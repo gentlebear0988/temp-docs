@@ -6,7 +6,7 @@ description: >-
 
 # ID Document Recognition Linux SDK
 
-Fully on-premise **ID Document Recognition HTTP API for Linux / Docker**. Image: `faceplugin/document-reader`. Default port **8082**. Gradio **9002**. CPU only.
+Fully on-premise **ID Document Recognition HTTP API for Linux / Docker**. Image: `faceplugin/document-reader`. Default port **8082**. Gradio **9002**.
 
 Reads ID cards, passports, and driver licenses. OCR, MRZ, barcode / QR, image quality, crops, and optional authenticity (document liveness).
 
@@ -83,7 +83,7 @@ curl -s -X POST http://127.0.0.1:8082/api/documentProcess \
   -d "{\"images\":[{\"image\":\"$IMG\",\"page_idx\":0}],\"response\":{\"OCR\":\"normal\",\"Authenticity\":\"normal\"}}"
 ```
 
-**Postman:** import `postman/` from the repo. Base URL `http://127.0.0.1:8082`.
+**Postman:** import `postman/DocumentReader-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8082`.
 
 **Gradio (host only):**
 

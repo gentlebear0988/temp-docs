@@ -89,6 +89,8 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
   -d "{\"images\":[{\"image\":\"$IMG\",\"page_idx\":0}]}"
 ```
 
+**Postman:** import `postman/DocumentLiveness-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8086`.
+
 **Gradio (host only):** port **9006**. There is **no** `documentRecognition` / `documentProcess` on this App — authenticity only. Security keys: [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md).
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

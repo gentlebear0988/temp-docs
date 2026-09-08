@@ -26,7 +26,12 @@ layout:
 
 Fully on-premise **Face Liveness SDK for Android** (presentation-attack detection). The demo does not enroll people or run 1:N search. It scores whether the face is real.
 
-Public class: `com.faceplugin.facelivenessdk.FaceLivenessSDK`. Demo id: **`com.faceplugin.faceliveness`**.
+| What | Id |
+| ---- | -- |
+| Android demo (`applicationId`) | `com.faceplugin.faceliveness` |
+| Public Java class | `com.faceplugin.facelivenesssdk.FaceLivenessSDK` |
+
+Keep `applicationId` **`com.faceplugin.faceliveness`** for the included license. The class package name is not the license id.
 
 ### Code <a href="#setup" id="setup"></a>
 

@@ -6,7 +6,7 @@ description: >-
 
 # Face Recognition SDK Windows (Recognition + Liveness)
 
-Fully on-premise **combined Face Recognition + Liveness** Windows App. Same HTTP surface as [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk-linux.md). Port **8083**. Gradio **9003**. CPU only. **No Docker** on Windows.
+Fully on-premise **combined Face Recognition + Liveness** Windows App. Same HTTP surface as [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk-linux.md). Port **8083**. Gradio **9003**. **No Docker** on Windows.
 
 One license (application id **1000**), two model packs (`far.fpk` + `fal.fpk`).
 
@@ -48,7 +48,7 @@ License **level** unlocks Recognition only, Liveness only, or both. Check `GET /
 
 ### Try it
 
-Same curl / Postman / Gradio flow as Linux, on `http://127.0.0.1:8083`. Gradio on **9003** (host only). Score **≥ 0.5** → Real.
+Same curl / Postman / Gradio flow as Linux, on `http://127.0.0.1:8083`. Import `postman/FaceRecognition-API.postman_collection.json`. Gradio on **9003** (host only). Score **≥ 0.5** → Real.
 
 ### APIs
 

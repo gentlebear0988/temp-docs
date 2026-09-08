@@ -6,7 +6,15 @@ description: >-
 
 # Liveness Detection iOS SDK
 
-Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`. Demo bundle id in Xcode: **`com.faceplugin.faceliveness.app`**.
+Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`.
+
+| What | Id |
+| ---- | -- |
+| iOS demo app (Xcode `PRODUCT_BUNDLE_IDENTIFIER`) | `com.faceplugin.faceliveness.app` |
+| Android demo (`applicationId`) | `com.faceplugin.faceliveness` |
+| SDK class / framework | `FaceLivenessSDK` in `facelivenessdk.framework` |
+
+Keep the iOS demo bundle **`com.faceplugin.faceliveness.app`** so the included license works. Request a new `FP1.…` if you change it.
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -85,11 +93,13 @@ The liveness demo does **not** enroll a match database.
 
 1. Place `facelivenessdk`, `FaceLivenessEngine`, and `onnxruntime` frameworks (see Setup).
 2. Keep the Xcode bundle id **`com.faceplugin.faceliveness.app`**.
-3. Run on a **physical** iPhone. The demo does **not** enroll a match database.
+3. Run on a **physical** iPhone. Home tiles: **Liveness**, Settings, About. The demo does **not** enroll a match database.
 
-{% hint style="info" %}
-Some README copies still mention bundle `com.faceplugin.facelivenessdk`. The shipping Xcode project uses **`com.faceplugin.faceliveness.app`**. If your demo license fails, send Faceplugin the bundle id from Xcode.
-{% endhint %}
+### Screenshots
+
+| Home | Liveness | Settings | About |
+| ---- | -------- | -------- | ----- |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness iOS home" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" width="180"/></p> |
 
 Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thread.
 

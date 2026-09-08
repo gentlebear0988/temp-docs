@@ -1,7 +1,7 @@
 ---
 description: >-
   Faceplugin Liveness Detection Linux Docker SDK. Fully on-premise PAD HTTP API on port
-  8084. POST /api/liveness. CPU only.
+  8084. POST /api/liveness.
 ---
 
 # Liveness Detection Linux SDK
@@ -44,7 +44,7 @@ curl -s http://127.0.0.1:8084/api/health
 
 Native (optional): put `libFaceLivenessSDK.so`, `libfal-eng.so`, `fal.fpk` from [Drive](https://drive.google.com/drive/folders/1rFnw7VASLmA4q8NWenQgszFS8njRGEgt) **directly** in `lib/cpu/`, then `./run.sh`.
 
-Default port **8084**. CPU only. Gradio demo (`demo.py`) on **9004** (host only).
+Default port **8084**. Gradio demo (`demo.py`) on **9004** (host only).
 
 `POST /api/check_liveness` is an alias of `/api/liveness`.
 
@@ -141,7 +141,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
   -d "{\"image\":\"$IMG\"}"
 ```
 
-**Postman:** import `postman/` from the repo. **Gradio (host only):** `DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python3 demo.py`.
+**Postman:** import `postman/FaceLiveness-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8084`. **Gradio (host only):** `DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python3 demo.py`.
 
 The Docker image is API-only. Control routes return a JSON **envelope**. `POST /api/liveness` returns **engine JSON**. Score **≥ 0.5** → Real / `pass` true.
 

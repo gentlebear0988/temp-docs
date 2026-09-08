@@ -6,7 +6,7 @@ description: >-
 
 # Face Recognition SDK Linux (Recognition + Liveness)
 
-Fully on-premise **combined Face Recognition + Liveness** Linux App. One license (application id **1000**), two model packs (`far.fpk` + `fal.fpk`). Docker image: `faceplugin/face-recognition-liveness-sdk`. Port **8083**. Gradio **9003**. CPU only.
+Fully on-premise **combined Face Recognition + Liveness** Linux App. One license (application id **1000**), two model packs (`far.fpk` + `fal.fpk`). Docker image: `faceplugin/face-recognition-liveness-sdk`. Port **8083**. Gradio **9003**.
 
 This is **not** the older single-product repos [FaceRecognition-Docker](https://github.com/Faceplugin-ltd/FaceRecognition-Docker) or [FaceLivenessDetection-Docker](https://github.com/Faceplugin-ltd/FaceLivenessDetection-Docker).
 

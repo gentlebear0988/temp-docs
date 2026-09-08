@@ -1,12 +1,12 @@
 ---
 description: >-
   Faceplugin Face Recognition Linux Docker SDK. Fully on-premise HTTP API on port 8083.
-  detect, quality, feature, match, similarity. CPU only.
+  detect, quality, feature, match, similarity.
 ---
 
 # Face Recognition Linux SDK
 
-Fully on-premise **Face Recognition HTTP API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**. CPU only.
+Fully on-premise **Face Recognition HTTP API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
 
 This product is **recognition only**. For recognition **and** liveness in one App, use [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk-linux.md).
 

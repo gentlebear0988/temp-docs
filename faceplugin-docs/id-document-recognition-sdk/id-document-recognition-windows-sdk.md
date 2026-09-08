@@ -12,7 +12,7 @@ description: >-
 
 ### Setup <a href="#setup" id="setup"></a>
 
-1. Copy the CPU runtime from [Google Drive](https://drive.google.com/drive/folders/1YfHUwnXO0E2NSvS_81nTNO2z3mKVO85g) into `lib\cpu\`.
+1. Copy the runtime from [Google Drive](https://drive.google.com/drive/folders/1YfHUwnXO0E2NSvS_81nTNO2z3mKVO85g) into `lib\cpu\`.
 2. Install and run:
 
 ```
@@ -43,7 +43,7 @@ Python: `sdk.document_recognition`, `sdk.document_liveness`, `sdk.document_proce
 
 ### Try it
 
-Same routes as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md) on port **8082**. Gradio **9002**. Parse results with [Document result JSON](document-result-json.md).
+Same routes as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md) on port **8082**. Import `postman/DocumentReader-API.postman_collection.json`. Gradio **9002**. Parse results with [Document result JSON](document-result-json.md).
 
 Windows also documents authenticity `"strict"` in addition to `"normal"` / `"none"`.
 

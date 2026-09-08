@@ -1,7 +1,7 @@
 ---
 description: >-
   Faceplugin Liveness Detection Windows SDK. Fully on-premise PAD HTTP API on port 8084.
-  POST /api/liveness. CPU only, no Docker.
+  POST /api/liveness. No Docker.
 ---
 
 # Liveness Detection Windows SDK
@@ -12,7 +12,7 @@ description: >-
 
 ### Setup <a href="#setup" id="setup"></a>
 
-1. Copy the CPU runtime from [Google Drive](https://drive.google.com/drive/folders/11xD987eHT00NUGiJZCNYSvwRadi0Nue5) into `lib\cpu\`.
+1. Copy the runtime from [Google Drive](https://drive.google.com/drive/folders/11xD987eHT00NUGiJZCNYSvwRadi0Nue5) into `lib\cpu\`.
 2. Install and run:
 
 ```
@@ -22,7 +22,7 @@ run.bat
 
 3. Copy `FPMC1.…` from the terminal or `GET /api/machinecode`, request `FP1.…`, then `POST /api/activate`.
 
-No Docker on Windows. API **8084**. Gradio **9004**. CPU only.
+No Docker on Windows. API **8084**. Gradio **9004**.
 
 Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md). `POST /api/check_liveness` is an alias of `/api/liveness`.
 
@@ -67,7 +67,7 @@ Python: `sdk.get_machine_code()`, `sdk.activate`, `sdk.init_sdk()`, `sdk.livenes
 
 ### Try it
 
-Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md) on port **8084**. Gradio **9004**. Score **≥ 0.5** → Real.
+Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md) on port **8084**. Import `postman/FaceLiveness-API.postman_collection.json`. Gradio **9004**. Score **≥ 0.5** → Real.
 
 ```
 pip install -r requirements.txt
