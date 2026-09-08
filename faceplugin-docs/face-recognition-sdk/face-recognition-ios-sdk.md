@@ -1,0 +1,131 @@
+---
+description: >-
+  Faceplugin Face Recognition iOS SDK. Fully on-premise face matching, 1:N identify, and 2D
+  liveness. Xcode frameworks, setActivation, initSDK, detectImage, VideoWorker.
+---
+
+# Face Recognition iOS SDK
+
+Fully on-premise **Face Recognition SDK for iOS**. Detect faces, extract templates, match 1:1 or live 1:N, and check passive 2D liveness on the device.
+
+Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not activated, **4** Init failed.
+
+### Code <a href="#setup" id="setup"></a>
+
+{% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-iOS" %}
+
+### Setup <a href="#setup" id="setup"></a>
+
+1. Unzip the frameworks from [Google Drive](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) next to the Xcode project: `facerecognitionsdk.framework`, `FaceRecognitionEngine.framework`, `onnxruntime.framework`.
+2. Add the SDK frameworks to the project in Xcode (**Embed & Sign**).
+3. Add `FaceRecognitionSDK-Bridging-Header.h` to Build Settings (`#import <facerecognitionsdk/FaceRecognitionSDK.h>`).
+4. Set **your** Signing Team. Demo bundle id: **`com.faceplugin.facerecognitionsdk.app`**. Physical iPhone, iOS 13+. Call **setActivation → initSDK** off the main thread.
+
+### APIs
+
+#### <mark style="color:orange;">setActivation:</mark> This API is used to activate the SDK <a href="#setactivation" id="setactivation"></a>
+
+```objectivec
++(int)setActivation:(NSString*)license;
+```
+
+| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>FP1.…</code>)</li></ul> |
+| ---------------- | -------------------------------------------------------------------------------------------------- |
+| **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul> |
+
+#### <mark style="color:orange;">initSDK:</mark> This API is used to initialize the SDK <a href="#initsdk" id="initsdk"></a>
+
+```objectivec
++(int)initSDK;
+```
+
+| **Input**        | None |
+| ---------------- | ---- |
+| **Return value** | <p>The SDK initialization status code.</p><ul><li>0: Success</li><li>1–4: see <code>setActivation</code></li></ul> |
+
+#### <mark style="color:orange;">getMachineCode:</mark> This API is used to retrieve the machine code <a href="#getmachinecode" id="getmachinecode"></a>
+
+```objectivec
++(NSString*)getMachineCode;
+```
+
+Fingerprint is `SHA256("IOS|" + bundleId)`.
+
+#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read the license tier <a href="#getlicensestatus" id="getlicensestatus"></a>
+
+```objectivec
++(NSString*)getLicenseStatus;
++(BOOL)allowsRecognition;
++(BOOL)allowsLiveness;
++(NSString*)lastLicenseError;
++(BOOL)isActivated;
+```
+
+#### <mark style="color:orange;">detectImage:</mark> This API is used to detect faces and return engine JSON <a href="#detectimage" id="detectimage"></a>
+
+```objectivec
++(NSString*)detectImage:(UIImage*)image crop:(BOOL)crop;
++(NSString*)detectImage:(UIImage*)image crop:(BOOL)crop flags:(FaceRecognitionDetectFlags)flags;
+```
+
+| **Input**        | <ul><li><strong>image</strong> (UIImage*): The input image</li><li><strong>flags</strong>: Estimators to run (<code>FaceRecognitionDetectAll</code>, <code>DetectLiveness</code>, …)</li></ul> |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Return value** | JSON string (Linux-compatible, same idea as HTTP <code>POST /api/detect</code>).                                                                                                              |
+
+#### <mark style="color:orange;">qualityImage:</mark> This API is used to run face image quality checks <a href="#qualityimage" id="qualityimage"></a>
+
+```objectivec
++(NSString*)qualityImage:(UIImage*)image crop:(BOOL)crop;
+```
+
+#### <mark style="color:orange;">matchImage1:</mark> This API is used to compare two photos (1:1) <a href="#matchimage" id="matchimage"></a>
+
+```objectivec
++(NSString*)matchImage1:(UIImage*)image1 image2:(UIImage*)image2 crop:(BOOL)crop;
+```
+
+#### <mark style="color:orange;">extractFeatureFromImage:</mark> This API is used to extract a face template <a href="#extractfeature" id="extractfeature"></a>
+
+```objectivec
++(NSString*)extractFeatureFromImage:(UIImage*)image;
+```
+
+| **Input**        | A face image (typically cropped). |
+| ---------------- | ---------------------------------- |
+| **Return value** | JSON with the template. Store the feature bytes in **your** database. |
+
+#### <mark style="color:orange;">similarityWithFeature1:</mark> This API is used to calculate the similarity between two face templates <a href="#similarity" id="similarity"></a>
+
+```objectivec
++(float)similarityWithFeature1:(NSData*)feature1 feature2:(NSData*)feature2;
+```
+
+| **Input**        | Two template blobs from <code>extractFeatureFromImage</code>. |
+| ---------------- | --------------------------------------------------------------- |
+| **Return value** | Similarity **0.0–1.0**, or **-1** on error. Demo Identify default threshold is **0.67**. |
+
+#### <mark style="color:orange;">setLandmarkMode:</mark> This API is used to set the landmark model <a href="#setlandmarkmode" id="setlandmarkmode"></a>
+
+```objectivec
++(int)setLandmarkMode:(int)mode; // 14, 68, or 468
++(int)landmarkMode;
+```
+
+#### <mark style="color:orange;">VideoWorker:</mark> This API is used for live 1:N identify <a href="#videoworker" id="videoworker"></a>
+
+```objectivec
++(int)startVideoWorkerWithMatchThreshold:(float)threshold;
++(int)startVideoWorkerWithConfig:(FaceRecognitionVideoWorkerConfig*)config;
++(int)syncVideoWorkerDatabaseWithFeatures:(NSArray<NSData*>*)features matchThreshold:(float)threshold;
++(int)addVideoWorkerFrame:(UIImage*)image;
++(int)addVideoWorkerSampleBuffer:(CMSampleBufferRef)sampleBuffer;
++(NSString*)extractFeatureWithSampleBuffer:(CMSampleBufferRef)sampleBuffer;
++(void)setVideoWorkerEventHandler:(void(^)(NSString* json))handler;
++(void)stopVideoWorker;
+```
+
+#### <mark style="color:orange;">deinitSDK:</mark> This API is used to unload the engine <a href="#deinitsdk" id="deinitsdk"></a>
+
+```objectivec
++(int)deinitSDK;
+```
