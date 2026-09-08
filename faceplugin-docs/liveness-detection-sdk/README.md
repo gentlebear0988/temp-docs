@@ -17,11 +17,7 @@ Our SDK is **iBeta Level 2 compliant**, adhering to the highest standards of liv
 * **3D models**
 * **Deepfakes**
 
-Score **≥ 0.5** means Real (`pass` true) in the shipping demos. On Android, `FaceDetectionParam.check_liveness` defaults to **false** — set it to **true**.
-
-There is **no** Face Liveness Flutter / React Native / Ionic repo in the current product line. Use native Android / iOS, or the Linux / Windows HTTP API. For recognition **and** liveness in one Linux App, see [Face Recognition SDK Linux (Recognition + Liveness)](../face-recognition-sdk/face-recognition-sdk-linux.md).
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Android SDK</strong></td><td></td><td><a href="../.gitbook/assets/android.png">android.png</a></td><td><a href="liveness-detection-android-sdk.md">liveness-detection-android-sdk.md</a></td></tr><tr><td></td><td><strong>iOS SDK</strong></td><td></td><td><a href="../.gitbook/assets/apple-logo-3-300x300.png">apple-logo-3-300x300.png</a></td><td><a href="liveness-detection-ios-sdk.md">liveness-detection-ios-sdk.md</a></td></tr><tr><td></td><td>Windows SDK</td><td></td><td></td><td><a href="liveness-detection-windows-sdk.md">liveness-detection-windows-sdk.md</a></td></tr><tr><td></td><td>Linux SDK</td><td></td><td><a href="../.gitbook/assets/linux_PNG1 (1).png">linux_PNG1 (1).png</a></td><td><a href="liveness-detection-linux-sdk.md">liveness-detection-linux-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Android SDK</strong></td><td></td><td><a href="../.gitbook/assets/android.png">android.png</a></td><td><a href="liveness-detection-android-sdk.md">liveness-detection-android-sdk.md</a></td></tr><tr><td></td><td><strong>iOS SDK</strong></td><td></td><td><a href="../.gitbook/assets/apple-logo-3-300x300.png">apple-logo-3-300x300.png</a></td><td><a href="liveness-detection-ios-sdk.md">liveness-detection-ios-sdk.md</a></td></tr><tr><td></td><td>Linux SDK</td><td></td><td><a href="../.gitbook/assets/linux_PNG1 (1).png">linux_PNG1 (1).png</a></td><td><a href="liveness-detection-linux-sdk.md">liveness-detection-linux-sdk.md</a></td></tr></tbody></table>
 
 ### Usecases
 

@@ -1,55 +1,15 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition JavaScript SDK. Browser and Node HTTP client for
-  OCR, MRZ, and authenticity against the on-premise Document Reader API on port 8082.
+  Faceplugin ID Document Recognition JavaScript SDK. Browser and Node HTTP client for the
+  on-premise Document Reader API. Contact Faceplugin for access.
 ---
 
 # ID Document Recognition JavaScript SDK
 
-JavaScript **HTTP client** for Faceplugin ID Document Recognition (browser and Node.js). This package does **not** load `libDocSDK`. Run it against the Linux, Windows, Node, Go, or C++ API on port **8082**.
+JavaScript **HTTP client** for Faceplugin ID Document Recognition (browser and Node.js). It does **not** load `libDocSDK`. Your app calls the on-premise Document Reader API (Linux / Windows, port **8082**) for OCR, MRZ, barcode, and optional authenticity.
 
-### Code <a href="#setup" id="setup"></a>
-
-{% embed url="https://github.com/Faceplugin-ltd/ID-Document-Recognition-JavaScript" %}
-
-### Setup <a href="#setup" id="setup"></a>
-
-```
-npm test
-python -m http.server 5176
-```
-
-Open `http://127.0.0.1:5176/demo/` with the API at `http://127.0.0.1:8082`.
-
-Web demos: [React](https://github.com/Faceplugin-ltd/ID-Document-Recognition-React) · [Vue](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Vue) · [Angular](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Angular).
-
-### APIs
-
-#### <mark style="color:orange;">documentRecognition:</mark> This API is used to run OCR / MRZ / barcode / image quality only
-
-```js
-import { DocumentReaderClient } from "./src/index.js";
-const client = new DocumentReaderClient("http://127.0.0.1:8082");
-await client.documentRecognition({ images: [{ image: base64Front }] });
-```
-
-#### <mark style="color:orange;">documentLiveness:</mark> This API is used to run authenticity / security only
-
-```js
-await client.documentLiveness({ images: [{ image: base64Front }] });
-```
-
-#### <mark style="color:orange;">documentProcess:</mark> This API is used to run the combined pipeline
-
-```js
-await client.documentProcess({
-  images: [{ image: base64Front }],
-  response: { OCR: "normal", Authenticity: "normal" },
-});
-```
-
-Also: `client.health()`, `client.machineCode()`, `client.activate(license)`, `client.licenseStatus()`.
-
-Parse the engine JSON with [Document result JSON](document-result-json.md). You still need a running [Linux](id-document-recognition-linux-sdk.md) or [Windows](id-document-recognition-windows-sdk.md) API.
+{% hint style="info" %}
+The public GitHub repository for this client is **not published yet**. [Contact us](../contact-us.md) for the package. The server API is already documented on [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md) and [Windows SDK](id-document-recognition-windows-sdk.md).
+{% endhint %}
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
