@@ -119,3 +119,14 @@ similarity(feature1: string, feature2: string): Promise<number>
 ```
 
 Also: `getLicenseStatus`, `detect`, `extractFeature`, `quality`, VideoWorker (`startVideoWorker`, `ingestLiveCameraFrame`, `exportLastLiveFrame`), `deinit`.
+
+### Integrate into your own app
+
+Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projects. For this Cordova plugin:
+
+1. Place `facerecognitionsdk.aar` in `FacePlugin/src/android/` and the three iOS frameworks in `FacePlugin/src/ios/Frameworks/`.
+2. `ionic cordova plugin add ./FacePlugin` then `npm run setup:android` or `setup:ios`.
+3. Keep demo id **`com.faceplugin.facerecognitionsdk`** or request a key for **your** id.
+4. `ionic serve` cannot load the engine — run on a physical phone.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

@@ -47,3 +47,9 @@ await client.documentProcess({
   response: { OCR: "normal", Authenticity: "normal" },
 });
 ```
+
+Also: `client.health()`, `client.machineCode()`, `client.activate(license)`, `client.licenseStatus()`.
+
+Parse the engine JSON with [Document result JSON](document-result-json.md). You still need a running [Linux](id-document-recognition-linux-sdk.md) or [Windows](id-document-recognition-windows-sdk.md) API.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

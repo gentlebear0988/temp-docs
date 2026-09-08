@@ -26,6 +26,8 @@
 * [ID Document Recognition SDK](id-document-recognition-sdk/README.md)
   * [ID Document Recognition Android SDK](id-document-recognition-sdk/id-document-recognition-android-sdk.md)
   * [ID Document Recognition iOS SDK](id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
+  * [Document result JSON](id-document-recognition-sdk/document-result-json.md)
+  * [Document security check fields](id-document-recognition-sdk/document-security-check-fields.md)
   * [ID Document Recognition React Native SDK](id-document-recognition-sdk/id-document-recognition-react-native-sdk.md)
   * [ID Document Recognition Flutter SDK](id-document-recognition-sdk/id-document-recognition-flutter-sdk.md)
   * [ID Document Recognition Ionic Capacitor SDK](id-document-recognition-sdk/id-document-recognition-ionic-capacitor-sdk.md)

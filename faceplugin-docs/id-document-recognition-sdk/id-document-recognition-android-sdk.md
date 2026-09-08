@@ -137,3 +137,42 @@ DocumentReaderSDK.startNewSession("{\"scenario\":\"FullProcess\",\"series\":fals
 ```java
 public static String deinit();
 ```
+
+`deinit()` returns a **String** (not `int`).
+
+### Run the demo
+
+1. Place `documentreadersdk.aar` in `libdocsdk/` (not `libfacesdk`).
+2. Keep `applicationId` **`com.faceplugin.documentreader`**.
+3. Run on a **physical** phone.
+4. Home: Camera, Gallery, About. Result tabs: OCR / MRZ / barcode, Liveness (security), Images, Raw JSON.
+
+### Screenshots
+
+| Home | Camera | Gallery |
+| ---- | ------ | ------- |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/home.png" alt="Faceplugin Document Reader Android home" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png" alt="Faceplugin Document Reader camera overlay" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/gallery.png" alt="Faceplugin Document Reader gallery" width="180"/></p> |
+
+| Result | Security | Images |
+| ------ | -------- | ------ |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/result.png" alt="Faceplugin Document Reader result" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/security.png" alt="Faceplugin Document Reader security" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/images.png" alt="Faceplugin Document Reader crops" width="180"/></p> |
+
+### License
+
+Licenses are **offline** and bound to your `applicationId`. After `getLicenseStatus()`:
+
+- **Recognition + Liveness** — OCR / MRZ / barcode **and** authenticity
+- **Recognition** — OCR / MRZ / barcode; Security stays empty / not checked
+- **Liveness** — authenticity only; OCR stays empty / not checked
+
+Parse the JSON with [Document result JSON](document-result-json.md).
+
+### Try it (after the demo compiles)
+
+```java
+DocumentReaderSDK.setActivation(context, DEMO_LICENSE);
+DocumentReaderSDK.init(context);
+String json = DocumentReaderSDK.recognize(front, back, "normal");
+```
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

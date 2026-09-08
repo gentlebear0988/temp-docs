@@ -89,3 +89,16 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 ```objectivec
 +(NSString*)deinitSDK;
 ```
+
+### Run the demo
+
+1. Unzip `docsdk.framework.zip` next to `DocumentReader.xcodeproj`. Engine may nest as `Frameworks/dcrcore.framework` inside `docsdk.framework`.
+2. Keep demo bundle **`com.faceplugin.documentreader.app`**.
+3. Physical iPhone, iOS 13+, Xcode 15+.
+4. Home: Camera, Gallery, About. Result JSON matches [Document result JSON](document-result-json.md).
+
+### License
+
+Licenses are **offline** and bound to your bundle id. Request a new `FP1.…` for **your** id. Authenticity `"normal"` needs a Liveness-capable license.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

@@ -64,3 +64,14 @@ Content-Type: application/json
 | **Return value** | Engine JSON. Score **≥ 0.5** → <code>result</code> Real and <code>pass</code> true. |
 
 Python: `sdk.get_machine_code()`, `sdk.activate`, `sdk.init_sdk()`, `sdk.liveness`.
+
+### Try it
+
+Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md) on port **8084**. Gradio **9004**. Score **≥ 0.5** → Real.
+
+```
+pip install -r requirements.txt
+run.bat
+```
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

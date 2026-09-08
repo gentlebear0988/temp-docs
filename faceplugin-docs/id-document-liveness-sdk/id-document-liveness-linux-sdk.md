@@ -77,3 +77,18 @@ sdk.activate("license.txt")
 sdk.init_sdk()
 print(sdk.document_liveness([{"image": base64_front}, {"image": base64_back, "page_idx": 1}]))
 ```
+
+### Try it
+
+```bash
+curl -s http://127.0.0.1:8086/api/health
+IMG=$(base64 -w0 id-front.jpg)
+
+curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
+  -H 'Content-Type: application/json' \
+  -d "{\"images\":[{\"image\":\"$IMG\",\"page_idx\":0}]}"
+```
+
+**Gradio (host only):** port **9006**. There is **no** `documentRecognition` / `documentProcess` on this App — authenticity only. Security keys: [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md).
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

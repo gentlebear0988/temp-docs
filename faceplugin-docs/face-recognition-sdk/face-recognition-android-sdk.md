@@ -249,3 +249,83 @@ public static int deinit();
 | **Input**        | None |
 | ---------------- | ---- |
 | **Return value** | Status code. **0**: Success. |
+
+### Run the demo
+
+1. Place `facerecognitionsdk.aar` in `libfacesdk/` (see Setup).
+2. Open the cloned repo in Android Studio.
+3. Run on a **physical** phone (emulator is not recommended for camera / liveness).
+4. Wait until the home status bar disappears. Then **Enroll / Identify / Capture / Attribute** unlock.
+
+Keep `applicationId` **`com.faceplugin.facerecognitionsdk`** for the included demo license.
+
+| Demo tile | What it does |
+| --------- | ------------ |
+| **Enroll** | Enroll a person from a gallery photo (exactly one face) into the on-device database |
+| **Identify** | Live 1:N camera match (stop on first hit) with 2D liveness |
+| **Capture** | Oval coach capture → still with attributes → optional enroll |
+| **Attribute** | Gallery analysis: landmarks, liveness, pose, quality, age, gender, emotion |
+| **Settings** | Camera lens, identify / liveness / pose / eye-close thresholds |
+| **About** | SDK name and license label |
+
+### Screenshots
+
+| Home | Identify | Capture |
+| ---- | -------- | ------- |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android home" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+
+### System requirements
+
+| Item | Minimum | Recommended |
+| ---- | ------- | ----------- |
+| Android | API 24 (7.0) | API 29 (10) or newer |
+| ABI | `arm64-v8a`, `armeabi-v7a` | `arm64-v8a` |
+| RAM | 4 GB | 6 GB or more |
+| Camera | Front camera | 720p or 1080p |
+| Device | Physical device | Same |
+
+### License
+
+Licenses are **offline** and bound to your `applicationId`. After `getLicenseStatus()`:
+
+- **Recognition only** — Enroll / Identify / Attribute
+- **Liveness only** — Capture
+- **Recognition + Liveness** — all four tiles
+- **Not licensed** — tiles stay locked until you activate
+
+Send your **applicationId** (mobile) to Faceplugin. [Request a License & Support](../request-a-license-and-support.md).
+
+### Try it (after the demo compiles)
+
+```kotlin
+Thread {
+    FaceRecognitionSDK.getMachineCode(context)
+    var code = FaceRecognitionSDK.setActivation(context, DEMO_LICENSE)
+    if (code == FaceRecognitionSDK.SDK_SUCCESS) {
+        code = FaceRecognitionSDK.init(context)
+    }
+    val faces = FaceRecognitionSDK.faceDetection(bitmap, FaceDetectionParam())
+    if (faces.isNotEmpty()) {
+        val t = FaceRecognitionSDK.templateExtraction(bitmap, faces[0])
+        val score = FaceRecognitionSDK.similarityCalculation(t, t)
+    }
+}.start()
+```
+
+{% hint style="warning" %}
+Call `setActivation`, `init`, and all process methods **off the UI thread**. The engine is **not** concurrent — serialize calls on one thread.
+{% endhint %}
+
+### Integrate into your own app
+
+You need `libfacesdk/` (the AAR) and `FaceRecognitionSDK`. You do **not** need the demo Activities.
+
+1. Copy `libfacesdk` into your project root and put `facerecognitionsdk.aar` inside it.
+2. Wire Gradle as in Setup (`minSdk 24`, `abiFilters`, `useLegacyPackaging`).
+3. Add CAMERA and photo-library permissions.
+4. Request `FP1.…` for **your** `applicationId`.
+5. Optional: copy `app/.../kit/` (`FaceRecognitionClient`) so you do not rewrite threading, CameraX, or VideoWorker.
+
+Typical call order: `setActivation` → `init` → `faceDetection` → `templateExtraction` → store templates in **your** database → `similarityCalculation` or VideoWorker for live 1:N.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

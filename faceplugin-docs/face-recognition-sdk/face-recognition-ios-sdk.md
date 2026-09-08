@@ -129,3 +129,34 @@ Fingerprint is `SHA256("IOS|" + bundleId)`.
 ```objectivec
 +(int)deinitSDK;
 ```
+
+### Run the demo
+
+1. Place the three frameworks next to the Xcode project (see Setup).
+2. Keep demo bundle id **`com.faceplugin.facerecognitionsdk.app`**.
+3. Run on a **physical** iPhone (iOS 13+).
+4. Wait until the home status bar shows Ready. Then Enroll / Identify / Capture / Attribute unlock.
+
+Call **setActivation → initSDK** off the main thread. The engine is **not** concurrent.
+
+### Screenshots
+
+| Home | Identify | Capture |
+| ---- | -------- | ------- |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition iOS home" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+
+### License
+
+Licenses are **offline** and bound to your bundle identifier. The sample key is only for the demo bundle. Request a new `FP1.…` for **your** id. Machine code fingerprint is `SHA256("IOS|" + bundleId)`.
+
+Identify default threshold is **0.67**. Liveness demo default is **0.5**.
+
+### Integrate into your own app
+
+You need the three frameworks and `FaceRecognitionSDK`. You do **not** need the demo view controllers.
+
+Typical call order: `setActivation` → `initSDK` → `detectImage` / `extractFeatureFromImage` → store templates in **your** database → `similarityWithFeature1:feature2:` or VideoWorker for live 1:N.
+
+Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFeature1:feature2:`, VideoWorker. There is **no** Objective-C `faceDetection:` returning `FaceBox` on this framework.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

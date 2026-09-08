@@ -24,9 +24,13 @@ layout:
 
 # Face Recognition React Native SDK
 
-Fully on-premise **Face Recognition SDK for React Native** (Android and iOS). Package: `face-recognition-sdk`. Expo Go is **not** supported.
+Fully on-premise **Face Recognition SDK for React Native** (Android and iOS). Package: `face-recognition-sdk`. It wraps the same native engines as the Android and iOS Face Recognition SDKs.
 
-Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About. Demo application id: **`com.faceplugin.facerecognitionsdk`**.
+All processing stays on the device. **No** biometric data is sent to Faceplugin cloud.
+
+{% hint style="warning" %}
+**Expo Go is not supported.** You need a development build (bare React Native or Expo prebuild) because this package includes native Android / iOS code. Use **Yarn 3** as in `package.json` (do not `npm install` at the repo root).
+{% endhint %}
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -34,42 +38,146 @@ Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About. Demo applicat
 
 ### How to Run
 
-#### 1. Set Up React Native Development Environment
+{% stepper %}
+{% step %}
+## Install tools
 
-You can refer to React Native [official document](https://reactnative.dev/docs/environment-setup) to setup enviroment. Use **Yarn 3** as in `package.json` (do not `npm install` at the repo root).
+Node **18+**, Yarn, and a React Native environment ([setup guide](https://reactnative.dev/docs/environment-setup)). Physical phone recommended (emulator is limited for camera / liveness).
+{% endstep %}
 
-#### 2. Get the runtimes
+{% step %}
+## Clone and install
 
-- Android AAR: [Google Drive](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0) → `example/android/libfacesdk/facerecognitionsdk.aar`
-- iOS frameworks: [Google Drive](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) → `ios/Frameworks/` (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
-
-#### 3. How to run Android App
-
-```
+```bash
+git clone https://github.com/Faceplugin-ltd/FaceRecognition-React-Native.git
+cd FaceRecognition-React-Native
 yarn
+cd example && yarn
+```
+{% endstep %}
+
+{% step %}
+## Place native runtimes
+
+Native binaries are **not** on GitHub (too large).
+
+| Platform | File | Example app path | Your own app path |
+| -------- | ---- | ---------------- | ----------------- |
+| Android | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | `node_modules/face-recognition-sdk/android/libs/` |
+| iOS | three frameworks | `ios/Frameworks/` | `node_modules/face-recognition-sdk/ios/Frameworks/` |
+
+- Android Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
+- iOS Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
+{% endstep %}
+
+{% step %}
+## Run on a phone
+
+```bash
 cd example
 yarn android
 ```
 
-#### 4. How to run the iOS App
+On macOS for iOS:
 
-```
-yarn
+```bash
 cd example
-yarn
-cd ios
-pod install
+cd ios && pod install && cd ..
+yarn ios --device
 ```
 
-Open `example/ios/FaceRecognitionSdkExample.xcworkspace` in Xcode and run on a **physical** iPhone.
+Open `example/ios/FaceRecognitionSdkExample.xcworkspace` in Xcode if you prefer. Wait until the home status bar shows **Ready**.
+{% endstep %}
+{% endstepper %}
+
+Keep demo ids so the included license works. Android `applicationId` and iOS bundle id are both **`com.faceplugin.facerecognitionsdk`**.
+
+| Requirement | Value |
+| ----------- | ----- |
+| React Native | 0.74.x (example ships 0.74.5) |
+| Android | minSdk 24, physical device recommended |
+| iOS | iOS 13+, A12+ recommended, physical device |
+
+| Demo tile | What it does |
+| --------- | ------------ |
+| **Enroll** | Enroll a person from a gallery photo (exactly one face) into the on-device database |
+| **Identify** | Live 1:N camera match (VideoWorker) with 2D liveness |
+| **Capture** | Oval coach capture → still with attributes → optional enroll |
+| **Attribute** | Gallery analysis: landmarks, liveness, pose, quality, age, gender, emotion |
+| **Settings** | Camera lens, identify / liveness / pose / eye-close thresholds |
+| **About** | SDK name and license label |
+
+### Screenshots
+
+| Home | Identify | Capture |
+| ---- | -------- | ------- |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition React Native home" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+
+### License
+
+Licenses are **offline** and bound to your `applicationId` / bundle identifier. The sample key is only for the demo id. Request a new `FP1.…` for **your** id.
+
+Default thresholds in Settings: identify **0.67**, liveness **0.5**, liveness level `0`, pose **40°**, eye-close **0.5**.
+
+[Request a License & Support](../request-a-license-and-support.md).
+
+### Integrate into your own app
+
+```bash
+yarn add github:Faceplugin-ltd/FaceRecognition-React-Native
+```
+
+1. Copy `facerecognitionsdk.aar` into `node_modules/face-recognition-sdk/android/libs/`
+2. Copy the three iOS frameworks into `node_modules/face-recognition-sdk/ios/Frameworks/` and `pod install`
+3. Call `setActivation` → `init` before detect / VideoWorker
+4. For the optional oval UI (`FaceCapture`), also install peers: `react-native-vision-camera`, `react-native-svg`, plus camera permissions
+
+```ts
+import {
+  setActivation,
+  init,
+  faceDetection,
+  templateExtraction,
+  SDK_SUCCESS,
+} from 'face-recognition-sdk';
+
+const code = await setActivation('FP1.…'); // bound to YOUR applicationId
+if (code === SDK_SUCCESS) {
+  await init();
+}
+
+const faces = await faceDetection(uri, { allAttributes: true, check_liveness: true });
+const probe = await templateExtraction(uri, faces[0]);
+const score = await similarity(probe, enrolledTemplateB64);
+```
+
+Live frames: pass `ingestLiveCameraFrame(photo, { frontCamera: true })` so Android and iOS share one orientation policy.
+
+Optional Capture UI:
+
+```ts
+import { FaceCapture } from 'face-recognition-sdk/capture';
+
+<FaceCapture
+  settings={{ camera_lens: 'front', liveness_threshold: 0.5, liveness_level: 0 }}
+  onCancel={() => navigation.goBack()}
+  onCaptured={(result) => { /* result.uri, result.faceBox, result.cropB64 */ }}
+/>
+```
+
+Person enrollment data in the example is **local** (`AsyncStorage`). Drive holds the **native runtime only**, not the enrolled gallery.
 
 ### APIs
+
+Call order: `getMachineCode` → `setActivation` → `init` → detect / VideoWorker → `deinit`.
+
+One TypeScript API for Android and iOS. Results use the **same FaceBox shape** on both platforms (Android is normalized for you). All methods return **Promises**.
+
+Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not activated, **4** Init failed.
 
 ```ts
 import { setActivation, init, faceDetection, templateExtraction, similarity } from 'face-recognition-sdk';
 ```
-
-Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not activated, **4** Init failed.
 
 #### <mark style="color:orange;">setActivation:</mark> This API is used to activate the SDK
 
@@ -100,6 +208,8 @@ getLicenseStatus(): Promise<string>
 ```ts
 faceDetection(image: ImageInput, param?: FaceDetectionParam): Promise<FaceBox[]>
 ```
+
+`FaceBox` includes `x1,y1,x2,y2`, `liveness` / `livenessLabel`, age / gender / emotion, glasses / mask, `attributes`, and `landmarks`. Optional: `normalizeFaceBox` if you parse raw bridge JSON yourself.
 
 #### <mark style="color:orange;">templateExtraction:</mark> This API is used to extract face template
 
@@ -136,3 +246,5 @@ stopVideoWorker(): Promise<void>
 ```
 
 Prefer `ingestLiveCameraFrame` so rotation is handled for you.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

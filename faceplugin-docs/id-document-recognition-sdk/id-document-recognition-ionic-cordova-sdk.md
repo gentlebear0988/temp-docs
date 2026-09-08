@@ -63,3 +63,7 @@ recognize(front, back?, authenticity?): Promise<string>
 ```
 
 Also: `getMachineCode`, `locateDocument`, `documentRecognition`, `documentLiveness`, `getLicenseStatus`, `deinit`.
+
+Place `documentreadersdk.aar` in the Cordova plugin Android libs and `docsdk.framework` in the iOS Frameworks folder. `ionic serve` cannot load the engine. Parse JSON with [Document result JSON](document-result-json.md).
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

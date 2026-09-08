@@ -80,3 +80,17 @@ The liveness demo does **not** enroll a match database.
 ```objectivec
 +(int)deinitSDK;
 ```
+
+### Run the demo
+
+1. Place `facelivenessdk`, `FaceLivenessEngine`, and `onnxruntime` frameworks (see Setup).
+2. Keep the Xcode bundle id **`com.faceplugin.faceliveness.app`**.
+3. Run on a **physical** iPhone. The demo does **not** enroll a match database.
+
+{% hint style="info" %}
+Some README copies still mention bundle `com.faceplugin.facelivenessdk`. The shipping Xcode project uses **`com.faceplugin.faceliveness.app`**. If your demo license fails, send Faceplugin the bundle id from Xcode.
+{% endhint %}
+
+Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thread.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

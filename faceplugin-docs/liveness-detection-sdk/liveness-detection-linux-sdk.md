@@ -129,3 +129,22 @@ sdk.activate("license.txt")
 sdk.init_sdk()
 print(sdk.liveness(base64_jpeg))
 ```
+
+### Try it
+
+```bash
+curl -s http://127.0.0.1:8084/api/health
+IMG=$(base64 -w0 face.jpg)
+
+curl -s -X POST http://127.0.0.1:8084/api/liveness \
+  -H 'Content-Type: application/json' \
+  -d "{\"image\":\"$IMG\"}"
+```
+
+**Postman:** import `postman/` from the repo. **Gradio (host only):** `DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python3 demo.py`.
+
+The Docker image is API-only. Control routes return a JSON **envelope**. `POST /api/liveness` returns **engine JSON**. Score **≥ 0.5** → Real / `pass` true.
+
+Need recognition **and** liveness in one App? Use [Face Recognition SDK Linux (Recognition + Liveness)](../face-recognition-sdk/face-recognition-sdk-linux.md).
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

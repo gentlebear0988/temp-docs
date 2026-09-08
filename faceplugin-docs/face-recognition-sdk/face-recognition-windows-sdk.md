@@ -46,3 +46,20 @@ Same routes as [Face Recognition Linux SDK](face-recognition-linux-sdk.md):
 There is **no** `POST /api/identify`.
 
 Python: `sdk.detect`, `sdk.quality`, `sdk.feature`, `sdk.match`, `sdk.similarity`.
+
+### Try it
+
+```bash
+curl -s http://127.0.0.1:8083/api/health
+IMG=$(base64 -w0 face.jpg)
+
+curl -s -X POST http://127.0.0.1:8083/api/detect \
+  -H 'Content-Type: application/json' \
+  -d "{\"image\":\"$IMG\"}"
+```
+
+**Postman:** import `postman/` from the repo. **Gradio (host only):** `DEMO_PORT=9003 API_BASE=http://127.0.0.1:8083 python demo.py`.
+
+Control routes return a JSON **envelope**. Process POSTs return **engine JSON**. There is **no** `POST /api/identify` (no server-side 1:N gallery). Store templates in **your** database and call `/api/similarity`.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

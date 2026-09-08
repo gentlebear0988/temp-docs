@@ -40,3 +40,11 @@ Same as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md
 | `POST /api/generalProcess` | Single-image general process |
 
 Python: `sdk.document_recognition`, `sdk.document_liveness`, `sdk.document_process`, `sdk.general_process`.
+
+### Try it
+
+Same routes as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md) on port **8082**. Gradio **9002**. Parse results with [Document result JSON](document-result-json.md).
+
+Windows also documents authenticity `"strict"` in addition to `"normal"` / `"none"`.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

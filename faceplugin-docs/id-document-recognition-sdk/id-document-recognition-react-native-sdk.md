@@ -24,17 +24,48 @@ layout:
 
 # ID Document Recognition React Native SDK
 
+Fully on-premise **ID Document Recognition SDK for React Native**. Package: `document-reader-sdk`. **Not Expo Go.** Physical arm64 device.
+
+Android output is **normalized** to the iOS-shaped JSON. Parse it with [Document result JSON](document-result-json.md).
+
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/ID-Document-Recognition-React-Native" %}
 
 ### How to Run
 
-#### 1. Set Up React-Native Development Environment
+{% stepper %}
+{% step %}
+## Install tools
 
-You can refer to React Native [official document](https://reactnative.dev/docs/environment-setup) to setup enviroment.
+Node **18+**, Yarn, React Native environment. Use Yarn as in the repo. **Not Expo Go.**
+{% endstep %}
 
-#### 2. How to run Android App
+{% step %}
+## Clone and install
+
+```bash
+git clone https://github.com/Faceplugin-ltd/ID-Document-Recognition-React-Native.git
+cd ID-Document-Recognition-React-Native
+yarn
+cd example && yarn
+```
+{% endstep %}
+
+{% step %}
+## Place native runtimes
+
+| Platform | File | Example app path | Your own app path |
+| -------- | ---- | ---------------- | ----------------- |
+| Android | `documentreadersdk.aar` | `example/android/libdocsdk/` | `node_modules/document-reader-sdk/android/libs/` |
+| iOS | `docsdk.framework` | `ios/Frameworks/` | `node_modules/document-reader-sdk/ios/Frameworks/` |
+
+- Android Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
+- iOS Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
+{% endstep %}
+
+{% step %}
+## Run on a phone
 
 ```
 yarn
@@ -42,19 +73,41 @@ cd example
 yarn android
 ```
 
-#### 3. How to run the iOS App
+iOS: `cd example/ios && pod install`, then open the workspace. Wait until Home shows Ready.
+{% endstep %}
+{% endstepper %}
 
+Keep demo ids: Android `com.faceplugin.documentreader`, iOS `com.faceplugin.documentreader.app`. Android: `minSdkVersion 24` and `abiFilters 'arm64-v8a'`.
+
+### License
+
+Licenses are **offline** and bound to your `applicationId` / bundle id. Install from GitHub, not npm:
+
+```bash
+yarn add document-reader-sdk@git+https://github.com/Faceplugin-ltd/ID-Document-Recognition-React-Native.git
 ```
-yarn
-cd example
-yarn
-cd ios
-pod install
+
+Rebuild the **native** app after install — a JS reload is not enough.
+
+### Integrate into your own app
+
+```ts
+import {
+  getMachineCode,
+  setActivation,
+  init,
+  recognize,
+  locateDocument,
+  SDK_SUCCESS,
+} from 'document-reader-sdk';
+
+const act = await setActivation('FP1.…');
+if (act === SDK_SUCCESS) await init();
+const locateJson = await locateDocument(imageUri);
+const resultJson = await recognize(frontUri, backUri, 'normal');
 ```
 
-Package: `document-reader-sdk`. **Not Expo Go.** Physical arm64 device.
-
-Android AAR: [Drive](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH) → `android/libs/` (example: `example/android/libdocsdk/`). iOS: [Drive](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q) → `ios/Frameworks/`. Install from GitHub, not npm.
+Permissions: CAMERA + photo library (`READ_MEDIA_IMAGES` / `READ_EXTERNAL_STORAGE` maxSdk 32; `NSCameraUsageDescription` / `NSPhotoLibraryUsageDescription`).
 
 ### APIs
 
@@ -84,11 +137,15 @@ getMachineCode(): Promise<string>
 locateDocument(image: ImageInput): Promise<string>
 ```
 
+**No OCR.** Overlay only.
+
 #### <mark style="color:orange;">recognize:</mark> This API is used to run FullProcess
 
 ```ts
 recognize(front, back?, authenticity?): Promise<string>
 ```
+
+Authenticity: `true` / `false` or `'normal'` / `'none'`.
 
 #### <mark style="color:orange;">documentRecognition:</mark> This API is used to run OCR / MRZ / barcode / image quality only
 
@@ -103,3 +160,5 @@ documentLiveness(front, back?): Promise<string>
 ```
 
 Also: `getLicenseStatus`, `startNewSession`, `deinit`.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

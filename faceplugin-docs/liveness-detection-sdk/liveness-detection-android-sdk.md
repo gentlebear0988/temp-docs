@@ -144,3 +144,38 @@ The demo does **not** enroll. VideoWorker match DB is empty. Use it to keep a li
 ```java
 public static int deinit();
 ```
+
+### Run the demo
+
+1. Place `facelivenessdk.aar` in `libfacesdk/` (see Setup).
+2. Keep `applicationId` **`com.faceplugin.faceliveness`**.
+3. Run on a **physical** phone.
+4. Home tiles: **Liveness**, Settings, About. The demo does **not** enroll people or run 1:N search.
+
+### Screenshots
+
+| Home | Liveness | Settings | About |
+| ---- | -------- | -------- | ----- |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness Android home" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" width="180"/></p> |
+
+### License
+
+Licenses are **offline** and bound to your `applicationId`. Request a new `FP1.…` for **your** id. Use `allowsLiveness()` before Capture.
+
+{% hint style="warning" %}
+`FaceDetectionParam.check_liveness` defaults to **false**. Set it to **true** or you will not get a liveness score.
+{% endhint %}
+
+### Try it (after the demo compiles)
+
+```java
+FaceDetectionParam param = new FaceDetectionParam();
+param.check_liveness = true;
+param.check_liveness_level = 0; // 0 accurate, 1 light
+List<FaceBox> faces = FaceLivenessSDK.faceDetection(bitmap, param);
+if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
+    // Real
+}
+```
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

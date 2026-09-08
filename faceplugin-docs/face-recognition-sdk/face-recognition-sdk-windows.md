@@ -6,7 +6,9 @@ description: >-
 
 # Face Recognition SDK Windows (Recognition + Liveness)
 
-Fully on-premise **combined Face Recognition + Liveness** Windows App. Same HTTP surface as [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk-linux.md). Port **8083**. Gradio **9003**. No Docker.
+Fully on-premise **combined Face Recognition + Liveness** Windows App. Same HTTP surface as [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk-linux.md). Port **8083**. Gradio **9003**. CPU only. **No Docker** on Windows.
+
+One license (application id **1000**), two model packs (`far.fpk` + `fal.fpk`).
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -14,9 +16,39 @@ Fully on-premise **combined Face Recognition + Liveness** Windows App. Same HTTP
 
 ### Setup <a href="#setup" id="setup"></a>
 
-1. Copy the CPU runtime from [Google Drive](https://drive.google.com/drive/folders/1twWrWO-F4lEnyMxBt-UtLTsQToqsQ-Xd) into `lib\cpu\`.
-2. `pip install -r requirements.txt` then `run.bat`.
-3. `GET /api/machinecode` → request `FP1.…` → `POST /api/activate`.
+{% stepper %}
+{% step %}
+## Copy the runtime
+
+Put every file from [Google Drive](https://drive.google.com/drive/folders/1twWrWO-F4lEnyMxBt-UtLTsQToqsQ-Xd) **directly** into `lib\cpu\` (not a nested folder).
+{% endstep %}
+
+{% step %}
+## Run the API
+
+```
+pip install -r requirements.txt
+run.bat
+```
+{% endstep %}
+
+{% step %}
+## Activate
+
+```
+curl -s http://127.0.0.1:8083/api/machinecode
+curl -s -X POST http://127.0.0.1:8083/api/activate ^
+  -H "Content-Type: text/plain" ^
+  --data-binary @license.txt
+```
+{% endstep %}
+{% endstepper %}
+
+License **level** unlocks Recognition only, Liveness only, or both. Check `GET /api/licenseStatus`.
+
+### Try it
+
+Same curl / Postman / Gradio flow as Linux, on `http://127.0.0.1:8083`. Gradio on **9003** (host only). Score **≥ 0.5** → Real.
 
 ### APIs
 
@@ -29,3 +61,5 @@ POST /api/liveness
 ```
 
 Alias: `POST /api/check_liveness`. Python: `sdk.liveness`.
+
+[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
