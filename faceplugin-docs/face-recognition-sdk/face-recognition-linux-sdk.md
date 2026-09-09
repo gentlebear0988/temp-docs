@@ -73,13 +73,7 @@ Control routes (`/api/health`, `/api/machinecode`, `/api/activate`, `/api/licens
 
 ### License
 
-Licenses are **offline** and bound to the machine code. After `GET /api/licenseStatus`:
-
-- **Recognition only** / **Recognition + Liveness** — Detect / Quality / Match
-- **Liveness only** — recognition APIs stay unavailable on this App
-- **Not licensed** — machine code only until you activate
-
-[Request a License & Support](../request-a-license-and-support.md).
+Licenses are **offline**. [Request a License & Support](../request-a-license-and-support.md).
 
 ### Try it
 

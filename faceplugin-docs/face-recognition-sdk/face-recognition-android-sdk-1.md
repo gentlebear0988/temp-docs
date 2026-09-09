@@ -90,7 +90,7 @@ Open `example/ios/FaceRecognitionSdkExample.xcworkspace` in Xcode if you prefer.
 {% endstep %}
 {% endstepper %}
 
-Keep demo ids so the included license works. Android `applicationId` and iOS bundle id are both **`com.faceplugin.facerecognitionsdk`**.
+Keep the demo package name **`com.faceplugin.facerecognitionsdk`** on Android and iOS so the sample key works.
 
 | Requirement | Value |
 | ----------- | ----- |
@@ -115,9 +115,9 @@ Keep demo ids so the included license works. Android `applicationId` and iOS bun
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId` / bundle identifier. The sample key is only for the demo id. Request a new `FP1.…` for **your** id.
+Licenses are **offline**. The sample key is only for the demo app. Request a new `FP1.…` for your own app.
 
-Default thresholds in Settings: identify **0.67**, liveness **0.5**, liveness level `0`, pose **40°**, eye-close **0.5**.
+Default thresholds in Settings: identify **0.67**, liveness **0.5**, pose **40°**, eye-close **0.5**.
 
 [Request a License & Support](../request-a-license-and-support.md).
 
@@ -141,7 +141,7 @@ import {
   SDK_SUCCESS,
 } from 'face-recognition-sdk';
 
-const code = await setActivation('FP1.…'); // bound to YOUR applicationId
+const code = await setActivation('FP1.…');
 if (code === SDK_SUCCESS) {
   await init();
 }
@@ -197,7 +197,7 @@ init(): Promise<number>
 getMachineCode(): Promise<string>
 ```
 
-#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read the license tier
+#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read license status
 
 ```ts
 getLicenseStatus(): Promise<string>

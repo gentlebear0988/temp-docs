@@ -99,6 +99,6 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 
 ### License
 
-Licenses are **offline** and bound to your bundle id. Request a new `FP1.…` for **your** id. Authenticity `"normal"` needs a Liveness-capable license.
+Licenses are **offline**. Request a new `FP1.…` for your own app.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

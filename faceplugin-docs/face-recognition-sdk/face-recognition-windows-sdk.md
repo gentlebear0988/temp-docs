@@ -34,7 +34,7 @@ Same routes as [Face Recognition Linux SDK](face-recognition-linux-sdk.md):
 | -------- | ------- |
 | `GET /api/health` | Process is listening (no license) |
 | `GET /api/machinecode` | Machine code `FPMC1.…` |
-| `GET /api/licenseStatus` | License tier |
+| `GET /api/licenseStatus` | License status |
 | `GET /api/backend` | `"cpu"` |
 | `POST /api/activate` | Activate and `init_sdk()` |
 | `POST /api/detect` | Detect faces |

@@ -49,9 +49,7 @@ Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status code
 +(NSString*)getMachineCode;
 ```
 
-Fingerprint is `SHA256("IOS|" + bundleId)`.
-
-#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read the license tier <a href="#getlicensestatus" id="getlicensestatus"></a>
+#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read license status <a href="#getlicensestatus" id="getlicensestatus"></a>
 
 ```objectivec
 +(NSString*)getLicenseStatus;
@@ -147,7 +145,7 @@ Call **setActivation → initSDK** off the main thread. The engine is **not** co
 
 ### License
 
-Licenses are **offline** and bound to your bundle identifier. The sample key is only for the demo bundle. Request a new `FP1.…` for **your** id. Machine code fingerprint is `SHA256("IOS|" + bundleId)`.
+Licenses are **offline**. The sample key is only for the demo bundle. Request a new `FP1.…` if you change the demo bundle.
 
 Identify default threshold is **0.67**. Liveness demo default is **0.5**.
 

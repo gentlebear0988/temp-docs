@@ -65,15 +65,11 @@ Authenticity / document liveness (license-gated). Full key list: [Document secur
 
 Each group is `{ title, result, checks? }` or `{ title, score }` for pattern percent. Nested checks are omitted when they were not run.
 
-Needs a **Liveness-capable** license. Mobile: pass authenticity `"normal"` into `recognize`. Server: `"Authenticity": "normal"` (Windows also documents `"strict"`). `"none"` skips Security.
+Needs authenticity `"normal"` on `recognize` / `"Authenticity": "normal"` on the server. `"none"` skips Security.
 
 ### Locate JSON (camera overlay only)
 
 `locateDocument` is **not** folded into the recognize result. Expect `score`, `position.corners`, and sometimes `_locateImageWidth` / `_locateImageHeight`. **No OCR** and **no image quality** on this path (`ImageQuality` is `"none"`).
-
-### License status JSON
-
-`getLicenseStatus` / `GET /api/licenseStatus`: `licensed`, `level`, `levelName`, `recognition`, `authenticity`, `label` (for example `"Recognition + Liveness"`). Home and About use `label`.
 
 Flutter, React Native, and Ionic ship typed helpers (`recognizeResult`, `rows`, `summary`, `images`, `securityRows`) so you do not write a 600-line parser.
 

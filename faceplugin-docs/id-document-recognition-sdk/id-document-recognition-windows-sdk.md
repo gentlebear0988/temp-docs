@@ -32,7 +32,7 @@ Same as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md
 | -------- | ------- |
 | `GET /api/health` | Process is listening (no license) |
 | `GET /api/machinecode` | Machine code `FPMC1.…` |
-| `GET /api/licenseStatus` | License tier (`recognition` / `authenticity`) |
+| `GET /api/licenseStatus` | License status |
 | `POST /api/activate` | Activate and `init_sdk()` |
 | `POST /api/documentRecognition` | OCR / MRZ / barcode / image quality only |
 | `POST /api/documentLiveness` | Authenticity only |

@@ -83,16 +83,16 @@ Keep demo ids so the included license works:
 
 | Platform | Id |
 | -------- | -- |
-| Android `applicationId` | `com.faceplugin.facerecognitionsdk` |
-| iOS bundle id | `com.faceplugin.facerecognitionsdk` |
+| Android package name | `com.faceplugin.facerecognitionsdk` |
+| iOS bundle identifier | `com.faceplugin.facerecognitionsdk` |
 
 Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId` / bundle id. The sample key is only for the demo id. Request a new `FP1.…` for **your** id. [Request a License & Support](../request-a-license-and-support.md).
+Licenses are **offline**. The sample key is only for the demo app. Request a new `FP1.…` for your own app. [Request a License & Support](../request-a-license-and-support.md).
 
-Default thresholds in Settings: identify **0.67**, liveness **0.5**, liveness level `0`, pose **40°**, eye-close **0.5**.
+Default thresholds in Settings: identify **0.67**, liveness **0.5**, pose **40°**, eye-close **0.5**.
 
 ### Integrate into your own app
 
@@ -117,7 +117,7 @@ import {
 
 async function activate() {
   const mc = await getMachineCode(); // FPMC1.… — send when requesting a key
-  const act = await setActivation('FP1.…'); // bound to YOUR applicationId
+  const act = await setActivation('FP1.…');
   if (act !== SDK_SUCCESS) throw new Error(await lastLicenseError());
   const initCode = await init();
   if (initCode !== SDK_SUCCESS) throw new Error(`init failed: ${initCode}`);

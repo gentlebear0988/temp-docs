@@ -28,12 +28,10 @@ Fully on-premise **Face Liveness SDK for Android** (presentation-attack detectio
 
 | What | Id |
 | ---- | -- |
-| Android demo (`applicationId`) | `com.faceplugin.faceliveness` |
+| Android demo package name | `com.faceplugin.faceliveness` |
 | Public Java class | `com.faceplugin.facelivenesssdk.FaceLivenessSDK` |
 
-Keep `applicationId` **`com.faceplugin.faceliveness`** for the included license. The class package name is not the license id.
-
-### Code <a href="#setup" id="setup"></a>
+Keep the demo package name **`com.faceplugin.faceliveness`** so the sample key works. ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceLivenessDetection-Android" %}
 
@@ -82,7 +80,7 @@ public static int init(Context context) throws IOException;
 public static String getMachineCode(Context context);
 ```
 
-#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read the license tier <a href="#getlicensestatus" id="getlicensestatus"></a>
+#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read license status <a href="#getlicensestatus" id="getlicensestatus"></a>
 
 ```java
 public static String getLicenseStatus();
@@ -153,7 +151,7 @@ public static int deinit();
 ### Run the demo
 
 1. Place `facelivenessdk.aar` in `libfacesdk/` (see Setup).
-2. Keep `applicationId` **`com.faceplugin.faceliveness`**.
+2. Keep the demo package name **`com.faceplugin.faceliveness`**.
 3. Run on a **physical** phone.
 4. Home tiles: **Liveness**, Settings, About. The demo does **not** enroll people or run 1:N search.
 
@@ -165,7 +163,7 @@ public static int deinit();
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId`. Request a new `FP1.…` for **your** id. Use `allowsLiveness()` before Capture.
+Licenses are **offline**. Request a new `FP1.…` for your own app. Use `allowsLiveness()` before Capture.
 
 {% hint style="warning" %}
 `FaceDetectionParam.check_liveness` defaults to **false**. Set it to **true** or you will not get a liveness score.

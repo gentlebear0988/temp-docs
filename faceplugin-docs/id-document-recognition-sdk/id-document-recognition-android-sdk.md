@@ -80,7 +80,7 @@ public static String getLicenseStatus();
 public static String lastLicenseError();
 ```
 
-JSON fields: `licensed`, `level`, `levelName`, `recognition`, `authenticity`, `label`.
+
 
 #### <mark style="color:orange;">locateDocument:</mark> This API is used to find document corners on a preview frame <a href="#locatedocument" id="locatedocument"></a>
 
@@ -143,7 +143,7 @@ public static String deinit();
 ### Run the demo
 
 1. Place `documentreadersdk.aar` in `libdocsdk/` (not `libfacesdk`).
-2. Keep `applicationId` **`com.faceplugin.documentreader`**.
+2. Keep the demo package name **`com.faceplugin.documentreader`**.
 3. Run on a **physical** phone.
 4. Home: Camera, Gallery, About. Result tabs: OCR / MRZ / barcode, Liveness (security), Images, Raw JSON.
 
@@ -159,13 +159,7 @@ public static String deinit();
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId`. After `getLicenseStatus()`:
-
-- **Recognition + Liveness** — OCR / MRZ / barcode **and** authenticity
-- **Recognition** — OCR / MRZ / barcode; Security stays empty / not checked
-- **Liveness** — authenticity only; OCR stays empty / not checked
-
-Parse the JSON with [Document result JSON](document-result-json.md).
+Licenses are **offline**. Request a new `FP1.…` for your own app. Parse the JSON with [Document result JSON](document-result-json.md).
 
 ### Try it (after the demo compiles)
 

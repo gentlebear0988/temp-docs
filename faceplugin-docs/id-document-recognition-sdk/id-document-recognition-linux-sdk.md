@@ -64,12 +64,6 @@ curl -s -X POST http://127.0.0.1:8082/api/activate \
 
 ### License
 
-After `GET /api/licenseStatus`:
-
-- **Recognition + Liveness** — OCR **and** authenticity
-- **Recognition** — OCR / MRZ / barcode; `security` stays empty / not checked
-- **Liveness** — authenticity only
-
 [Request a License & Support](../request-a-license-and-support.md).
 
 ### Try it

@@ -11,7 +11,7 @@ Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`.
 | What | Id |
 | ---- | -- |
 | iOS demo app (Xcode `PRODUCT_BUNDLE_IDENTIFIER`) | `com.faceplugin.faceliveness.app` |
-| Android demo (`applicationId`) | `com.faceplugin.faceliveness` |
+| Android demo package name | `com.faceplugin.faceliveness` |
 | SDK class / framework | `FaceLivenessSDK` in `facelivenessdk.framework` |
 
 Keep the iOS demo bundle **`com.faceplugin.faceliveness.app`** so the included license works. Request a new `FP1.…` if you change it.
@@ -52,7 +52,7 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 +(NSString*)getMachineCode;
 ```
 
-#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read the license tier <a href="#getlicensestatus" id="getlicensestatus"></a>
+#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read license status <a href="#getlicensestatus" id="getlicensestatus"></a>
 
 ```objectivec
 +(NSString*)getLicenseStatus;

@@ -85,8 +85,8 @@ Keep demo ids so the included license works:
 
 | Platform | Id |
 | -------- | -- |
-| Android `applicationId` | `com.faceplugin.facerecognitionsdk` |
-| iOS bundle id | `com.faceplugin.facerecognition.app` |
+| Android package name | `com.faceplugin.facerecognitionsdk` |
+| iOS bundle identifier | `com.faceplugin.facerecognition.app` |
 
 | Requirement | Value |
 | ----------- | ----- |
@@ -104,9 +104,9 @@ Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId` / bundle identifier. Demo keys live in `example/lib/core/constants/license.dart`. Request a new `FP1.…` for **your** id.
+Licenses are **offline**. Demo keys live in `example/lib/core/constants/license.dart`. Request a new `FP1.…` for your own app.
 
-Default thresholds in the example Settings: identify **0.67**, liveness **0.5**, level `0`, pose **40°**, eye-close **0.5**. You pass these as Dart parameters — change them for your product.
+Default thresholds in the example Settings: identify **0.67**, liveness **0.5**, pose **40°**, eye-close **0.5**. You pass these as Dart parameters — change them for your product.
 
 [Request a License & Support](../request-a-license-and-support.md).
 
@@ -121,14 +121,14 @@ dependencies:
       url: https://github.com/Faceplugin-ltd/FaceRecognition-Flutter.git
 ```
 
-Then copy runtimes (table above), set **your** `applicationId` / iOS bundle id, add camera + photo-library permissions, and request a license for **that** id.
+Then copy runtimes (table above), set your Android package name / iOS bundle identifier, add camera + photo-library permissions, and request a license for your own app.
 
 ```dart
 import 'package:face_recognition_sdk/face_recognition_sdk.dart';
 
 Future<void> activate() async {
   final code = await getMachineCode(); // FPMC1.… — send when requesting a key
-  final act = await setActivation('FP1.…'); // bound to YOUR applicationId / bundle id
+  final act = await setActivation('FP1.…');
   if (act != sdkSuccess) {
     throw StateError(await lastLicenseError());
   }

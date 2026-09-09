@@ -60,15 +60,13 @@ dependencies {
 }
 ```
 
-4. Add camera / gallery permissions in `AndroidManifest.xml`. Call **setActivation → init** on a **background** thread. The demo license is bound to `applicationId` **`com.faceplugin.facerecognitionsdk`**. Request a new `FP1.…` key for **your** application id.
+4. Add camera / gallery permissions in `AndroidManifest.xml`. Call **setActivation → init** on a **background** thread. Keep the demo package name **`com.faceplugin.facerecognitionsdk`**. Request a new `FP1.…` for your own app.
 
 {% hint style="info" %}
 Serialize native calls on one thread. The engine is not concurrent. First `init` unpacks on-device models (a few seconds).
 {% endhint %}
 
 Status codes: **0** Success (`SDK_SUCCESS`), **1** Invalid license, **2** Expired, **3** Not activated, **4** Init failed.
-
-License `level` 0 / 1 / 2: Recognition only · Liveness only · Recognition + Liveness.
 
 ### APIs
 
@@ -78,7 +76,7 @@ License `level` 0 / 1 / 2: Recognition only · Liveness only · Recognition + Li
 public static int setActivation(Context context, String license);
 ```
 
-| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>FP1.…</code>) bound to <code>applicationId</code></li></ul> |
+| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>FP1.…</code>)</li></ul> |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul>                                           |
 
@@ -102,7 +100,7 @@ public static String getMachineCode(Context context);
 | ---------------- | ----------------------------------------------------------------------------------- |
 | **Return value** | Machine code string (for license requests).                                            |
 
-#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read the license tier <a href="#getlicensestatus" id="getlicensestatus"></a>
+#### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read license status <a href="#getlicensestatus" id="getlicensestatus"></a>
 
 ```java
 public static String getLicenseStatus();
@@ -114,7 +112,7 @@ public static boolean isActivated();
 
 | **Input**        | None |
 | ---------------- | ---- |
-| **Return value** | JSON with <code>licensed</code>, <code>level</code>, <code>levelName</code>, <code>recognition</code>, <code>liveness</code>, <code>label</code>. |
+| **Return value** | JSON status string. |
 
 #### <mark style="color:orange;">faceDetection:</mark> This API is used to detect faces <a href="#facedetection" id="facedetection"></a>
 
@@ -257,7 +255,7 @@ public static int deinit();
 3. Run on a **physical** phone (emulator is not recommended for camera / liveness).
 4. Wait until the home status bar disappears. Then **Enroll / Identify / Capture / Attribute** unlock.
 
-Keep `applicationId` **`com.faceplugin.facerecognitionsdk`** for the included demo license.
+Keep the demo package name **`com.faceplugin.facerecognitionsdk`** so the sample key works.
 
 | Demo tile | What it does |
 | --------- | ------------ |
@@ -286,14 +284,7 @@ Keep `applicationId` **`com.faceplugin.facerecognitionsdk`** for the included de
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId`. After `getLicenseStatus()`:
-
-- **Recognition only** — Enroll / Identify / Attribute
-- **Liveness only** — Capture
-- **Recognition + Liveness** — all four tiles
-- **Not licensed** — tiles stay locked until you activate
-
-Send your **applicationId** (mobile) to Faceplugin. [Request a License & Support](../request-a-license-and-support.md).
+Licenses are **offline**. Keep the demo package name so the sample key works. For your own app, [request a license](../request-a-license-and-support.md).
 
 ### Try it (after the demo compiles)
 
@@ -323,7 +314,7 @@ You need `libfacesdk/` (the AAR) and `FaceRecognitionSDK`. You do **not** need t
 1. Copy `libfacesdk` into your project root and put `facerecognitionsdk.aar` inside it.
 2. Wire Gradle as in Setup (`minSdk 24`, `abiFilters`, `useLegacyPackaging`).
 3. Add CAMERA and photo-library permissions.
-4. Request `FP1.…` for **your** `applicationId`.
+4. Request `FP1.…` for your own app.
 5. Optional: copy `app/.../kit/` (`FaceRecognitionClient`) so you do not rewrite threading, CameraX, or VideoWorker.
 
 Typical call order: `setActivation` → `init` → `faceDetection` → `templateExtraction` → store templates in **your** database → `similarityCalculation` or VideoWorker for live 1:N.

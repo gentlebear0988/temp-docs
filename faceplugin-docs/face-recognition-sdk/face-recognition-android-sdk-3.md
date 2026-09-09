@@ -26,7 +26,7 @@ layout:
 
 Fully on-premise **Face Recognition SDK for Ionic Cordova**. Plugin folder: `FacePlugin/`. Plugin id: `face-recognition-cordova`. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projects.
 
-Demo application id: **`com.faceplugin.facerecognitionsdk`**.
+Demo package name: **`com.faceplugin.facerecognitionsdk`**.
 
 ### Code <a href="#setup" id="setup"></a>
 

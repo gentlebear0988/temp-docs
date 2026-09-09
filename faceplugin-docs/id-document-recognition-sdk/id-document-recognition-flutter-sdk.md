@@ -76,7 +76,7 @@ Physical phone. Keep Android `com.faceplugin.documentreader`, iOS `com.faceplugi
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId` / bundle id. Request a new `FP1.…` for **your** id.
+Licenses are **offline**. Request a new `FP1.…` for your own app.
 
 ### Integrate into your own app
 

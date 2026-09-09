@@ -10,7 +10,7 @@ description: >-
 
 Introducing our **ID Document Liveness SDK**, a **cross-platform, on-premise solution** designed for document anti-spoofing. It checks whether the image in front of you is a **physical ID** or an attack: a screen replay, a printout, a digitally created page, or a substituted portrait.
 
-This product does **not** read fields. OCR, MRZ, and barcodes are turned off. For **fields plus authenticity** in one engine, use [ID Document Recognition SDK](../id-document-recognition-sdk/) with a Liveness-capable license.
+This product does **not** read fields. OCR, MRZ, and barcodes are turned off. For **fields plus authenticity** in one engine, use [ID Document Recognition SDK](../id-document-recognition-sdk/).
 
 Today the public App is **Linux / Docker** (HTTP port **8086**).
 

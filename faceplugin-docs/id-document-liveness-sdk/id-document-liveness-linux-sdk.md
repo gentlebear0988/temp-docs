@@ -33,7 +33,7 @@ Native: put `libDocSDK.so`, `libDocumentEngine.so`, `dcr.fpk` from [Drive](https
 
 Default port **8086**. Gradio demo on **9006** (host only).
 
-Need OCR as well? Use [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) with a Liveness-capable license.
+Need OCR as well? Use [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md).
 
 ### APIs
 

@@ -81,7 +81,7 @@ Keep demo ids: Android `com.faceplugin.documentreader`, iOS `com.faceplugin.docu
 
 ### License
 
-Licenses are **offline** and bound to your `applicationId` / bundle id. Install from GitHub, not npm:
+Licenses are **offline**. Install from GitHub, not npm:
 
 ```bash
 yarn add document-reader-sdk@git+https://github.com/Faceplugin-ltd/ID-Document-Recognition-React-Native.git
