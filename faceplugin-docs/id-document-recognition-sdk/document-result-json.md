@@ -61,7 +61,7 @@ Authenticity / document liveness (license-gated). Full key list: [Document secur
 | --- | ------- |
 | `overall` | Rolled-up authenticity (`success` / `fail` / `notChecked`) |
 | `label` | Human-readable status |
-| `pages[]` | Per-page groups (`pageIndex`, `overall`, `label`, plus check keys such as `uvLuminescence`, `hologramIntegrity`) |
+| `pages[]` | Per-page groups (`pageIndex`, `overall`, `label`, plus RGB check keys such as `photoOriginAnalysis`, `hologramIntegrity`) |
 
 Each group is `{ title, result, checks? }` or `{ title, score }` for pattern percent. Nested checks are omitted when they were not run.
 
