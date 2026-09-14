@@ -107,8 +107,6 @@ GET /api/machinecode
 
 Also: `GET /api/health` (no license), `GET /api/licenseStatus`, `GET /api/backend` (`"cpu"`).
 
-<figure><img src="../.gitbook/assets/face-liveness-linux-get-machinecode.png" alt="Faceplugin Face Liveness Linux SDK GET /api/machinecode FPMC1"><figcaption><p>Call <code>GET /api/machinecode</code> to get the machine code (<code>FPMC1.…</code>)</p></figcaption></figure>
-
 #### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK <a href="#initsdk" id="initsdk"></a>
 
 ```http
@@ -123,8 +121,6 @@ JSON `{"license":"FP1.…"}` and a license file body are also accepted.
 | **Input**        | License key or file. |
 | ---------------- | -------------------- |
 | **Return value** | Envelope. Success: <code>code</code> 0, <code>"Successfully activated"</code>. On success the App also calls <code>init_sdk()</code>. |
-
-<figure><img src="../.gitbook/assets/face-liveness-linux-post-activate.png" alt="Faceplugin Face Liveness Linux SDK POST /api/activate"><figcaption><p>Call <code>POST /api/activate</code> to activate the SDK</p></figcaption></figure>
 
 #### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake <a href="#facedetection" id="facedetection"></a>
 
@@ -146,8 +142,6 @@ Example:
 ```json
 { "score": 0.72, "result": "Real", "pass": true }
 ```
-
-<figure><img src="../.gitbook/assets/face-liveness-linux-post-liveness.png" alt="Faceplugin Face Liveness Linux SDK POST /api/liveness Real or Spoof"><figcaption><p>Call <code>POST /api/liveness</code> to determine if the face is real or spoof</p></figcaption></figure>
 
 Python:
 
