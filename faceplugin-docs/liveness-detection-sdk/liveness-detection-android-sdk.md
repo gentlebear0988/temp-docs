@@ -1,6 +1,6 @@
 ---
 description: >-
-  Faceplugin Liveness Detection Android SDK. On-premise PAD against photos, screens, masks,
+  Faceplugin Face Liveness Detection Android SDK. On-premise PAD against photos, screens, masks,
   and deepfakes. AAR, setActivation, init, faceDetection, detect.
 layout:
   width: default
@@ -22,7 +22,7 @@ layout:
     visible: true
 ---
 
-# Liveness Detection Android SDK
+# Face Liveness Detection Android SDK
 
 Fully on-premise **Face Liveness SDK for Android** (presentation-attack detection). The demo does not enroll people or run 1:N search. It scores whether the face is real.
 
@@ -183,7 +183,7 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 }
 ```
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -193,7 +193,7 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 
 ### Related documentation
 
-* [Faceplugin Liveness Detection Mobile SDK](mobile-sdk.md) · [iOS](liveness-detection-ios-sdk.md)
+* [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [iOS](liveness-detection-ios-sdk.md)
 * [Face Recognition Android SDK](../face-recognition-sdk/face-recognition-android-sdk.md)
 * [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

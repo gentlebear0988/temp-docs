@@ -4,11 +4,11 @@ description: >-
   passive liveness for Android, iOS, Windows, and Linux Docker. POST /api/liveness.
 ---
 
-# Liveness Detection SDK
+# Face Liveness Detection SDK
 
 ### Overview
 
-**Faceplugin Liveness Detection SDK** is an on-premise **face anti-spoofing** / presentation-attack detection (PAD) engine. It answers: is a **live person** in front of the camera, or a printout, phone screen, 3D mask, or deepfake-style video?
+**Faceplugin Face Liveness Detection SDK** is an on-premise **face anti-spoofing** / presentation-attack detection (PAD) engine. It answers: is a **live person** in front of the camera, or a printout, phone screen, 3D mask, or deepfake-style video?
 
 This product is **iBeta Level 2 class** **passive** PAD. The shipping Apps do not require a smile / turn-head challenge. That is **not** a separate “active liveness” SKU. Optional active prompts exist on some Face Recognition Identify flows, not on this App.
 

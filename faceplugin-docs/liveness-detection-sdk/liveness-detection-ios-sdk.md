@@ -1,10 +1,10 @@
 ---
 description: >-
-  Faceplugin Liveness Detection iOS SDK. On-premise PAD against photos, screens, masks, and
+  Faceplugin Face Liveness Detection iOS SDK. On-premise PAD against photos, screens, masks, and
   deepfakes. Xcode frameworks, setActivation, initSDK, detectImage.
 ---
 
-# Liveness Detection iOS SDK
+# Face Liveness Detection iOS SDK
 
 Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`.
 
@@ -105,7 +105,7 @@ Sample demo UI from `faceplugin-assets` (`face-liveness/mobile/`). Not a dedicat
 
 Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thread.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -115,7 +115,7 @@ Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thre
 
 ### Related documentation
 
-* [Faceplugin Liveness Detection Mobile SDK](mobile-sdk.md) · [Android](liveness-detection-android-sdk.md)
+* [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [Android](liveness-detection-android-sdk.md)
 * [Face Recognition iOS SDK](../face-recognition-sdk/face-recognition-ios-sdk.md)
 * [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

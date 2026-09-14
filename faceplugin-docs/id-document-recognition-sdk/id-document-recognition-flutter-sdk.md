@@ -157,7 +157,7 @@ Future<String> documentLiveness(ImageInput front, [ImageInput? back])
 
 Also: `getLicenseStatus`, `startNewSession`, `recognizeResult` (typed `DocResult`), `deinit`.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 

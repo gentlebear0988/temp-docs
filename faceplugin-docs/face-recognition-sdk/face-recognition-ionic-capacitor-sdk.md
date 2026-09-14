@@ -190,7 +190,7 @@ stopVideoWorker()
 
 Optional session helpers in the example: `IdentifySession`, `CaptureSession`.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 

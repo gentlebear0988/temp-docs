@@ -64,7 +64,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
   -d "{\"image\":\"$IMG\"}"
 ```
 
-Score **≥ 0.5** is Real / pass. JPEG only. [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md).
+Score **≥ 0.5** is Real / pass. JPEG only. [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md).
 {% endtab %}
 
 {% tab title="ID Document" %}

@@ -93,7 +93,7 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 
 **Gradio (host only):** port **9006**. There is **no** `documentRecognition` / `documentProcess` on this App — authenticity only. Security keys: [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md).
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -105,6 +105,6 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 
 * [Faceplugin ID Document Liveness Server SDK](server-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) (OCR + optional authenticity)
-* [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (face PAD)
+* [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (face PAD)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

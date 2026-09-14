@@ -12,7 +12,7 @@ A library that detects faces, extracts a template (embedding), and compares temp
 
 ## What is passive liveness detection?
 
-The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Liveness Detection SDK](../liveness-detection-sdk/) is **passive PAD** (iBeta Level 2 **class** wording in these docs — not a claim of a named iBeta certificate unless you have one on file).
+The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/) is **passive PAD** (iBeta Level 2 **class** wording in these docs — not a claim of a named iBeta certificate unless you have one on file).
 
 ## What is the difference between active and passive liveness?
 

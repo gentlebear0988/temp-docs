@@ -73,7 +73,7 @@ Needs authenticity `"normal"` on `recognize` / `"Authenticity": "normal"` on the
 
 Flutter, React Native, and Ionic ship typed helpers (`recognizeResult`, `rows`, `summary`, `images`, `securityRows`) so you do not write a 600-line parser.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 

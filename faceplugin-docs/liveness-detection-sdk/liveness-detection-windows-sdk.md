@@ -1,14 +1,14 @@
 ---
 description: >-
-  Faceplugin Liveness Detection Windows SDK. Fully on-premise PAD HTTP API on port 8084.
+  Faceplugin Face Liveness Detection Windows SDK. Fully on-premise PAD HTTP API on port 8084.
   POST /api/liveness. No Docker.
 ---
 
-# Liveness Detection Windows SDK
+# Face Liveness Detection Windows SDK
 
 Fully on-premise **Face Liveness HTTP API for Windows**. Default port **8084**. Gradio **9004**. No Docker on Windows.
 
-Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md). `POST /api/check_liveness` is an alias of `/api/liveness`.
+Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Same HTTP API as [Face Liveness Detection Linux SDK](liveness-detection-linux-sdk.md). `POST /api/check_liveness` is an alias of `/api/liveness`.
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -114,7 +114,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 
 **Gradio (host only):** `DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python demo.py`.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -124,7 +124,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 
 ### Related documentation
 
-* [Faceplugin Liveness Detection Server SDK](server-sdk.md) · [Linux](liveness-detection-linux-sdk.md)
+* [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Linux](liveness-detection-linux-sdk.md)
 * [Face Recognition Windows SDK](../face-recognition-sdk/face-recognition-windows-sdk.md)
 * [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

@@ -4,7 +4,7 @@ description: >-
   iOS. Passive liveness against photos, screens, 3D masks, and deepfakes.
 ---
 
-# Faceplugin Liveness Detection Mobile SDK
+# Faceplugin Face Liveness Detection Mobile SDK
 
 Standalone presentation-attack detection on Android and iOS. The demo scores whether the face is **real**. It does not enroll people or run 1:N search.
 
@@ -31,7 +31,7 @@ flowchart LR
 
 ### Related documentation
 
-* [Faceplugin Liveness Detection Server SDK](server-sdk.md) · [Liveness Detection SDK](README.md)
+* [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Face Liveness Detection SDK](README.md)
 * [Face Recognition Mobile SDK](../face-recognition-sdk/mobile-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

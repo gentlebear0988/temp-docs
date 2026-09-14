@@ -4,7 +4,7 @@ description: >-
   /api/liveness on port 8084. Score 0.5 or higher is Real.
 ---
 
-# Liveness Detection Linux SDK
+# Face Liveness Detection Linux SDK
 
 Fully on-premise **Face Liveness HTTP API for Linux / Docker**. Image: `faceplugin/face-liveness`. Default port **8084**.
 
@@ -176,7 +176,7 @@ DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python3 demo.py
 
 Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio in production.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -186,7 +186,7 @@ Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio 
 
 ### Related documentation
 
-* [Faceplugin Liveness Detection Server SDK](server-sdk.md) · [Windows](liveness-detection-windows-sdk.md)
+* [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Windows](liveness-detection-windows-sdk.md)
 * [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 * [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md)

@@ -1,18 +1,16 @@
 ---
 description: >-
-  Faceplugin docs resources. Choose a product, try-it curl, FAQ, troubleshooting, status codes,
-  SDK comparison, and changelog for on-premise Face Recognition, Liveness, and ID Document SDKs.
+  Faceplugin docs resources. FAQ, troubleshooting, status codes, SDK comparison, and changelog
+  for on-premise Face Recognition, Face Liveness, and ID Document SDKs.
 ---
 
 # Resources
 
-Technical pages that apply across products: how to pick an SDK, copy-paste `curl`, status codes, FAQ, and vendor comparisons.
+Shared reference pages that apply across products. For setup and real APIs, open a product → **Mobile SDK** or **Server SDK**.
 
-These pages do **not** replace the product → Mobile SDK / Server SDK tree. Start there for setup and real APIs (`setActivation`, `init`, `faceDetection`, `POST /api/liveness`, `documentProcess`).
+New here? Start with [Choose a product](choose-a-product.md) and [Try it](try-it.md) (also linked from the top of the sidebar).
 
-* [Choose a product](choose-a-product.md) — catalog, ports, and eKYC combining
-* [Try it](try-it.md) — health, machinecode, activate, detect, liveness, documentProcess
-* [FAQ](faq.md)
+* [FAQ](faq.md) — PAD, offline, Flutter, Docker vs host `FPMC1`, thresholds
 * [Troubleshooting](troubleshooting.md)
 * [Status codes](status-codes.md)
 * [SDK comparison](comparisons/README.md)
@@ -20,4 +18,4 @@ These pages do **not** replace the product → Mobile SDK / Server SDK tree. Sta
 
 ### Related documentation
 
-* [Welcome](../README.md) · [Request a License](../request-a-license-and-support.md)
+* [Welcome](../README.md) · [Request a License](../request-a-license-and-support.md) · [Contact us](../contact-us.md)

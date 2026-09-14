@@ -17,7 +17,7 @@ Need a vendor comparison? See [SDK comparison](comparisons/README.md).
 | You need | Use |
 | --- | --- |
 | Match faces 1:1 or 1:N | [Face Recognition SDK](../face-recognition-sdk/) |
-| Face anti-spoofing / PAD only | [Liveness Detection SDK](../liveness-detection-sdk/) |
+| Face anti-spoofing / PAD only | [Face Liveness Detection SDK](../liveness-detection-sdk/) |
 | Recognition and PAD together | Run Face Recognition **and** Face Liveness as two Apps (ports **8083** and **8084**). Do not merge `lib/cpu`. |
 | Passport OCR / ID card verification | [ID Document Recognition SDK](../id-document-recognition-sdk/) |
 | Document authenticity **without** OCR | [ID Document Liveness SDK](../id-document-liveness-sdk/) |

@@ -201,7 +201,7 @@ print(sdk.document_recognition([{"image": base64_front}]))
 print(sdk.document_process(images, options={"response": {"OCR": "normal", "Authenticity": "normal"}}))
 ```
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -213,7 +213,7 @@ print(sdk.document_process(images, options={"response": {"OCR": "normal", "Authe
 
 * [Faceplugin ID Document Recognition Server SDK](server-sdk.md) · [Windows](id-document-recognition-windows-sdk.md)
 * [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md)
-* [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
+* [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

@@ -10,7 +10,7 @@ description: >-
 
 **Faceplugin Face Recognition SDK** is a fully **on-premise, offline** face matching engine. Images are processed on the device or on your server — not in Faceplugin’s cloud. The algorithm is evaluated on **NIST FRVT**.
 
-This is **not** the standalone [Liveness Detection SDK](../liveness-detection-sdk/) (PAD only). It is **not** a passport OCR SDK — use [ID Document Recognition](../id-document-recognition-sdk/) to read IDs. On mobile, Identify already includes **passive 2D liveness**. For PAD without enrollment, use Liveness Detection.
+This is **not** the standalone [Face Liveness Detection SDK](../liveness-detection-sdk/) (PAD only). It is **not** a passport OCR SDK — use [ID Document Recognition](../id-document-recognition-sdk/) to read IDs. On mobile, Identify already includes **passive 2D liveness**. For PAD without enrollment, use Face Liveness Detection.
 
 On **mobile**, demos enroll people, run live **1:N Identify** (VideoWorker), and store templates in **your** database. On **Linux and Windows**, the Face Recognition **API** is still-image HTTP: detect, quality, feature, match, similarity. There is **no** `POST /api/identify` gallery.
 
@@ -48,7 +48,7 @@ Typical call order on **Linux / Windows**: `GET /api/machinecode` → `POST /api
 
 **Can face recognition work completely offline?** Yes. After you activate with an `FP1.…` key, matching does not need the internet.
 
-**Does this SDK include liveness?** Mobile Identify includes passive 2D liveness. Standalone iBeta-class PAD is the [Liveness Detection SDK](../liveness-detection-sdk/). On the server, run Face Recognition (port **8083**) and Face Liveness (port **8084**) as **two** Apps.
+**Does this SDK include liveness?** Mobile Identify includes passive 2D liveness. Standalone iBeta-class PAD is the [Face Liveness Detection SDK](../liveness-detection-sdk/). On the server, run Face Recognition (port **8083**) and Face Liveness (port **8084**) as **two** Apps.
 
 **Is there a Face Recognition API?** Yes — Linux Docker and Windows HTTP on port **8083**. See [Linux](face-recognition-linux-sdk.md) and [Windows](face-recognition-windows-sdk.md).
 
@@ -68,7 +68,7 @@ Typical call order on **Linux / Windows**: `GET /api/machinecode` → `POST /api
 
 ### Related documentation
 
-* [Liveness Detection SDK](../liveness-detection-sdk/) · [ID Document Recognition SDK](../id-document-recognition-sdk/)
+* [Face Liveness Detection SDK](../liveness-detection-sdk/) · [ID Document Recognition SDK](../id-document-recognition-sdk/)
 * [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
 * [Status codes](../resources/status-codes.md)

@@ -8,7 +8,7 @@ description: >-
 
 Fully on-premise **commercial Face Recognition HTTP API for Windows**. Default port **8083**. Gradio **9003**. No Docker on Windows.
 
-This is not the [Open Source Face Recognition Windows SDK](open-source-face-recognition-windows-sdk.md). For PAD, run [Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on port **8084** as a second process.
+This is not the [Open Source Face Recognition Windows SDK](open-source-face-recognition-windows-sdk.md). For PAD, run [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on port **8084** as a second process.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 
@@ -101,7 +101,7 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
 
 **Gradio (host only):** `DEMO_PORT=9003 API_BASE=http://127.0.0.1:8083 python demo.py`. Open [http://127.0.0.1:9003](http://127.0.0.1:9003). You do **not** need Gradio in production.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -112,7 +112,7 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
 ### Related documentation
 
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Linux](face-recognition-linux-sdk.md)
-* [Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
+* [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

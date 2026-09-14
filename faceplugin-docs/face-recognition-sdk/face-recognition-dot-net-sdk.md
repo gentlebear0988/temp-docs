@@ -53,7 +53,7 @@ public int Compare(byte[] rgbData1, int width1, int height1, int stride1, byte[]
 This page follows the public [FaceRecognition-.Net](https://github.com/Faceplugin-ltd/FaceRecognition-.Net) API (`GetHardwareId`, `Activate`, `Init`, `DetectFace`, `Compare`). There is no matching App in the current shipping workspace. If your DLL differs, [contact us](../request-a-license-and-support.md) with the methods you see.
 {% endhint %}
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 
 ### FAQ

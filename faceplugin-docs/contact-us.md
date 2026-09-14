@@ -4,13 +4,13 @@ description: >-
   Request FP1 mobile keys or FPMC1 server machine codes for on-premise SDKs.
 ---
 
-# Contact US
+# Contact us
 
 ### Availability
 
 We are available 24/7 for you.
 
-### Contact US
+### Contact us
 
 * Email : [info@faceplugin.com](mailto:info@faceplugin.com)
 * WhatsApp : [+1 (469) 278-4822](https://wa.me/+14692784822)

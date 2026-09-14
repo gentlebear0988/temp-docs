@@ -29,7 +29,7 @@ Do not paste demo `FP1.…` keys into your production app.
 
 We offer **free integration** with all our biometric solutions, ensuring a smooth and hassle-free setup for your systems. Additionally, our dedicated team provides comprehensive **after-sale and maintenance support** to guarantee optimal performance and reliability over time. Whether it's initial deployment or ongoing assistance, we are committed to supporting your needs every step of the way.
 
-### Contact US
+### Contact us
 
 * Email : [info@faceplugin.com](mailto:info@faceplugin.com)
 * WhatsApp : [+1 (469) 278-4822](https://wa.me/+14692784822)

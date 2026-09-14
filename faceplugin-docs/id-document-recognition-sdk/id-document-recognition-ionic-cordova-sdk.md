@@ -86,7 +86,7 @@ Also: `getMachineCode`, `locateDocument`, `documentRecognition`, `documentLivene
 
 Parse JSON with [Document result JSON](document-result-json.md).
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 

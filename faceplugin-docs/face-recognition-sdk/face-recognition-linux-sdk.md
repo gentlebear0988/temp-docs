@@ -8,7 +8,7 @@ description: >-
 
 Fully on-premise **Face Recognition API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
 
-This product is **recognition only**. For PAD, run [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on port **8084** as a second container.
+This product is **recognition only**. For PAD, run [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on port **8084** as a second container.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 
@@ -220,7 +220,7 @@ print(sdk.match(image1, image2))
 
 Call order: `get_machine_code` → `activate` → `init_sdk` → detect / quality / feature / match / similarity.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -233,7 +233,7 @@ Call order: `get_machine_code` → `activate` → `init_sdk` → detect / qualit
 ### Related documentation
 
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Windows](face-recognition-windows-sdk.md)
-* [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
+* [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

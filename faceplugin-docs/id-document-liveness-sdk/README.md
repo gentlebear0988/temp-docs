@@ -10,7 +10,7 @@ description: >-
 
 **Faceplugin ID Document Liveness SDK** checks whether the image is a **physical ID** or an attack: a screen replay, a printout, a digitally created page, or a substituted portrait.
 
-This product does **not** read fields. OCR, MRZ, and barcodes are turned off. For **passport OCR plus authenticity** in one engine, use [ID Document Recognition](../id-document-recognition-sdk/) with a Liveness-capable license. This is **not** face PAD — use [Liveness Detection](../liveness-detection-sdk/) for selfies.
+This product does **not** read fields. OCR, MRZ, and barcodes are turned off. For **passport OCR plus authenticity** in one engine, use [ID Document Recognition](../id-document-recognition-sdk/) with a Liveness-capable license. This is **not** face PAD — use [Face Liveness Detection](../liveness-detection-sdk/) for selfies.
 
 Today the public App is **Linux / Docker** (HTTP port **8086**). There is no public mobile App.
 
@@ -47,7 +47,7 @@ flowchart LR
 
 ### Related documentation
 
-* [ID Document Recognition SDK](../id-document-recognition-sdk/) · [Liveness Detection SDK](../liveness-detection-sdk/)
+* [ID Document Recognition SDK](../id-document-recognition-sdk/) · [Face Liveness Detection SDK](../liveness-detection-sdk/)
 * [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md)
 * [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

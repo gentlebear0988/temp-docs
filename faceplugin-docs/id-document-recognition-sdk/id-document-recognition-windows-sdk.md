@@ -78,7 +78,7 @@ curl -s -X POST http://127.0.0.1:8082/api/documentProcess \
 
 **Postman:** import `postman/DocumentReader-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8082`. Gradio **9002**. Authenticity names: [Document security check fields](document-security-check-fields.md).
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -90,7 +90,7 @@ curl -s -X POST http://127.0.0.1:8082/api/documentProcess \
 
 * [Faceplugin ID Document Recognition Server SDK](server-sdk.md) · [Linux](id-document-recognition-linux-sdk.md)
 * [Face Recognition Windows SDK](../face-recognition-sdk/face-recognition-windows-sdk.md)
-* [Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
+* [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

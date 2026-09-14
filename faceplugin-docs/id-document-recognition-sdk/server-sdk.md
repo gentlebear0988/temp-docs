@@ -16,7 +16,7 @@ Authenticity **without** OCR is a separate product: [ID Document Liveness SDK](.
 
 For on-device capture, use [Mobile SDK](mobile-sdk.md).
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Windows SDK</strong></td><td>HTTP API on port 8082. No Docker on Windows.</td><td><a href="../.gitbook/assets/windows.png">windows.png</a></td><td><a href="id-document-recognition-windows-sdk.md">id-document-recognition-windows-sdk.md</a></td></tr><tr><td></td><td><strong>Linux SDK</strong></td><td>Docker image faceplugin/document-reader. Same HTTP API as Windows.</td><td><a href="../.gitbook/assets/linux-docker.png">linux-docker.png</a></td><td><a href="id-document-recognition-linux-sdk.md">id-document-recognition-linux-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Linux SDK</strong></td><td>Docker image faceplugin/document-reader. Same HTTP API as Windows.</td><td><a href="../.gitbook/assets/linux-docker.png">linux-docker.png</a></td><td><a href="id-document-recognition-linux-sdk.md">id-document-recognition-linux-sdk.md</a></td></tr><tr><td></td><td><strong>Windows SDK</strong></td><td>HTTP API on port 8082. No Docker on Windows.</td><td><a href="../.gitbook/assets/windows.png">windows.png</a></td><td><a href="id-document-recognition-windows-sdk.md">id-document-recognition-windows-sdk.md</a></td></tr></tbody></table>
 
 ```mermaid
 flowchart LR

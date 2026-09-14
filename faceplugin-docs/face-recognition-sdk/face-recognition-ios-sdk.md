@@ -159,7 +159,7 @@ Typical call order: `setActivation` → `initSDK` → `detectImage` / `extractFe
 
 Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFeature1:feature2:`, VideoWorker. There is **no** Objective-C `faceDetection:` returning `FaceBox` on this framework.
 
-[Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+[Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
 ### FAQ
 
@@ -172,7 +172,7 @@ Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFea
 ### Related documentation
 
 * [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Android](face-recognition-android-sdk.md)
-* [Liveness Detection iOS SDK](../liveness-detection-sdk/liveness-detection-ios-sdk.md)
+* [Face Liveness Detection iOS SDK](../liveness-detection-sdk/liveness-detection-ios-sdk.md)
 * [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
