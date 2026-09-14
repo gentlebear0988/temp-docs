@@ -15,7 +15,7 @@ Completely Free and Open Source Face recognition Linux SDK
 The world's 1st **Completely Free** and **Open Source** **Face Recognition SDK** for developers to integrate face recognition capabilities into applications. Supports real-time, high-accuracy face recognition with deep learning models.\
 This is **on-premise face recognition SDK** which means everything is processed in your server and **NO** data leaves the machine.\
 \
-**Please contact us if you need the SDK with higher accuracy.**
+**Please contact us if you need the SDK with higher accuracy** — that is the commercial [Face Recognition Linux SDK](face-recognition-linux-sdk.md).
 
 ### Setup <a href="#setup" id="setup"></a>
 

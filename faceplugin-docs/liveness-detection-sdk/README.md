@@ -17,7 +17,15 @@ Our SDK is **iBeta Level 2 compliant**, adhering to the highest standards of liv
 * **3D models**
 * **Deepfakes**
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Android SDK</strong></td><td></td><td><a href="../.gitbook/assets/android.png">android.png</a></td><td><a href="liveness-detection-android-sdk.md">liveness-detection-android-sdk.md</a></td></tr><tr><td></td><td><strong>iOS SDK</strong></td><td></td><td><a href="../.gitbook/assets/apple-logo-3-300x300.png">apple-logo-3-300x300.png</a></td><td><a href="liveness-detection-ios-sdk.md">liveness-detection-ios-sdk.md</a></td></tr><tr><td></td><td>Linux SDK</td><td></td><td><a href="../.gitbook/assets/linux_PNG1 (1).png">linux_PNG1 (1).png</a></td><td><a href="liveness-detection-linux-sdk.md">liveness-detection-linux-sdk.md</a></td></tr></tbody></table>
+**Mobile** apps run a live camera (VideoWorker plus `faceDetection`). **Linux and Windows** score one RGB JPEG over HTTP (`POST /api/liveness`). Score **0.5 or higher** is treated as Real / pass.
+
+This SDK is **standalone**. If you already use Face Recognition Identify on mobile, that flow already includes **passive 2D liveness**. Choose this product when you need PAD **without** enrollment or 1:N search.
+
+### Platforms
+
+Pick **Mobile SDK** or **Server SDK**, then the platform page.
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android and iOS. Live camera PAD.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker. JPEG over HTTP on port 8084.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
 
 ### Usecases
 
@@ -29,5 +37,3 @@ Our SDK is **iBeta Level 2 compliant**, adhering to the highest standards of liv
 * [x] E-Commerce & Retail
 * [x] Gaming & Entertainment
 * [x] Fraud Prevention
-
-###

@@ -12,6 +12,8 @@ Discover our cutting-edge **ID Document Recognition SDK**, a **cross-platform, o
 
 All processing stays on the device or in your own server — **NO** data leaves your machine.
 
+With a **Liveness-capable license**, the same engine can run **document authenticity**. If you only need authenticity and not OCR, use the dedicated [ID Document Liveness SDK](../id-document-liveness-sdk/).
+
 ### Features
 
 * [x] ID card, passport, and driver license recognition
@@ -23,7 +25,11 @@ All processing stays on the device or in your own server — **NO** data leaves 
 * [x] Authenticity / document liveness (when licensed)
 * [x] Fully On-Premise
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Android SDK</strong></td><td></td><td><a href="../.gitbook/assets/android.png">android.png</a></td><td><a href="id-document-recognition-android-sdk.md">id-document-recognition-android-sdk.md</a></td></tr><tr><td></td><td><strong>iOS SDK</strong></td><td></td><td><a href="../.gitbook/assets/apple-logo-3-300x300.png">apple-logo-3-300x300.png</a></td><td><a href="id-document-recognition-ios-sdk.md">id-document-recognition-ios-sdk.md</a></td></tr><tr><td></td><td>Windows SDK</td><td></td><td></td><td><a href="id-document-recognition-windows-sdk.md">id-document-recognition-windows-sdk.md</a></td></tr><tr><td></td><td>Linux SDK</td><td></td><td><a href="../.gitbook/assets/linux_PNG1 (1).png">linux_PNG1 (1).png</a></td><td><a href="id-document-recognition-linux-sdk.md">id-document-recognition-linux-sdk.md</a></td></tr></tbody></table>
+### Platforms
+
+Pick **Mobile SDK** or **Server SDK**, then the platform page.
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker HTTP API on port 8082.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
 
 Every platform returns the same result idea. Start with [Document result JSON](document-result-json.md), then [Document security check fields](document-security-check-fields.md) when authenticity is on.
 

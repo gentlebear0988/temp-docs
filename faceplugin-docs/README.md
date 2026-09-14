@@ -45,7 +45,7 @@ This guide will walk you through the features, installation, usage, and integrat
 ### How to use these docs
 
 1. Open the product that matches what you licensed (Face Recognition, Liveness, ID Document, or Document Liveness).
-2. Open the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
+2. Open **Mobile SDK** or **Server SDK**, then the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
 3. Follow **Setup** / **How to run** to place the Drive runtime and start the **demo**.
 4. Copy the **machine code** (`FPMC1.…`) if you run a server SDK, then [request a license](request-a-license-and-support.md).
 5. Use **Try it** / **APIs** to call the same engine from your app. Store templates and document JSON in **your** database.

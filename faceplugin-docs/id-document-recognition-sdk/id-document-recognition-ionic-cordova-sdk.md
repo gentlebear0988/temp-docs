@@ -1,5 +1,7 @@
 ---
-description: ID Document Recognition Ionic Cordova SDK
+description: >-
+  Faceplugin ID Document Recognition Ionic Cordova SDK. Legacy DocumentReaderPlugin
+  layout. Prefer Capacitor for new ID scanning apps.
 layout:
   width: default
   title:
@@ -22,6 +24,8 @@ layout:
 
 # ID Document Recognition Ionic Cordova SDK
 
+Use this guide only if you already have a **Cordova** Ionic app. The native engine matches Capacitor. New projects should use [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md).
+
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/ID-Document-Recognition-Ionic-Cordova" %}
@@ -30,7 +34,21 @@ layout:
 
 ### ✅ Setup Environment
 
-Install Node.js, Ionic CLI, and Cordova as on the Face Recognition Cordova page.
+Install Node.js, Ionic CLI, and Cordova. Physical device recommended (`ionic serve` cannot load the engine).
+
+1. Place `documentreadersdk.aar` at `DocumentReaderPlugin/src/android/documentreadersdk.aar`.
+2. Place `docsdk.framework` at `DocumentReaderPlugin/src/ios/Frameworks/docsdk.framework`.
+3. Run:
+
+```bash
+npm install
+npm run setup:android
+npm run android
+```
+
+Gradle is bootstrapped via `scripts/with-gradle.js`. iOS: put your Apple Team ID in root `build.json`. Physical iPhone; `docsdk` is device arm64.
+
+You can also add the plugin from a local path:
 
 ```bash
 ionic cordova plugin add ./DocumentReaderPlugin
@@ -38,11 +56,13 @@ ionic cordova build android
 ionic cordova run android
 ```
 
-Drive: [Android](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH) · [iOS](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q). Prefer [Capacitor](id-document-recognition-ionic-capacitor-sdk.md) for new projects.
+Drive: [Android](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH) · [iOS](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q).
+
+The Android demo `FP1.…` string in this repo can differ from Capacitor / React Native / Flutter; it is still bound to `com.faceplugin.documentreader`.
 
 ### APIs
 
-Same activate → init → locate / recognize / documentRecognition / documentLiveness sequence as the other mobile Document Reader Apps. Status codes **0**–**4**.
+Same activate → init → locate / recognize / documentRecognition / documentLiveness sequence as the other mobile Document Reader Apps. Status codes **0**–**4**. Native camera helpers: `startLivePreview` / `takeLiveSnapshot` / `stopLivePreview`. Plugin folder: `DocumentReaderPlugin/`.
 
 #### <mark style="color:orange;">setActivation:</mark> This API is used to activate the SDK
 
@@ -64,6 +84,6 @@ recognize(front, back?, authenticity?): Promise<string>
 
 Also: `getMachineCode`, `locateDocument`, `documentRecognition`, `documentLiveness`, `getLicenseStatus`, `deinit`.
 
-Place `documentreadersdk.aar` in the Cordova plugin Android libs and `docsdk.framework` in the iOS Frameworks folder. `ionic serve` cannot load the engine. Parse JSON with [Document result JSON](document-result-json.md).
+Parse JSON with [Document result JSON](document-result-json.md).
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

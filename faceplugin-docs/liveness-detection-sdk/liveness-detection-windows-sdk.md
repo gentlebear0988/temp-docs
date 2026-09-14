@@ -6,25 +6,57 @@ description: >-
 
 # Liveness Detection Windows SDK
 
+Fully on-premise **Face Liveness HTTP API for Windows**. Default port **8084**. Gradio **9004**. No Docker on Windows.
+
+Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md). `POST /api/check_liveness` is an alias of `/api/liveness`.
+
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceLivenessDetection-Windows" %}
 
 ### Setup <a href="#setup" id="setup"></a>
 
-1. Copy the runtime from [Google Drive](https://drive.google.com/drive/folders/11xD987eHT00NUGiJZCNYSvwRadi0Nue5) into `lib\cpu\`.
-2. Install and run:
+{% stepper %}
+{% step %}
+## Copy the runtime
+
+Copy the CPU libraries from [Google Drive](https://drive.google.com/drive/folders/11xD987eHT00NUGiJZCNYSvwRadi0Nue5) into `lib\cpu\`.
+{% endstep %}
+
+{% step %}
+## Install and run
 
 ```
 pip install -r requirements.txt
 run.bat
 ```
+{% endstep %}
 
-3. Copy `FPMC1.…` from the terminal or `GET /api/machinecode`, request `FP1.…`, then `POST /api/activate`.
+{% step %}
+## Copy the machine code
 
-No Docker on Windows. API **8084**. Gradio **9004**.
+```
+curl -s http://127.0.0.1:8084/api/machinecode
+```
 
-Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md). `POST /api/check_liveness` is an alias of `/api/liveness`.
+Send `FPMC1.…` to Faceplugin.
+{% endstep %}
+
+{% step %}
+## Activate, then check liveness
+
+```
+curl -s -X POST http://127.0.0.1:8084/api/activate \
+  -H 'Content-Type: text/plain' \
+  --data-binary @license.txt
+
+IMG=$(base64 -w0 face.jpg)
+curl -s -X POST http://127.0.0.1:8084/api/liveness \
+  -H 'Content-Type: application/json' \
+  -d "{\"image\":\"$IMG\"}"
+```
+{% endstep %}
+{% endstepper %}
 
 ### APIs
 
@@ -59,6 +91,8 @@ Content-Type: application/json
 {"image":"<BASE64-JPEG>"}
 ```
 
+File field `image` (alias `file`) is accepted as `multipart/form-data`. Same URL.
+
 | **Input**        | JPEG image (base64 JSON or form-data). |
 | ---------------- | --------------------------------------- |
 | **Return value** | Engine JSON. Score **≥ 0.5** → <code>result</code> Real and <code>pass</code> true. |
@@ -67,11 +101,17 @@ Python: `sdk.get_machine_code()`, `sdk.activate`, `sdk.init_sdk()`, `sdk.livenes
 
 ### Try it
 
-Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md) on port **8084**. Import `postman/FaceLiveness-API.postman_collection.json`. Gradio **9004**. Score **≥ 0.5** → Real.
+```bash
+curl -s http://127.0.0.1:8084/api/health
+IMG=$(base64 -w0 face.jpg)
 
+curl -s -X POST http://127.0.0.1:8084/api/liveness \
+  -H 'Content-Type: application/json' \
+  -d "{\"image\":\"$IMG\"}"
 ```
-pip install -r requirements.txt
-run.bat
-```
+
+**Postman:** import `postman/FaceLiveness-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8084`.
+
+**Gradio (host only):** `DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python demo.py`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

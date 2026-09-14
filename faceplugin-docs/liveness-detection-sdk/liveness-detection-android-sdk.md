@@ -31,7 +31,9 @@ Fully on-premise **Face Liveness SDK for Android** (presentation-attack detectio
 | Android demo package name | `com.faceplugin.faceliveness` |
 | Public Java class | `com.faceplugin.facelivenesssdk.FaceLivenessSDK` |
 
-Keep the demo package name **`com.faceplugin.faceliveness`** so the sample key works. ### Code <a href="#setup" id="setup"></a>
+Keep the demo package name **`com.faceplugin.faceliveness`** so the sample key works.
+
+### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceLivenessDetection-Android" %}
 

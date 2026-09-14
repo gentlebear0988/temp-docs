@@ -6,13 +6,23 @@ description: >-
 
 # Liveness Detection Linux SDK
 
+Fully on-premise **Face Liveness HTTP API for Linux / Docker**. Image: `faceplugin/face-liveness`. Default port **8084**.
+
+Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Score **&lt; 0.5** → Spoof / `pass` false.
+
+Need recognition **and** liveness in one App? Use [Face Recognition SDK Linux (Recognition + Liveness)](../face-recognition-sdk/face-recognition-sdk-linux.md).
+
+All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
+
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceLivenessDetection-Docker" %}
 
 ### Setup <a href="#setup" id="setup"></a>
 
-1. Pull and run the Docker Hub image (no Drive required):
+{% stepper %}
+{% step %}
+## Pull Docker Hub (no Drive)
 
 ```
 sudo docker pull faceplugin/face-liveness:latest
@@ -23,40 +33,69 @@ sudo docker run -d --name faceplugin-face-liveness \
   faceplugin/face-liveness:latest
 ```
 
-2. Confirm it is running (no license needed yet):
+On Docker Desktop (macOS/Windows) omit the `/etc/machine-id` volume.
+{% endstep %}
+
+{% step %}
+## Confirm health (no license yet)
 
 ```
 curl -s http://127.0.0.1:8084/api/health
 ```
+{% endstep %}
 
-3. Get machine code
+{% step %}
+## Copy the machine code
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Call <code>GET /api/machinecode</code> to get the machine code (<code>FPMC1.…</code>)</p></figcaption></figure>
+```
+curl -s http://127.0.0.1:8084/api/machinecode
+```
 
-4. Contact us to get the license according to the machine code.
-5. Activate the server by using the license obtained from us.
+Send `FPMC1.…` to Faceplugin. Docker and local host codes are **different**.
+{% endstep %}
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Call <code>POST /api/activate</code> to activate the SDK</p></figcaption></figure>
+{% step %}
+## Activate
 
-6. Liveness detection using a JPEG image
+Put your key in `license.txt`, then:
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Call <code>POST /api/liveness</code> to determine if the face is real or spoof</p></figcaption></figure>
+```
+curl -s -X POST http://127.0.0.1:8084/api/activate \
+  -H 'Content-Type: text/plain' \
+  --data-binary @license.txt
+```
+{% endstep %}
 
-Native (optional): put `libFaceLivenessSDK.so`, `libfal-eng.so`, `fal.fpk` from [Drive](https://drive.google.com/drive/folders/1rFnw7VASLmA4q8NWenQgszFS8njRGEgt) **directly** in `lib/cpu/`, then `./run.sh`.
+{% step %}
+## Check liveness
 
-Default port **8084**. Gradio demo (`demo.py`) on **9004** (host only).
+```
+IMG=$(base64 -w0 face.jpg)   # macOS: base64 -i face.jpg
+
+curl -s -X POST http://127.0.0.1:8084/api/liveness \
+  -H 'Content-Type: application/json' \
+  -d "{\"image\":\"$IMG\"}"
+```
+{% endstep %}
+{% endstepper %}
+
+**Native (optional):** put `libFaceLivenessSDK.so`, `libfal-eng.so`, `fal.fpk` from [Drive](https://drive.google.com/drive/folders/1rFnw7VASLmA4q8NWenQgszFS8njRGEgt) **directly** in `lib/cpu/`, then `./run.sh`.
+
+Default port **8084**. Gradio demo (`demo.py`) on **9004** (host only). The Docker image is API-only.
 
 `POST /api/check_liveness` is an alias of `/api/liveness`.
+
+{% hint style="info" %}
+Control routes (`/api/health`, `/api/machinecode`, `/api/activate`, `/api/licenseStatus`) return a JSON **envelope**. `POST /api/liveness` returns **engine JSON** as the HTTP body.
+{% endhint %}
+
+### License
+
+Licenses are **offline**. [Request a License & Support](../request-a-license-and-support.md).
 
 ### APIs
 
 #### <mark style="color:orange;">get_machine_code:</mark> This API is used to retrieve the code specific to the server on which this SDK is running <a href="#setactivation" id="setactivation"></a>
-
-```python
-@app.get('/api/machinecode')
-def get_machine_code():
-    return envelope(data={"machinecode": sdk.get_machine_code()})
-```
 
 ```http
 GET /api/machinecode
@@ -68,15 +107,9 @@ GET /api/machinecode
 
 Also: `GET /api/health` (no license), `GET /api/licenseStatus`, `GET /api/backend` (`"cpu"`).
 
-#### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK <a href="#initsdk" id="initsdk"></a>
+<figure><img src="../.gitbook/assets/image (1).png" alt="GET /api/machinecode"><figcaption><p>Call <code>GET /api/machinecode</code> to get the machine code (<code>FPMC1.…</code>)</p></figcaption></figure>
 
-```python
-@app.post('/api/activate')
-def activate_machine():
-    ret = sdk.activate(license)
-    sdk.init_sdk()
-    return envelope(data={"activated": True})
-```
+#### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK <a href="#initsdk" id="initsdk"></a>
 
 ```http
 POST /api/activate
@@ -91,14 +124,9 @@ JSON `{"license":"FP1.…"}` and a license file body are also accepted.
 | ---------------- | -------------------- |
 | **Return value** | Envelope. Success: <code>code</code> 0, <code>"Successfully activated"</code>. On success the App also calls <code>init_sdk()</code>. |
 
-#### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake <a href="#facedetection" id="facedetection"></a>
+<figure><img src="../.gitbook/assets/image (2).png" alt="POST /api/activate"><figcaption><p>Call <code>POST /api/activate</code> to activate the SDK</p></figcaption></figure>
 
-```python
-@app.post('/api/liveness')
-@app.post('/api/check_liveness')
-def check_liveness():
-    return sdk.liveness(base64_jpeg)
-```
+#### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake <a href="#facedetection" id="facedetection"></a>
 
 ```http
 POST /api/liveness
@@ -107,7 +135,7 @@ Content-Type: application/json
 {"image":"<BASE64-JPEG>"}
 ```
 
-File field `image` (alias `file`) is accepted as `multipart/form-data`. Same URL.
+File field `image` (alias `file`) is accepted as `multipart/form-data`. Same URL. Alias: `POST /api/check_liveness`.
 
 | **Input**        | JPEG image (base64 JSON or form-data). A missing <code>image</code> field returns envelope <code>code: -1</code> and <code>"image required"</code>. |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -118,6 +146,8 @@ Example:
 ```json
 { "score": 0.72, "result": "Real", "pass": true }
 ```
+
+<figure><img src="../.gitbook/assets/image (3).png" alt="POST /api/liveness"><figcaption><p>Call <code>POST /api/liveness</code> to determine if the face is real or spoof</p></figcaption></figure>
 
 Python:
 
@@ -141,10 +171,15 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
   -d "{\"image\":\"$IMG\"}"
 ```
 
-**Postman:** import `postman/FaceLiveness-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8084`. **Gradio (host only):** `DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python3 demo.py`.
+**Postman:** import `postman/FaceLiveness-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8084`.
 
-The Docker image is API-only. Control routes return a JSON **envelope**. `POST /api/liveness` returns **engine JSON**. Score **≥ 0.5** → Real / `pass` true.
+**Gradio (host only):**
 
-Need recognition **and** liveness in one App? Use [Face Recognition SDK Linux (Recognition + Liveness)](../face-recognition-sdk/face-recognition-sdk-linux.md).
+```
+pip3 install -r requirements-demo.txt
+DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python3 demo.py
+```
+
+Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio in production.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)

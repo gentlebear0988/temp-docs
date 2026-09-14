@@ -24,7 +24,7 @@ layout:
 
 # Face Recognition Ionic Capacitor SDK
 
-Fully on-premise **Face Recognition SDK for Ionic Capacitor**. Package: `face-recognition-capacitor`. Use this for **new** Ionic apps. Cordova is a [different repo](face-recognition-android-sdk-3.md).
+Fully on-premise **Face Recognition SDK for Ionic Capacitor**. Package: `face-recognition-capacitor`. Use this for **new** Ionic apps. Cordova is a [different repo](face-recognition-ionic-cordova-sdk.md).
 
 `ionic serve` / the browser **cannot** load the engine. Open Android Studio or Xcode and run on a **physical** phone.
 
