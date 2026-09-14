@@ -1,22 +1,38 @@
 ---
 description: >-
-  Faceplugin SDK FAQ. Passive vs active liveness, offline on-premise licensing, Flutter support,
-  Docker vs host machine codes, demo app ids, and match thresholds.
+  Faceplugin SDK FAQ. Passport OCR, ID verification, Face Recognition API, passive vs active
+  liveness, offline licensing, Flutter, Docker machine codes, and thresholds.
 ---
 
 # FAQ
 
+## What can Faceplugin Document Reader do?
+
+On-premise **passport OCR**, **MRZ reading**, ID card and driver license verification, barcode/QR, document type classification (**16,900** templates / **255** countries), and optional document authenticity. See [Document capabilities](../id-document-recognition-sdk/capabilities.md) and [Passport OCR & ID verification](passport-ocr-and-id-verification.md).
+
+## Is Faceplugin a passport OCR SDK / MRZ reader?
+
+Yes. The ID Document Recognition SDK reads passports and MRZ (when the template includes one), plus national IDs and licenses. HTTP API on port **8082**.
+
 ## What is a face recognition SDK?
 
-A library that detects faces, extracts a template (embedding), and compares templates. Faceplugin’s commercial SDK runs **on-premise**. You store templates in **your** database. See [Face Recognition SDK](../face-recognition-sdk/).
+A library that detects faces, extracts a template (embedding), and compares templates. Faceplugin’s commercial SDK runs **on-premise**. You store templates in **your** database. See [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
+
+## Is there a Face Recognition API?
+
+Yes — Linux Docker and Windows HTTP on port **8083** (`/api/detect`, `/match`, `/similarity`). Combined Recognition + Liveness Apps add `/api/liveness` on the same port. Details: [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
 
 ## What is passive liveness detection?
 
-The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/) is **passive PAD** (iBeta Level 2 **class** wording in these docs — not a claim of a named iBeta certificate unless you have one on file).
+The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md) is **passive PAD** (iBeta Level 2 **class** wording in these docs — not a claim of a named iBeta certificate unless you have one on file).
 
 ## What is the difference between active and passive liveness?
 
 **Passive:** no user challenge (Face Liveness Apps, and 2D liveness on Face Recognition Identify). **Active:** challenge demos exist on GitHub as `Active-Liveness-Detection-Android` and `Active-Liveness-Detection-iOS`. They are **not** the Face Liveness App. Face Liveness Linux/Windows is still `POST /api/liveness` on one JPEG.
+
+## Face Recognition liveness vs Face Liveness SDK?
+
+Identify on mobile includes **2D liveness** as part of matching. The Face Liveness product is **PAD only** (no enroll / 1:N). See [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
 
 ## Can face recognition work completely offline?
 
@@ -38,6 +54,10 @@ Yes for Face Recognition and ID Document Recognition (`face_recognition_sdk`, `d
 
 Yes for Face Recognition, Face Liveness, and ID Document Recognition. Physical iPhone; demo bundle ids are listed on each iOS page.
 
+## How many ID document types are supported?
+
+**16,900** templates across **255** countries and territories. Download the [Supported documents PDF](../id-document-recognition-sdk/capabilities.md#document-type-classification--worldwide-coverage).
+
 ## Docker vs host machine code
 
 `GET /api/machinecode` returns `FPMC1.…`. Docker and a native host on the same machine produce **different** codes. License the environment you run in production. See [Request a License](../request-a-license-and-support.md).
@@ -56,9 +76,11 @@ The GitHub repo is small. Native models (AAR + `.fpk` / engine) come from Google
 
 ## Is there a Node.js or C++ App?
 
-Not as a public customer App in this documentation. Server integration is HTTP (`curl` from any language) or Python `sdk.py` on the same host as `lib/cpu/`.
+Document Reader has public Node / Go / C++ HTTP options. Face server integration is primarily HTTP (`curl` from any language) or Python `sdk.py` on the same host as `lib/cpu/`. See [Choose a product](choose-a-product.md).
 
 ### Related documentation
 
 * [Try it](try-it.md) · [Troubleshooting](troubleshooting.md) · [Status codes](status-codes.md)
-* [Choose a product](choose-a-product.md) · [SDK comparison](comparisons/README.md)
+* [Choose a product](choose-a-product.md) · [Passport OCR & ID verification](passport-ocr-and-id-verification.md)
+* [Document capabilities](../id-document-recognition-sdk/capabilities.md) · [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) · [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md)
+* [SDK comparison](comparisons/README.md)

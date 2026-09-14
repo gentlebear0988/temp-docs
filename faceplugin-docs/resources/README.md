@@ -6,15 +6,18 @@ description: >-
 
 # Resources
 
-Shared reference pages that apply across products. For setup and real APIs, open a product → **Mobile SDK** or **Server SDK**.
+Shared reference pages that apply across products. For **what each product can do**, open **Capabilities** under the product hub. For setup and real APIs, open **Mobile SDK** or **Server SDK**.
 
 New here? Start with [Choose a product](choose-a-product.md) and [Try it](try-it.md) (also linked from the top of the sidebar).
 
-* [FAQ](faq.md) — PAD, offline, Flutter, Docker vs host `FPMC1`, thresholds
+* [Passport OCR and ID verification](passport-ocr-and-id-verification.md) — search-intent entry to Document capabilities
+* [FAQ](faq.md) — passport OCR, Face Recognition API, PAD, offline, Flutter, Docker vs host `FPMC1`, thresholds
 * [Troubleshooting](troubleshooting.md)
 * [Status codes](status-codes.md)
 * [SDK comparison](comparisons/README.md)
 * [Changelog](changelog.md)
+
+Capability pages: [Document](../id-document-recognition-sdk/capabilities.md) · [Face Recognition](../face-recognition-sdk/capabilities.md) · [Face Liveness](../liveness-detection-sdk/capabilities.md)
 
 ### Related documentation
 

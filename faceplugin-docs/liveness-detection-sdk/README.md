@@ -1,7 +1,7 @@
 ---
 description: >-
   Faceplugin Face Liveness Detection SDK and anti-spoofing PAD. On-premise iBeta Level 2 class
-  passive liveness for Android, iOS, Windows, and Linux Docker. POST /api/liveness.
+  passive liveness for Android, iOS, Windows, and Linux Docker. POST /api/liveness on port 8084.
 ---
 
 # Face Liveness Detection SDK
@@ -9,6 +9,8 @@ description: >-
 ### Overview
 
 **Faceplugin Face Liveness Detection SDK** is an on-premise **face anti-spoofing** / presentation-attack detection (PAD) engine. It answers: is a **live person** in front of the camera, or a printout, phone screen, 3D mask, or deepfake-style video?
+
+**What it can do:** [Face Liveness Detection capabilities](capabilities.md) — passive PAD, mobile vs server, and when to use it versus Face Recognition Identify.
 
 This product is **iBeta Level 2 class** **passive** PAD. The shipping Apps do not require a smile / turn-head challenge. That is **not** a separate “active liveness” SKU. Optional active prompts exist on some Face Recognition Identify flows, not on this App.
 
@@ -32,13 +34,13 @@ Capable of detecting:
 
 ### Platforms
 
-Pick **Mobile SDK** or **Server SDK**, then the platform page.
+Start with [Capabilities](capabilities.md), then **Mobile SDK** or **Server SDK**.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android and iOS. Live camera PAD.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker. JPEG over HTTP on port 8084.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Passive PAD, API 8084, vs Identify 2D liveness.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android and iOS. Live camera PAD.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker. JPEG over HTTP on port 8084.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
 
 ### FAQ
 
-**What is passive liveness detection?** The engine scores a camera frame or JPEG without a user challenge animation.
+**What is passive liveness detection?** The engine scores a camera frame or JPEG without a user challenge animation. See [Capabilities](capabilities.md).
 
 **What is the difference between this and Face Recognition liveness?** Face Recognition mobile Identify includes 2D liveness as part of matching. This product is PAD only.
 
@@ -57,7 +59,7 @@ Pick **Mobile SDK** or **Server SDK**, then the platform page.
 
 ### Related documentation
 
-* [Face Recognition SDK](../face-recognition-sdk/) · [ID Document Liveness SDK](../id-document-liveness-sdk/)
+* [Capabilities](capabilities.md) · [Face Recognition SDK](../face-recognition-sdk/) · [ID Document Liveness SDK](../id-document-liveness-sdk/)
 * [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
 * [Status codes](../resources/status-codes.md)

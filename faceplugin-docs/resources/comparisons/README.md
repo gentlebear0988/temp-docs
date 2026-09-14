@@ -8,7 +8,9 @@ description: >-
 
 This section compares **Faceplugin** to vendors people often evaluate for on-premise face matching, PAD, and ID reading. Tables use **public vendor documentation**. Where a fact is not stated on that vendor’s site, the cell is **Check vendor**.
 
-Faceplugin facts below match the shipping Apps in these docs: on-premise/offline after `FP1.…`, Android/iOS/Flutter/RN/Ionic/Windows/Linux Docker, **passive** face PAD, passport OCR / ID card APIs, document liveness on Linux, NIST FRVT **evaluated** matching, iBeta Level 2 **class** PAD wording (not a named certificate unless you have one).
+Faceplugin facts below match the shipping Apps in these docs: on-premise/offline after `FP1.…`, Android/iOS/Flutter/RN/Ionic/Windows/Linux Docker, **passive** face PAD, passport OCR / ID card APIs (**16,900** templates / **255** countries — [catalog PDF](../../id-document-recognition-sdk/capabilities.md#document-type-classification--worldwide-coverage)), document liveness on Linux, NIST FRVT **evaluated** matching, iBeta Level 2 **class** PAD wording (not a named certificate unless you have one).
+
+Capability overviews: [Document](../../id-document-recognition-sdk/capabilities.md) · [Face Recognition](../../face-recognition-sdk/capabilities.md) · [Face Liveness](../../liveness-detection-sdk/capabilities.md).
 
 | Page | When to read it |
 | --- | --- |
@@ -18,7 +20,7 @@ Faceplugin facts below match the shipping Apps in these docs: on-premise/offline
 | [Faceplugin vs FaceOnLive](vs-faceonlive.md) | Overlapping on-prem face + ID catalogs |
 | [Faceplugin vs KBY-AI](vs-kby-ai.md) | Overlapping GitHub/Docker face + liveness catalogs |
 
-Then integrate: [Face Recognition Android](../../face-recognition-sdk/face-recognition-android-sdk.md) · [Liveness Linux](../../liveness-detection-sdk/liveness-detection-linux-sdk.md) · [Document Linux](../../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
+Then integrate: [Document capabilities](../../id-document-recognition-sdk/capabilities.md) · [Face Recognition Android](../../face-recognition-sdk/face-recognition-android-sdk.md) · [Liveness Linux](../../liveness-detection-sdk/liveness-detection-linux-sdk.md) · [Document Linux](../../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 
 ### Related documentation
 

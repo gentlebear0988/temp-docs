@@ -35,22 +35,26 @@ layout:
 
 **Faceplugin** builds **on-premise, offline** biometric SDKs. Processing stays on the phone, your Windows/Linux host, or your Docker host. There is no per-call Faceplugin cloud.
 
-* **[Face Recognition SDK](face-recognition-sdk/)** — NIST FRVT evaluated face matching, 1:1 and live 1:N on mobile, Face Recognition API on Linux/Windows.
-* **[Face Liveness Detection SDK](liveness-detection-sdk/)** — iBeta Level 2 class **passive** PAD / face anti-spoofing against photos, screens, 3D masks, and deepfake-style attacks.
-* **[ID Document Recognition SDK](id-document-recognition-sdk/)** — passport OCR, ID card verification, MRZ, barcode, and optional document authenticity.
-* **[ID Document Liveness SDK](id-document-liveness-sdk/)** — document anti-spoofing only (no OCR).
+### What you can build
+
+* **Passport OCR & ID verification** — classify and read **16,900** document templates from **255** countries (MRZ, barcode, optional authenticity). Start: [Document capabilities](id-document-recognition-sdk/capabilities.md) · [Passport OCR guide](resources/passport-ocr-and-id-verification.md)
+* **Face Recognition API & Identify** — offline 1:1 match, mobile 1:N Identify, NIST FRVT evaluated. Start: [Face Recognition capabilities](face-recognition-sdk/capabilities.md)
+* **Face anti-spoofing (PAD)** — passive liveness against photos, screens, 3D masks, deepfake-style attacks. Start: [Face Liveness capabilities](liveness-detection-sdk/capabilities.md)
+* **Document authenticity only** — no OCR. [ID Document Liveness](id-document-liveness-sdk/) (Linux **8086**)
+
+Product hubs: [Face Recognition](face-recognition-sdk/) · [Face Liveness Detection](liveness-detection-sdk/) · [ID Document Recognition](id-document-recognition-sdk/) · [ID Document Liveness](id-document-liveness-sdk/)
 
 This documentation is the **integration** layer: clone a public GitHub demo, add the Drive runtime or pull Docker Hub, activate a license, then call the APIs that repository actually ships.
 
 ### How to use these docs
 
-Pick the product you licensed, then **Mobile SDK** (on-device `setActivation` → `init`) or **Server SDK** (HTTP: `GET /api/machinecode` → `POST /api/activate` → process). Ports: Document **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
-
-1. Open the product that matches what you licensed (Face Recognition, Liveness, ID Document, or Document Liveness).
+1. Read **Capabilities** for the product you need (what it can do).
 2. Open **Mobile SDK** or **Server SDK**, then the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
 3. Follow **Setup** / **How to run** to place the Drive runtime and start the **demo**.
 4. Copy the **machine code** (`FPMC1.…`) if you run a server SDK, then [request a license](request-a-license-and-support.md).
 5. Use [Try it](resources/try-it.md) / **APIs** to call the same engine from your app. Store templates and document JSON in **your** database.
+
+Ports: Document **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
 
 Native binaries are **not** on GitHub (too large). Each platform page links the Google Drive folder and the exact copy path.
 
@@ -64,7 +68,7 @@ After you publish this space, connect the docs domain to **Google Search Console
 
 ### Our Products
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face Recognition SDK</strong></td><td>On-premise face matching, 1:N Identify on mobile, HTTP API on Linux/Windows</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">identify.png</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>Face Liveness Detection SDK</strong></td><td>Passive PAD / anti-spoofing against photos, screens, 3D models, and deepfakes</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png">liveness.png</a></td><td></td><td><a href="liveness-detection-sdk/">liveness-detection-sdk</a></td></tr><tr><td><strong>ID Document Recognition SDK</strong></td><td>Passport OCR, ID card and driver license recognition from 200+ countries</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png">camera.png</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face Recognition SDK</strong></td><td>On-premise face matching, 1:N Identify on mobile, HTTP API on Linux/Windows</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">identify.png</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>Face Liveness Detection SDK</strong></td><td>Passive PAD / anti-spoofing against photos, screens, 3D models, and deepfakes</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png">liveness.png</a></td><td></td><td><a href="liveness-detection-sdk/">liveness-detection-sdk</a></td></tr><tr><td><strong>ID Document Recognition SDK</strong></td><td>Passport OCR, ID verification — 16,900 templates, 255 countries</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png">camera.png</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr></tbody></table>
 
 Also: [ID Document Liveness SDK](id-document-liveness-sdk/) (Linux / Docker authenticity only) · [Palm Recognition SDK](palm-recognition-sdk/).
 

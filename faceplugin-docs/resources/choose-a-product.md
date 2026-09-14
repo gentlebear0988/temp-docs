@@ -16,15 +16,15 @@ Need a vendor comparison? See [SDK comparison](comparisons/README.md).
 
 | You need | Use |
 | --- | --- |
-| Match faces 1:1 or 1:N | [Face Recognition SDK](../face-recognition-sdk/) |
-| Face anti-spoofing / PAD only | [Face Liveness Detection SDK](../liveness-detection-sdk/) |
+| Passport OCR / MRZ / ID card verification | [Document capabilities](../id-document-recognition-sdk/capabilities.md) → [ID Document Recognition SDK](../id-document-recognition-sdk/) |
+| Match faces 1:1 or 1:N / Face Recognition API | [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) → [Face Recognition SDK](../face-recognition-sdk/) |
+| Face anti-spoofing / PAD only | [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md) → [Face Liveness Detection SDK](../liveness-detection-sdk/) |
 | Recognition and PAD together | Prefer [Face Recognition + Liveness Linux / Windows](../face-recognition-sdk/face-recognition-sdk-linux.md) (one App, port **8083**, includes `/api/liveness`). Or run recognition-only **8083** + Face Liveness **8084** as two Apps. Do not merge `lib/cpu`. |
-| Passport OCR / ID card verification | [ID Document Recognition SDK](../id-document-recognition-sdk/) |
 | Document authenticity **without** OCR | [ID Document Liveness SDK](../id-document-liveness-sdk/) |
 
 ## ID Document Recognition
 
-Scan passports, national IDs, and driver licenses on the device or over HTTP. Authenticity (document liveness) is a **license capability** on the same engine, except the dedicated Document Liveness Linux product which does authenticity only.
+Scan passports, national IDs, and driver licenses on the device or over HTTP (**16,900** templates, **255** countries). Authenticity (document liveness) is a **license capability** on the same engine, except the dedicated Document Liveness Linux product which does authenticity only. Capability overview: [Document capabilities](../id-document-recognition-sdk/capabilities.md).
 
 | Platform | Clone | Package / image | Port |
 | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ Scan passports, national IDs, and driver licenses on the device or over HTTP. Au
 
 ## Face Recognition
 
-Detect faces, read attributes, extract templates, and match 1:1. Mobile demos add live **1:N Identify** (VideoWorker) and a local person database. Server APIs today expose still-image detect / quality / feature / match / similarity — not a gallery identify route.
+Detect faces, read attributes, extract templates, and match 1:1. Mobile demos add live **1:N Identify** (VideoWorker) and a local person database. Server APIs today expose still-image detect / quality / feature / match / similarity — not a gallery identify route. Capability overview: [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
 
 | Platform | Clone | Package / image | Port |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ Detect faces, read attributes, extract templates, and match 1:1. Mobile demos ad
 
 ## Face Liveness
 
-Standalone presentation-attack detection (PAD). Mobile uses a live camera plus VideoWorker. The server scores a single RGB JPEG.
+Standalone presentation-attack detection (PAD). Mobile uses a live camera plus VideoWorker. The server scores a single RGB JPEG. Capability overview: [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
 
 | Platform | Clone | Package / image | Port |
 | --- | --- | --- | --- |
