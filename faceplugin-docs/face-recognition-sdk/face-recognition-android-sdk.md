@@ -24,9 +24,6 @@ layout:
 
 # Face Recognition Android SDK
 
-<figure><img src="../.gitbook/assets/diagram-fr-mobile-identify.png" alt="Face Recognition Android SDK on-premise Identify Camera Detect 2D Liveness Embedding"><figcaption><p>FaceRecognition-Android. Java/Kotlin FaceRecognitionSDK.setActivation, init, faceDetection.</p></figcaption></figure>
-
-
 Fully on-premise **Face Recognition SDK for Android**. Detect faces, extract templates you store yourself, match 1:1 or live 1:N, and check passive 2D liveness on the device. Images never leave the phone.
 
 Public class: `com.faceplugin.facerecognitionsdk.FaceRecognitionSDK`. Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
@@ -323,7 +320,6 @@ You need `libfacesdk/` (the AAR) and `FaceRecognitionSDK`. You do **not** need t
 Typical call order: `setActivation` → `init` → `faceDetection` → `templateExtraction` → store templates in **your** database → `similarityCalculation` or VideoWorker for live 1:N.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

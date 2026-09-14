@@ -6,9 +6,6 @@ description: >-
 
 # Faceplugin Liveness Detection Server SDK
 
-<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Faceplugin Face Liveness API POST /api/liveness port 8084 score 0.5 Real"><figcaption><p>FaceLivenessDetection-Windows and FaceLivenessDetection-Docker. One RGB JPEG.</p></figcaption></figure>
-
-
 Score **one RGB JPEG** over HTTP. `POST /api/liveness` (alias `/api/check_liveness`). Score **0.5 or higher** → Real / pass.
 
 Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/liveness`. Default port **8084**.
@@ -31,7 +28,6 @@ flowchart LR
 **What is the Face Liveness API?** `POST /api/liveness` on port **8084**. Score **≥ 0.5** is Real / pass.
 
 **Is this document anti-spoofing?** No. Use [ID Document Liveness](../id-document-liveness-sdk/).
-
 
 ### Related documentation
 

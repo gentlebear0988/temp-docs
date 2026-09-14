@@ -6,9 +6,6 @@ description: >-
 
 # ID Document Liveness Linux SDK
 
-<figure><img src="../.gitbook/assets/diagram-document-liveness.png" alt="ID Document Liveness Linux Docker POST /api/documentLiveness port 8086"><figcaption><p>ID-Document-Liveness-Detection-Docker.</p></figcaption></figure>
-
-
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/ID-Document-Liveness-Detection-Docker" %}
@@ -97,7 +94,6 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 **Gradio (host only):** port **9006**. There is **no** `documentRecognition` / `documentProcess` on this App — authenticity only. Security keys: [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md).
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

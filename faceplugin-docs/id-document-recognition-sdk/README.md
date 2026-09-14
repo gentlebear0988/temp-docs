@@ -8,9 +8,6 @@ description: >-
 
 ### Overview
 
-<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="Faceplugin ID Document Recognition passport OCR: Capture Locate OCR MRZ barcode authenticity JSON documentProcess port 8082"><figcaption><p>Public Apps: ID-Document-Recognition-Android, iOS, Flutter, React Native, Ionic, Windows, Docker.</p></figcaption></figure>
-
-
 **Faceplugin ID Document Recognition SDK** is an on-premise **passport OCR** and **ID card verification** engine. It classifies the document, runs OCR, reads the MRZ, decodes barcodes and QR codes, checks image quality, and crops the portrait and signature.
 
 This is **not** the authenticity-only [ID Document Liveness SDK](../id-document-liveness-sdk/). With a **Liveness-capable license**, the same document engine can also run **document authenticity** (document liveness). It is **not** a face matching SDK — use [Face Recognition](../face-recognition-sdk/) after you have a selfie.

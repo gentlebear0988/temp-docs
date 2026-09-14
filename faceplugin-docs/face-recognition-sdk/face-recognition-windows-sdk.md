@@ -6,9 +6,6 @@ description: >-
 
 # Face Recognition Windows SDK
 
-<figure><img src="../.gitbook/assets/diagram-fr-server-api.png" alt="Face Recognition API Windows POST /api/detect match similarity port 8083"><figcaption><p>FaceRecognition-Windows. No Docker. Same HTTP routes as Linux.</p></figcaption></figure>
-
-
 Fully on-premise **commercial Face Recognition HTTP API for Windows**. Default port **8083**. Gradio **9003**. No Docker on Windows.
 
 This is not the [Open Source Face Recognition Windows SDK](open-source-face-recognition-windows-sdk.md). For PAD, run [Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on port **8084** as a second process.
@@ -105,7 +102,6 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
 **Gradio (host only):** `DEMO_PORT=9003 API_BASE=http://127.0.0.1:8083 python demo.py`. Open [http://127.0.0.1:9003](http://127.0.0.1:9003). You do **not** need Gradio in production.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

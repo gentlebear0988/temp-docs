@@ -6,9 +6,6 @@ description: >-
 
 # Face Recognition Linux SDK
 
-<figure><img src="../.gitbook/assets/diagram-fr-server-api.png" alt="Face Recognition API Linux Docker POST /api/detect match similarity port 8083"><figcaption><p>FaceRecognition-Docker image faceplugin/face-recognition.</p></figcaption></figure>
-
-
 Fully on-premise **Face Recognition API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
 
 This product is **recognition only**. For PAD, run [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on port **8084** as a second container.
@@ -224,7 +221,6 @@ print(sdk.match(image1, image2))
 Call order: `get_machine_code` → `activate` → `init_sdk` → detect / quality / feature / match / similarity.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

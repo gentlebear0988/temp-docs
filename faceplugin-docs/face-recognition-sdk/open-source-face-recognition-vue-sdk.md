@@ -5,9 +5,6 @@ description: >-
 
 # Open Source Face Recognition Vue SDK
 
-<figure><img src="../.gitbook/assets/diagram-browser-oss.png" alt="Open source Face Recognition Vue SDK browser wrapper"><figcaption><p>FaceRecognition-Vue wraps the JavaScript browser SDK.</p></figcaption></figure>
-
-
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-Vue" %}
@@ -95,7 +92,6 @@ npm run dev
     loadFeatureModel()
     extractFeature(session, canvas_id, landmarks)
     ```
-
 
 ### FAQ
 

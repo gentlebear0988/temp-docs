@@ -6,9 +6,6 @@ description: >-
 
 # Faceplugin ID Document Liveness Server SDK
 
-<figure><img src="../.gitbook/assets/diagram-document-liveness.png" alt="Document liveness Linux Docker API port 8086 POST /api/documentLiveness"><figcaption><p>No public mobile App for this product in Faceplugin-ltd GitHub.</p></figcaption></figure>
-
-
 Document authenticity only (screen replay, print, substitution). Optical character recognition (OCR), MRZ, and barcodes are **off**.
 
 Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/documentLiveness`. Default port **8086**.
@@ -30,7 +27,6 @@ flowchart LR
 **Does this read the MRZ?** No. OCR is off. Use [ID Document Recognition](../id-document-recognition-sdk/).
 
 **API?** `POST /api/documentLiveness` on port **8086** after `POST /api/activate`.
-
 
 ### Related documentation
 

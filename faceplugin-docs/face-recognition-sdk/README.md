@@ -8,17 +8,11 @@ description: >-
 
 ### Overview
 
-<figure><img src="../.gitbook/assets/diagram-fr-mobile-identify.png" alt="On-premise Face Recognition Mobile SDK Identify flow: Camera Detect 2D Liveness Embedding Your database Identify 0.67"><figcaption><p>Public mobile Apps (Android, iOS, Flutter, React Native, Ionic): live Identify stores templates in your database. Default match 0.67.</p></figcaption></figure>
-
-
 **Faceplugin Face Recognition SDK** is a fully **on-premise, offline** face matching engine. Images are processed on the device or on your server — not in Faceplugin’s cloud. The algorithm is evaluated on **NIST FRVT**.
 
 This is **not** the standalone [Liveness Detection SDK](../liveness-detection-sdk/) (PAD only). It is **not** a passport OCR SDK — use [ID Document Recognition](../id-document-recognition-sdk/) to read IDs. On mobile, Identify already includes **passive 2D liveness**. For PAD without enrollment, use Liveness Detection.
 
 On **mobile**, demos enroll people, run live **1:N Identify** (VideoWorker), and store templates in **your** database. On **Linux and Windows**, the Face Recognition **API** is still-image HTTP: detect, quality, feature, match, similarity. There is **no** `POST /api/identify` gallery.
-
-<figure><img src="../.gitbook/assets/diagram-fr-server-api.png" alt="Faceplugin Face Recognition API for Linux Docker and Windows: POST /api/detect match similarity on port 8083, no identify gallery"><figcaption><p>Commercial server Apps FaceRecognition-Windows and FaceRecognition-Docker. Port 8083. No server-side 1:N gallery.</p></figcaption></figure>
-
 
 ```mermaid
 flowchart LR

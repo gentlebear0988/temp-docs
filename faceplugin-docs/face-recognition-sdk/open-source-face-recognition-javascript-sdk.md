@@ -5,9 +5,6 @@ description: >-
 
 # Open Source Face Recognition Javascript SDK
 
-<figure><img src="../.gitbook/assets/diagram-browser-oss.png" alt="Open source Face Recognition JavaScript SDK npm faceplugin in the browser"><figcaption><p>FaceRecognition-LivenessDetection-Javascript. Not the commercial AAR.</p></figcaption></figure>
-
-
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-LivenessDetection-Javascript" %}
@@ -83,7 +80,6 @@ npm install faceplugin
     loadFeatureModel()
     extractFeature(session, canvas_id, landmarks)
     ```
-
 
 ### FAQ
 

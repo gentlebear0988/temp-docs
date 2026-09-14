@@ -6,9 +6,6 @@ description: >-
 
 # Palm Recognition SDK
 
-<figure><img src="../.gitbook/assets/diagram-palm-rgb.png" alt="Open-source Palm Recognition compare_two_images RGB camera"><figcaption><p>Public Python sample. Not a Faceplugin Face Recognition App.</p></figcaption></figure>
-
-
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/Palm-Recognition" %}

@@ -6,9 +6,6 @@ description: >-
 
 # ID Document Recognition iOS SDK
 
-<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="ID Document Recognition iOS SDK passport OCR"><figcaption><p>ID-Document-Recognition-iOS.</p></figcaption></figure>
-
-
 Fully on-premise **ID Document Recognition SDK for iOS**. Native class: `DocSDK`. Demo bundle: **`com.faceplugin.documentreader.app`**.
 
 ### Code <a href="#setup" id="setup"></a>
@@ -105,7 +102,6 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 Licenses are **offline**. Request a new `FP1.…` for your own app.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

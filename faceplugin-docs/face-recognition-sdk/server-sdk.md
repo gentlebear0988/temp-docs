@@ -6,9 +6,6 @@ description: >-
 
 # Faceplugin Face Recognition Server SDK
 
-<figure><img src="../.gitbook/assets/diagram-fr-server-api.png" alt="Faceplugin Face Recognition Server SDK HTTP API port 8083 detect match similarity"><figcaption><p>GET /api/machinecode, POST /api/activate, then detect / match / similarity. Image faceplugin/face-recognition on Linux.</p></figcaption></figure>
-
-
 Face Recognition as an HTTP API (or .NET bindings) on **your** machine. Still-image detect, quality, template extract, 1:1 match, and template similarity. There is **no** server-side 1:N gallery (`POST /api/identify` does not exist).
 
 Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/detect` / `match` / `similarity`. Default port **8083**.
@@ -34,7 +31,6 @@ flowchart LR
 **Is there server-side 1:N?** No. There is no `POST /api/identify` gallery. Store templates in **your** database.
 
 **Docker vs Windows?** Same routes. Windows has no Docker; Linux uses `faceplugin/face-recognition`.
-
 
 ### Related documentation
 

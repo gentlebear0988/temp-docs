@@ -6,9 +6,6 @@ description: >-
 
 # Liveness Detection iOS SDK
 
-<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Face Liveness Detection iOS SDK passive PAD"><figcaption><p>FaceLivenessDetection-iOS.</p></figcaption></figure>
-
-
 Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`.
 
 | What | Id |
@@ -109,7 +106,6 @@ Sample demo UI from `faceplugin-assets` (`face-liveness/mobile/`). Not a dedicat
 Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thread.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

@@ -6,9 +6,6 @@ description: >-
 
 # Faceplugin ID Document Recognition Mobile SDK
 
-<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="On-premise passport OCR and ID card verification Mobile SDK recognize documentProcess"><figcaption><p>Camera locate, then recognize / documentProcess. Same JSON on every mobile platform.</p></figcaption></figure>
-
-
 Capture and read identity documents on the device. Camera locate overlay (corners only — no OCR on every frame), then `recognize` / `documentProcess` for OCR, MRZ, barcode, image quality, and optional authenticity.
 
 Every platform returns the same field set: [Document result JSON](document-result-json.md). Authenticity names: [Document security check fields](document-security-check-fields.md).
@@ -30,7 +27,6 @@ flowchart LR
 **Does this do passport OCR on the phone?** Yes. `recognize` / `documentProcess` return OCR, MRZ, barcode, and crops. See [Document result JSON](document-result-json.md).
 
 **Is authenticity included?** Only with a Liveness-capable license. Otherwise use [ID Document Liveness](../id-document-liveness-sdk/).
-
 
 ### Related documentation
 

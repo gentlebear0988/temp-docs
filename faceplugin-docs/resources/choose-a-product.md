@@ -77,9 +77,6 @@ Authenticity / anti-spoofing **only** (no OCR, MRZ, or barcode API). For OCR plu
 
 ## Combining products (eKYC) <a href="#combining-products-ekyc" id="combining-products-ekyc"></a>
 
-<figure><img src="../.gitbook/assets/diagram-ekyc-orchestrate.png" alt="eKYC orchestration of Faceplugin shipping Apps on ports 8082 8086 8084 8083 do not merge lib/cpu"><figcaption><p>There is no single IDV App. You run the public Docker/Windows Apps as separate processes.</p></figcaption></figure>
-
-
 A typical identity (eKYC) flow is:
 
 ```mermaid

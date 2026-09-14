@@ -6,9 +6,6 @@ description: >-
 
 # ID Document Recognition Linux SDK
 
-<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="Document verification API Linux Docker port 8082 documentProcess"><figcaption><p>ID-Document-Recognition-Docker image faceplugin/document-reader.</p></figcaption></figure>
-
-
 Fully on-premise **ID Document Recognition HTTP API for Linux / Docker**. Image: `faceplugin/document-reader`. Default port **8082**. Gradio **9002**.
 
 Reads ID cards, passports, and driver licenses. OCR, MRZ, barcode / QR, image quality, crops, and optional authenticity (document liveness).
@@ -205,7 +202,6 @@ print(sdk.document_process(images, options={"response": {"OCR": "normal", "Authe
 ```
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

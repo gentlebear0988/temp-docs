@@ -8,9 +8,6 @@ description: >-
 
 ### Overview
 
-<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Faceplugin Face Liveness anti-spoofing PAD: print screen 3D mask deepfake, score 0.5 Real, POST /api/liveness port 8084"><figcaption><p>Passive PAD only. Mobile: FaceLivenessDetection-Android / iOS. Server: POST /api/liveness on port 8084.</p></figcaption></figure>
-
-
 **Faceplugin Liveness Detection SDK** is an on-premise **face anti-spoofing** / presentation-attack detection (PAD) engine. It answers: is a **live person** in front of the camera, or a printout, phone screen, 3D mask, or deepfake-style video?
 
 This product is **iBeta Level 2 class** **passive** PAD. The shipping Apps do not require a smile / turn-head challenge. That is **not** a separate “active liveness” SKU. Optional active prompts exist on some Face Recognition Identify flows, not on this App.

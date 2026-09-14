@@ -24,9 +24,6 @@ layout:
 
 # Face Recognition Flutter SDK
 
-<figure><img src="../.gitbook/assets/diagram-plugin-bridge.png" alt="Cross-platform Faceplugin plugin bridge Flutter React Native Ionic to Android AAR and iOS framework engine"><figcaption><p>JS/Dart plugins wrap the same native engines as the Android and iOS Apps.</p></figcaption></figure>
-
-
 Fully on-premise **Face Recognition SDK for Flutter**. Package: `face_recognition_sdk`. Same native engines as the Android and iOS Face Recognition SDKs.
 
 All processing stays on the device. **No** biometric data is sent to Faceplugin cloud.
@@ -221,7 +218,6 @@ Future<void> stopVideoWorker()
 ```
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

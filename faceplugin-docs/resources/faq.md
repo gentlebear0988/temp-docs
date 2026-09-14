@@ -6,9 +6,6 @@ description: >-
 
 # FAQ
 
-<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="What is passive liveness detection Faceplugin PAD score 0.5 POST /api/liveness"><figcaption><p>Face Liveness Apps are passive. Active challenge demos are separate GitHub repos, not this API.</p></figcaption></figure>
-
-
 ## What is a face recognition SDK?
 
 A library that detects faces, extracts a template (embedding), and compares templates. Faceplugin’s commercial SDK runs **on-premise**. You store templates in **your** database. See [Face Recognition SDK](../face-recognition-sdk/).

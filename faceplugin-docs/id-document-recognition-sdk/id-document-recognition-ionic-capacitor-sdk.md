@@ -24,9 +24,6 @@ layout:
 
 # ID Document Recognition Ionic Capacitor SDK
 
-<figure><img src="../.gitbook/assets/diagram-plugin-bridge.png" alt="Cross-platform Faceplugin plugin bridge Flutter React Native Ionic to Android AAR and iOS framework engine"><figcaption><p>JS/Dart plugins wrap the same native engines as the Android and iOS Apps.</p></figcaption></figure>
-
-
 Fully on-premise **ID Document Recognition SDK for Ionic Capacitor**. Package: `document-reader-capacitor`. Prefer this for **new** Ionic apps. Cordova is a [different repo](id-document-recognition-ionic-cordova-sdk.md).
 
 `ionic serve` / the browser **cannot** load the engine. Open Android Studio or Xcode and run on a **physical** phone.
@@ -127,7 +124,6 @@ documentLiveness(front, back?): Promise<string>
 Also: `getLicenseStatus`, `startNewSession`, `startLivePreview` / `takeLiveSnapshot`, `deinit`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

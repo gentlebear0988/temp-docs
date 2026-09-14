@@ -8,10 +8,9 @@ description: >-
 
 Faceplugin licenses are **offline**. After activation, face matching, liveness, and document OCR do **not** need the internet.
 
+In short: **mobile** keys (`FP1.…`) bind to your app id; **server** keys start from a machine code (`FPMC1.…`) from the host or Docker you will run in production.
+
 ### Need a license?
-
-<figure><img src="../.gitbook/assets/diagram-license-fp1-fpmc1.png" alt="Faceplugin offline license: mobile FP1 app id and server FPMC1 GET /api/machinecode POST /api/activate"><figcaption><p>Docker and host machine codes differ. License the environment you run in production.</p></figcaption></figure>
-
 
 * **Mobile SDK:** contact us via WhatsApp, Telegram, or email. Demo `FP1.…` keys are bound to the **sample application id / bundle id** on each platform page. Request a new `FP1.…` if you use your own app.
 * **Server SDK (Linux / Windows / Docker):** start the API once, copy `FPMC1.…` from logs or `GET /api/machinecode`, and send that code. Docker and a native host have **different** machine codes. Use the code from the environment you will run in production.

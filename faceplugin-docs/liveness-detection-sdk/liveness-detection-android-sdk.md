@@ -24,9 +24,6 @@ layout:
 
 # Liveness Detection Android SDK
 
-<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Face Liveness Detection Android SDK passive PAD"><figcaption><p>FaceLivenessDetection-Android.</p></figcaption></figure>
-
-
 Fully on-premise **Face Liveness SDK for Android** (presentation-attack detection). The demo does not enroll people or run 1:N search. It scores whether the face is real.
 
 | What | Id |
@@ -187,7 +184,6 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 ```
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

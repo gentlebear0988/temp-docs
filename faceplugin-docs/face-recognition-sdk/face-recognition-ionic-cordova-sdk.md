@@ -24,9 +24,6 @@ layout:
 
 # Face Recognition Ionic-Cordova SDK
 
-<figure><img src="../.gitbook/assets/diagram-plugin-bridge.png" alt="Cross-platform Faceplugin plugin bridge Flutter React Native Ionic to Android AAR and iOS framework engine"><figcaption><p>JS/Dart plugins wrap the same native engines as the Android and iOS Apps.</p></figcaption></figure>
-
-
 Fully on-premise **Face Recognition SDK for Ionic Cordova**. Plugin folder: `FacePlugin/`. Plugin id: `face-recognition-cordova`. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projects.
 
 Demo package name: **`com.faceplugin.facerecognitionsdk`**.
@@ -133,7 +130,6 @@ Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projec
 4. `ionic serve` cannot load the engine — run on a physical phone.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
-
 
 ### FAQ
 

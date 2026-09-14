@@ -33,9 +33,6 @@ layout:
 
 ### Introduction
 
-<figure><img src=".gitbook/assets/diagram-onprem-suite.png" alt="Faceplugin on-premise Face Recognition, Face Liveness, ID Document OCR, and Document Liveness SDKs on mobile and server"><figcaption><p>Shipping products only: Face Recognition, Face Liveness, ID Document Recognition, Document Liveness. Inference stays on your device or host.</p></figcaption></figure>
-
-
 **Faceplugin** builds **on-premise, offline** biometric SDKs. Processing stays on the phone, your Windows/Linux host, or your Docker host. There is no per-call Faceplugin cloud.
 
 * **[Face Recognition SDK](face-recognition-sdk/)** — NIST FRVT evaluated face matching, 1:1 and live 1:N on mobile, Face Recognition API on Linux/Windows.
@@ -47,8 +44,7 @@ This documentation is the **integration** layer: clone a public GitHub demo, add
 
 ### How to use these docs
 
-<figure><img src=".gitbook/assets/diagram-mobile-vs-server.png" alt="Faceplugin Mobile SDK versus Server SDK: on-device setActivation init versus HTTP machinecode activate API"><figcaption><p>Mobile uses setActivation and init. Server uses GET /api/machinecode, POST /api/activate, then the product HTTP API.</p></figcaption></figure>
-
+Pick the product you licensed, then **Mobile SDK** (on-device `setActivation` → `init`) or **Server SDK** (HTTP: `GET /api/machinecode` → `POST /api/activate` → process). Ports: Document **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
 
 1. Open the product that matches what you licensed (Face Recognition, Liveness, ID Document, or Document Liveness).
 2. Open **Mobile SDK** or **Server SDK**, then the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
