@@ -139,9 +139,11 @@ Call **setActivation → initSDK** off the main thread. The engine is **not** co
 
 ### Screenshots
 
+The gallery is **Android** sample UI from `faceplugin-assets`. iOS demo tiles match these screens; there is no separate iOS photoshoot in these docs.
+
 | Home | Identify | Capture |
 | ---- | -------- | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition iOS home" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the iOS page; no separate iOS screenshot yet)" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
 
 ### License
 
@@ -158,3 +160,20 @@ Typical call order: `setActivation` → `initSDK` → `detectImage` / `extractFe
 Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFeature1:feature2:`, VideoWorker. There is **no** Objective-C `faceDetection:` returning `FaceBox` on this framework.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**What APIs does this page ship?** Swift equivalents of `setActivation`, `init`, face detection, template extract, similarity, and VideoWorker Identify.
+
+**Are the screenshots iOS?** No. The gallery uses **Android** sample UI. iOS demo tiles match those screens.
+
+**Offline?** Yes, after `FP1.…` for the demo bundle id (or yours).
+
+### Related documentation
+
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Android](face-recognition-android-sdk.md)
+* [Liveness Detection iOS SDK](../liveness-detection-sdk/liveness-detection-ios-sdk.md)
+* [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

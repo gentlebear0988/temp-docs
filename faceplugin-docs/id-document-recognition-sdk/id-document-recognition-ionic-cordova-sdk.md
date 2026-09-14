@@ -87,3 +87,16 @@ Also: `getMachineCode`, `locateDocument`, `documentRecognition`, `documentLivene
 Parse JSON with [Document result JSON](document-result-json.md).
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Legacy plugin?** Yes. Prefer [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md) for new apps.
+
+### Related documentation
+
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md)
+* [Face Recognition Ionic Cordova SDK](../face-recognition-sdk/face-recognition-ionic-cordova-sdk.md)
+* [Document result JSON](document-result-json.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

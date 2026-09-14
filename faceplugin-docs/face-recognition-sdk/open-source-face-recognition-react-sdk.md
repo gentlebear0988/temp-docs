@@ -1,5 +1,6 @@
 ---
-description: Completely Free and Open Source Face recognition React SDK
+description: >-
+  Faceplugin open-source Face Recognition React SDK. On-premise browser wrapper of the JavaScript face matching SDK. Not the commercial native engine.
 ---
 
 # Open Source Face Recognition React SDK
@@ -91,3 +92,15 @@ npm start
     loadFeatureModel()
     extractFeature(session, canvas_id, landmarks)
     ```
+
+
+### FAQ
+
+**Is this the commercial React Native SDK?** No. It wraps the open-source JavaScript browser SDK.
+
+### Related documentation
+
+* [Open Source Javascript SDK](open-source-face-recognition-javascript-sdk.md) · [Vue](open-source-face-recognition-vue-sdk.md)
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

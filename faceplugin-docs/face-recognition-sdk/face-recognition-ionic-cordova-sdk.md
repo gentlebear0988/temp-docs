@@ -130,3 +130,17 @@ Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projec
 4. `ionic serve` cannot load the engine — run on a physical phone.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Legacy plugin?** Yes. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new apps.
+
+**Offline?** Yes after activation with an `FP1.…` bound to the Cordova app id.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md)
+* [ID Document Recognition Ionic Cordova SDK](../id-document-recognition-sdk/id-document-recognition-ionic-cordova-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

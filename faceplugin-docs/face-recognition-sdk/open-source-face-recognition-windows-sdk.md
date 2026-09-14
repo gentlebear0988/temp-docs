@@ -1,5 +1,6 @@
 ---
-description: Completely Free and Open Source Face recognition Windows SDK
+description: >-
+  Faceplugin open-source Face Recognition Windows SDK. Free on-premise Python sample. Lower accuracy than the commercial HTTP API on port 8083.
 ---
 
 # Open Source Face Recognition Windows SDK
@@ -39,3 +40,15 @@ Please download anaconda on your computer and install it. We used Windows machin
 * **GetImageInfo(image, faceMaxCount):** returns face bounding boxes, landmarks and feature embedding
 * **get\_similarity(feat1, feat2):** returns similarity between two feature embeddings. 0 to 100
 * **Threshold:** value to determine if two embeddings belong to same person, default = 75
+
+
+### FAQ
+
+**Same accuracy as the commercial API?** No. Use [Face Recognition Windows SDK](face-recognition-windows-sdk.md) on port **8083** for the commercial engine.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Open Source Linux](open-source-face-recognition-linux-sdk.md)
+* Lower accuracy than the commercial [Windows HTTP API](face-recognition-windows-sdk.md).
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

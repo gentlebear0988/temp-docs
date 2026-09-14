@@ -54,3 +54,17 @@ This page follows the public [FaceRecognition-.Net](https://github.com/Faceplugi
 {% endhint %}
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**What APIs does this page ship?** Public GitHub names: `GetHardwareId`, `Activate`, `Init`, `DetectFace`, `Compare`.
+
+**Is this the Windows HTTP API?** No. For `POST /api/detect` on port **8083**, use [Face Recognition Windows SDK](face-recognition-windows-sdk.md).
+
+### Related documentation
+
+* [Faceplugin Face Recognition Server SDK](server-sdk.md)
+* [Face Recognition Windows SDK](face-recognition-windows-sdk.md) (HTTP API)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

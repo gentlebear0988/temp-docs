@@ -124,3 +124,18 @@ documentLiveness(front, back?): Promise<string>
 Also: `getLicenseStatus`, `startNewSession`, `startLivePreview` / `takeLiveSnapshot`, `deinit`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Package?** `document-reader-capacitor`. Prefer Capacitor over Cordova.
+
+**JSON contract?** [Document result JSON](document-result-json.md).
+
+### Related documentation
+
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Ionic Cordova](id-document-recognition-ionic-cordova-sdk.md)
+* [Face Recognition Ionic Capacitor SDK](../face-recognition-sdk/face-recognition-ionic-capacitor-sdk.md)
+* [Document result JSON](document-result-json.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

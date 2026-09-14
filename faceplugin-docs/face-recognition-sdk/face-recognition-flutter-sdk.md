@@ -98,9 +98,11 @@ Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
 
 ### Screenshots
 
+The gallery is **Android** sample UI from `faceplugin-assets`. The Flutter plugin wraps the same native engines; there is no separate Flutter photoshoot in these docs.
+
 | Home | Identify | Capture |
 | ---- | -------- | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Flutter home" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the Flutter page; no separate Flutter screenshot yet)" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
 
 ### License
 
@@ -216,3 +218,20 @@ Future<void> stopVideoWorker()
 ```
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Package?** `face_recognition_sdk`.
+
+**Screenshots?** The gallery uses **Android** sample UI. The plugin wraps native Android and iOS engines.
+
+**Face Liveness Flutter App?** None public.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [React Native](face-recognition-react-native-sdk.md)
+* [ID Document Recognition Flutter SDK](../id-document-recognition-sdk/id-document-recognition-flutter-sdk.md)
+* There is no public Face Liveness Flutter App — use Identify 2D liveness or native Android/iOS Liveness.
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

@@ -1,10 +1,10 @@
 ---
 description: >-
-  Faceplugin ID Document Liveness server SDK. On-premise document anti-spoofing HTTP API
-  for Linux and Docker on port 8086. No OCR.
+  Faceplugin ID Document Liveness Server SDK. On-premise document anti-spoofing HTTP API for
+  Linux Docker on port 8086. POST /api/documentLiveness. No OCR.
 ---
 
-# Server SDK
+# Faceplugin ID Document Liveness Server SDK
 
 Document authenticity only (screen replay, print, substitution). Optical character recognition (OCR), MRZ, and barcodes are **off**.
 
@@ -14,4 +14,24 @@ For **fields plus authenticity** in one engine, use [ID Document Recognition Ser
 
 There is no public mobile App for this product.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Linux SDK</strong></td><td>Docker image faceplugin/document-liveness. HTTP API on port 8086.</td><td><a href="../.gitbook/assets/linux_PNG1 (1).png">linux_PNG1 (1).png</a></td><td><a href="id-document-liveness-linux-sdk.md">id-document-liveness-linux-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Linux SDK</strong></td><td>Docker image faceplugin/document-liveness. HTTP API on port 8086.</td><td><a href="../.gitbook/assets/linux-docker.png">linux-docker.png</a></td><td><a href="id-document-liveness-linux-sdk.md">id-document-liveness-linux-sdk.md</a></td></tr></tbody></table>
+
+```mermaid
+flowchart LR
+  PageImage --> Authenticity
+  Authenticity --> SecurityJSON
+```
+
+### FAQ
+
+**Does this read the MRZ?** No. OCR is off. Use [ID Document Recognition](../id-document-recognition-sdk/).
+
+**API?** `POST /api/documentLiveness` on port **8086** after `POST /api/activate`.
+
+
+### Related documentation
+
+* [ID Document Liveness SDK](README.md) · [Linux SDK](id-document-liveness-linux-sdk.md)
+* [ID Document Recognition Server SDK](../id-document-recognition-sdk/server-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

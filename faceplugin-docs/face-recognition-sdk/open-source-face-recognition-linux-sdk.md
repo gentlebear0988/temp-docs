@@ -1,5 +1,6 @@
 ---
-description: Completely Free and Open Source Face recognition Linux SDK
+description: >-
+  Faceplugin open-source Face Recognition Linux SDK. Free on-premise Python sample. Lower accuracy than the commercial Docker Face Recognition API.
 ---
 
 # Open Source Face Recognition Linux SDK
@@ -42,3 +43,15 @@ Please download anaconda on your computer and install it. We used Linux machine 
 * **GetImageInfo(image, faceMaxCount):** returns face bounding boxes, landmarks and feature embedding
 * **get\_similarity(feat1, feat2):** returns similarity between two feature embeddings. 0 to 100
 * **Threshold:** value to determine if two embeddings belong to same person, default = 75
+
+
+### FAQ
+
+**Same accuracy as Docker Hub?** No. Use [Face Recognition Linux SDK](face-recognition-linux-sdk.md) (`faceplugin/face-recognition`) for the commercial Face Recognition API.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Open Source Windows](open-source-face-recognition-windows-sdk.md)
+* Lower accuracy than the commercial [Linux HTTP API](face-recognition-linux-sdk.md).
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

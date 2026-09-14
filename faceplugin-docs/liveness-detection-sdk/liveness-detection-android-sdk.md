@@ -184,3 +184,18 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 ```
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Passive or active?** **Passive** PAD. Score the camera frame; no challenge animation on this App.
+
+**Threshold?** Treat **0.5** or higher as Real / pass unless Faceplugin gives you another operating point.
+
+### Related documentation
+
+* [Faceplugin Liveness Detection Mobile SDK](mobile-sdk.md) · [iOS](liveness-detection-ios-sdk.md)
+* [Face Recognition Android SDK](../face-recognition-sdk/face-recognition-android-sdk.md)
+* [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

@@ -191,3 +191,17 @@ stopVideoWorker()
 Optional session helpers in the example: `IdentifySession`, `CaptureSession`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Package?** `face-recognition-capacitor`. Prefer Capacitor over Cordova for new Ionic apps.
+
+**Offline?** Yes after `setActivation` / `init` with an `FP1.…` for your app id.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Cordova](face-recognition-ionic-cordova-sdk.md)
+* [ID Document Recognition Ionic Capacitor SDK](../id-document-recognition-sdk/id-document-recognition-ionic-capacitor-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

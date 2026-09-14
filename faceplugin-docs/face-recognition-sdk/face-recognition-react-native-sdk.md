@@ -109,9 +109,11 @@ Keep the demo package name **`com.faceplugin.facerecognitionsdk`** on Android an
 
 ### Screenshots
 
+The gallery is **Android** sample UI from `faceplugin-assets`. The React Native plugin wraps the same native engines; there is no separate RN photoshoot in these docs.
+
 | Home | Identify | Capture |
 | ---- | -------- | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition React Native home" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the React Native page; no separate RN screenshot yet)" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
 
 ### License
 
@@ -248,3 +250,20 @@ stopVideoWorker(): Promise<void>
 Prefer `ingestLiveCameraFrame` so rotation is handled for you.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Package?** `face-recognition-sdk`. Yarn 3; not Expo Go.
+
+**Screenshots?** The gallery uses **Android** sample UI. The plugin wraps native Android and iOS engines.
+
+**Liveness Flutter/RN App?** None public. Identify includes 2D liveness.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Flutter](face-recognition-flutter-sdk.md)
+* [ID Document Recognition React Native SDK](../id-document-recognition-sdk/id-document-recognition-react-native-sdk.md)
+* There is no public Face Liveness React Native App — use Identify 2D liveness or native Android/iOS Liveness.
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

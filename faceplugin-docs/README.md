@@ -1,7 +1,7 @@
 ---
 description: >-
-  Official Faceplugin documentation. On-premise Face Recognition, Liveness Detection, and
-  ID Document Recognition SDKs for Android, iOS, Flutter, React Native, Windows, and Linux.
+  Faceplugin on-premise Face Recognition, Liveness, and ID Document Recognition SDK docs.
+  Offline Android, iOS, Flutter, React Native, Windows, and Linux Docker integration guides.
 icon: hand-wave
 cover: .gitbook/assets/Screenshot 2025-11-21 184657.png
 coverY: 0
@@ -29,18 +29,18 @@ layout:
     visible: true
 ---
 
-# Welcome to Faceplugin
+# Faceplugin on-premise Face Recognition, Liveness, and ID Document SDKs
 
 ### Introduction
 
-Welcome to the official documentation for **Faceplugin**. Our company provides cutting-edge biometric solutions, including:
+**Faceplugin** builds **on-premise, offline** biometric SDKs. Processing stays on the phone, your Windows/Linux host, or your Docker host. There is no per-call Faceplugin cloud.
 
-* **Face Recognition SDK**: Accurate facial recognition for a wide range of use cases.
-* **Liveness Detection SDK**: Ensures the user is physically present during authentication.
-* **ID Document Recognition SDK**: Automates the process of recognizing and validating ID documents for secure identification.
-* **ID Document Liveness SDK**: Document anti-spoofing against screen replays, printouts, and substitution.
+* **[Face Recognition SDK](face-recognition-sdk/)** — NIST FRVT evaluated face matching, 1:1 and live 1:N on mobile, Face Recognition API on Linux/Windows.
+* **[Liveness Detection SDK](liveness-detection-sdk/)** — iBeta Level 2 class **passive** PAD / face anti-spoofing against photos, screens, 3D masks, and deepfake-style attacks.
+* **[ID Document Recognition SDK](id-document-recognition-sdk/)** — passport OCR, ID card verification, MRZ, barcode, and optional document authenticity.
+* **[ID Document Liveness SDK](id-document-liveness-sdk/)** — document anti-spoofing only (no OCR).
 
-This guide will walk you through the features, installation, usage, and integration of these SDKs.
+This documentation is the **integration** layer: clone a public GitHub demo, add the Drive runtime or pull Docker Hub, activate a license, then call the APIs that repository actually ships.
 
 ### How to use these docs
 
@@ -48,7 +48,7 @@ This guide will walk you through the features, installation, usage, and integrat
 2. Open **Mobile SDK** or **Server SDK**, then the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
 3. Follow **Setup** / **How to run** to place the Drive runtime and start the **demo**.
 4. Copy the **machine code** (`FPMC1.…`) if you run a server SDK, then [request a license](request-a-license-and-support.md).
-5. Use **Try it** / **APIs** to call the same engine from your app. Store templates and document JSON in **your** database.
+5. Use [Try it](resources/try-it.md) / **APIs** to call the same engine from your app. Store templates and document JSON in **your** database.
 
 Native binaries are **not** on GitHub (too large). Each platform page links the Google Drive folder and the exact copy path.
 
@@ -56,9 +56,15 @@ Native binaries are **not** on GitHub (too large). Each platform page links the 
 The demo is a full app. You do **not** need the demo screens in production — copy the runtime, call activate → init, then the process APIs.
 {% endhint %}
 
+{% hint style="info" %}
+After you publish this space, connect the docs domain to **Google Search Console** (GitBook admin: custom domain, sitemap, Open Graph). Markdown in this repo cannot enable Search Console by itself.
+{% endhint %}
+
 ### Our Products
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face Recognition SDK</strong></td><td>Face recognition algorithm top ranked on NIST FRVT</td><td><a href=".gitbook/assets/Lucid_Origin_A_futuristic_face_recognition_interface_for_Facep_1.jpg">Lucid_Origin_A_futuristic_face_recognition_interface_for_Facep_1.jpg</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>Liveness Detection SDK</strong></td><td>Detect printed photos, screen replays, 3D models and deepfakes</td><td><a href=".gitbook/assets/Lucid_Origin_Splitscreen_concept_showing_real_face_vs_spoof_at_0.jpg">Lucid_Origin_Splitscreen_concept_showing_real_face_vs_spoof_at_0.jpg</a></td><td></td><td><a href="liveness-detection-sdk/">liveness-detection-sdk</a></td></tr><tr><td><strong>ID Document Recognition SDK</strong></td><td>Recognize ID documents from 200+ countries including ID card, Driver License and Passport</td><td><a href=".gitbook/assets/Lucid_Origin_A_modern_UI_showing_an_ID_card_being_scanned_boun_0.jpg">Lucid_Origin_A_modern_UI_showing_an_ID_card_being_scanned_boun_0.jpg</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face Recognition SDK</strong></td><td>On-premise face matching, 1:N Identify on mobile, HTTP API on Linux/Windows</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">identify.png</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>Liveness Detection SDK</strong></td><td>Passive PAD / anti-spoofing against photos, screens, 3D models, and deepfakes</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png">liveness.png</a></td><td></td><td><a href="liveness-detection-sdk/">liveness-detection-sdk</a></td></tr><tr><td><strong>ID Document Recognition SDK</strong></td><td>Passport OCR, ID card and driver license recognition from 200+ countries</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png">camera.png</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr></tbody></table>
+
+Also: [ID Document Liveness SDK](id-document-liveness-sdk/) (Linux / Docker authenticity only) · [Palm Recognition SDK](palm-recognition-sdk/).
 
 ### Try our SDKs
 
@@ -67,6 +73,7 @@ The demo is a full app. You do **not** need the demo screens in production — c
 * [Our playground](https://playground.faceplugin.com/)
 * [HuggingFace Spaces](https://huggingface.co/FacePlugin-Ltd)
 * [Docker Hub](https://hub.docker.com/u/faceplugin)
+* [Try it (copy-paste)](resources/try-it.md)
 
 ### Features <a href="#feature" id="feature"></a>
 
@@ -88,3 +95,9 @@ Android, iOS, Flutter, React Native, Ionic (Capacitor and Cordova), Windows and 
 * Self-checkout at shops
 * Government e-services
 * Fraud detection and prevention
+
+### Related documentation
+
+* [Choose a product](resources/choose-a-product.md) · [FAQ](resources/faq.md) · [Troubleshooting](resources/troubleshooting.md)
+* [Request a License & Support](request-a-license-and-support.md) · [SDK comparison](resources/comparisons/README.md)
+* [Status codes](resources/status-codes.md) · [Changelog](resources/changelog.md)

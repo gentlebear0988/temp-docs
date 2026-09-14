@@ -320,3 +320,20 @@ You need `libfacesdk/` (the AAR) and `FaceRecognitionSDK`. You do **not** need t
 Typical call order: `setActivation` → `init` → `faceDetection` → `templateExtraction` → store templates in **your** database → `similarityCalculation` or VideoWorker for live 1:N.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**What APIs does this page ship?** Java/Kotlin `FaceRecognitionSDK.setActivation`, `init`, `faceDetection`, `templateExtraction`, `similarityCalculation`, and VideoWorker Identify.
+
+**Offline / on-premise?** Yes, after an `FP1.…` key bound to the demo app id (or your own id).
+
+**Identify threshold?** Default **0.67**. Mobile Identify includes **passive 2D liveness**.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [iOS](face-recognition-ios-sdk.md)
+* [Liveness Detection Android SDK](../liveness-detection-sdk/liveness-detection-android-sdk.md)
+* [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

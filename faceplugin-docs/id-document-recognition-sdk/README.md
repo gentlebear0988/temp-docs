@@ -1,18 +1,26 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition SDK. Fully on-premise OCR, MRZ, barcode, and
-  authenticity for passports and ID cards from 200+ countries.
+  Faceplugin ID Document Recognition SDK. On-premise passport OCR, ID card verification, MRZ,
+  barcode, and optional document authenticity for Android, iOS, Flutter, Windows, and Linux.
 ---
 
 # ID Document Recognition SDK
 
 ### Overview
 
-Discover our cutting-edge **ID Document Recognition SDK**, a **cross-platform, on-premise solution** built to read and validate identity documents. The SDK recognizes **ID cards, driver licenses, and passports from 200+ countries**, with OCR, MRZ, barcode, image quality, and optional document authenticity (document liveness).
+**Faceplugin ID Document Recognition SDK** is an on-premise **passport OCR** and **ID card verification** engine. It classifies the document, runs OCR, reads the MRZ, decodes barcodes and QR codes, checks image quality, and crops the portrait and signature.
+
+This is **not** the authenticity-only [ID Document Liveness SDK](../id-document-liveness-sdk/). With a **Liveness-capable license**, the same document engine can also run **document authenticity** (document liveness). It is **not** a face matching SDK — use [Face Recognition](../face-recognition-sdk/) after you have a selfie.
+
+```mermaid
+flowchart LR
+  Capture --> Locate
+  Locate --> OCR_MRZ
+  OCR_MRZ --> Authenticity
+  Authenticity --> JSON
+```
 
 All processing stays on the device or in your own server — **NO** data leaves your machine.
-
-With a **Liveness-capable license**, the same engine can run **document authenticity**. If you only need authenticity and not OCR, use the dedicated [ID Document Liveness SDK](../id-document-liveness-sdk/).
 
 ### Features
 
@@ -25,13 +33,31 @@ With a **Liveness-capable license**, the same engine can run **document authenti
 * [x] Authenticity / document liveness (when licensed)
 * [x] Fully On-Premise
 
+### Passport OCR, ID card verification, MRZ
+
+| Capability | Where it runs |
+| --- | --- |
+| Passport OCR / MRZ | `recognize` / `documentRecognition` / `documentProcess` on every platform |
+| ID card and driver license OCR | Same APIs |
+| Barcode / QR | Same APIs |
+| Document verification API (HTTP) | Linux / Windows port **8082** |
+| Authenticity without OCR | Dedicated [ID Document Liveness](../id-document-liveness-sdk/) on Linux **8086**, or `documentLiveness` on this engine when licensed |
+
+Every platform returns the same field set: [Document result JSON](document-result-json.md). Authenticity names: [Document security check fields](document-security-check-fields.md).
+
 ### Platforms
 
 Pick **Mobile SDK** or **Server SDK**, then the platform page.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker HTTP API on port 8082.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
 
-Every platform returns the same result idea. Start with [Document result JSON](document-result-json.md), then [Document security check fields](document-security-check-fields.md) when authenticity is on.
+### FAQ
+
+**Does Faceplugin read passports?** Yes — OCR, MRZ, and crops. See the platform pages and [Document result JSON](document-result-json.md).
+
+**Is document liveness included?** Only with a Liveness-capable license on this engine, or via the dedicated Document Liveness Linux product.
+
+**Is there a document verification API?** Yes — `POST /api/documentRecognition` and `POST /api/documentProcess` on port **8082**.
 
 ### Usecases
 
@@ -41,3 +67,10 @@ Every platform returns the same result idea. Start with [Document result JSON](d
 * [x] Government e-services
 * [x] Access Control & Security
 * [x] Fraud Prevention
+
+### Related documentation
+
+* [ID Document Liveness SDK](../id-document-liveness-sdk/) · [Face Recognition SDK](../face-recognition-sdk/)
+* [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Status codes](../resources/status-codes.md)

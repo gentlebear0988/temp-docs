@@ -1,3 +1,9 @@
+---
+description: >-
+  Faceplugin open-source Palm Recognition SDK. On-premise Python Anaconda sample for RGB-camera
+  palm matching. extract_roi, extract_features, compare_two_images. Not a commercial face SDK.
+---
+
 # Palm Recognition SDK
 
 ### Code <a href="#setup" id="setup"></a>
@@ -6,13 +12,9 @@
 
 ### Overview <a href="#setup" id="setup"></a>
 
-**World's First Palm Recognition SDK for Any RGB Camera – On-Premise, Real-Time, and High Accuracy**
+This page is the **open-source Palm Recognition** Python sample. It matches palms from a standard **RGB camera** on **your** machine. It is **not** the commercial [Face Recognition SDK](../face-recognition-sdk/), **not** Face Liveness, and **not** document OCR.
 
-Introducing the world’s first **Palm Recognition SDK** that works seamlessly with images captured by any standard **RGB camera**. Designed for developers, this powerful SDK enables easy integration of **real-time, high-accuracy palm recognition** into your applications using advanced **deep learning models**.
-
-Unlike cloud-based solutions, our SDK is fully **on-premise**, ensuring that **all data is processed locally on your server** — delivering maximum **data privacy and security**. No internet connection is required, and **no biometric data ever leaves your machine**.
-
-Perfect for secure authentication, access control, and enterprise-grade biometric solutions.
+Unlike cloud palm APIs, processing stays local. No biometric data is sent to Faceplugin.
 
 ### Setup <a href="#setup" id="setup"></a>
 
@@ -52,3 +54,14 @@ python main.py
 * **extract\_roi(hands, mp\_hands, img\_path):** extract region of interest from the palm image for template matching
 * **extract\_features(mp\_hands, hands, path: str):** extract template from the plam image specified by the path parameter
 * **compare\_two\_images(mp\_hands, hands, image\_path1, image\_path2, similarity\_threshold=0.8):** compare two hand images to determine if they are the same hand or not.
+
+### FAQ
+
+**Is this a Faceplugin commercial App?** No. It is a public GitHub sample. There is no `FP1.…` / Docker HTTP API on this page.
+
+**Can I use it for face matching?** No. Use [Face Recognition](../face-recognition-sdk/).
+
+### Related documentation
+
+* [Palm Recognition SDK](README.md) · [Face Recognition SDK](../face-recognition-sdk/)
+* [Request a License](../request-a-license-and-support.md) · [Choose a product](../resources/choose-a-product.md)

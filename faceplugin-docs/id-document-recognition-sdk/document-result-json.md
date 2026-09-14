@@ -74,3 +74,17 @@ Needs authenticity `"normal"` on `recognize` / `"Authenticity": "normal"` on the
 Flutter, React Native, and Ionic ship typed helpers (`recognizeResult`, `rows`, `summary`, `images`, `securityRows`) so you do not write a 600-line parser.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Same JSON on every platform?** Yes — `recognize` and `POST /api/documentProcess` share this field set.
+
+**Authenticity key names?** [Document security check fields](document-security-check-fields.md).
+
+### Related documentation
+
+* [Document security check fields](document-security-check-fields.md)
+* [ID Document Recognition Mobile SDK](mobile-sdk.md) · [Server SDK](server-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

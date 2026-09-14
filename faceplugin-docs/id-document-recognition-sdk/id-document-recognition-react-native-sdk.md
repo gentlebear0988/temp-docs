@@ -162,3 +162,18 @@ documentLiveness(front, back?): Promise<string>
 Also: `getLicenseStatus`, `startNewSession`, `deinit`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Package?** `document-reader-sdk`. Yarn 3; not Expo Go.
+
+**Same JSON as iOS?** Yes — the plugin normalizes Android output. See [Document result JSON](document-result-json.md).
+
+### Related documentation
+
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Flutter](id-document-recognition-flutter-sdk.md)
+* [Face Recognition React Native SDK](../face-recognition-sdk/face-recognition-react-native-sdk.md)
+* [Document result JSON](document-result-json.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

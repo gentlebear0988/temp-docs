@@ -115,3 +115,18 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 **Gradio (host only):** `DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python demo.py`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**API?** Same as Linux: `POST /api/liveness` on port **8084**. No Docker on Windows.
+
+**Active liveness?** Not this App. Passive JPEG PAD only.
+
+### Related documentation
+
+* [Faceplugin Liveness Detection Server SDK](server-sdk.md) · [Linux](liveness-detection-linux-sdk.md)
+* [Face Recognition Windows SDK](../face-recognition-sdk/face-recognition-windows-sdk.md)
+* [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

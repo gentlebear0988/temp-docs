@@ -1,5 +1,6 @@
 ---
-description: Completely Free and Open Source Face recognition Javascript SDK
+description: >-
+  Faceplugin open-source Face Recognition JavaScript SDK. On-premise browser face matching and liveness (npm faceplugin). Not the commercial Android/iOS engine.
 ---
 
 # Open Source Face Recognition Javascript SDK
@@ -79,3 +80,18 @@ npm install faceplugin
     loadFeatureModel()
     extractFeature(session, canvas_id, landmarks)
     ```
+
+
+### FAQ
+
+**Is this the commercial SDK?** No. Browser `npm faceplugin`. Contact Faceplugin for the higher-accuracy native engine.
+
+**On-premise?** Processing stays in the user's tab.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md)
+* [Open Source React](open-source-face-recognition-react-sdk.md) · [Open Source Vue](open-source-face-recognition-vue-sdk.md)
+* This browser SDK is **not** the commercial Android/iOS engine.
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

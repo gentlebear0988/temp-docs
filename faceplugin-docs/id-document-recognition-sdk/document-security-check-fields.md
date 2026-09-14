@@ -120,3 +120,12 @@ A missing key means that check was not run for this image — not that it passed
 {% endhint %}
 
 Top-level recognize contract: [Document result JSON](document-result-json.md).
+
+
+### Related documentation
+
+* [Document result JSON](document-result-json.md)
+* [ID Document Liveness SDK](../id-document-liveness-sdk/)
+* [ID Document Recognition Server SDK](server-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

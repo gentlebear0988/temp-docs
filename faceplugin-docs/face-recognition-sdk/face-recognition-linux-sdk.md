@@ -1,12 +1,12 @@
 ---
 description: >-
-  Faceplugin Face Recognition Linux Docker SDK. Fully on-premise HTTP API on port 8083.
-  detect, quality, feature, match, similarity.
+  Faceplugin Face Recognition API for Linux Docker. On-premise detect, match, and similarity
+  on port 8083. Offline after FPMC1 / FP1 activation.
 ---
 
 # Face Recognition Linux SDK
 
-Fully on-premise **Face Recognition HTTP API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
+Fully on-premise **Face Recognition API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
 
 This product is **recognition only**. For recognition **and** liveness in one App, use [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk-linux.md).
 
@@ -221,3 +221,21 @@ print(sdk.match(image1, image2))
 Call order: `get_machine_code` → `activate` → `init_sdk` → detect / quality / feature / match / similarity.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Is this a Face Recognition API?** Yes. Docker image `faceplugin/face-recognition`, port **8083**: `POST /api/detect`, `/api/match`, `/api/similarity`.
+
+**Machine code?** `GET /api/machinecode` returns `FPMC1.…`. Docker and host codes differ.
+
+**Server-side 1:N?** No. There is no `POST /api/identify` gallery.
+
+### Related documentation
+
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Windows](face-recognition-windows-sdk.md)
+* [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
+* [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
+* [Combined Recognition + Liveness (Linux)](face-recognition-sdk-linux.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

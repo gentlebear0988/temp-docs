@@ -1,15 +1,32 @@
 ---
 description: >-
-  Faceplugin Face Recognition mobile SDKs. On-premise 1:1 and 1:N matching for Android,
-  iOS, Flutter, React Native, Ionic, and browser open-source clients.
+  Faceplugin Face Recognition Mobile SDK. On-premise 1:1 and 1:N matching for Android, iOS,
+  Flutter, React Native, and Ionic. Offline setActivation, init, VideoWorker Identify.
 ---
 
-# Mobile SDK
+# Faceplugin Face Recognition Mobile SDK
 
-On-device Face Recognition. Enroll people, run live **1:N Identify**, and store templates in **your** database. Processing stays on the phone (or in the browser for the open-source JavaScript clients).
+On-device **Face Recognition SDK** for Android, iOS, Flutter, React Native, and Ionic. Enroll people, run live **1:N Identify**, and store templates in **your** database. Processing stays on the phone (or in the browser for the open-source JavaScript clients). This is **not** the HTTP Face Recognition API — that is [Server SDK](server-sdk.md).
 
 Typical call order: `setActivation` → `init` → detect / extract template → `similarity` or VideoWorker (live 1:N). Identify default **0.67**. Mobile Identify includes **passive 2D liveness**.
 
 For HTTP APIs on Windows, Linux, and Docker, use [Server SDK](server-sdk.md).
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Android SDK</strong></td><td>Native AAR. Enroll, Identify, Capture, and Attribute screens.</td><td><a href="../.gitbook/assets/android.png">android.png</a></td><td><a href="face-recognition-android-sdk.md">face-recognition-android-sdk.md</a></td></tr><tr><td></td><td><strong>iOS SDK</strong></td><td>Xcode frameworks. Same demo screens as Android.</td><td><a href="../.gitbook/assets/apple-logo-3-300x300.png">apple-logo-3-300x300.png</a></td><td><a href="face-recognition-ios-sdk.md">face-recognition-ios-sdk.md</a></td></tr><tr><td></td><td><strong>React Native SDK</strong></td><td>face-recognition-sdk plugin. Yarn 3, not Expo Go.</td><td></td><td><a href="face-recognition-react-native-sdk.md">face-recognition-react-native-sdk.md</a></td></tr><tr><td></td><td><strong>Flutter SDK</strong></td><td>face_recognition_sdk plugin plus an example app.</td><td></td><td><a href="face-recognition-flutter-sdk.md">face-recognition-flutter-sdk.md</a></td></tr><tr><td></td><td><strong>Ionic Capacitor SDK</strong></td><td>face-recognition-capacitor for new Ionic apps.</td><td></td><td><a href="face-recognition-ionic-capacitor-sdk.md">face-recognition-ionic-capacitor-sdk.md</a></td></tr><tr><td></td><td><strong>Ionic Cordova SDK</strong></td><td>Legacy Cordova plugin. Prefer Capacitor for new projects.</td><td></td><td><a href="face-recognition-ionic-cordova-sdk.md">face-recognition-ionic-cordova-sdk.md</a></td></tr><tr><td></td><td><strong>Open Source Javascript</strong></td><td>Browser face recognition and liveness. Runs in the user’s tab.</td><td></td><td><a href="open-source-face-recognition-javascript-sdk.md">open-source-face-recognition-javascript-sdk.md</a></td></tr><tr><td></td><td><strong>Open Source React</strong></td><td>React wrapper of the open-source JavaScript SDK.</td><td></td><td><a href="open-source-face-recognition-react-sdk.md">open-source-face-recognition-react-sdk.md</a></td></tr><tr><td></td><td><strong>Open Source Vue</strong></td><td>Vue wrapper of the open-source JavaScript SDK.</td><td></td><td><a href="open-source-face-recognition-vue-sdk.md">open-source-face-recognition-vue-sdk.md</a></td></tr></tbody></table>
+
+```mermaid
+flowchart LR
+  Camera --> Detect
+  Detect --> Liveness2D
+  Liveness2D --> Embedding
+  Embedding --> Identify
+  Identify --> Result
+```
+
+### Related documentation
+
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Face Recognition SDK](README.md)
+* [Liveness Detection Mobile SDK](../liveness-detection-sdk/mobile-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+

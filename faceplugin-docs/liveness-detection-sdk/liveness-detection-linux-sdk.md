@@ -1,7 +1,7 @@
 ---
 description: >-
-  Faceplugin Liveness Detection Linux Docker SDK. Fully on-premise PAD HTTP API on port
-  8084. POST /api/liveness.
+  Faceplugin Face Liveness API for Linux Docker. On-premise anti-spoofing PAD. POST
+  /api/liveness on port 8084. Score 0.5 or higher is Real.
 ---
 
 # Liveness Detection Linux SDK
@@ -107,7 +107,7 @@ GET /api/machinecode
 
 Also: `GET /api/health` (no license), `GET /api/licenseStatus`, `GET /api/backend` (`"cpu"`).
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="GET /api/machinecode"><figcaption><p>Call <code>GET /api/machinecode</code> to get the machine code (<code>FPMC1.…</code>)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/face-liveness-linux-get-machinecode.png" alt="Faceplugin Face Liveness Linux SDK GET /api/machinecode FPMC1"><figcaption><p>Call <code>GET /api/machinecode</code> to get the machine code (<code>FPMC1.…</code>)</p></figcaption></figure>
 
 #### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK <a href="#initsdk" id="initsdk"></a>
 
@@ -124,7 +124,7 @@ JSON `{"license":"FP1.…"}` and a license file body are also accepted.
 | ---------------- | -------------------- |
 | **Return value** | Envelope. Success: <code>code</code> 0, <code>"Successfully activated"</code>. On success the App also calls <code>init_sdk()</code>. |
 
-<figure><img src="../.gitbook/assets/image (2).png" alt="POST /api/activate"><figcaption><p>Call <code>POST /api/activate</code> to activate the SDK</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/face-liveness-linux-post-activate.png" alt="Faceplugin Face Liveness Linux SDK POST /api/activate"><figcaption><p>Call <code>POST /api/activate</code> to activate the SDK</p></figcaption></figure>
 
 #### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake <a href="#facedetection" id="facedetection"></a>
 
@@ -147,7 +147,7 @@ Example:
 { "score": 0.72, "result": "Real", "pass": true }
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="POST /api/liveness"><figcaption><p>Call <code>POST /api/liveness</code> to determine if the face is real or spoof</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/face-liveness-linux-post-liveness.png" alt="Faceplugin Face Liveness Linux SDK POST /api/liveness Real or Spoof"><figcaption><p>Call <code>POST /api/liveness</code> to determine if the face is real or spoof</p></figcaption></figure>
 
 Python:
 
@@ -183,3 +183,19 @@ DEMO_PORT=9004 API_BASE=http://127.0.0.1:8084 python3 demo.py
 Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio in production.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Face Liveness API?** `POST /api/liveness` on port **8084**. Score **≥ 0.5** → Real.
+
+**Machine code?** `GET /api/machinecode` returns `FPMC1.…`. Docker and host codes differ.
+
+### Related documentation
+
+* [Faceplugin Liveness Detection Server SDK](server-sdk.md) · [Windows](liveness-detection-windows-sdk.md)
+* [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md)
+* [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
+* [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

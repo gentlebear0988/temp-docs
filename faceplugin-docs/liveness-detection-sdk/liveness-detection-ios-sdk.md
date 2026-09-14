@@ -97,10 +97,27 @@ The liveness demo does **not** enroll a match database.
 
 ### Screenshots
 
+Sample demo UI from `faceplugin-assets` (`face-liveness/mobile/`). Not a dedicated iOS photoshoot.
+
 | Home | Liveness | Settings | About |
 | ---- | -------- | -------- | ----- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness iOS home" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" width="180"/></p> |
+| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness sample demo home (mobile UI from faceplugin-assets, not a dedicated iOS photoshoot)" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" width="180"/></p> |
 
 Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thread.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Passive or active?** **Passive** PAD on this App.
+
+**Screenshots?** Sample demo UI from `faceplugin-assets` (`face-liveness/mobile/`). Not a dedicated iOS photoshoot.
+
+### Related documentation
+
+* [Faceplugin Liveness Detection Mobile SDK](mobile-sdk.md) · [Android](liveness-detection-android-sdk.md)
+* [Face Recognition iOS SDK](../face-recognition-sdk/face-recognition-ios-sdk.md)
+* [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

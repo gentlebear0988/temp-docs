@@ -170,3 +170,19 @@ String json = DocumentReaderSDK.recognize(front, back, "normal");
 ```
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Passport OCR on Android?** Yes. `DocumentReaderSDK.recognize` / `documentProcess` return OCR, MRZ, barcode, and crops. See [Document result JSON](document-result-json.md).
+
+**Offline?** Yes after `setActivation` / `init` with an `FP1.…` for the demo app id (or yours).
+
+### Related documentation
+
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [iOS](id-document-recognition-ios-sdk.md)
+* [Face Recognition Android SDK](../face-recognition-sdk/face-recognition-android-sdk.md)
+* [Liveness Detection Android SDK](../liveness-detection-sdk/liveness-detection-android-sdk.md)
+* [Document result JSON](document-result-json.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

@@ -158,3 +158,18 @@ Future<String> documentLiveness(ImageInput front, [ImageInput? back])
 Also: `getLicenseStatus`, `startNewSession`, `recognizeResult` (typed `DocResult`), `deinit`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact US](../contact-us.md)
+
+
+### FAQ
+
+**Package?** `document_reader_sdk`.
+
+**Passport OCR?** Yes. `recognize` / `documentProcess`. Typed helper: `recognizeResult`.
+
+### Related documentation
+
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [React Native](id-document-recognition-react-native-sdk.md)
+* [Face Recognition Flutter SDK](../face-recognition-sdk/face-recognition-flutter-sdk.md)
+* [Document result JSON](document-result-json.md)
+* [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
