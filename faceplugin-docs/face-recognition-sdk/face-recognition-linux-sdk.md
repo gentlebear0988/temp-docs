@@ -8,7 +8,7 @@ description: >-
 
 Fully on-premise **Face Recognition API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
 
-This product is **recognition only**. For PAD, run [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on port **8084** as a second container.
+This product is **recognition only**. For PAD in the **same** container, use [Face Recognition + Liveness Linux SDK](face-recognition-sdk-linux.md) (`faceplugin/face-recognition-liveness-sdk`). Or run [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on port **8084** as a second container.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 

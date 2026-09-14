@@ -18,7 +18,7 @@ Need a vendor comparison? See [SDK comparison](comparisons/README.md).
 | --- | --- |
 | Match faces 1:1 or 1:N | [Face Recognition SDK](../face-recognition-sdk/) |
 | Face anti-spoofing / PAD only | [Face Liveness Detection SDK](../liveness-detection-sdk/) |
-| Recognition and PAD together | Run Face Recognition **and** Face Liveness as two Apps (ports **8083** and **8084**). Do not merge `lib/cpu`. |
+| Recognition and PAD together | Prefer [Face Recognition + Liveness Linux / Windows](../face-recognition-sdk/face-recognition-sdk-linux.md) (one App, port **8083**, includes `/api/liveness`). Or run recognition-only **8083** + Face Liveness **8084** as two Apps. Do not merge `lib/cpu`. |
 | Passport OCR / ID card verification | [ID Document Recognition SDK](../id-document-recognition-sdk/) |
 | Document authenticity **without** OCR | [ID Document Liveness SDK](../id-document-liveness-sdk/) |
 
@@ -36,6 +36,10 @@ Scan passports, national IDs, and driver licenses on the device or over HTTP. Au
 | Ionic Cordova | [ID-Document-Recognition-Ionic-Cordova](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Ionic-Cordova) | Cordova plugin | — |
 | Windows | [ID-Document-Recognition-Windows](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Windows) | `sdk.py` + `app.py` | API **8082**, demo **9002** |
 | Linux / Docker | [ID-Document-Recognition-Docker](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Docker) | `faceplugin/document-reader` | API **8082**, demo **9002** |
+| Node.js HTTP | [ID-Document-Recognition-Node](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Node) | HTTP API (optional native lib) | API **8082** |
+| Go / C++ HTTP | [ID-Document-Recognition-Go](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Go), […-CPP](https://github.com/Faceplugin-ltd/ID-Document-Recognition-CPP) | HTTP API | API **8082** |
+| JavaScript client | [ID-Document-Recognition-JavaScript](https://github.com/Faceplugin-ltd/ID-Document-Recognition-JavaScript) | Browser + Node client | → **8082** |
+| React / Vue / Angular | […-React](https://github.com/Faceplugin-ltd/ID-Document-Recognition-React), […-Vue](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Vue), […-Angular](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Angular) | Web demos (HTTP) | → **8082** |
 
 ## Face Recognition
 
@@ -49,8 +53,10 @@ Detect faces, read attributes, extract templates, and match 1:1. Mobile demos ad
 | React Native | [FaceRecognition-React-Native](https://github.com/Faceplugin-ltd/FaceRecognition-React-Native) | `face-recognition-sdk` | — |
 | Ionic Capacitor | [FaceRecognition-Ionic-Capacitor](https://github.com/Faceplugin-ltd/FaceRecognition-Ionic-Capacitor) | `face-recognition-capacitor` | — |
 | Ionic Cordova | [FaceRecognition-Ionic-Cordova](https://github.com/Faceplugin-ltd/FaceRecognition-Ionic-Cordova) | Cordova plugin | — |
-| Windows | [FaceRecognition-Windows](https://github.com/Faceplugin-ltd/FaceRecognition-Windows) | `sdk.py` + `app.py` | API **8083**, demo **9003** |
-| Linux / Docker | [FaceRecognition-Docker](https://github.com/Faceplugin-ltd/FaceRecognition-Docker) | `faceplugin/face-recognition` | API **8083**, demo **9003** |
+| Windows (recognition) | [FaceRecognition-Windows](https://github.com/Faceplugin-ltd/FaceRecognition-Windows) | `sdk.py` + `app.py` | API **8083**, demo **9003** |
+| Linux / Docker (recognition) | [FaceRecognition-Docker](https://github.com/Faceplugin-ltd/FaceRecognition-Docker) | `faceplugin/face-recognition` | API **8083**, demo **9003** |
+| Windows (recognition + liveness) | [FaceRecognitionSDK-Windows](https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Windows) | `sdk.py` + `app.py` | API **8083** (+ `/api/liveness`), demo **9003** |
+| Linux / Docker (recognition + liveness) | [FaceRecognitionSDK-Linux](https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Linux) | `faceplugin/face-recognition-liveness-sdk` | API **8083** (+ `/api/liveness`), demo **9003** |
 
 ## Face Liveness
 

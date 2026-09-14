@@ -8,7 +8,7 @@ description: >-
 
 Fully on-premise **commercial Face Recognition HTTP API for Windows**. Default port **8083**. Gradio **9003**. No Docker on Windows.
 
-This is not the [Open Source Face Recognition Windows SDK](open-source-face-recognition-windows-sdk.md). For PAD, run [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on port **8084** as a second process.
+This is not the [Open Source Face Recognition Windows SDK](open-source-face-recognition-windows-sdk.md). For PAD in the **same** process, use [Face Recognition + Liveness Windows SDK](face-recognition-sdk-windows.md). Or run [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on port **8084** as a second process.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 

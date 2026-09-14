@@ -52,7 +52,7 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
   -d "{\"image1\":\"$IMG\",\"image2\":\"$IMG\"}"
 ```
 
-Install: [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md).
+Install: [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md). Combined recognition + PAD in one App: [Face Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md) (same port, adds `/api/liveness`).
 {% endtab %}
 
 {% tab title="Face Liveness" %}
@@ -64,7 +64,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
   -d "{\"image\":\"$IMG\"}"
 ```
 
-Score **≥ 0.5** is Real / pass. JPEG only. [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md).
+Score **≥ 0.5** is Real / pass. JPEG only. [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md). Combined App on **8083**: same body against `/api/liveness` on [Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md).
 {% endtab %}
 
 {% tab title="ID Document" %}
