@@ -6,11 +6,14 @@ description: >-
 
 # Liveness Detection Linux SDK
 
+<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Face Liveness API Linux Docker POST /api/liveness port 8084"><figcaption><p>FaceLivenessDetection-Docker image faceplugin/face-liveness.</p></figcaption></figure>
+
+
 Fully on-premise **Face Liveness HTTP API for Linux / Docker**. Image: `faceplugin/face-liveness`. Default port **8084**.
 
 Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Score **&lt; 0.5** → Spoof / `pass` false.
 
-Need recognition **and** liveness in one App? Use [Face Recognition SDK Linux (Recognition + Liveness)](../face-recognition-sdk/face-recognition-sdk-linux.md).
+Need recognition as well? Run [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md) on port **8083** as a **second** container.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 

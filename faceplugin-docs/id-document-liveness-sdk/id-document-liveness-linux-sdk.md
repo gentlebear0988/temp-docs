@@ -6,6 +6,9 @@ description: >-
 
 # ID Document Liveness Linux SDK
 
+<figure><img src="../.gitbook/assets/diagram-document-liveness.png" alt="ID Document Liveness Linux Docker POST /api/documentLiveness port 8086"><figcaption><p>ID-Document-Liveness-Detection-Docker.</p></figcaption></figure>
+
+
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/ID-Document-Liveness-Detection-Docker" %}

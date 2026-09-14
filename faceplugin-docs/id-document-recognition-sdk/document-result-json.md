@@ -6,6 +6,9 @@ description: >-
 
 # Document result JSON
 
+<figure><img src="../.gitbook/assets/diagram-document-json.png" alt="ID Document Recognition result JSON documentName OCR MRZ images security from recognize and documentProcess"><figcaption><p>Mobile recognize and server documentProcess share this field set.</p></figcaption></figure>
+
+
 `recognize` (mobile) and `POST /api/documentProcess` (Linux / Windows) return the **same idea**: one JSON object. Dedicated `documentRecognition` / `documentLiveness` (and the matching HTTP paths) use the same JSON shape with recognition-only or authenticity-only fields populated. Flutter, React Native, and Ionic **normalize Android output** so it matches this **iOS-shaped** contract.
 
 Parse this object in your app. Do not copy the demo Result screen.

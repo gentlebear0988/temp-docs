@@ -6,6 +6,9 @@ description: >-
 
 # ID Document Recognition Windows SDK
 
+<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="Document verification API Windows port 8082"><figcaption><p>ID-Document-Recognition-Windows.</p></figcaption></figure>
+
+
 Fully on-premise **ID Document Recognition HTTP API for Windows**. Default port **8082**. Gradio **9002**. No Docker on Windows — use [Linux SDK](id-document-recognition-linux-sdk.md) for Docker.
 
 Reads ID cards, passports, and driver licenses. Same routes as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md). Parse results with [Document result JSON](document-result-json.md).

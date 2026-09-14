@@ -24,6 +24,9 @@ layout:
 
 # ID Document Recognition Android SDK
 
+<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="ID Document Recognition Android SDK passport OCR recognize"><figcaption><p>ID-Document-Recognition-Android.</p></figcaption></figure>
+
+
 Fully on-premise **ID Document Recognition SDK for Android**. Reads passports, national IDs, and driver licenses. Place `documentreadersdk.aar` in **`libdocsdk/`**, not `libfacesdk/`.
 
 Public class: `com.faceplugin.documentreadersdk.DocumentReaderSDK`. Demo id: **`com.faceplugin.documentreader`**.

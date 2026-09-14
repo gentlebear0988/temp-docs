@@ -5,6 +5,9 @@ description: >-
 
 # Open Source Face Recognition React SDK
 
+<figure><img src="../.gitbook/assets/diagram-browser-oss.png" alt="Open source Face Recognition React SDK browser wrapper"><figcaption><p>FaceRecognition-React wraps the JavaScript browser SDK.</p></figcaption></figure>
+
+
 ### Code <a href="#setup" id="setup"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-React" %}

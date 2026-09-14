@@ -15,8 +15,6 @@
   * [Server SDK](face-recognition-sdk/server-sdk.md)
     * [Face Recognition Windows SDK](face-recognition-sdk/face-recognition-windows-sdk.md)
     * [Face Recognition Linux SDK](face-recognition-sdk/face-recognition-linux-sdk.md)
-    * [Face Recognition SDK Windows (Recognition + Liveness)](face-recognition-sdk/face-recognition-sdk-windows.md)
-    * [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk/face-recognition-sdk-linux.md)
     * [Face Recognition Dot Net SDK](face-recognition-sdk/face-recognition-dot-net-sdk.md)
     * [Open Source Face Recognition Windows SDK](face-recognition-sdk/open-source-face-recognition-windows-sdk.md)
     * [Open Source Face Recognition Linux SDK](face-recognition-sdk/open-source-face-recognition-linux-sdk.md)

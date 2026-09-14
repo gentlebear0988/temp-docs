@@ -6,6 +6,9 @@ description: >-
 
 # ID Document Recognition iOS SDK
 
+<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="ID Document Recognition iOS SDK passport OCR"><figcaption><p>ID-Document-Recognition-iOS.</p></figcaption></figure>
+
+
 Fully on-premise **ID Document Recognition SDK for iOS**. Native class: `DocSDK`. Demo bundle: **`com.faceplugin.documentreader.app`**.
 
 ### Code <a href="#setup" id="setup"></a>

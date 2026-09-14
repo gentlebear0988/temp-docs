@@ -19,7 +19,7 @@ Faceplugin adds a **document recognition** SDK (passport OCR, MRZ, barcode) and 
 | macOS SDK | Check vendor | Yes (FaceSDK site) |
 | Face recognition | Yes | Yes |
 | Passive liveness | Yes | Yes (documented) |
-| Active liveness | Identify/combined kit only, not Face Liveness App | Yes (Tracker API samples) |
+| Active liveness | Public GitHub: Active-Liveness-Detection-Android / iOS. Not the Face Liveness App | Yes (Tracker API samples) |
 | Passport OCR / ID card SDK | Yes | No (public FaceSDK positioning) |
 | Document liveness | Yes | Check vendor |
 | HTTP Docker Hub images | Yes | Check vendor |

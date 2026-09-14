@@ -18,7 +18,7 @@ Need a vendor comparison? See [SDK comparison](comparisons/README.md).
 | --- | --- |
 | Match faces 1:1 or 1:N | [Face Recognition SDK](../face-recognition-sdk/) |
 | Face anti-spoofing / PAD only | [Liveness Detection SDK](../liveness-detection-sdk/) |
-| Recognition **and** PAD in one **server** App | Combined Recognition + Liveness under [Face Recognition Server SDK](../face-recognition-sdk/server-sdk.md) |
+| Recognition and PAD together | Run Face Recognition **and** Face Liveness as two Apps (ports **8083** and **8084**). Do not merge `lib/cpu`. |
 | Passport OCR / ID card verification | [ID Document Recognition SDK](../id-document-recognition-sdk/) |
 | Document authenticity **without** OCR | [ID Document Liveness SDK](../id-document-liveness-sdk/) |
 
@@ -76,6 +76,9 @@ Authenticity / anti-spoofing **only** (no OCR, MRZ, or barcode API). For OCR plu
 | Linux / Docker | [ID-Document-Liveness-Detection-Docker](https://github.com/Faceplugin-ltd/ID-Document-Liveness-Detection-Docker) | `faceplugin/document-liveness` | API **8086**, demo **9006** |
 
 ## Combining products (eKYC) <a href="#combining-products-ekyc" id="combining-products-ekyc"></a>
+
+<figure><img src="../.gitbook/assets/diagram-ekyc-orchestrate.png" alt="eKYC orchestration of Faceplugin shipping Apps on ports 8082 8086 8084 8083 do not merge lib/cpu"><figcaption><p>There is no single IDV App. You run the public Docker/Windows Apps as separate processes.</p></figcaption></figure>
+
 
 A typical identity (eKYC) flow is:
 

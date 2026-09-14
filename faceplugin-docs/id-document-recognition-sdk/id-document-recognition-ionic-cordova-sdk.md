@@ -24,6 +24,9 @@ layout:
 
 # ID Document Recognition Ionic Cordova SDK
 
+<figure><img src="../.gitbook/assets/diagram-plugin-bridge.png" alt="Cross-platform Faceplugin plugin bridge Flutter React Native Ionic to Android AAR and iOS framework engine"><figcaption><p>JS/Dart plugins wrap the same native engines as the Android and iOS Apps.</p></figcaption></figure>
+
+
 Use this guide only if you already have a **Cordova** Ionic app. The native engine matches Capacitor. New projects should use [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md).
 
 ### Code <a href="#setup" id="setup"></a>

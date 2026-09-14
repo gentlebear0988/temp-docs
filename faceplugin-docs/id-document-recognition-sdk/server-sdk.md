@@ -6,6 +6,9 @@ description: >-
 
 # Faceplugin ID Document Recognition Server SDK
 
+<figure><img src="../.gitbook/assets/diagram-document-ocr.png" alt="Faceplugin document verification API port 8082 documentRecognition documentProcess"><figcaption><p>ID-Document-Recognition-Windows and ID-Document-Recognition-Docker. Port 8082.</p></figcaption></figure>
+
+
 ID Document Recognition as an HTTP API on **your** machine. Send page images; receive OCR, MRZ, barcode, image quality, and optional authenticity JSON.
 
 Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/documentRecognition` / `documentLiveness` / `documentProcess`. Default port **8082**.

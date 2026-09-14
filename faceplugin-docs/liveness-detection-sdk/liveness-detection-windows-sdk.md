@@ -6,6 +6,9 @@ description: >-
 
 # Liveness Detection Windows SDK
 
+<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Face Liveness API Windows POST /api/liveness port 8084"><figcaption><p>FaceLivenessDetection-Windows.</p></figcaption></figure>
+
+
 Fully on-premise **Face Liveness HTTP API for Windows**. Default port **8084**. Gradio **9004**. No Docker on Windows.
 
 Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Same HTTP API as [Liveness Detection Linux SDK](liveness-detection-linux-sdk.md). `POST /api/check_liveness` is an alias of `/api/liveness`.

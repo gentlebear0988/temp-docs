@@ -8,6 +8,9 @@ description: >-
 
 ### Overview
 
+<figure><img src="../.gitbook/assets/diagram-document-liveness.png" alt="Faceplugin ID Document Liveness SDK document anti-spoofing no OCR POST /api/documentLiveness port 8086"><figcaption><p>Public App: ID-Document-Liveness-Detection-Docker only. Authenticity, not OCR.</p></figcaption></figure>
+
+
 **Faceplugin ID Document Liveness SDK** checks whether the image is a **physical ID** or an attack: a screen replay, a printout, a digitally created page, or a substituted portrait.
 
 This product does **not** read fields. OCR, MRZ, and barcodes are turned off. For **passport OCR plus authenticity** in one engine, use [ID Document Recognition](../id-document-recognition-sdk/) with a Liveness-capable license. This is **not** face PAD — use [Liveness Detection](../liveness-detection-sdk/) for selfies.

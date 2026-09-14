@@ -6,6 +6,9 @@ description: >-
 
 # Try it
 
+<figure><img src="../.gitbook/assets/diagram-tryit-ports.png" alt="Faceplugin Try it HTTP ports: document 8082 face match 8083 face liveness 8084 document liveness 8086 curl health machinecode"><figcaption><p>health works before a key. Then copy FPMC1 from machinecode.</p></figcaption></figure>
+
+
 These snippets are meant to be **copied as-is**. You do not write a UI first.
 
 {% hint style="info" %}

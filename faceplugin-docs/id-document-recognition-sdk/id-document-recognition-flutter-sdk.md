@@ -24,6 +24,9 @@ layout:
 
 # ID Document Recognition Flutter SDK
 
+<figure><img src="../.gitbook/assets/diagram-plugin-bridge.png" alt="Cross-platform Faceplugin plugin bridge Flutter React Native Ionic to Android AAR and iOS framework engine"><figcaption><p>JS/Dart plugins wrap the same native engines as the Android and iOS Apps.</p></figcaption></figure>
+
+
 Fully on-premise **ID Document Recognition SDK for Flutter**. Package: `document_reader_sdk`. Android output is **normalized** to the iOS-shaped JSON. Parse it with [Document result JSON](document-result-json.md).
 
 ### Code <a href="#setup" id="setup"></a>

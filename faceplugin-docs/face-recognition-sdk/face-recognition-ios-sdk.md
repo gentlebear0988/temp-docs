@@ -6,6 +6,9 @@ description: >-
 
 # Face Recognition iOS SDK
 
+<figure><img src="../.gitbook/assets/diagram-fr-mobile-identify.png" alt="Face Recognition iOS SDK on-premise Identify setActivation initSDK"><figcaption><p>FaceRecognition-iOS. Same Identify flow as Android on a physical iPhone.</p></figcaption></figure>
+
+
 Fully on-premise **Face Recognition SDK for iOS**. Detect faces, extract templates, match 1:1 or live 1:N, and check passive 2D liveness on the device.
 
 Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not activated, **4** Init failed.

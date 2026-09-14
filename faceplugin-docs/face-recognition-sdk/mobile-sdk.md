@@ -6,6 +6,9 @@ description: >-
 
 # Faceplugin Face Recognition Mobile SDK
 
+<figure><img src="../.gitbook/assets/diagram-fr-mobile-identify.png" alt="Faceplugin Face Recognition Mobile SDK on-device Identify pipeline setActivation init faceDetection"><figcaption><p>Call order: setActivation, init, faceDetection, then Identify. Templates stay in your database.</p></figcaption></figure>
+
+
 On-device **Face Recognition SDK** for Android, iOS, Flutter, React Native, and Ionic. Enroll people, run live **1:N Identify**, and store templates in **your** database. Processing stays on the phone (or in the browser for the open-source JavaScript clients). This is **not** the HTTP Face Recognition API — that is [Server SDK](server-sdk.md).
 
 Typical call order: `setActivation` → `init` → detect / extract template → `similarity` or VideoWorker (live 1:N). Identify default **0.67**. Mobile Identify includes **passive 2D liveness**.

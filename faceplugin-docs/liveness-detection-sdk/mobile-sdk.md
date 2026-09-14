@@ -6,6 +6,9 @@ description: >-
 
 # Faceplugin Liveness Detection Mobile SDK
 
+<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Faceplugin Face Liveness Mobile SDK Android iOS passive PAD faceDetection"><figcaption><p>Standalone PAD. No Flutter or React Native Face Liveness App in the public GitHub org.</p></figcaption></figure>
+
+
 Standalone presentation-attack detection on Android and iOS. The demo scores whether the face is **real**. It does not enroll people or run 1:N search.
 
 Live camera (VideoWorker plus `faceDetection`). Score **0.5 or higher** is treated as Real / pass.

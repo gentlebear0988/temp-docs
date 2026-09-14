@@ -6,6 +6,9 @@ description: >-
 
 # FAQ
 
+<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="What is passive liveness detection Faceplugin PAD score 0.5 POST /api/liveness"><figcaption><p>Face Liveness Apps are passive. Active challenge demos are separate GitHub repos, not this API.</p></figcaption></figure>
+
+
 ## What is a face recognition SDK?
 
 A library that detects faces, extracts a template (embedding), and compares templates. Faceplugin’s commercial SDK runs **on-premise**. You store templates in **your** database. See [Face Recognition SDK](../face-recognition-sdk/).
@@ -16,7 +19,7 @@ The engine scores a camera frame or JPEG **without** a smile / turn-head challen
 
 ## What is the difference between active and passive liveness?
 
-**Passive:** no user challenge (Face Liveness Apps, and 2D liveness on Face Recognition Identify). **Active:** optional VideoWorker prompts (smile, blink, turn) on some Face Recognition Identify / combined kit flows. Active liveness is **not** a separate Faceplugin SKU and is **not** how the Face Liveness Linux/Windows API works (`POST /api/liveness` on one JPEG).
+**Passive:** no user challenge (Face Liveness Apps, and 2D liveness on Face Recognition Identify). **Active:** challenge demos exist on GitHub as `Active-Liveness-Detection-Android` and `Active-Liveness-Detection-iOS`. They are **not** the Face Liveness App. Face Liveness Linux/Windows is still `POST /api/liveness` on one JPEG.
 
 ## Can face recognition work completely offline?
 

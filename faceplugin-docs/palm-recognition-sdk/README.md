@@ -8,6 +8,9 @@ description: >-
 
 ### Overview
 
+<figure><img src="../.gitbook/assets/diagram-palm-rgb.png" alt="Faceplugin open-source Palm Recognition SDK RGB ROI template compare_two_images not a face SDK"><figcaption><p>Python sample. Not Face Recognition and not a commercial HTTP App.</p></figcaption></figure>
+
+
 **Faceplugin Palm Recognition SDK** is a **free, on-premise** Python sample for palm matching from a standard **RGB camera**. It is **not** the commercial [Face Recognition SDK](../face-recognition-sdk/) and it is **not** a document or liveness product.
 
 All processing stays on your machine.

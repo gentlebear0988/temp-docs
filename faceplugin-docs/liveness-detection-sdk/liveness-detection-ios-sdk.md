@@ -6,6 +6,9 @@ description: >-
 
 # Liveness Detection iOS SDK
 
+<figure><img src="../.gitbook/assets/diagram-liveness-pad.png" alt="Face Liveness Detection iOS SDK passive PAD"><figcaption><p>FaceLivenessDetection-iOS.</p></figcaption></figure>
+
+
 Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`.
 
 | What | Id |

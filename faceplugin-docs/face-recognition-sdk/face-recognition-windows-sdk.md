@@ -6,9 +6,12 @@ description: >-
 
 # Face Recognition Windows SDK
 
+<figure><img src="../.gitbook/assets/diagram-fr-server-api.png" alt="Face Recognition API Windows POST /api/detect match similarity port 8083"><figcaption><p>FaceRecognition-Windows. No Docker. Same HTTP routes as Linux.</p></figcaption></figure>
+
+
 Fully on-premise **commercial Face Recognition HTTP API for Windows**. Default port **8083**. Gradio **9003**. No Docker on Windows.
 
-This is not the [Open Source Face Recognition Windows SDK](open-source-face-recognition-windows-sdk.md). For recognition **and** liveness in one App, use [Face Recognition SDK Windows (Recognition + Liveness)](face-recognition-sdk-windows.md).
+This is not the [Open Source Face Recognition Windows SDK](open-source-face-recognition-windows-sdk.md). For PAD, run [Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on port **8084** as a second process.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 
@@ -115,6 +118,5 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Linux](face-recognition-linux-sdk.md)
 * [Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
-* [Combined Recognition + Liveness (Windows)](face-recognition-sdk-windows.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

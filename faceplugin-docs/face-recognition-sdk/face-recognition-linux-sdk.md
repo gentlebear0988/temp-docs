@@ -6,9 +6,12 @@ description: >-
 
 # Face Recognition Linux SDK
 
+<figure><img src="../.gitbook/assets/diagram-fr-server-api.png" alt="Face Recognition API Linux Docker POST /api/detect match similarity port 8083"><figcaption><p>FaceRecognition-Docker image faceplugin/face-recognition.</p></figcaption></figure>
+
+
 Fully on-premise **Face Recognition API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
 
-This product is **recognition only**. For recognition **and** liveness in one App, use [Face Recognition SDK Linux (Recognition + Liveness)](face-recognition-sdk-linux.md).
+This product is **recognition only**. For PAD, run [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on port **8084** as a second container.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 
@@ -236,6 +239,5 @@ Call order: `get_machine_code` → `activate` → `init_sdk` → detect / qualit
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Windows](face-recognition-windows-sdk.md)
 * [Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
-* [Combined Recognition + Liveness (Linux)](face-recognition-sdk-linux.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
