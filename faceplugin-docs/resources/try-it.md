@@ -1,7 +1,8 @@
 ---
 description: >-
-  Try Faceplugin SDKs with copy-paste commands. curl health with no license, then detect, match,
-  liveness, and document OCR. Android and Flutter snippets after the demo runs.
+  Try FacePlugin SDKs with copy-paste commands. Start with license-free curl
+  health and machine-code checks, then activate the SDK and test face detection,
+  face matching, liveness, and document OCR.
 ---
 
 # Try it
@@ -9,7 +10,7 @@ description: >-
 These snippets are meant to be **copied as-is**. You do not write a UI first. Start with `health` and `machinecode` (no license needed), then activate and call one process API.
 
 {% hint style="info" %}
-**Server first is the easiest.** Docker Hub + `curl` needs no Android Studio. Mobile snippets assume you already ran the demo once (AAR / frameworks in place, demo license still bound to the demo app id).
+**Start with the server if you want the quickest test.** Docker Hub + `curl` lets you test the SDK without Android Studio. Mobile snippets assume you have already run the demo once, with the required AAR/framework files in place and the demo license configured for the demo app ID.
 {% endhint %}
 
 ## 1. Server — no license yet
@@ -36,7 +37,7 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
 
 Success looks like `"Successfully activated"`. The App also loads the engine on this call.
 
-## 3. Server — one function each product
+## 3. Server — try the main APIs for each product
 
 {% tabs %}
 {% tab title="Face Recognition" %}
@@ -95,7 +96,7 @@ print(urllib.request.urlopen(req).read().decode())
 
 ## 4. Mobile — after the demo compiles
 
-Keep the **demo application id** so the included `FP1.…` works. Call this on a **background** thread.
+Keep the **demo application ID** so the included `FP1.…` license works. Call this on a **background** thread.
 
 {% tabs %}
 {% tab title="Android Face Recognition" %}

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin on-premise Face Recognition, Liveness, and ID Document Recognition SDK docs.
-  Offline Android, iOS, Flutter, React Native, Windows, and Linux Docker integration guides.
+  Faceplugin on-premise Face Recognition, Liveness, and ID Document Recognition
+  SDK docs. Offline Android, iOS, Flutter, React Native, Windows, and Linux
+  Docker integration guides.
 icon: hand-wave
 cover: .gitbook/assets/Screenshot 2025-11-21 184657.png
 coverY: 0
@@ -27,9 +28,11 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
-# Faceplugin on-premise Face Recognition, Liveness, and ID Document SDKs
+# Welcome
 
 ### Introduction
 
@@ -59,16 +62,12 @@ Ports: Document **8082**, Face Recognition **8083**, Face Liveness **8084**, Doc
 Native binaries are **not** on GitHub (too large). Each platform page links the Google Drive folder and the exact copy path.
 
 {% hint style="info" %}
-The demo is a full app. You do **not** need the demo screens in production — copy the runtime, call activate → init, then the process APIs.
-{% endhint %}
-
-{% hint style="info" %}
-After you publish this space, connect the docs domain to **Google Search Console** (GitBook admin: custom domain, sitemap, Open Graph). Markdown in this repo cannot enable Search Console by itself.
+The demo is a complete application for testing. In production, use the runtime directly: copy the runtime, call `activate` → `init`, then call the processing APIs.
 {% endhint %}
 
 ### Our Products
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face Recognition SDK</strong></td><td>On-premise face matching, 1:N Identify on mobile, HTTP API on Linux/Windows</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">identify.png</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>Face Liveness Detection SDK</strong></td><td>Passive PAD / anti-spoofing against photos, screens, 3D models, and deepfakes</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png">liveness.png</a></td><td></td><td><a href="liveness-detection-sdk/">liveness-detection-sdk</a></td></tr><tr><td><strong>ID Document Recognition SDK</strong></td><td>Passport OCR, ID verification — 16,900 templates, 255 countries</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png">camera.png</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face Recognition SDK</strong></td><td>On-premise face matching, 1:N Identify on mobile, HTTP API on Linux/Windows</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>Face Liveness Detection SDK</strong></td><td>Passive PAD / anti-spoofing against photos, screens, 3D models, and deepfakes</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png</a></td><td></td><td><a href="liveness-detection-sdk/">liveness-detection-sdk</a></td></tr><tr><td><strong>ID Document Recognition SDK</strong></td><td>Passport OCR, ID verification — 16,900 templates, 255 countries</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr></tbody></table>
 
 Also: [ID Document Liveness SDK](id-document-liveness-sdk/) (Linux / Docker authenticity only) · [Palm Recognition SDK](palm-recognition-sdk/).
 
@@ -105,5 +104,5 @@ Android, iOS, Flutter, React Native, Ionic (Capacitor and Cordova), Windows and 
 ### Related documentation
 
 * [Choose a product](resources/choose-a-product.md) · [FAQ](resources/faq.md) · [Troubleshooting](resources/troubleshooting.md)
-* [Request a License & Support](request-a-license-and-support.md) · [SDK comparison](resources/comparisons/README.md)
+* [Request a License & Support](request-a-license-and-support.md) · [SDK comparison](resources/comparisons/)
 * [Status codes](resources/status-codes.md) · [Changelog](resources/changelog.md)
