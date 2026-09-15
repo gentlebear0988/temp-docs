@@ -57,7 +57,7 @@ Typical call order on **Linux / Windows**: `GET /api/machinecode` → `POST /api
 
 **Does this SDK include liveness?** Mobile Identify includes passive 2D liveness. Standalone iBeta-class PAD is the [Face Liveness Detection SDK](../liveness-detection-sdk/). On the server you can use combined [Recognition + Liveness](face-recognition-sdk-linux.md) which provides both services on port **8083**.
 
-**Is there a Face Recognition API?** Yes — Linux Docker and Windows HTTP on port **8083**. See [Linux](face-recognition-linux-sdk.md), [Windows](face-recognition-windows-sdk.md), and combined [+ Liveness Linux](face-recognition-sdk-linux.md) / [Windows](face-recognition-sdk-windows.md).
+**Is there a Face Recognition API?** Yes — Linux Docker and Windows HTTP on port **8083**. See [Linux](face-recognition-linux-sdk.md), [Windows](face-recognition-windows-sdk.md), and combined [Face Recognition + Liveness Linux](face-recognition-sdk-linux.md) / [Windows](face-recognition-sdk-windows.md).
 
 **Does the server SDK support 1 identification?** The server SDK does not provide a built-in 1:N gallery or `POST /api/identify` endpoint.
 
