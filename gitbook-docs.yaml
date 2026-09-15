@@ -8,4 +8,4 @@ site:
       path: faceplugin-docs
       default: true
       content:
-        directory: ./faceplugin-docs
+        directory: null
