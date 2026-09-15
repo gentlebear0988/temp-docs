@@ -63,5 +63,5 @@ python main.py
 
 ### Related documentation
 
-* [Palm Recognition SDK](README.md) · [Face Recognition SDK](../face-recognition-sdk/)
+* [Palm Recognition SDK](README.md) · [Face Recognition SDK](../face-recognition-sdk/) · [Glossary](../resources/glossary.md)
 * [Request a License](../request-a-license-and-support.md) · [Choose a product](../resources/choose-a-product.md)

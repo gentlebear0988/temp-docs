@@ -193,7 +193,7 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 
 ### Related documentation
 
-* [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [iOS](liveness-detection-ios-sdk.md)
+* [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [iOS](liveness-detection-ios-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Android SDK](../face-recognition-sdk/face-recognition-android-sdk.md)
 * [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

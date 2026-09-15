@@ -38,5 +38,5 @@ Parse fields with [Document result JSON](document-result-json.md).
 
 ### Related documentation
 
-* [Linux SDK](id-document-recognition-linux-sdk.md) · [React](id-document-recognition-react-sdk.md) · [Vue](id-document-recognition-vue-sdk.md) · [Angular](id-document-recognition-angular-sdk.md)
+* [Linux SDK](id-document-recognition-linux-sdk.md) · [React](id-document-recognition-react-sdk.md) · [Vue](id-document-recognition-vue-sdk.md) · [Angular](id-document-recognition-angular-sdk.md) · [Glossary](../resources/glossary.md)
 * [Choose a product](../resources/choose-a-product.md) · [Request a License](../request-a-license-and-support.md)

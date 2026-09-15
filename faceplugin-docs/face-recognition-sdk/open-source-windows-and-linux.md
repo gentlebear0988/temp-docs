@@ -6,7 +6,7 @@ description: >-
 
 # Open Source Windows & Linux
 
-### Code <a href="#setup" id="setup"></a>
+### Code <a href="#code" id="code"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK" %}
 
@@ -14,14 +14,11 @@ description: >-
 
 The **Open Source Face Recognition SDK** is a free Python sample for Windows and Linux. It detects faces, extracts embeddings, and compares them on your machine (no Faceplugin cloud).
 
-Accuracy is lower than the commercial Face Recognition SDK. Contact Faceplugin if you need the higher-accuracy native engine.
+Accuracy is lower than the commercial Face Recognition SDK. Contact Faceplugin if you need the higher-accuracy native engine. This sample is **not** the commercial Android/iOS or HTTP engine.
 
+### Setup <a href="#setup" id="setup"></a>
 
-### Setup
-
-### Prerequisites
-
-
+#### Prerequisites
 
 * **Python 3.9 or higher**
 * **Anaconda** (recommended for dependency management)
@@ -145,8 +142,7 @@ Compares two face feature embeddings.
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Mobile SDK](mobile-sdk.md)
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Mobile SDK](mobile-sdk.md) · [Glossary](../resources/glossary.md)
 * [Open Source React](open-source-face-recognition-react-sdk.md) · [Open Source Vue](open-source-face-recognition-vue-sdk.md)
-* This open-source Python SDK is **not** the commercial Android/iOS or HTTP engine.
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

@@ -26,5 +26,5 @@ Also public: [Go](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Go) 
 
 ### Related documentation
 
-* [Linux SDK](id-document-recognition-linux-sdk.md) · [JavaScript client](id-document-recognition-javascript-sdk.md)
+* [Linux SDK](id-document-recognition-linux-sdk.md) · [JavaScript client](id-document-recognition-javascript-sdk.md) · [Glossary](../resources/glossary.md)
 * [Document result JSON](document-result-json.md) · [Choose a product](../resources/choose-a-product.md)

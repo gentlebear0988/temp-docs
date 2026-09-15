@@ -111,7 +111,7 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Linux](face-recognition-linux-sdk.md)
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Linux](face-recognition-linux-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

@@ -1,12 +1,12 @@
 ---
 description: >-
-  Passport OCR and ID card verification with Faceplugin. On-premise Document Reader SDK for MRZ,
-  barcode, and 16,900 document templates. Start with capabilities and Try it.
+  On-premise passport OCR SDK and ID card verification API from Faceplugin. Read MRZ
+  (machine-readable zone), barcodes, and 16,900 document templates on mobile or port 8082.
 ---
 
 # Passport OCR and ID card verification
 
-Looking for an on-premise **passport OCR SDK**, **MRZ reader**, or **ID card verification API**? Faceplugin **ID Document Recognition** (Document Reader) classifies the document, runs OCR / MRZ / barcode, and optionally document authenticity — on the phone or on your server (port **8082**).
+Looking for an on-premise **passport OCR SDK**, **MRZ reader** (machine-readable zone), or **ID card verification API**? Faceplugin **ID Document Recognition** (Document Reader) classifies the document, runs OCR / MRZ / barcode, and optionally document authenticity — on the phone or on your server (port **8082**). Terms: [Glossary](glossary.md).
 
 * **What it can do:** [ID Document Recognition capabilities](../id-document-recognition-sdk/capabilities.md)
 * **Supported documents (PDF):** [catalog](../id-document-recognition-sdk/capabilities.md#document-type-classification--worldwide-coverage) — **16,900** templates, **255** countries
@@ -17,4 +17,4 @@ For face match after the ID scan, see [Face Recognition capabilities](../face-re
 
 ### Related documentation
 
-* [Choose a product](choose-a-product.md) · [FAQ](faq.md) · [Request a License](../request-a-license-and-support.md)
+* [Choose a product](choose-a-product.md) · [FAQ](faq.md) · [Glossary](glossary.md) · [Request a License](../request-a-license-and-support.md)

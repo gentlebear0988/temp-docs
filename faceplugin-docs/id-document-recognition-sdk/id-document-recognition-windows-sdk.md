@@ -88,7 +88,7 @@ curl -s -X POST http://127.0.0.1:8082/api/documentProcess \
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Server SDK](server-sdk.md) · [Linux](id-document-recognition-linux-sdk.md)
+* [Faceplugin ID Document Recognition Server SDK](server-sdk.md) · [Linux](id-document-recognition-linux-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Windows SDK](../face-recognition-sdk/face-recognition-windows-sdk.md)
 * [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [Document result JSON](document-result-json.md)

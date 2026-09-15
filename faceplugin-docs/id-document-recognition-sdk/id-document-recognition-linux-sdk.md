@@ -211,7 +211,7 @@ print(sdk.document_process(images, options={"response": {"OCR": "normal", "Authe
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Server SDK](server-sdk.md) · [Windows](id-document-recognition-windows-sdk.md)
+* [Faceplugin ID Document Recognition Server SDK](server-sdk.md) · [Windows](id-document-recognition-windows-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md)
 * [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md)

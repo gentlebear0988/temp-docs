@@ -108,7 +108,7 @@ Local Gradio: `run_demo.bat` on **9003** (Detect, Quality, Match, **Liveness**).
 
 ### Related documentation
 
-* [Face Recognition Windows SDK](face-recognition-windows-sdk.md) (recognition only)
+* [Face Recognition Windows SDK](face-recognition-windows-sdk.md) (recognition only) · [Glossary](../resources/glossary.md)
 * [Face Recognition + Liveness Linux SDK](face-recognition-sdk-linux.md)
 * [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [Face Recognition Server SDK](server-sdk.md) · [Choose a product](../resources/choose-a-product.md)

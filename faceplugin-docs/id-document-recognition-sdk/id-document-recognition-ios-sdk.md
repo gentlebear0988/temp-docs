@@ -111,7 +111,7 @@ Licenses are **offline**. Request a new `FP1.…` for your own app.
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Android](id-document-recognition-android-sdk.md)
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Android](id-document-recognition-android-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition iOS SDK](../face-recognition-sdk/face-recognition-ios-sdk.md)
 * [Face Liveness Detection iOS SDK](../liveness-detection-sdk/liveness-detection-ios-sdk.md)
 * [Document result JSON](document-result-json.md)

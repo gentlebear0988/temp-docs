@@ -88,7 +88,7 @@ Recognition-only images: `faceplugin/face-recognition`. Combined Recognition + L
 
 ### Related documentation
 
-* [Face Recognition SDK](./) · [Try it](../resources/try-it.md)
+* [Face Recognition SDK](./) · [Try it](../resources/try-it.md) · [Glossary](../resources/glossary.md)
 * [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md)
 * [ID Document capabilities](../id-document-recognition-sdk/capabilities.md)
 * [Request a License](../request-a-license-and-support.md)

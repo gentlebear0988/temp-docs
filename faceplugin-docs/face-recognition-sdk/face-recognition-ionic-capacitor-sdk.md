@@ -200,7 +200,7 @@ Optional session helpers in the example: `IdentifySession`, `CaptureSession`.
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Cordova](face-recognition-ionic-cordova-sdk.md)
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Cordova](face-recognition-ionic-cordova-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Ionic Capacitor SDK](../id-document-recognition-sdk/id-document-recognition-ionic-capacitor-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

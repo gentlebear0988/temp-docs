@@ -46,4 +46,4 @@ Score **≥ 0.5** → Real / pass (product README). Change this default only if 
 
 ### Related documentation
 
-* [FAQ](faq.md) · [Troubleshooting](troubleshooting.md) · [Request a License](../request-a-license-and-support.md)
+* [FAQ](faq.md) · [Glossary](glossary.md) · [Troubleshooting](troubleshooting.md) · [Request a License](../request-a-license-and-support.md)

@@ -124,7 +124,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 
 ### Related documentation
 
-* [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Linux](liveness-detection-linux-sdk.md)
+* [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Linux](liveness-detection-linux-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Windows SDK](../face-recognition-sdk/face-recognition-windows-sdk.md)
 * [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

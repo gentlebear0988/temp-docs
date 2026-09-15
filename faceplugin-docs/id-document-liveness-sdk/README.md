@@ -46,7 +46,7 @@ flowchart LR
 
 ### Related documentation
 
-* [ID Document Recognition SDK](../id-document-recognition-sdk/) · [Face Liveness Detection SDK](../liveness-detection-sdk/)
+* [ID Document Recognition SDK](../id-document-recognition-sdk/) · [Face Liveness Detection SDK](../liveness-detection-sdk/) · [Glossary](../resources/glossary.md)
 * [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md)
 * [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

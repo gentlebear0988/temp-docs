@@ -30,7 +30,7 @@ flowchart LR
 
 ### Related documentation
 
-* [ID Document Liveness SDK](README.md) · [Linux SDK](id-document-liveness-linux-sdk.md)
+* [ID Document Liveness SDK](README.md) · [Linux SDK](id-document-liveness-linux-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Server SDK](../id-document-recognition-sdk/server-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

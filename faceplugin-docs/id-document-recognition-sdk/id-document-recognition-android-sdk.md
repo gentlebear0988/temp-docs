@@ -177,7 +177,7 @@ String json = DocumentReaderSDK.recognize(front, back, "normal");
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [iOS](id-document-recognition-ios-sdk.md)
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [iOS](id-document-recognition-ios-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Android SDK](../face-recognition-sdk/face-recognition-android-sdk.md)
 * [Face Liveness Detection Android SDK](../liveness-detection-sdk/liveness-detection-android-sdk.md)
 * [Document result JSON](document-result-json.md)

@@ -38,5 +38,5 @@ The public sample is the [open-source Palm Recognition repository](open-source-p
 
 ### Related documentation
 
-* [Open-source Palm Recognition setup](open-source-palm-recognition-sdk.md)
+* [Open-source Palm Recognition setup](open-source-palm-recognition-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition SDK](../face-recognition-sdk/) · [Request a License](../request-a-license-and-support.md)

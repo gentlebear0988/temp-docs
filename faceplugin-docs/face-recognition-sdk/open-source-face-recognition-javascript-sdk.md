@@ -3,9 +3,9 @@ description: >-
   Faceplugin open-source Face Recognition JavaScript SDK. On-premise browser face matching and liveness (npm faceplugin). Not the commercial Android/iOS engine.
 ---
 
-# Open Source Face Recognition Javascript SDK
+# Open Source Face Recognition JavaScript SDK
 
-### Code <a href="#setup" id="setup"></a>
+### Code <a href="#code" id="code"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-LivenessDetection-Javascript" %}
 Completely Free and Open Source Face recognition Javascript SDK
@@ -13,9 +13,11 @@ Completely Free and Open Source Face recognition Javascript SDK
 
 ### Overview <a href="#overview" id="overview"></a>
 
-Free **open-source** Face Recognition JavaScript sample for the browser. Face matching (and optional liveness helpers in the sample) run **in the user's tab** — no Faceplugin cloud.
+The world's 1st **Completely Free** and **Open Source** **Face Recognition Javascript SDK** for developers to integrate face recognition and liveness detection capabilities into web frontend. Supports real-time, high-accuracy face recognition with deep learning models.\
+This is **on-premise face recognition SDK** which means everything is processed in your browser and **NO** data leaves it.\
+\
+**Please contact us if you need the SDK with higher accuracy.**
 
-This is **not** the commercial Android/iOS or HTTP Face Recognition engine. Contact Faceplugin if you need higher accuracy.
 ### Setup
 
 ```

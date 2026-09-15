@@ -94,7 +94,7 @@ Parse JSON with [Document result JSON](document-result-json.md).
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md)
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Ionic Cordova SDK](../face-recognition-sdk/face-recognition-ionic-cordova-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

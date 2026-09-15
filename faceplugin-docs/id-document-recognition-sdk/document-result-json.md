@@ -83,7 +83,7 @@ Flutter, React Native, and Ionic ship typed helpers (`recognizeResult`, `rows`, 
 
 ### Related documentation
 
-* [Document security check fields](document-security-check-fields.md)
+* [Document security check fields](document-security-check-fields.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Mobile SDK](mobile-sdk.md) · [Server SDK](server-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

@@ -232,7 +232,7 @@ Call order: `get_machine_code` → `activate` → `init_sdk` → detect / qualit
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Windows](face-recognition-windows-sdk.md)
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Windows](face-recognition-windows-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

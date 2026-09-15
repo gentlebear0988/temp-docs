@@ -171,7 +171,7 @@ Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFea
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Android](face-recognition-android-sdk.md)
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Android](face-recognition-android-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection iOS SDK](../liveness-detection-sdk/liveness-detection-ios-sdk.md)
 * [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

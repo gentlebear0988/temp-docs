@@ -139,7 +139,7 @@ Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projec
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md)
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Ionic Cordova SDK](../id-document-recognition-sdk/id-document-recognition-ionic-cordova-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

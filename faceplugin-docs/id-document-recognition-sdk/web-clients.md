@@ -12,5 +12,5 @@ These repos are **HTTP clients / demos**. They do **not** ship `libDocSDK`. Star
 
 ### Related documentation
 
-* [Server SDK](server-sdk.md) · [Document result JSON](document-result-json.md)
+* [Server SDK](server-sdk.md) · [Document result JSON](document-result-json.md) · [Glossary](../resources/glossary.md)
 * [Choose a product](../resources/choose-a-product.md)

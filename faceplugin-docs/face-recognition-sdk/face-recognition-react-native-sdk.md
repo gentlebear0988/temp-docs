@@ -261,7 +261,7 @@ Prefer `ingestLiveCameraFrame` so rotation is handled for you.
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Flutter](face-recognition-flutter-sdk.md)
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Flutter](face-recognition-flutter-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition React Native SDK](../id-document-recognition-sdk/id-document-recognition-react-native-sdk.md)
 * There is no public Face Liveness React Native SDK — use Identify 2D liveness or native Android/iOS Liveness.
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

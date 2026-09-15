@@ -15,4 +15,4 @@ Until dated entries appear on this page, use:
 
 ### Related documentation
 
-* [Choose a product](choose-a-product.md) · [Request a License](../request-a-license-and-support.md)
+* [Choose a product](choose-a-product.md) · [Request a License](../request-a-license-and-support.md) · [Glossary](glossary.md)

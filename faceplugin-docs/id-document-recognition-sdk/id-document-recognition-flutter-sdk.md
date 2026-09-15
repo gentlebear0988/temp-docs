@@ -167,7 +167,7 @@ Also: `getLicenseStatus`, `startNewSession`, `recognizeResult` (typed `DocResult
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [React Native](id-document-recognition-react-native-sdk.md)
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [React Native](id-document-recognition-react-native-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Flutter SDK](../face-recognition-sdk/face-recognition-flutter-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

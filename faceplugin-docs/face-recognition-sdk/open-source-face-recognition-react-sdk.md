@@ -5,7 +5,7 @@ description: >-
 
 # Open Source Face Recognition React SDK
 
-### Code <a href="#setup" id="setup"></a>
+### Code <a href="#code" id="code"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-React" %}
 
@@ -98,7 +98,7 @@ npm start
 
 ### Related documentation
 
-* [Open Source Javascript SDK](open-source-face-recognition-javascript-sdk.md) · [Vue](open-source-face-recognition-vue-sdk.md)
+* [Open Source Javascript SDK](open-source-face-recognition-javascript-sdk.md) · [Vue](open-source-face-recognition-vue-sdk.md) · [Glossary](../resources/glossary.md)
 * [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

@@ -331,7 +331,7 @@ Typical call order: `setActivation` → `init` → `faceDetection` → `template
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [iOS](face-recognition-ios-sdk.md)
+* [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [iOS](face-recognition-ios-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection Android SDK](../liveness-detection-sdk/liveness-detection-android-sdk.md)
 * [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

@@ -14,5 +14,5 @@ For production accuracy, use [Mobile SDK](mobile-sdk.md) or [Server SDK](server-
 
 ### Related documentation
 
-* [Mobile SDK](mobile-sdk.md) · [Server SDK](server-sdk.md) · [Face Recognition SDK](README.md)
+* [Mobile SDK](mobile-sdk.md) · [Server SDK](server-sdk.md) · [Face Recognition SDK](README.md) · [Glossary](../resources/glossary.md)
 * [Choose a product](../resources/choose-a-product.md) · [Request a License](../request-a-license-and-support.md)

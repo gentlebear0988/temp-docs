@@ -82,6 +82,6 @@ Images: `faceplugin/face-liveness`. See [Linux](liveness-detection-linux-sdk.md)
 
 ### Related documentation
 
-* [Face Liveness Detection SDK](README.md) · [Face Recognition capabilities](../face-recognition-sdk/capabilities.md)
+* [Face Liveness Detection SDK](README.md) · [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) · [Glossary](../resources/glossary.md)
 * [Try it](../resources/try-it.md) · [Request a License](../request-a-license-and-support.md)
 * [SDK comparison](../resources/comparisons/README.md)

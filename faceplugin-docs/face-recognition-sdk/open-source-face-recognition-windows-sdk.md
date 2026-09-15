@@ -5,10 +5,10 @@ description: >-
 
 # Open Source Face Recognition Windows SDK
 
-### Code <a href="#setup" id="setup"></a>
+### Code <a href="#code" id="code"></a>
 
 {% embed url="https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK" %}
-Completely Free and Open Source Face recognition Windows SDK
+Free open-source Face Recognition Windows SDK
 {% endembed %}
 
 ### Overview <a href="#overview" id="overview"></a>
@@ -53,7 +53,7 @@ Please download anaconda on your computer and install it. We used Windows machin
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Open Source Linux](open-source-face-recognition-linux-sdk.md)
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Open Source Linux](open-source-face-recognition-linux-sdk.md) · [Glossary](../resources/glossary.md)
 * Lower accuracy than the commercial [Windows HTTP API](face-recognition-windows-sdk.md).
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

@@ -33,5 +33,5 @@ Integrate Faceplugin: [Android Face Recognition](../../face-recognition-sdk/face
 
 ### Related documentation
 
-* [SDK comparison index](README.md) · [Choose a product](../choose-a-product.md)
+* [SDK comparison index](README.md) · [Choose a product](../choose-a-product.md) · [Glossary](../glossary.md)
 * [FAQ](../faq.md) · [Try it](../try-it.md)

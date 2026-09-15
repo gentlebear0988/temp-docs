@@ -133,7 +133,7 @@ Also: `getLicenseStatus`, `startNewSession`, `startLivePreview` / `takeLiveSnaps
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Ionic Cordova](id-document-recognition-ionic-cordova-sdk.md)
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Ionic Cordova](id-document-recognition-ionic-cordova-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Ionic Capacitor SDK](../face-recognition-sdk/face-recognition-ionic-capacitor-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

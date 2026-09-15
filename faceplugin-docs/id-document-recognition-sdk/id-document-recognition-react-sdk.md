@@ -22,5 +22,5 @@ For native mobile, use [Flutter](id-document-recognition-flutter-sdk.md) or [Rea
 
 ### Related documentation
 
-* [JavaScript client](id-document-recognition-javascript-sdk.md) · [Document result JSON](document-result-json.md)
+* [JavaScript client](id-document-recognition-javascript-sdk.md) · [Document result JSON](document-result-json.md) · [Glossary](../resources/glossary.md)
 * [Linux SDK](id-document-recognition-linux-sdk.md) · [Choose a product](../resources/choose-a-product.md)

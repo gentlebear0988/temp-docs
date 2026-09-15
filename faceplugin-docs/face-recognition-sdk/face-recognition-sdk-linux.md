@@ -118,7 +118,7 @@ Local Gradio: `DEMO_PORT=9003 API_BASE=http://127.0.0.1:8083 python3 demo.py` (D
 
 ### Related documentation
 
-* [Face Recognition Linux SDK](face-recognition-linux-sdk.md) (recognition only)
+* [Face Recognition Linux SDK](face-recognition-linux-sdk.md) (recognition only) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [Face Recognition Server SDK](server-sdk.md) · [Choose a product](../resources/choose-a-product.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

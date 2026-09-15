@@ -1,7 +1,13 @@
 ---
-description: Moved to Face Recognition Ionic Cordova SDK.
+description: >-
+  Redirect. This URL was renamed. Use Faceplugin Face Recognition Ionic Cordova SDK —
+  on-premise face matching for Ionic Cordova.
 ---
 
-# Face Recognition Ionic Cordova SDK
+# Page moved: Face Recognition Ionic Cordova SDK
 
-This page moved to [Face Recognition Ionic Cordova SDK](face-recognition-ionic-cordova-sdk.md).
+This URL is outdated. Continue here:
+
+**[Face Recognition Ionic Cordova SDK](face-recognition-ionic-cordova-sdk.md)**
+
+Also: [Face Recognition Mobile SDK](mobile-sdk.md) · [Glossary](../resources/glossary.md)

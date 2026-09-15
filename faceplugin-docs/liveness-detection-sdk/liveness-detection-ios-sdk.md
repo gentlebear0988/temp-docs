@@ -115,7 +115,7 @@ Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thre
 
 ### Related documentation
 
-* [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [Android](liveness-detection-android-sdk.md)
+* [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [Android](liveness-detection-android-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition iOS SDK](../face-recognition-sdk/face-recognition-ios-sdk.md)
 * [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

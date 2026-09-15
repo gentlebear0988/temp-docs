@@ -171,7 +171,7 @@ Also: `getLicenseStatus`, `startNewSession`, `deinit`.
 
 ### Related documentation
 
-* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Flutter](id-document-recognition-flutter-sdk.md)
+* [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [Flutter](id-document-recognition-flutter-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition React Native SDK](../face-recognition-sdk/face-recognition-react-native-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

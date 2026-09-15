@@ -20,5 +20,5 @@ Vue **web demo** for ID Document Recognition. Calls `POST /api/documentProcess` 
 
 ### Related documentation
 
-* [JavaScript client](id-document-recognition-javascript-sdk.md) · [React](id-document-recognition-react-sdk.md) · [Angular](id-document-recognition-angular-sdk.md)
+* [JavaScript client](id-document-recognition-javascript-sdk.md) · [React](id-document-recognition-react-sdk.md) · [Angular](id-document-recognition-angular-sdk.md) · [Glossary](../resources/glossary.md)
 * [Document result JSON](document-result-json.md) · [Choose a product](../resources/choose-a-product.md)

@@ -103,7 +103,7 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 
 ### Related documentation
 
-* [Faceplugin ID Document Liveness Server SDK](server-sdk.md)
+* [Faceplugin ID Document Liveness Server SDK](server-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) (OCR + optional authenticity)
 * [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (face anti-spoofing)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

@@ -1,7 +1,13 @@
 ---
-description: Moved to Open Source Face Recognition Vue SDK.
+description: >-
+  Redirect. This URL was renamed. Use Faceplugin open-source Face Recognition Vue SDK —
+  browser face matching sample (not the commercial native SDK).
 ---
 
-# Open Source Face Recognition Vue SDK
+# Page moved: Open Source Face Recognition Vue SDK
 
-This page moved to [Open Source Face Recognition Vue SDK](open-source-face-recognition-vue-sdk.md).
+This URL is outdated. Continue here:
+
+**[Open Source Face Recognition Vue SDK](open-source-face-recognition-vue-sdk.md)**
+
+Also: [Open Source Web](web-clients.md) · [Glossary](../resources/glossary.md)

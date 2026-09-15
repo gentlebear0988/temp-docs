@@ -64,7 +64,7 @@ This page follows the public [FaceRecognition-.Net](https://github.com/Faceplugi
 
 ### Related documentation
 
-* [Faceplugin Face Recognition Server SDK](server-sdk.md)
+* [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Windows SDK](face-recognition-windows-sdk.md) (HTTP API)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

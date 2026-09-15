@@ -119,6 +119,6 @@ You call each product from **your** app or backend. See [Combining products](../
 
 ### Related documentation
 
-* [ID Document Recognition SDK](README.md) · [Try it](../resources/try-it.md)
+* [ID Document Recognition SDK](README.md) · [Try it](../resources/try-it.md) · [Glossary](../resources/glossary.md)
 * [Document result JSON](document-result-json.md) · [Request a License](../request-a-license-and-support.md)
 * [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) · [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md)

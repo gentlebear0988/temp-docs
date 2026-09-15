@@ -186,7 +186,7 @@ Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio 
 
 ### Related documentation
 
-* [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Windows](liveness-detection-windows-sdk.md)
+* [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Windows](liveness-detection-windows-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 * [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md)

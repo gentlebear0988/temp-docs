@@ -34,7 +34,7 @@ flowchart LR
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [ID Document Recognition SDK](README.md)
+* [Capabilities](capabilities.md) · [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [ID Document Recognition SDK](README.md) · [Glossary](../resources/glossary.md)
 * [ID Document Liveness Server SDK](../id-document-liveness-sdk/server-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

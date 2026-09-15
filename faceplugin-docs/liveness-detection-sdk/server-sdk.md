@@ -31,7 +31,7 @@ flowchart LR
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [Face Liveness Detection SDK](README.md)
+* [Capabilities](capabilities.md) · [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [Face Liveness Detection SDK](README.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Server SDK](../face-recognition-sdk/server-sdk.md)
 * [ID Document Liveness Server SDK](../id-document-liveness-sdk/server-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)

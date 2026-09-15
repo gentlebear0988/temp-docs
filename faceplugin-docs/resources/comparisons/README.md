@@ -25,4 +25,4 @@ Then integrate: [Document capabilities](../../id-document-recognition-sdk/capabi
 
 ### Related documentation
 
-* [Choose a product](../choose-a-product.md) · [FAQ](../faq.md)
+* [Choose a product](../choose-a-product.md) · [FAQ](../faq.md) · [Glossary](../glossary.md)

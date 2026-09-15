@@ -22,7 +22,7 @@
     * [Open Source Face Recognition Windows SDK](face-recognition-sdk/open-source-face-recognition-windows-sdk.md)
   * [Open Source Windows & Linux](face-recognition-sdk/open-source-windows-and-linux.md)
   * [Open Source Web](face-recognition-sdk/web-clients.md)
-    * [Open Source Face Recognition Javascript SDK](face-recognition-sdk/open-source-face-recognition-javascript-sdk.md)
+    * [Open Source Face Recognition JavaScript SDK](face-recognition-sdk/open-source-face-recognition-javascript-sdk.md)
     * [Open Source Face Recognition React SDK](face-recognition-sdk/open-source-face-recognition-react-sdk.md)
     * [Open Source Face Recognition Vue SDK](face-recognition-sdk/open-source-face-recognition-vue-sdk.md)
 * [Face Liveness Detection SDK](liveness-detection-sdk/README.md)
