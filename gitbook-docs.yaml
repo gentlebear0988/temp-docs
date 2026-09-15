@@ -1,6 +1,6 @@
 $schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
-  title: Faceplugin on-premise Face Recognition, Liveness, and ID Document SDK docs
+  title: Faceplugin on-premise Identity Verification SDKs
   structure:
     - type: space
       key: space-1
