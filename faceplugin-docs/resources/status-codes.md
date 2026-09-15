@@ -1,7 +1,7 @@
 ---
 description: >-
-  Faceplugin SDK status codes. Mobile activate and init return 0 through 4. Linux and Windows
-  HTTP envelope codes. Document verification and image quality use 0, 1, 2.
+  Faceplugin SDK status codes for activate and init (0–4), Linux/Windows HTTP envelope codes,
+  and document verification / image quality fields. Used across Face Recognition, Liveness, and Document SDKs.
 ---
 
 # Status codes

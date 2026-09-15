@@ -26,7 +26,7 @@ flowchart LR
 * [x] Screen replay and digital-source detection
 * [x] Printed copy checks
 * [x] Front and back (multi-page) images
-* [x] Fully On-Premise
+* [x] On-premise (your machine only)
 
 ### Platforms
 
@@ -40,10 +40,9 @@ flowchart LR
 
 ### Use cases
 
-* [x] Identity Verification & KYC (Know Your Customer)
-* [x] Digital onboarding
-* [x] Financial Services (Banking & Fintech)
-* [x] Fraud Prevention
+* **KYC authenticity gate** — reject screen replays and printouts before OCR (`POST /api/documentLiveness`, port **8086**)
+* **Split architecture** — run authenticity-only on Linux while OCR runs in another service
+* **Fraud prevention** — physical-ID checks without reading personal fields
 
 ### Related documentation
 

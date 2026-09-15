@@ -67,10 +67,10 @@ Images: `faceplugin/face-liveness`. See [Linux](liveness-detection-linux-sdk.md)
 
 ## Use cases
 
-* Banking and fintech onboarding
-* KYC / identity verification selfies
-* Access control
-* Exam proctoring and fraud prevention
+* **KYC selfies** — passive anti-spoofing before face match
+* **Banking onboarding** — block photo and screen attacks
+* **Access control** — live-camera anti-spoofing on Android / iOS
+* **Server checks** — JPEG `POST /api/liveness` on port **8084**
 
 ## FAQ
 

@@ -8,7 +8,7 @@ description: >-
 
 Faceplugin licenses are **offline**. After activation, face matching, liveness, and document OCR do **not** need the internet.
 
-In short: **mobile** keys (`FP1.…`) bind to your app id; **server** keys start from a machine code (`FPMC1.…`) from the host or Docker you will run in production.
+In short: **mobile** keys (`FP1.…`) bind to your app id; **server** keys start from a **machine code** (`FPMC1.…`) from the host or Docker you will run in production. Definitions: [Glossary](resources/glossary.md).
 
 ### Need a license?
 
@@ -27,8 +27,7 @@ Do not paste demo `FP1.…` keys into your production app.
 
 ### Need support?
 
-We offer **free integration** with all our biometric solutions, ensuring a smooth and hassle-free setup for your systems. Additionally, our dedicated team provides comprehensive **after-sale and maintenance support** to guarantee optimal performance and reliability over time. Whether it's initial deployment or ongoing assistance, we are committed to supporting your needs every step of the way.
-
+Faceplugin provides integration help for licensed SDKs, plus ongoing support after you go live. Email, WhatsApp, or Telegram with your OS, GitHub repo name, activate/init result codes, and whether you use Docker or a native Google Drive runtime.
 ### Contact us
 
 * Email : [info@faceplugin.com](mailto:info@faceplugin.com)
@@ -37,7 +36,7 @@ We offer **free integration** with all our biometric solutions, ensuring a smoot
 
 ### Related documentation
 
-* [Try it](resources/try-it.md) · [FAQ](resources/faq.md) · [Troubleshooting](resources/troubleshooting.md)
+* [Try it](resources/try-it.md) · [FAQ](resources/faq.md) · [Glossary](resources/glossary.md) · [Troubleshooting](resources/troubleshooting.md)
 * [Choose a product](resources/choose-a-product.md) · [Changelog](resources/changelog.md)
 
 {% hint style="info" %}

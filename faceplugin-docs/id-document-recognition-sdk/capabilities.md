@@ -90,7 +90,14 @@ flowchart LR
 3. Capture selfie → [Face Liveness](../liveness-detection-sdk/capabilities.md) (**8084**) and/or [Face Recognition](../face-recognition-sdk/capabilities.md) (**8083** / mobile).
 4. Compare portrait crop to selfie with Face Recognition.
 
-Orchestration stays in **your** app. See [Combining products](../resources/choose-a-product.md#combining-products-ekyc).
+You call each product from **your** app or backend. See [Combining products](../resources/choose-a-product.md#combining-products-ekyc).
+
+## Use cases
+
+* **Passport OCR / MRZ** — read travel documents on-device or on port **8082**
+* **ID card and license verification** — classify and extract fields for KYC
+* **Digital onboarding** — capture ID, then hand crops to Face Liveness / Face Recognition
+* **Authenticity** — licensed document liveness on this engine, or dedicated Document Liveness on **8086**
 
 ## Platforms
 

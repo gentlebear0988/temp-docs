@@ -78,9 +78,13 @@ The GitHub repo is small. Native models (AAR + `.fpk` / engine) come from Google
 
 Document Reader has public Node / Go / C++ HTTP options. Face server integration is primarily HTTP (`curl` from any language) or Python `sdk.py` on the same host as `lib/cpu/`. See [Choose a product](choose-a-product.md).
 
+## Where are acronyms defined?
+
+See the [Glossary](glossary.md) for MRZ, OCR, eKYC, 1:1 / 1:N, PAD, FRVT, `FP1.…`, and `FPMC1.…`.
+
 ### Related documentation
 
-* [Try it](try-it.md) · [Troubleshooting](troubleshooting.md) · [Status codes](status-codes.md)
+* [Glossary](glossary.md) · [Try it](try-it.md) · [Troubleshooting](troubleshooting.md) · [Status codes](status-codes.md)
 * [Choose a product](choose-a-product.md) · [Passport OCR & ID verification](passport-ocr-and-id-verification.md)
 * [Document capabilities](../id-document-recognition-sdk/capabilities.md) · [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) · [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md)
 * [SDK comparison](comparisons/README.md)

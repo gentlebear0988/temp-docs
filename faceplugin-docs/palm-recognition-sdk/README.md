@@ -18,7 +18,7 @@ All processing stays on your machine.
 * [x] ROI (region of interest) extraction
 * [x] Template Extraction
 * [x] Template Matching
-* [x] Fully On-Premise
+* [x] On-premise (your machine only)
 
 ### Platforms
 
@@ -32,14 +32,9 @@ The public sample is the [open-source Palm Recognition repository](open-source-p
 
 ### Use cases
 
-* [x] Access Control & Security
-* [x] Attendance & Time Tracking
-* [x] Law Enforcement & Public Safety
-* [x] User Authentication for Applications
-* [x] Travel & Transportation
-* [x] Smart Devices & IoT
-* [x] Entertainment & Events
-* [x] Fraud Prevention
+* **Access control demo** — extract palm ROI and match templates in Python on your machine
+* **Attendance prototype** — compare two palm images with `compare_two_images`
+* **R&D** — evaluate palm matching before choosing a commercial face product
 
 ### Related documentation
 

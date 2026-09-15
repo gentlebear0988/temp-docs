@@ -45,5 +45,5 @@ Email [info@faceplugin.com](mailto:info@faceplugin.com) with: OS, GitHub repo na
 
 ### Related documentation
 
-* [FAQ](faq.md) · [Status codes](status-codes.md) · [Try it](try-it.md)
+* [FAQ](faq.md) · [Glossary](glossary.md) · [Status codes](status-codes.md) · [Try it](try-it.md)
 * [Request a License](../request-a-license-and-support.md)

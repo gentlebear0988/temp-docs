@@ -71,10 +71,10 @@ Recognition-only images: `faceplugin/face-recognition`. Combined Recognition + L
 
 ## Use cases
 
-* Access control and security
-* Attendance and time tracking
-* User authentication in apps
-* Fraud prevention and KYC selfie match (with [Document Recognition](../id-document-recognition-sdk/capabilities.md))
+* **Access control / attendance** — enroll templates on mobile; run live 1:N Identify
+* **App authentication** — 1:1 `similarity` or `POST /api/match` against a stored template
+* **KYC selfie match** — match ID portrait to selfie (with Document Recognition and optional Face Liveness)
+* **Server fraud checks** — still-image detect / match / similarity on port **8083**
 
 ## FAQ
 

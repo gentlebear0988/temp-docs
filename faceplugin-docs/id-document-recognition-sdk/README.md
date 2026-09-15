@@ -33,7 +33,7 @@ All processing stays on the device or in your own server — **NO** data leaves 
 * [x] Image quality analysis
 * [x] Face, portrait, and signature extraction
 * [x] Authenticity / document liveness (when licensed)
-* [x] Fully On-Premise document verification API (port **8082**)
+* [x] On-premise document verification API (port **8082**)
 
 ### Passport OCR, ID card verification, MRZ
 
@@ -59,7 +59,7 @@ Coverage: **16,900** templates across **255** countries and territories — full
 
 ### Platforms
 
-Pick **Capabilities** to learn what ships, then **Mobile SDK** or **Server SDK** for install.
+Pick **Capabilities** to learn what the product can do, then **Mobile SDK** or **Server SDK** for install.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Passport OCR, MRZ, ID verification, coverage PDF, eKYC.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows, Linux / Docker, and Node HTTP API on port 8082.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr><tr><td></td><td><strong>Web clients</strong></td><td>JavaScript, React, Vue, Angular demos calling the HTTP API.</td><td><a href="web-clients.md">web-clients.md</a></td></tr></tbody></table>
 
@@ -77,16 +77,15 @@ Pick **Capabilities** to learn what ships, then **Mobile SDK** or **Server SDK**
 
 ### Use cases
 
-* [x] Identity Verification & KYC (Know Your Customer)
-* [x] Digital onboarding
-* [x] Financial Services (Banking & Fintech)
-* [x] Government e-services
-* [x] Access Control & Security
-* [x] Fraud Prevention
+* **Passport / ID onboarding** — classify the document, run OCR / MRZ / barcode (`recognize` / `documentRecognition`)
+* **Digital KYC** — extract fields and portrait crops for downstream face match
+* **Banking & fintech** — verify IDs on-device or via HTTP on port **8082**
+* **Government e-services** — read national IDs and licenses from **16,900** templates
+* **Fraud prevention** — optional document authenticity when your license includes it (or use [Document Liveness](../id-document-liveness-sdk/))
 
 ### Related documentation
 
 * [Capabilities](capabilities.md) · [ID Document Liveness SDK](../id-document-liveness-sdk/) · [Face Recognition SDK](../face-recognition-sdk/)
-* [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md)
+* [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md) · [Glossary](../resources/glossary.md)
 * [Passport OCR & ID verification](../resources/passport-ocr-and-id-verification.md) · [Combining products (eKYC)](../resources/choose-a-product.md)
 * [SDK comparison](../resources/comparisons/README.md) · [Status codes](../resources/status-codes.md)

@@ -152,5 +152,5 @@ Thread {
 
 ### Related documentation
 
-* [Choose a product](choose-a-product.md) · [Status codes](status-codes.md) · [Troubleshooting](troubleshooting.md)
+* [Choose a product](choose-a-product.md) · [Glossary](glossary.md) · [Status codes](status-codes.md) · [Troubleshooting](troubleshooting.md)
 * [Request a License](../request-a-license-and-support.md)

@@ -48,18 +48,15 @@ Start with [Capabilities](capabilities.md), then **Mobile SDK** or **Server SDK*
 
 ### Use cases
 
-* [x] Financial Services (Banking & Fintech)
-* [x] Identity Verification & KYC (Know Your Customer)
-* [x] Healthcare & Telemedicine
-* [x] Access Control & Security
-* [x] Online Education & Exam Proctoring
-* [x] E-Commerce & Retail
-* [x] Gaming & Entertainment
-* [x] Fraud Prevention
+* **KYC / onboarding selfies** — confirm a live person before face match (`faceDetection` / `POST /api/liveness`)
+* **Banking and fintech** — block photo and screen replay attacks on selfie capture
+* **Access control** — reject printouts and phone-screen spoofs at entry
+* **Exam proctoring** — score camera frames for presentation attacks without a challenge animation
+* **Fraud prevention** — JPEG anti-spoofing on your server (port **8084**)
 
 ### Related documentation
 
 * [Capabilities](capabilities.md) · [Face Recognition SDK](../face-recognition-sdk/) · [ID Document Liveness SDK](../id-document-liveness-sdk/)
-* [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md)
+* [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md) · [Glossary](../resources/glossary.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
 * [Status codes](../resources/status-codes.md)

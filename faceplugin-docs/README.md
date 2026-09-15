@@ -92,17 +92,13 @@ Platforms vary by product. **Face Recognition** and **ID Document Recognition** 
 
 ### Use cases <a href="#application" id="application"></a>
 
-* eKYC
-* Fintech
-* ID verification
-* Digital onboarding
-* Online banking, Payments
-* Self-checkout at shops
-* Government e-services
-* Fraud detection and prevention
+* **eKYC / digital onboarding** — ID OCR + optional authenticity + selfie liveness + face match ([combine products](resources/choose-a-product.md#combining-products-ekyc))
+* **Banking and fintech** — passport / ID verification and face anti-spoofing on your infrastructure
+* **Access control and attendance** — mobile 1:N Identify with templates you store
+* **Fraud prevention** — reject presentation attacks and document spoofs before enrollment
 
 ### Related documentation
 
-* [Choose a product](resources/choose-a-product.md) · [FAQ](resources/faq.md) · [Troubleshooting](resources/troubleshooting.md)
+* [Choose a product](resources/choose-a-product.md) · [Try it](resources/try-it.md) · [Glossary](resources/glossary.md) · [FAQ](resources/faq.md)
 * [Request a License & Support](request-a-license-and-support.md) · [SDK comparison](resources/comparisons/)
-* [Status codes](resources/status-codes.md) · [Changelog](resources/changelog.md)
+* [Status codes](resources/status-codes.md) · [Troubleshooting](resources/troubleshooting.md) · [Changelog](resources/changelog.md)

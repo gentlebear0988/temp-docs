@@ -39,7 +39,7 @@ flowchart LR
 * [x] Live 1:N Identify (mobile)
 * [x] Liveness Detection (passive 2D on mobile Identify)
 * [x] Pose Estimation
-* [x] Fully On-Premise Face Recognition API (port **8083**)
+* [x] On-premise Face Recognition API (port **8083**)
 
 ### Platforms
 
@@ -65,21 +65,15 @@ Instead, store face templates in your own database. When you need to identify a 
 
 ### Use cases
 
-* [x] Access Control & Security
-* [x] Attendance & Time Tracking
-* [x] Law Enforcement & Public Safety
-* [x] User Authentication for Applications
-* [x] Retail & Customer Experience
-* [x] Healthcare
-* [x] Travel & Transportation
-* [x] Smart Devices & IoT
-* [x] Entertainment & Events
-* [x] Education
-* [x] Fraud Prevention
+* **Access control** — enroll face templates, then live 1:N Identify at a door or gate (mobile)
+* **Attendance** — enroll staff once; match camera frames against your person database
+* **App login** — 1:1 selfie match against a stored template (`similarity` / `POST /api/match`)
+* **KYC selfie match** — after ID OCR, compare portrait crop to a live selfie (with [Document Recognition](../id-document-recognition-sdk/) and optional [Face Liveness](../liveness-detection-sdk/))
+* **Fraud checks** — still-image detect / match / similarity on your server (port **8083**)
 
 ### Related documentation
 
 * [Capabilities](capabilities.md) · [Face Liveness Detection SDK](../liveness-detection-sdk/) · [ID Document Recognition SDK](../id-document-recognition-sdk/)
-* [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md)
+* [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md) · [Glossary](../resources/glossary.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)
 * [Status codes](../resources/status-codes.md)

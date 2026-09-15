@@ -126,5 +126,5 @@ On mobile: unique AAR / framework names, one license **per** application id **pe
 
 ### Related documentation
 
-* [Try it](try-it.md) · [FAQ](faq.md) · [Troubleshooting](troubleshooting.md)
+* [Try it](try-it.md) · [FAQ](faq.md) · [Glossary](glossary.md) · [Troubleshooting](troubleshooting.md)
 * [Request a License](../request-a-license-and-support.md)
