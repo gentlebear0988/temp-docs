@@ -24,7 +24,7 @@ layout:
 
 # Face Recognition Ionic Cordova SDK
 
-Fully on-premise **Face Recognition SDK for Ionic Cordova**. Plugin folder: `FacePlugin/`. Plugin id: `face-recognition-cordova`. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projects.
+Fully on-premise **Face Recognition SDK for Ionic Cordova**. Plugin folder: `Faceplugin/`. Plugin id: `face-recognition-cordova`. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projects.
 
 Demo package name: **`com.faceplugin.facerecognitionsdk`**.
 
@@ -47,16 +47,16 @@ npm -v
 
 #### 2. Get the runtimes
 
-- Android AAR: [Google Drive](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0) → `FacePlugin/src/android/facerecognitionsdk.aar`
-- iOS frameworks: [Google Drive](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) → `FacePlugin/src/ios/Frameworks/`
+- Android AAR: [Google Drive](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0) → `Faceplugin/src/android/facerecognitionsdk.aar`
+- iOS frameworks: [Google Drive](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) → `Faceplugin/src/ios/Frameworks/`
 
 ***
 
-### 📱 Running the App on Android
+### Running the sample on Android
 
 ```bash
 npm install
-ionic cordova plugin add ./FacePlugin
+ionic cordova plugin add ./Faceplugin
 npm run setup:android
 npm run android
 ```
@@ -67,11 +67,11 @@ Add camera permission in `platforms/android/app/src/main/AndroidManifest.xml` if
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-### 🍏 Running the App on iOS
+### Running the sample on iOS
 
 ```bash
 npm install
-ionic cordova plugin add ./FacePlugin
+ionic cordova plugin add ./Faceplugin
 npm run setup:ios
 npm run ios
 ```
@@ -124,8 +124,8 @@ Also: `getLicenseStatus`, `detect`, `extractFeature`, `quality`, VideoWorker (`s
 
 Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projects. For this Cordova plugin:
 
-1. Place `facerecognitionsdk.aar` in `FacePlugin/src/android/` and the three iOS frameworks in `FacePlugin/src/ios/Frameworks/`.
-2. `ionic cordova plugin add ./FacePlugin` then `npm run setup:android` or `setup:ios`.
+1. Place `facerecognitionsdk.aar` in `Faceplugin/src/android/` and the three iOS frameworks in `Faceplugin/src/ios/Frameworks/`.
+2. `ionic cordova plugin add ./Faceplugin` then `npm run setup:android` or `setup:ios`.
 3. Keep demo id **`com.faceplugin.facerecognitionsdk`** or request a key for **your** id.
 4. `ionic serve` cannot load the engine — run on a physical phone.
 

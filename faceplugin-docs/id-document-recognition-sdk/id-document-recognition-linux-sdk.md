@@ -24,7 +24,7 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 {% stepper %}
 {% step %}
-## Pull Docker Hub (no Drive)
+## Pull from Docker Hub (no Google Drive download)
 
 ```
 sudo docker pull faceplugin/document-reader:latest
@@ -58,9 +58,9 @@ curl -s -X POST http://127.0.0.1:8082/api/activate \
 {% endstep %}
 {% endstepper %}
 
-**Native (optional):** put `libDocSDK.so`, `libDocumentEngine.so`, `dcr.fpk` from [Drive](https://drive.google.com/drive/folders/16DFGKtyGbyL-0gfVOmNVaQ9vgXCYDr2M) **directly** in `lib/cpu/`, then `./run.sh`.
+**Native (optional):** put `libDocSDK.so`, `libDocumentEngine.so`, `dcr.fpk` from [Google Drive](https://drive.google.com/drive/folders/16DFGKtyGbyL-0gfVOmNVaQ9vgXCYDr2M) **directly** in `lib/cpu/`, then `./run.sh`.
 
-**Try online:** [Hugging Face Space](https://huggingface.co/spaces/FacePlugin-Ltd/ID-Document-Recognition-SDK) (Gradio UI → your Linux API).
+**Try online:** [Hugging Face Space](https://huggingface.co/spaces/Faceplugin-Ltd/ID-Document-Recognition-SDK) (Gradio UI → your Linux API).
 
 ### License
 
@@ -119,7 +119,7 @@ POST /api/activate
 
 | **Input**        | Plain <code>FP1.…</code>, JSON <code>{"license":"FP1.…"}</code>, or a license file |
 | ---------------- | ------------------------------------------------------------------------------------ |
-| **Return value** | Envelope. On success the App also calls <code>init_sdk()</code>.                  |
+| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
 
 #### <mark style="color:orange;">documentRecognition:</mark> This API is used to run OCR / MRZ / barcode / image quality only
 

@@ -75,7 +75,7 @@ Pick **Capabilities** to learn what ships, then **Mobile SDK** or **Server SDK**
 
 **How many document types?** **16,900** templates in **255** countries — [PDF catalog](capabilities.md#document-type-classification--worldwide-coverage).
 
-### Usecases
+### Use cases
 
 * [x] Identity Verification & KYC (Know Your Customer)
 * [x] Digital onboarding

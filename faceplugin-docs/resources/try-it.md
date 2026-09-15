@@ -1,6 +1,6 @@
 ---
 description: >-
-  Try FacePlugin SDKs with copy-paste commands. Start with license-free curl
+  Try Faceplugin SDKs with copy-paste commands. Start with license-free curl
   health and machine-code checks, then activate the SDK and test face detection,
   face matching, liveness, and document OCR.
 ---
@@ -22,9 +22,9 @@ curl -s http://127.0.0.1:8083/api/health
 curl -s http://127.0.0.1:8083/api/machinecode
 ```
 
-Change the port: Document Reader **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
+Change the port: **ID Document Recognition** (Document Reader) **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
 
-`health` works **before** you have a key. Copy `FPMC1.…` from `machinecode` and [request a license](../request-a-license-and-support.md).
+`health` works **before** you have a key. Copy the server **machine code** (`FPMC1.…`) from `machinecode` and [request a license](../request-a-license-and-support.md).
 
 ## 2. Server — activate once
 

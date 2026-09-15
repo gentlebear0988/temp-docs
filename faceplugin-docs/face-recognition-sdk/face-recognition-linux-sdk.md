@@ -20,7 +20,7 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 {% stepper %}
 {% step %}
-## Pull Docker Hub (no Drive)
+## Pull from Docker Hub (no Google Drive download)
 
 ```
 sudo docker pull faceplugin/face-recognition:latest
@@ -65,7 +65,7 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
 {% endstep %}
 {% endstepper %}
 
-**Native (optional):** put `libFaceRecognitionSDK.so`, `libfar-eng.so`, `far.fpk` from [Drive](https://drive.google.com/drive/folders/1NVq0psW8PLfEX58FWNE-RKFWfCZdOMmz) **directly** in `lib/cpu/`, then `pip3 install -r requirements.txt` and `./run.sh`. Local `./run.sh` wants glibc **2.38+** (e.g. Ubuntu 24.04).
+**Native (optional):** put `libFaceRecognitionSDK.so`, `libfar-eng.so`, `far.fpk` from [Google Drive](https://drive.google.com/drive/folders/1NVq0psW8PLfEX58FWNE-RKFWfCZdOMmz) **directly** in `lib/cpu/`, then `pip3 install -r requirements.txt` and `./run.sh`. Local `./run.sh` wants glibc **2.38+** (e.g. Ubuntu 24.04).
 
 {% hint style="info" %}
 Control routes (`/api/health`, `/api/machinecode`, `/api/activate`, `/api/licenseStatus`) return a JSON **envelope**. Process POSTs (`/api/detect`, `/api/quality`, …) return **engine JSON** as the HTTP body.
@@ -137,7 +137,7 @@ JSON `{"license":"FP1.…"}` and a license file body are also accepted. Empty bo
 
 | **Input**        | License key or file |
 | ---------------- | -------------------- |
-| **Return value** | Envelope. On success the App also calls <code>init_sdk()</code>. |
+| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>. |
 
 #### <mark style="color:orange;">detect:</mark> This API is used to detect faces
 

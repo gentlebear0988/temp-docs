@@ -12,7 +12,7 @@ description: >-
 
 **What it can do:** [Face Liveness Detection capabilities](capabilities.md) — passive anti-spoofing, mobile vs server, and when to use it versus Face Recognition Identify.
 
-This product is **passive** anti-spoofing: no smile / turn-head challenge. These docs describe performance in iBeta Level 2 terms; contact Faceplugin if you need a specific certification claim. Active challenge demos on GitHub are **not** this product. Optional active prompts on some Face Recognition Identify flows also are not this SDK.
+This product is **passive** anti-spoofing: no smile / turn-head challenge. These docs do **not** claim iBeta certification. Contact Faceplugin if you need a certification statement. Active challenge demos on GitHub are **not** this product. Optional active prompts on some Face Recognition Identify flows also are not this SDK.
 
 This SDK is **standalone**. It does **not** enroll people or run 1:N. If you already use Face Recognition Identify on mobile, that flow already includes **passive 2D liveness**. Choose this product when you need anti-spoofing **without** face matching.
 
@@ -46,7 +46,7 @@ Start with [Capabilities](capabilities.md), then **Mobile SDK** or **Server SDK*
 
 **Does it require the internet?** No, after license activation.
 
-### Usecases
+### Use cases
 
 * [x] Financial Services (Banking & Fintech)
 * [x] Identity Verification & KYC (Know Your Customer)

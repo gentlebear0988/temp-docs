@@ -26,7 +26,7 @@ All processing stays on your machine. **No** biometric data is sent to Faceplugi
 {% step %}
 ## Copy the runtime
 
-Copy the CPU libraries from Drive into `lib\cpu\` (see the repo README for the current folder link).
+Copy the CPU libraries from Google Drive into `lib\cpu\` (see the repo README for the current folder link).
 {% endstep %}
 
 {% step %}
@@ -60,7 +60,7 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
 {% endstepper %}
 
 {% hint style="info" %}
-Control routes return a JSON **envelope**. Process POSTs return **engine JSON**. Port **8083** is shared with recognition-only — run **one** Face Recognition App at a time.
+Control routes return a JSON **envelope**. Process POSTs return **engine JSON**. Port **8083** is shared with recognition-only — run **one** Face Recognition HTTP service at a time.
 {% endhint %}
 
 ### APIs

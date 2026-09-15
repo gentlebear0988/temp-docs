@@ -57,7 +57,7 @@ python main.py
 
 ### FAQ
 
-**Is this a Faceplugin commercial App?** No. It is a public GitHub sample. There is no `FP1.…` / Docker HTTP API on this page.
+**Is this a Faceplugin commercial SDK?** No. It is a public GitHub sample. There is no `FP1.…` / Docker HTTP API on this page.
 
 **Can I use it for face matching?** No. Use [Face Recognition](../face-recognition-sdk/).
 

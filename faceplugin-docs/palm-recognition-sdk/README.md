@@ -15,7 +15,7 @@ All processing stays on your machine.
 ### Features
 
 * [x] Palm Detection
-* [x] ROI(Region of Interest) Extraction
+* [x] ROI (region of interest) extraction
 * [x] Template Extraction
 * [x] Template Matching
 * [x] Fully On-Premise
@@ -28,9 +28,9 @@ The public sample is the [open-source Palm Recognition repository](open-source-p
 
 **Does this replace Face Recognition?** No. Use [Face Recognition](../face-recognition-sdk/) for faces.
 
-**Is there a Docker HTTP API?** Not in this sample. Commercial face/document Apps are Docker Hub images under each product’s Server SDK.
+**Is there a Docker HTTP API?** Not in this sample. Commercial face/document server SDKs are Docker Hub images under each product’s Server SDK.
 
-### Usecases
+### Use cases
 
 * [x] Access Control & Security
 * [x] Attendance & Time Tracking

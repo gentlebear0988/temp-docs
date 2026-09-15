@@ -66,8 +66,8 @@ Native binaries are **not** on GitHub (too large).
 | Android | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | `node_modules/face-recognition-sdk/android/libs/` |
 | iOS | three frameworks | `ios/Frameworks/` | `node_modules/face-recognition-sdk/ios/Frameworks/` |
 
-- Android Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
-- iOS Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
+- Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
+- iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
 {% endstep %}
 
 {% step %}
@@ -263,6 +263,6 @@ Prefer `ingestLiveCameraFrame` so rotation is handled for you.
 
 * [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Flutter](face-recognition-flutter-sdk.md)
 * [ID Document Recognition React Native SDK](../id-document-recognition-sdk/id-document-recognition-react-native-sdk.md)
-* There is no public Face Liveness React Native App — use Identify 2D liveness or native Android/iOS Liveness.
+* There is no public Face Liveness React Native SDK — use Identify 2D liveness or native Android/iOS Liveness.
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

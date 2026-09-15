@@ -9,12 +9,11 @@ description: >-
 
 {% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-Vue" %}
 
-### Overview <a href="#setup" id="setup"></a>
+### Overview <a href="#overview" id="overview"></a>
 
-The world's 1st **Completely Free** and **Open Source** **Face Recognition Vue SDK** for developers to integrate face recognition and liveness detection capabilities into web frontend. Supports real-time, high-accuracy face recognition with deep learning models.\
-This is **on-premise face recognition SDK** which means everything is processed in your browser and **NO** data leaves it.\
-\
-**Please contact us if you need the SDK with higher accuracy.**
+Free **open-source** Face Recognition Vue sample for the web. It wraps the open-source JavaScript browser SDK. Processing stays in the user's browser.
+
+This is **not** the commercial native Face Recognition SDK. Contact Faceplugin if you need higher accuracy.
 
 ### How to Run
 

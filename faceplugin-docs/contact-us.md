@@ -1,18 +1,16 @@
 ---
 description: >-
   Contact Faceplugin for licenses and integration support. Email, WhatsApp, and Telegram.
-  Request FP1 mobile keys or FPMC1 server machine codes for on-premise SDKs.
+  Request mobile license keys (FP1.…) or server machine codes (FPMC1.…) for on-premise SDKs.
 ---
 
 # Contact us
 
-### Availability
+### Contact
 
-We are available 24/7 for you.
+Email, WhatsApp, or Telegram for licenses and integration help.
 
-### Contact us
-
-* Email : [info@faceplugin.com](mailto:info@faceplugin.com)
+* Email: [info@faceplugin.com](mailto:info@faceplugin.com)
 * WhatsApp : [+1 (469) 278-4822](https://wa.me/+14692784822)
 * Telegram : [@faceplugin](https://t.me/faceplugin)
 

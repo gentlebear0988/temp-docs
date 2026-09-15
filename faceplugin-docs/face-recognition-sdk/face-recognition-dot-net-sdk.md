@@ -4,7 +4,7 @@ description: >-
   and .NET. Activate, Init, DetectFace, Compare.
 ---
 
-# Face Recognition Dot Net SDK
+# Face Recognition .NET SDK
 
 ### Code <a href="#setup" id="setup"></a>
 

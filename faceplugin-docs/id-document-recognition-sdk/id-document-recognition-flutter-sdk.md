@@ -36,7 +36,7 @@ Fully on-premise **ID Document Recognition SDK for Flutter**. Package: `document
 {% step %}
 ## Install tools
 
-Flutter **3.44+**, JDK **17**. Run `flutter doctor` and fix reported issues.
+Flutter **3.44+** (see the package `pubspec.yaml`). JDK **17**. Run `flutter doctor` and fix reported issues.
 {% endstep %}
 
 {% step %}
@@ -57,8 +57,8 @@ dart run tool/bootstrap.dart
 | Android | `documentreadersdk.aar` | `example/android/libdocsdk/` | Plugin `android/libs/` |
 | iOS | `docsdk.framework` | `ios/Frameworks/` | Plugin `ios/Frameworks/` |
 
-- Android Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
-- iOS Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
+- Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
+- iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
 {% endstep %}
 
 {% step %}

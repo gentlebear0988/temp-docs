@@ -29,7 +29,7 @@ sudo docker run -d --name faceplugin-document-liveness \
 3. Get machine code: `GET /api/machinecode`
 4. Contact us for `FP1.…`, then `POST /api/activate`
 
-Native: put `libDocSDK.so`, `libDocumentEngine.so`, `dcr.fpk` from [Drive](https://drive.google.com/drive/folders/1_V05Nvcdc3WfOPuyquFyGIW-4CDj8aAm) **directly** in `lib/cpu/`, then `./run.sh`. On Docker Desktop omit the `/etc/machine-id` volume.
+Native: put `libDocSDK.so`, `libDocumentEngine.so`, `dcr.fpk` from [Google Drive](https://drive.google.com/drive/folders/1_V05Nvcdc3WfOPuyquFyGIW-4CDj8aAm) **directly** in `lib/cpu/`, then `./run.sh`. On Docker Desktop omit the `/etc/machine-id` volume.
 
 Default port **8086**. Gradio demo on **9006** (host only).
 
@@ -53,7 +53,7 @@ POST /api/activate
 
 | **Input**        | Plain <code>FP1.…</code>, JSON <code>{"license":"FP1.…"}</code>, or a license file |
 | ---------------- | ------------------------------------------------------------------------------------ |
-| **Return value** | Envelope. On success the App also calls <code>init_sdk()</code>.                  |
+| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
 
 #### <mark style="color:orange;">documentLiveness:</mark> This API is used to run authenticity / document anti-spoofing
 
@@ -105,6 +105,6 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 
 * [Faceplugin ID Document Liveness Server SDK](server-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) (OCR + optional authenticity)
-* [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (face PAD)
+* [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (face anti-spoofing)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

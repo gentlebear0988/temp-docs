@@ -11,13 +11,11 @@ description: >-
 Completely Free and Open Source Face recognition Linux SDK
 {% endembed %}
 
-### Overview <a href="#setup" id="setup"></a>
+### Overview <a href="#overview" id="overview"></a>
 
-The world's 1st **Completely Free** and **Open Source** **Face Recognition SDK** for developers to integrate face recognition capabilities into applications. Supports real-time, high-accuracy face recognition with deep learning models.\
-This is **on-premise face recognition SDK** which means everything is processed in your server and **NO** data leaves the machine.\
-\
-**Please contact us if you need the SDK with higher accuracy** — that is the commercial [Face Recognition Linux SDK](face-recognition-linux-sdk.md).
+Free **open-source** Face Recognition sample for Linux (Python). Detect faces, extract embeddings, and compare them **on your machine** — no Faceplugin cloud.
 
+Accuracy is **lower** than the commercial [Face Recognition Linux SDK](face-recognition-linux-sdk.md). Contact Faceplugin if you need the higher-accuracy native engine.
 ### Setup <a href="#setup" id="setup"></a>
 
 Please download anaconda on your computer and install it. We used Linux machine without GPU for testing
@@ -31,9 +29,13 @@ Please download anaconda on your computer and install it. We used Linux machine 
 3.  **Install dependencies**
 
     `pip install -r requirements.txt`
-4.  **In faceutil.py in the face\_util directory modify the following code to import `libFaceUtil.so` file in face\_util/c directory**
+4.  **In `face_util/faceutil.py`, confirm the Linux library path points to `libFaceUtil.so`**
 
-    `dll_path = os.path.abspath(os.path.dirname(`**`file`**`)) + '/C/face_util.dll'`
+    ```
+    dll_path = os.path.abspath(os.path.dirname(__file__)) + '/C/libFaceUtil.so'
+    ```
+
+    (Windows uses `'/C/FaceUtil.dll'` instead — see the Windows page.)
 5.  **Compare face images in the** `test` **directory**
 
     `python run.py`

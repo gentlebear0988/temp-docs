@@ -10,9 +10,9 @@ description: >-
 
 **Faceplugin ID Document Liveness SDK** checks whether the image is a **physical ID** or an attack: a screen replay, a printout, a digitally created page, or a substituted portrait.
 
-This product does **not** read fields. OCR, MRZ, and barcodes are turned off. For **passport OCR plus authenticity** in one engine, use [ID Document Recognition](../id-document-recognition-sdk/) with a Liveness-capable license. This is **not** face PAD — use [Face Liveness Detection](../liveness-detection-sdk/) for selfies.
+This product does **not** read fields. OCR, MRZ (machine-readable zone), and barcodes are turned off. For **passport OCR plus authenticity** in one engine, use [ID Document Recognition](../id-document-recognition-sdk/) with a Liveness-capable license. This is **not** face anti-spoofing — use [Face Liveness Detection](../liveness-detection-sdk/) for selfies.
 
-Today the public App is **Linux / Docker** (HTTP port **8086**). There is no public mobile App.
+Today the public **SDK** is **Linux / Docker** (HTTP port **8086**). There is no public mobile SDK.
 
 ```mermaid
 flowchart LR
@@ -38,7 +38,7 @@ flowchart LR
 
 **How do I call it?** `POST /api/documentLiveness` after `POST /api/activate`. See [Linux SDK](id-document-liveness-linux-sdk.md).
 
-### Usecases
+### Use cases
 
 * [x] Identity Verification & KYC (Know Your Customer)
 * [x] Digital onboarding

@@ -22,7 +22,7 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 {% stepper %}
 {% step %}
-## Pull Docker Hub (no Drive)
+## Pull from Docker Hub (no Google Drive download)
 
 ```
 sudo docker pull faceplugin/face-liveness:latest
@@ -79,7 +79,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 {% endstep %}
 {% endstepper %}
 
-**Native (optional):** put `libFaceLivenessSDK.so`, `libfal-eng.so`, `fal.fpk` from [Drive](https://drive.google.com/drive/folders/1rFnw7VASLmA4q8NWenQgszFS8njRGEgt) **directly** in `lib/cpu/`, then `./run.sh`.
+**Native (optional):** put `libFaceLivenessSDK.so`, `libfal-eng.so`, `fal.fpk` from [Google Drive](https://drive.google.com/drive/folders/1rFnw7VASLmA4q8NWenQgszFS8njRGEgt) **directly** in `lib/cpu/`, then `./run.sh`.
 
 Default port **8084**. Gradio demo (`demo.py`) on **9004** (host only). The Docker image is API-only.
 
@@ -120,7 +120,7 @@ JSON `{"license":"FP1.…"}` and a license file body are also accepted.
 
 | **Input**        | License key or file. |
 | ---------------- | -------------------- |
-| **Return value** | Envelope. Success: <code>code</code> 0, <code>"Successfully activated"</code>. On success the App also calls <code>init_sdk()</code>. |
+| **Return value** | Envelope. Success: <code>code</code> 0, <code>"Successfully activated"</code>. On success the HTTP service also calls <code>init_sdk()</code>. |
 
 #### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake <a href="#facedetection" id="facedetection"></a>
 

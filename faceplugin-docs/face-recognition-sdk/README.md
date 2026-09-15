@@ -1,16 +1,17 @@
 ---
 description: >-
-  FacePlugin’s on-premise Face Recognition SDK supports offline 1:1
-  verification, mobile 1:N identification, and server-side face recognition.
-  Supports Android, iOS, Windows, Linux/Docker, and .NET.---
+  Faceplugin on-premise Face Recognition SDK: offline 1:1 matching, mobile 1:N
+  Identify, and HTTP Face Recognition API on Android, iOS, Flutter, React Native,
+  Windows, Linux/Docker, and .NET.
+---
 
 # Face Recognition SDK
 
 ### Overview
 
-**Faceplugin Face Recognition SDK** is a fully **on-premise, offline** face matching engine. Images are processed on the device or on your server — not in Faceplugin’s cloud. The algorithm is evaluated on **NIST FRVT**.
+**Faceplugin Face Recognition SDK** is a fully **on-premise, offline** face matching engine. Images are processed on the device or on your server — not in Faceplugin’s cloud. The algorithm is evaluated on **NIST FRVT** (Face Recognition Vendor Test).
 
-**What it can do:** See [Face Recognition capabilities](capabilities.md) — 1:1 match, mobile 1:N Identify, Face Recognition API on port **8083**, and available liveness options.
+**What it can do:** See [Face Recognition capabilities](capabilities.md) — 1:1 match, mobile **1:N Identify** (match one face against many enrolled templates), Face Recognition API on port **8083**, and available liveness options.
 
 This product focuses on **face recognition and identification**. It is different from the standalone [Face Liveness Detection SDK](../liveness-detection-sdk/), which is designed specifically for presentation attack detection (anti-spoofing). On mobile, **1:N Identify includes passive 2D liveness** as part of the identification workflow. If you need standalone face liveness detection, use the Face Liveness Detection SDK.
 
@@ -42,9 +43,9 @@ flowchart LR
 
 ### Platforms
 
-Start with [Capabilities](capabilities.md), then **Mobile SDK** or **Server SDK**. Each platform page includes GitHub source, install steps, and the APIs that product actually ships.
+Start with [Capabilities](capabilities.md), then **Mobile SDK** or **Server SDK**. Each platform page includes GitHub source, install steps, and the APIs that product actually exposes.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Offline matching, Identify, API 8083, liveness options.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows, Linux / Docker, .NET, and open-source Python.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr><tr><td></td><td><strong>Open Source Windows &#x26; Linux</strong></td><td></td><td><a href="open-source-windows-and-linux.md">open-source-windows-and-linux.md</a></td></tr><tr><td></td><td><strong>Open Source Web</strong></td><td>Browser JavaScript, React, and Vue samples.</td><td><a href="web-clients.md">web-clients.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Offline matching, Identify, API 8083, liveness options.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows, Linux / Docker, .NET, and open-source Python.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr><tr><td></td><td><strong>Open Source Windows &#x26; Linux</strong></td><td>Free Python sample — lower accuracy than the commercial HTTP API.</td><td><a href="open-source-windows-and-linux.md">open-source-windows-and-linux.md</a></td></tr><tr><td></td><td><strong>Open Source Web</strong></td><td>Browser JavaScript, React, and Vue samples.</td><td><a href="web-clients.md">web-clients.md</a></td></tr></tbody></table>
 
 Typical call order on **mobile**: `setActivation` → `init` → detect / extract template → store templates in **your** database → `similarity` or VideoWorker (live 1:N). Identify default **0.67**. Liveness default **0.5**.
 
@@ -62,7 +63,7 @@ Typical call order on **Linux / Windows**: `GET /api/machinecode` → `POST /api
 
 Instead, store face templates in your own database. When you need to identify a person, compare the probe template against your stored templates using `/api/similarity` and determine the best match in your application.
 
-### Usecases
+### Use cases
 
 * [x] Access Control & Security
 * [x] Attendance & Time Tracking

@@ -1,32 +1,17 @@
 ---
 description: >-
-  Faceplugin SDK changelog. Record shipping notes for Face Recognition, Liveness, and ID
-  Document Recognition when you publish a release. Do not invent version numbers.
+  Release history for Faceplugin Face Recognition, Face Liveness, and ID Document SDKs.
+  Check each public GitHub repository and Docker Hub for the latest tags.
 ---
 
 # Changelog
 
-Add an entry here when you ship a public GitHub, Docker Hub, or Drive runtime update.
+Published release notes for Faceplugin SDKs will be listed here.
 
-Format:
+Until dated entries appear on this page, use:
 
-```text
-## Faceplugin <product> — YYYY-MM-DD
-
-- New features
-- Improvements
-- Bug fixes
-- Security fixes
-- Android / iOS / API changes
-```
-
-There are no dated public entries in this docs repo yet. Until you fill this page, use the **Releases** tab on each public GitHub repository and the Docker Hub tag `latest`.
-
-Do not invent version numbers (for example `v2.4.0`) in these docs.
-
-{% hint style="info" %}
-GitBook admin (not this markdown): custom domain, Open Graph image, sitemap, and **Google Search Console** on the docs hostname. See also the note on [Welcome](../README.md) and [Request a License](../request-a-license-and-support.md).
-{% endhint %}
+* The **Releases** tab on each [public GitHub repository](https://github.com/Faceplugin-ltd)
+* Docker Hub tags such as `latest` under [hub.docker.com/u/faceplugin](https://hub.docker.com/u/faceplugin)
 
 ### Related documentation
 

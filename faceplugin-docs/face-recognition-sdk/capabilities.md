@@ -1,11 +1,11 @@
 ---
 description: >-
-  FacePlugin Face Recognition capabilities: offline 1:1 face matching, mobile
-  1:N identification, and a server-side Face Recognition API. Optional liveness
-  detection is also available
+  Faceplugin Face Recognition capabilities: offline 1:1 face matching, mobile
+  1:N Identify, and HTTP Face Recognition API on port 8083. Optional passive 2D
+  liveness on mobile Identify; combined Recognition + Liveness package available.
 ---
 
-# Capabilities
+# Face Recognition capabilities
 
 What the Faceplugin **Face Recognition SDK** can do — matching, Identify, and the Face Recognition API — before you pick a platform.
 
@@ -37,7 +37,7 @@ On **Linux / Windows**, the HTTP API is still-image **detect / quality / feature
 
 ## Face templates you own
 
-`templateExtraction` / `POST /api/feature` generates face templates that you can store in **your own database**. FacePlugin does not host your users' face data or provide a cloud-based person gallery.
+`templateExtraction` / `POST /api/feature` generates face templates that you can store in **your own database**. Faceplugin does not host your users' face data or provide a cloud-based person gallery.
 
 ## Passive 2D liveness on Identify
 

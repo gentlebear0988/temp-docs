@@ -1,14 +1,14 @@
 ---
 description: >-
-  Faceplugin Face Liveness Detection capabilities. On-premise passive PAD / anti-spoofing against
+  Faceplugin Face Liveness Detection capabilities. On-premise passive anti-spoofing against
   photos, screens, 3D masks, and deepfake-style attacks. Mobile and POST /api/liveness on 8084.
 ---
 
 # Face Liveness Detection capabilities
 
-What the Faceplugin **Face Liveness Detection SDK** can do — standalone face anti-spoofing / PAD — before you pick Android, iOS, or Linux.
+What the Faceplugin **Face Liveness Detection SDK** can do — standalone face anti-spoofing (presentation-attack detection) — before you pick Android, iOS, or Linux.
 
-For face matching, see [Face Recognition capabilities](../face-recognition-sdk/capabilities.md). For document authenticity (not face PAD), see [ID Document Liveness](../id-document-liveness-sdk/) or Document Recognition authenticity.
+For face matching, see [Face Recognition capabilities](../face-recognition-sdk/capabilities.md). For document authenticity (not face anti-spoofing), see [ID Document Liveness](../id-document-liveness-sdk/) or Document Recognition authenticity.
 
 ```mermaid
 flowchart LR
@@ -19,7 +19,7 @@ flowchart LR
 
 ## Passive presentation-attack detection (PAD)
 
-The product is **passive** anti-spoofing (presentation-attack detection): it scores a camera frame or JPEG **without** a smile / turn-head challenge. These docs describe performance in iBeta Level 2 terms; contact Faceplugin if you need a specific certification claim. Optional active challenge demos on GitHub are **not** this product’s server API.
+The product is **passive** anti-spoofing (presentation-attack detection): it scores a camera frame or JPEG **without** a smile / turn-head challenge. These docs do **not** claim iBeta certification. Contact Faceplugin if you need a certification statement. Optional active challenge demos on GitHub are **not** this product’s server API.
 
 Capable of detecting attack types including:
 

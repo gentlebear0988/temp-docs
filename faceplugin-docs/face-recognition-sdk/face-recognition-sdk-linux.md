@@ -22,7 +22,7 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 {% stepper %}
 {% step %}
-## Pull Docker Hub (no Drive)
+## Pull from Docker Hub (no Google Drive download)
 
 ```
 sudo docker pull faceplugin/face-recognition-liveness-sdk:latest
@@ -114,7 +114,7 @@ Local Gradio: `DEMO_PORT=9003 API_BASE=http://127.0.0.1:8083 python3 demo.py` (D
 
 **Prefer two separate products?** Use [Face Recognition Linux](face-recognition-linux-sdk.md) on **8083** and [Face Liveness Linux](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on **8084**.
 
-**Windows combined App?** [Face Recognition + Liveness Windows SDK](face-recognition-sdk-windows.md).
+**Windows combined package?** [Face Recognition + Liveness Windows SDK](face-recognition-sdk-windows.md).
 
 ### Related documentation
 

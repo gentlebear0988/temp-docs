@@ -9,7 +9,7 @@ description: >-
 
 Use this page as a catalog: **which GitHub repository to clone**, what the package or Docker image is called, and which HTTP port each server product listens on.
 
-Always clone the **public** GitHub repo name (for example `ID-Document-Recognition-Android`). Do not use internal folder names that end with `-App`—those are not published repositories.
+Always clone the **public** GitHub repository name shown in the tables below (for example `ID-Document-Recognition-Android`).
 
 Need a vendor comparison? See [SDK comparison](comparisons/).
 
@@ -20,7 +20,7 @@ Need a vendor comparison? See [SDK comparison](comparisons/).
 | Passport OCR / MRZ / ID card verification     | [Document capabilities](../id-document-recognition-sdk/capabilities.md) → [ID Document Recognition SDK](../id-document-recognition-sdk/)                                                                                                                       |
 | Match faces 1:1 or 1:N / Face Recognition API | [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) → [Face Recognition SDK](../face-recognition-sdk/)                                                                                                                                    |
 | Face anti-spoofing only                       | [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md) → [Face Liveness Detection SDK](../liveness-detection-sdk/)                                                                                                                            |
-| Recognition and anti-spoofing together        | For recognition plus liveness on one server, use [Face Recognition + Liveness Linux / Windows](../face-recognition-sdk/face-recognition-sdk-linux.md) (port **8083**, includes `/api/liveness`). Or run separate services on **8083** and **8084**—never mix their runtime folders. |
+| Recognition and anti-spoofing together        | For recognition plus liveness on one server, use [Face Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md) or [Windows](../face-recognition-sdk/face-recognition-sdk-windows.md) (port **8083**, includes `/api/liveness`). Or run separate services on **8083** and **8084**—never mix their runtime folders. |
 | Document authenticity **without** OCR         | [ID Document Liveness SDK](../id-document-liveness-sdk/)                                                                                                                                                                                                       |
 
 ## ID Document Recognition
@@ -84,7 +84,7 @@ Authenticity / anti-spoofing **only** (no OCR, MRZ, or barcode API). For OCR plu
 
 ## Combining products (eKYC) <a href="#combining-products-ekyc" id="combining-products-ekyc"></a>
 
-A typical identity (eKYC) flow is:
+**eKYC** means electronic know-your-customer / digital identity onboarding. A typical flow is:
 
 ```mermaid
 flowchart LR

@@ -8,7 +8,7 @@ description: >-
 
 Node.js **HTTP API** with the same routes as the Python Document Reader server (`POST /api/documentProcess`, license routes, …). Default port **8082**. No Docker.
 
-Native `libDocSDK` is optional. Without it the server can run a Gradio-shaped stub (`DOCSDK_STUB=1`). For production OCR, use the Python Linux/Windows App or provide the native library.
+Native `libDocSDK` is optional. Without it the server can run a Gradio-shaped stub (`DOCSDK_STUB=1`). For production OCR, use the Python Linux/Windows HTTP SDK or provide the native library.
 
 ### Code
 

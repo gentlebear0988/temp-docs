@@ -40,29 +40,29 @@ layout:
 
 ### What you can build
 
-* **Passport OCR & ID verification** — classify and read **16,900** document templates from **255** countries (MRZ, barcode, optional authenticity). Start: [Document capabilities](id-document-recognition-sdk/capabilities.md) · [Passport OCR guide](resources/passport-ocr-and-id-verification.md)
-* **Face Recognition API & Identify** — offline 1:1 match, mobile 1:N Identify, NIST FRVT evaluated. Start: [Face Recognition capabilities](face-recognition-sdk/capabilities.md)
+* **Passport OCR & ID verification** — classify and read **16,900** document templates from **255** countries (MRZ — the machine-readable zone on passports — plus barcode and optional authenticity). Start: [Document capabilities](id-document-recognition-sdk/capabilities.md) · [Passport OCR guide](resources/passport-ocr-and-id-verification.md)
+* **Face Recognition API & Identify** — offline 1:1 match, mobile 1:N Identify (one face vs many enrolled templates), NIST FRVT (Face Recognition Vendor Test) evaluated. Start: [Face Recognition capabilities](face-recognition-sdk/capabilities.md)
 * **Face anti-spoofing** — passive liveness against photos, screens, 3D masks, deepfake-style attacks. Start: [Face Liveness capabilities](liveness-detection-sdk/capabilities.md)
 * **Document authenticity only** — no OCR. [ID Document Liveness](id-document-liveness-sdk/) (Linux **8086**)
 
 Product hubs: [Face Recognition](face-recognition-sdk/) · [Face Liveness Detection](liveness-detection-sdk/) · [ID Document Recognition](id-document-recognition-sdk/) · [ID Document Liveness](id-document-liveness-sdk/)
 
-This documentation is the **integration** layer: clone a public GitHub demo, add the Google Drive runtime package or pull Docker Hub, activate a license, then call the APIs that repository actually ships.
+This documentation is the **integration** layer: clone a public GitHub sample, add the Google Drive runtime package or pull Docker Hub, activate a license, then call the APIs that repository actually exposes.
 
 ### How to use these docs
 
 1. Read **Capabilities** for the product you need (what it can do).
 2. Open **Mobile SDK** or **Server SDK**, then the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
-3. Follow **Setup** / **How to run** to place the Google Drive runtime package and start the **demo**.
+3. Follow **Setup** / **How to run** to place the Google Drive runtime package and start the **GitHub sample app** for that product.
 4. Copy the **machine code** (`FPMC1.…`) if you run a server SDK, then [request a license](request-a-license-and-support.md).
-5. Use [Try it](resources/try-it.md) / **APIs** to call the same engine from your app. Store templates and document JSON in **your** database.
+5. Use [Try it](resources/try-it.md) / **APIs** to call the same **SDK APIs** from your app. Store templates and document JSON in **your** database.
 
 Ports: Document **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
 
 Native binaries are **not** on GitHub (too large). Each platform page links the Google Drive folder and the exact copy path.
 
 {% hint style="info" %}
-The demo is a complete application for testing. In production, use the runtime directly: copy the runtime, call `activate` → `init`, then call the processing APIs.
+Each GitHub sample app is a complete application for testing. In production, use the runtime directly: copy the runtime, call `activate` → `init`, then call the processing APIs.
 {% endhint %}
 
 ### Our Products
@@ -73,24 +73,24 @@ Also: [ID Document Liveness SDK](id-document-liveness-sdk/) (Linux / Docker auth
 
 ### Try our SDKs
 
-* [Github Repo](https://github.com/Faceplugin-ltd)
+* [GitHub repos](https://github.com/Faceplugin-ltd)
 * [Google Play App](https://play.google.com/store/apps/details?id=ai.faceplugin.recognition)
-* [Our playground](https://playground.faceplugin.com/)
-* [HuggingFace Spaces](https://huggingface.co/FacePlugin-Ltd)
+* [Playground](https://playground.faceplugin.com/)
+* [Hugging Face Spaces](https://huggingface.co/Faceplugin-Ltd)
 * [Docker Hub](https://hub.docker.com/u/faceplugin)
 * [Try it (copy-paste)](resources/try-it.md)
 
 ### Features <a href="#feature" id="feature"></a>
 
-* Fully On Premise, Offline SDK
-* Simple and comprehensive API
-* Flexible licensing model
+* Offline after `FP1.…` license activation — no Faceplugin cloud inference
+* HTTP APIs on ports **8082** (documents), **8083** (face recognition), **8084** (face liveness), **8086** (document liveness)
+* Mobile SDKs for Android, iOS, Flutter, React Native, and Ionic (platform support varies by product)
 
 ### Platforms <a href="#platform" id="platform"></a>
 
-Android, iOS, Flutter, React Native, Ionic (Capacitor and Cordova), Windows and Linux / Docker platforms.
+Platforms vary by product. **Face Recognition** and **ID Document Recognition** include Android, iOS, Flutter, React Native, Ionic, Windows, and Linux/Docker. **Face Liveness** is Android, iOS, Windows, and Linux/Docker (no public Flutter or React Native SDK).
 
-### Usecases <a href="#application" id="application"></a>
+### Use cases <a href="#application" id="application"></a>
 
 * eKYC
 * Fintech

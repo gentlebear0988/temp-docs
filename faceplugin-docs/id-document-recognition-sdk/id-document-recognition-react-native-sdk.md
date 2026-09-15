@@ -60,8 +60,8 @@ cd example && yarn
 | Android | `documentreadersdk.aar` | `example/android/libdocsdk/` | `node_modules/document-reader-sdk/android/libs/` |
 | iOS | `docsdk.framework` | `ios/Frameworks/` | `node_modules/document-reader-sdk/ios/Frameworks/` |
 
-- Android Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
-- iOS Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
+- Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
+- iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
 {% endstep %}
 
 {% step %}

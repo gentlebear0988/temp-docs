@@ -6,7 +6,7 @@ description: >-
 
 # FAQ
 
-## What can Faceplugin Document Reader do?
+## What can Faceplugin ID Document Recognition (Document Reader) do?
 
 On-premise **passport OCR**, **MRZ reading**, ID card and driver license verification, barcode/QR, document type classification (**16,900** templates / **255** countries), and optional document authenticity. See [Document capabilities](../id-document-recognition-sdk/capabilities.md) and [Passport OCR & ID verification](passport-ocr-and-id-verification.md).
 
@@ -24,7 +24,7 @@ Yes — Linux Docker and Windows HTTP on port **8083** (`/api/detect`, `/match`,
 
 ## What is passive liveness detection?
 
-The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md) is **passive** anti-spoofing. These docs describe performance in iBeta Level 2 terms; contact Faceplugin if you need a specific certification claim.
+The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md) is **passive** anti-spoofing. These docs do **not** claim iBeta certification. Contact Faceplugin if you need a certification statement.
 
 ## What is the difference between active and passive liveness?
 
@@ -44,7 +44,7 @@ Yes. That is the product model: phone, Windows/Linux host, or Docker on **your**
 
 ## Does the Faceplugin SDK require an internet connection?
 
-Not for inference after activation. You need a network only to clone GitHub, pull Docker Hub, download Drive runtimes, and to contact Faceplugin for a license.
+Not for inference after activation. You need a network only to clone GitHub, pull Docker Hub, download Google Drive runtimes, and to contact Faceplugin for a license.
 
 ## Does Faceplugin support Flutter?
 
@@ -72,7 +72,7 @@ Mobile Identify default match **0.67**. Face Liveness server: score **≥ 0.5** 
 
 ## How large is the Android SDK?
 
-The GitHub repo is small. Native models (AAR + `.fpk` / engine) come from Google Drive and are large — that is why they are not on GitHub. Check the Drive folder size for the product you licensed.
+The GitHub repo is small. Native models (AAR + `.fpk` / engine) come from Google Drive and are large — that is why they are not on GitHub. Check the Google Drive folder size for the product you licensed.
 
 ## Is there a Node.js or C++ SDK?
 

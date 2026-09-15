@@ -8,7 +8,7 @@ description: >-
 
 [FaceTec](https://www.facetec.com/) focuses on **3D liveness** (3D FaceMap / FaceScan), 3D face matching, and ID scan/OCR as part of that flow. Device SDKs target **iOS, Android, and webcams**. Customers run FaceTec **Server SDK** on their servers; FaceTec’s site describes **monthly 3D liveness usage** (minimum commitment) with ID scans included for customers. Certified PAD is a core FaceTec marketing claim.
 
-Faceplugin ships **2D** on-premise engines: still-image or camera-frame matching and **passive** PAD, plus standalone passport OCR and document liveness. Linux/Windows are **HTTP APIs** you host (ports 8083 / 8084 / 8082). License is an offline `FP1.…` key, not a per-liveness monthly meter in these docs.
+Faceplugin ships **2D** on-premise engines: still-image or camera-frame matching and **passive** anti-spoofing, plus standalone passport OCR and document liveness. Linux/Windows are **HTTP APIs** you host (ports 8083 / 8084 / 8082). License is an offline `FP1.…` key, not a per-liveness monthly meter in these docs.
 
 | Criterion | Faceplugin | FaceTec |
 | --- | --- | --- |
@@ -17,13 +17,13 @@ Faceplugin ships **2D** on-premise engines: still-image or camera-frame matching
 | Android / iOS | Yes | Yes |
 | Flutter / React Native / Ionic | Yes (FR + Document; Liveness is Android/iOS) | Check vendor |
 | Windows / Linux HTTP API | Yes | Server SDK / REST on **your** FaceTec server |
-| Passive 2D PAD | Yes | 3D liveness is the product |
-| Active / challenge liveness | Not the Face Liveness App | 3D video-selfie capture |
+| Passive 2D anti-spoofing | Yes | 3D liveness is the product |
+| Active / challenge liveness | Not the Face Liveness SDK | 3D video-selfie capture |
 | Passport OCR / ID scan | Yes (Document Recognition SDK) | Yes (Photo ID OCR / barcode / NFC per FaceTec site) |
 | Document liveness product | Yes (Linux) | ID tampering checks in Identity Check flow |
-| Flutter Face Liveness App | No public App | Check vendor |
+| Flutter Face Liveness SDK | No public SDK | Check vendor |
 | Pricing model in public docs | License key / machine code | Monthly 3D liveness usage + minimums (per FaceTec.com) |
-| NIST / iBeta | FRVT evaluated matching; iBeta Level 2 **class** PAD wording | FaceTec publishes PAD certification claims — verify on FaceTec.com |
+| NIST / iBeta | NIST FRVT evaluated matching; no iBeta certification claimed in these docs | FaceTec publishes PAD certification claims — verify on FaceTec.com |
 
 **Choose Faceplugin** when you want **unlimited on-prem inference after license**, 2D JPEG/`faceDetection` APIs, Docker Hub images, and a **separate** document OCR engine you combine yourself ([eKYC](../choose-a-product.md#combining-products-ekyc)).
 

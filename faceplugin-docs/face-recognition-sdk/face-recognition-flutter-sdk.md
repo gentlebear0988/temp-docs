@@ -38,7 +38,7 @@ All processing stays on the device. **No** biometric data is sent to Faceplugin 
 {% step %}
 ## Install tools
 
-Flutter **3.44+**, Dart **3.3+**, JDK **17+** for Android. Run `flutter doctor` and fix reported issues. Accept Android licenses: `flutter doctor --android-licenses`. `JAVA_HOME` must point to the JDK **home** (the folder that contains `bin`), not to `bin` itself.
+Flutter **3.44+** and Dart **3.3+** (from the package `pubspec.yaml`), JDK **17+** for Android. Run `flutter doctor` and fix reported issues. Accept Android licenses: `flutter doctor --android-licenses`. `JAVA_HOME` must point to the JDK **home** (the folder that contains `bin`), not to `bin` itself.
 {% endstep %}
 
 {% step %}
@@ -59,8 +59,8 @@ dart run tool/bootstrap.dart
 | Android | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | Copy `example/android/libfacesdk/` into **your app** `android/libfacesdk/` and `include(":libfacesdk")` |
 | iOS | three frameworks | `ios/Frameworks/` | Plugin checkout `ios/Frameworks/` |
 
-- Android Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
-- iOS Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
+- Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
+- iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
 
 {% hint style="warning" %}
 Do **not** `implementation(files(…aar))` inside the plugin — AGP will fail `bundleDebugAar`. Copy the `libfacesdk` **module** from the example into your app.

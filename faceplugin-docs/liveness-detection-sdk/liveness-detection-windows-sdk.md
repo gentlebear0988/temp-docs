@@ -80,7 +80,7 @@ POST /api/activate
 
 | **Input**        | Plain <code>FP1.…</code>, JSON <code>{"license":"FP1.…"}</code>, or a license file |
 | ---------------- | ------------------------------------------------------------------------------------ |
-| **Return value** | Envelope. On success the App also calls <code>init_sdk()</code>.                  |
+| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
 
 #### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake
 

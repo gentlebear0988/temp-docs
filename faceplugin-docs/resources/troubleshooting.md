@@ -10,7 +10,7 @@ Start here when a Faceplugin demo never reaches **Ready**, the camera stays blac
 
 ## Home never shows Ready / tiles stay locked
 
-1. Native runtime missing or nested in a subfolder. Check the exact AAR / framework path in that App’s guide.
+1. Native runtime missing or nested in a subfolder. Check the exact AAR / framework path in that SDK's platform guide.
 2. Wrong application id — demo `FP1.…` only matches the sample id.
 3. `init` returned 1–4. See [Status codes](status-codes.md).
 4. Called activate/init on the UI thread (Android) or before the binary was packaged (hot reload is not enough).
@@ -41,7 +41,7 @@ Do not copy two products’ Google Drive runtimes into one folder. See [Combinin
 
 ## Still stuck
 
-Email [info@faceplugin.com](mailto:info@faceplugin.com) with: OS, App repo, activate/init code, and whether you used Docker or Drive.
+Email [info@faceplugin.com](mailto:info@faceplugin.com) with: OS, GitHub repo name, activate/init code, and whether you used Docker or Google Drive.
 
 ### Related documentation
 
