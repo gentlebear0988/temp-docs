@@ -7,9 +7,9 @@ description: >-
 
 # Choose a product
 
-Use this page as a catalog: **which GitHub repository to clone**, what the package or Docker image is called, and which HTTP port the server Apps listen on.
+Use this page as a catalog: **which GitHub repository to clone**, what the package or Docker image is called, and which HTTP port each server product listens on.
 
-Always clone the **public** GitHub name (for example `ID-Document-Recognition-Android`). Internal workspace folders that end with `-App` are not what customers clone.
+Always clone the **public** GitHub repo name (for example `ID-Document-Recognition-Android`). Do not use internal folder names that end with `-App`—those are not published repositories.
 
 Need a vendor comparison? See [SDK comparison](comparisons/).
 
@@ -19,13 +19,13 @@ Need a vendor comparison? See [SDK comparison](comparisons/).
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Passport OCR / MRZ / ID card verification     | [Document capabilities](../id-document-recognition-sdk/capabilities.md) → [ID Document Recognition SDK](../id-document-recognition-sdk/)                                                                                                                       |
 | Match faces 1:1 or 1:N / Face Recognition API | [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) → [Face Recognition SDK](../face-recognition-sdk/)                                                                                                                                    |
-| Face anti-spoofing / PAD only                 | [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md) → [Face Liveness Detection SDK](../liveness-detection-sdk/)                                                                                                                            |
-| Recognition and PAD together                  | Prefer [Face Recognition + Liveness Linux / Windows](../face-recognition-sdk/face-recognition-sdk-linux.md) (one App, port **8083**, includes `/api/liveness`). Or run recognition-only **8083** + Face Liveness **8084** as two Apps. Do not merge `lib/cpu`. |
+| Face anti-spoofing only                       | [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md) → [Face Liveness Detection SDK](../liveness-detection-sdk/)                                                                                                                            |
+| Recognition and anti-spoofing together        | For recognition plus liveness on one server, use [Face Recognition + Liveness Linux / Windows](../face-recognition-sdk/face-recognition-sdk-linux.md) (port **8083**, includes `/api/liveness`). Or run separate services on **8083** and **8084**—never mix their runtime folders. |
 | Document authenticity **without** OCR         | [ID Document Liveness SDK](../id-document-liveness-sdk/)                                                                                                                                                                                                       |
 
 ## ID Document Recognition
 
-Scan passports, national IDs, and driver licenses on the device or over HTTP (**16,900** templates, **255** countries). Authenticity (document liveness) is a **license capability** on the same engine, except the dedicated Document Liveness Linux product which does authenticity only. Capability overview: [Document capabilities](../id-document-recognition-sdk/capabilities.md).
+Scan passports, national IDs, and driver licenses on the device or over HTTP (**16,900** templates, **255** countries). Document authenticity (anti-spoofing of the ID itself) needs a license that includes that feature, unless you use the dedicated Document Liveness Linux product (authenticity only). Overview: [Document capabilities](../id-document-recognition-sdk/capabilities.md).
 
 | Platform              | Clone                                                                                                                                                                                                                              | Package / image                | Port                        |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | --------------------------- |
@@ -61,7 +61,7 @@ Detect faces, read attributes, extract templates, and match 1:1. Mobile demos al
 
 ## Face Liveness
 
-Standalone presentation-attack detection (PAD). Mobile uses a live camera plus VideoWorker. The server scores a single RGB JPEG. Capability overview: [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
+Standalone presentation-attack detection (anti-spoofing). Mobile uses a live camera plus VideoWorker. The server scores a single RGB JPEG. Capability overview: [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
 
 | Platform       | Clone                                                                                            | Package / image                         | Port                        |
 | -------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------- | --------------------------- |
@@ -71,7 +71,7 @@ Standalone presentation-attack detection (PAD). Mobile uses a live camera plus V
 | Linux / Docker | [FaceLivenessDetection-Docker](https://github.com/Faceplugin-ltd/FaceLivenessDetection-Docker)   | `faceplugin/face-liveness`              | API **8084**, demo **9004** |
 
 {% hint style="info" %}
-Face Recognition mobile apps already include **2D liveness on Identify**. Use the standalone Face Liveness product when you need PAD without enrollment / 1:N.
+Face Recognition mobile apps already include **2D liveness on Identify**. Use the standalone Face Liveness product when you need anti-spoofing without enrollment / 1:N.
 {% endhint %}
 
 ## ID Document Liveness
@@ -95,11 +95,11 @@ flowchart LR
   FaceLiveness --> Match
 ```
 
-Faceplugin does **not** currently ship a single IDV App that does all of those steps. You orchestrate the shipping products in **your** backend or mobile app.
+Faceplugin does **not** offer one all-in-one identity-verification app. You combine Document Reader, Face Liveness, and Face Recognition in **your** mobile app or backend.
 
 Keep each engine in its **own** process or container so OpenCV, ONNX, and model packs cannot overwrite each other.
 
-Prefer **one process (or container) per product**. Do not dump two Drive folders into one `lib/cpu/`.
+Prefer **one process (or container) per product**. Do not dump two Google Drive runtimes into one `lib/cpu/` folder.
 
 ```
 lib/
@@ -111,7 +111,7 @@ lib/
 On Linux, run Docker containers on 8082 / 8083 / 8084 (and 8086 if you split document authenticity).
 
 {% hint style="danger" %}
-OpenCV, OpenSSL, and ONNX builds often differ between products. A flat merge overwrites `.so` / `.dll` files and will crash or silently mis-score.
+OpenCV, OpenSSL, and ONNX builds often differ between products. Do not copy two products’ runtime files into the same folder—shared libraries can overwrite each other and cause crashes or wrong scores.
 {% endhint %}
 
 | Product                             | Code  | Pack example |
@@ -122,7 +122,7 @@ OpenCV, OpenSSL, and ONNX builds often differ between products. A flat merge ove
 
 Never ship a generic `models.fpk` next to another product.
 
-On mobile: unique AAR / framework names, one license **per** application id **per** product, serialize native calls **per** engine. Face Liveness has no Flutter/RN App — use Face Recognition’s 2D liveness and/or a native Face Liveness module.
+On mobile: unique AAR / framework names, one license **per** application id **per** product, serialize native calls **per** engine. Face Liveness has no Flutter/React Native SDK—use Face Recognition’s 2D liveness and/or a native Face Liveness module.
 
 ### Related documentation
 

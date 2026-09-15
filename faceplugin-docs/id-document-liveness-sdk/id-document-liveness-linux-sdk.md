@@ -66,7 +66,7 @@ Content-Type: application/json
 
 | **Input**        | One or more page images (base64). OCR / MRZ / barcode / image quality are always off. |
 | ---------------- | -------------------------------------------------------------------------------------- |
-| **Return value** | Engine JSON with <code>security</code> checks. There is no <code>documentRecognition</code> / <code>documentProcess</code> on this App. |
+| **Return value** | Engine JSON with <code>security</code> checks. There is no <code>documentRecognition</code> / <code>documentProcess</code> on this product. |
 
 Python:
 
@@ -91,7 +91,7 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 
 **Postman:** import `postman/DocumentLiveness-API.postman_collection.json` from the repo. Base URL `http://127.0.0.1:8086`.
 
-**Gradio (host only):** port **9006**. There is **no** `documentRecognition` / `documentProcess` on this App — authenticity only. Security keys: [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md).
+**Gradio (host only):** port **9006**. There is **no** `documentRecognition` / `documentProcess` on this product — authenticity only. Security keys: [Document security check fields](../id-document-recognition-sdk/document-security-check-fields.md).
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
@@ -99,7 +99,7 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 
 **Document anti-spoofing API?** `POST /api/documentLiveness` on port **8086**. No OCR.
 
-**Need passport OCR too?** Use [ID Document Recognition Linux](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) with a Liveness-capable license, or orchestrate both containers.
+**Need passport OCR too?** Use [ID Document Recognition Linux](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) with a Liveness-capable license, or run both containers and call each API from your backend.
 
 ### Related documentation
 

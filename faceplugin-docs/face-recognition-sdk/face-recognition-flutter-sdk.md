@@ -225,12 +225,12 @@ Future<void> stopVideoWorker()
 
 **Screenshots?** The gallery uses **Android** sample UI. The plugin wraps native Android and iOS engines.
 
-**Face Liveness Flutter App?** None public.
+**Face Liveness Flutter SDK?** None public.
 
 ### Related documentation
 
 * [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [React Native](face-recognition-react-native-sdk.md)
 * [ID Document Recognition Flutter SDK](../id-document-recognition-sdk/id-document-recognition-flutter-sdk.md)
-* There is no public Face Liveness Flutter App — use Identify 2D liveness or native Android/iOS Liveness.
+* There is no public Face Liveness Flutter SDK — use Identify 2D liveness or native Android/iOS Liveness.
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

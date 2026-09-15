@@ -42,7 +42,7 @@ Process routes often **skip** the envelope and return engine JSON instead.
 
 ## Face Liveness server threshold
 
-Score **≥ 0.5** → Real / pass (product README). Tune only if Faceplugin gives you a different operating point for your license.
+Score **≥ 0.5** → Real / pass (product README). Change this default only if Faceplugin support gives you a different recommended threshold for your license.
 
 ### Related documentation
 

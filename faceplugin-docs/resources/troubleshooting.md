@@ -37,7 +37,7 @@ Use **Yarn 3** as `packageManager`. npm workspaces are not supported at the root
 
 ## Two products in one APK / one `lib/`
 
-Do not merge Drive zips. See [Combining products](choose-a-product.md#combining-products-ekyc).
+Do not copy two products’ Google Drive runtimes into one folder. See [Combining products](choose-a-product.md#combining-products-ekyc).
 
 ## Still stuck
 

@@ -43,7 +43,7 @@ On **Linux / Windows**, the HTTP API is still-image **detect / quality / feature
 
 Mobile **1:N Identify** includes passive 2D liveness detection with a default threshold of **0.5**.
 
-For standalone iBeta Level 2 certified face liveness detection, use the [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md).
+For standalone face anti-spoofing (passive liveness), use the [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md).
 
 ## Face Recognition API (Linux / Windows)
 
@@ -84,7 +84,7 @@ Recognition-only images: `faceplugin/face-recognition`. Combined Recognition + L
 
 **Server-side 1:N gallery?** No. Store templates in your DB; call `/api/similarity`.
 
-**Does it include liveness?** Mobile Identify includes 2D liveness. Standalone PAD is [Face Liveness](../liveness-detection-sdk/capabilities.md). Combined server App: [+ Liveness Linux](face-recognition-sdk-linux.md).
+**Does it include liveness?** Mobile Identify includes 2D liveness. Standalone anti-spoofing is [Face Liveness](../liveness-detection-sdk/capabilities.md). Combined server package: [+ Liveness Linux](face-recognition-sdk-linux.md).
 
 ### Related documentation
 

@@ -187,9 +187,9 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 
 ### FAQ
 
-**Passive or active?** **Passive** PAD. Score the camera frame; no challenge animation on this App.
+**Passive or active?** **Passive** anti-spoofing. Score the camera frame; no smile / turn-head challenge on this product.
 
-**Threshold?** Treat **0.5** or higher as Real / pass unless Faceplugin gives you another operating point.
+**Threshold?** Treat **0.5** or higher as Real / pass unless Faceplugin support gives you a different recommended threshold.
 
 ### Related documentation
 

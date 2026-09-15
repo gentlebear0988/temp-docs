@@ -10,11 +10,11 @@ Standalone presentation-attack detection on Android and iOS. The demo scores whe
 
 Live camera (VideoWorker plus `faceDetection`). Score **0.5 or higher** is treated as Real / pass.
 
-If you already use Face Recognition Identify on mobile, that flow already includes **passive 2D liveness**. Choose this product when you need PAD **without** enrollment.
+If you already use Face Recognition Identify on mobile, that flow already includes **passive 2D liveness**. Choose this product when you need anti-spoofing **without** enrollment.
 
 For JPEG-over-HTTP on Windows, Linux, and Docker, use [Server SDK](server-sdk.md).
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Android SDK</strong></td><td>Native AAR. Liveness, Settings, and About screens.</td><td><a href="../.gitbook/assets/android.png">android.png</a></td><td><a href="liveness-detection-android-sdk.md">liveness-detection-android-sdk.md</a></td></tr><tr><td></td><td><strong>iOS SDK</strong></td><td>Three frameworks. Same PAD flow as Android.</td><td><a href="../.gitbook/assets/apple-logo-3-300x300.png">apple-logo-3-300x300.png</a></td><td><a href="liveness-detection-ios-sdk.md">liveness-detection-ios-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Android SDK</strong></td><td>Native AAR. Liveness, Settings, and About screens.</td><td><a href="../.gitbook/assets/android.png">android.png</a></td><td><a href="liveness-detection-android-sdk.md">liveness-detection-android-sdk.md</a></td></tr><tr><td></td><td><strong>iOS SDK</strong></td><td>Three frameworks. Same anti-spoofing flow as Android.</td><td><a href="../.gitbook/assets/apple-logo-3-300x300.png">apple-logo-3-300x300.png</a></td><td><a href="liveness-detection-ios-sdk.md">liveness-detection-ios-sdk.md</a></td></tr></tbody></table>
 
 ```mermaid
 flowchart LR
@@ -25,9 +25,9 @@ flowchart LR
 
 ### FAQ
 
-**Is this active liveness?** No. The shipping Apps are **passive** PAD (no smile / turn-head challenge).
+**Is this active liveness?** No. This product is **passive** anti-spoofing (no smile / turn-head challenge).
 
-**Flutter / React Native?** There is no public Face Liveness Flutter or RN App. Use native Android/iOS, or 2D liveness on Face Recognition Identify.
+**Flutter / React Native?** There is no public Face Liveness Flutter or React Native SDK. Use native Android/iOS, or 2D liveness on Face Recognition Identify.
 
 ### Related documentation
 

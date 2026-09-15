@@ -10,7 +10,7 @@ Fully on-premise **Face Recognition + Face Liveness HTTP API for Windows** in **
 
 One wrapper (`FaceRecognitionSDK.dll`), one license, two model packs (`far.fpk` + `fal.fpk`). Your license can unlock Recognition only, Liveness only, or both.
 
-This is **not** the recognition-only [Face Recognition Windows SDK](face-recognition-windows-sdk.md). It is **not** the PAD-only [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) (port **8084**). Do not merge Drive folders into one `lib\cpu\`.
+This is **not** the recognition-only [Face Recognition Windows SDK](face-recognition-windows-sdk.md). It is **not** the anti-spoofing-only [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md) (port **8084**). Do not copy two products’ Google Drive runtimes into one `lib\cpu\` folder.
 
 For Docker combined, use [Face Recognition + Liveness Linux SDK](face-recognition-sdk-linux.md) (`faceplugin/face-recognition-liveness-sdk`).
 
@@ -79,7 +79,7 @@ Same recognition routes as [Face Recognition Windows SDK](face-recognition-windo
 | `POST /api/feature` | Extract template |
 | `POST /api/match` | Compare two photos |
 | `POST /api/similarity` | Compare two templates |
-| `POST /api/liveness` | Passive face PAD |
+| `POST /api/liveness` | Passive face anti-spoofing |
 
 There is **no** `POST /api/identify` (no server-side 1:N gallery).
 
@@ -102,7 +102,7 @@ Local Gradio: `run_demo.bat` on **9003** (Detect, Quality, Match, **Liveness**).
 
 ### FAQ
 
-**Is this one Windows process for recognition and PAD?** Yes. Public repo [FaceRecognitionSDK-Windows](https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Windows), including `POST /api/liveness`.
+**Is this one Windows process for recognition and liveness?** Yes. Public repo [FaceRecognitionSDK-Windows](https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Windows), including `POST /api/liveness`.
 
 **Prefer two separate products?** Use [Face Recognition Windows](face-recognition-windows-sdk.md) on **8083** and [Face Liveness Windows](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on **8084**.
 

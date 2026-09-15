@@ -20,19 +20,19 @@ A library that detects faces, extracts a template (embedding), and compares temp
 
 ## Is there a Face Recognition API?
 
-Yes — Linux Docker and Windows HTTP on port **8083** (`/api/detect`, `/match`, `/similarity`). Combined Recognition + Liveness Apps add `/api/liveness` on the same port. Details: [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
+Yes — Linux Docker and Windows HTTP on port **8083** (`/api/detect`, `/match`, `/similarity`). The combined Recognition + Liveness packages also expose `/api/liveness` on the same port. Details: [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
 
 ## What is passive liveness detection?
 
-The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md) is **passive PAD** (iBeta Level 2 **class** wording in these docs — not a claim of a named iBeta certificate unless you have one on file).
+The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md) is **passive** anti-spoofing. These docs describe performance in iBeta Level 2 terms; contact Faceplugin if you need a specific certification claim.
 
 ## What is the difference between active and passive liveness?
 
-**Passive:** no user challenge (Face Liveness Apps, and 2D liveness on Face Recognition Identify). **Active:** challenge demos exist on GitHub as `Active-Liveness-Detection-Android` and `Active-Liveness-Detection-iOS`. They are **not** the Face Liveness App. Face Liveness Linux/Windows is still `POST /api/liveness` on one JPEG.
+**Passive:** no user challenge—used in the Face Liveness SDK and in Face Recognition’s Identify mode. **Active:** separate GitHub demos with smile/turn prompts (`Active-Liveness-Detection-Android` / `-iOS`); they are **not** the Face Liveness SDK. Face Liveness on Linux/Windows is still `POST /api/liveness` on one JPEG.
 
 ## Face Recognition liveness vs Face Liveness SDK?
 
-Identify on mobile includes **2D liveness** as part of matching. The Face Liveness product is **PAD only** (no enroll / 1:N). See [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
+Identify on mobile includes **2D liveness** as part of matching. The Face Liveness product is **anti-spoofing only** (no enroll / 1:N). See [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
 
 ## Can face recognition work completely offline?
 
@@ -48,7 +48,7 @@ Not for inference after activation. You need a network only to clone GitHub, pul
 
 ## Does Faceplugin support Flutter?
 
-Yes for Face Recognition and ID Document Recognition (`face_recognition_sdk`, `document_reader_sdk`). There is **no** public Face Liveness Flutter App — use Face Recognition’s 2D liveness on Identify and/or native Android/iOS Liveness.
+Yes for Face Recognition and ID Document Recognition (`face_recognition_sdk`, `document_reader_sdk`). There is **no** public Face Liveness Flutter SDK — use Face Recognition’s 2D liveness on Identify and/or native Android/iOS Liveness.
 
 ## Does Faceplugin support iOS?
 
@@ -68,13 +68,13 @@ Sample keys are bound to the **demo** application id / bundle id on the platform
 
 ## Match and liveness thresholds
 
-Mobile Identify default match **0.67**. Face Liveness server: score **≥ 0.5** → Real / pass. Tune only if Faceplugin gives you a different operating point for your license.
+Mobile Identify default match **0.67**. Face Liveness server: score **≥ 0.5** → Real / pass. Change these defaults only if Faceplugin support gives you different recommended thresholds for your license.
 
 ## How large is the Android SDK?
 
 The GitHub repo is small. Native models (AAR + `.fpk` / engine) come from Google Drive and are large — that is why they are not on GitHub. Check the Drive folder size for the product you licensed.
 
-## Is there a Node.js or C++ App?
+## Is there a Node.js or C++ SDK?
 
 Document Reader has public Node / Go / C++ HTTP options. Face server integration is primarily HTTP (`curl` from any language) or Python `sdk.py` on the same host as `lib/cpu/`. See [Choose a product](choose-a-product.md).
 

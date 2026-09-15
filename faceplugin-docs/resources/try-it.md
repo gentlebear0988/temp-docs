@@ -15,7 +15,7 @@ These snippets are meant to be **copied as-is**. You do not write a UI first. St
 
 ## 1. Server — no license yet
 
-Start any Linux/Windows App, then:
+Start any Linux/Windows server product, then:
 
 ```bash
 curl -s http://127.0.0.1:8083/api/health
@@ -35,7 +35,7 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
   --data-binary @license.txt
 ```
 
-Success looks like `"Successfully activated"`. The App also loads the engine on this call.
+Success looks like `"Successfully activated"`. The service also loads the engine on this call.
 
 ## 3. Server — try the main APIs for each product
 
@@ -53,7 +53,7 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
   -d "{\"image1\":\"$IMG\",\"image2\":\"$IMG\"}"
 ```
 
-Install: [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md). Combined recognition + PAD in one App: [Face Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md) (same port, adds `/api/liveness`).
+Install: [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md). Combined recognition + liveness in one package: [Face Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md) (same port, adds `/api/liveness`).
 {% endtab %}
 
 {% tab title="Face Liveness" %}
@@ -65,7 +65,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
   -d "{\"image\":\"$IMG\"}"
 ```
 
-Score **≥ 0.5** is Real / pass. JPEG only. [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md). Combined App on **8083**: same body against `/api/liveness` on [Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md).
+Score **≥ 0.5** is Real / pass. JPEG only. [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md). Combined package on **8083**: same body against `/api/liveness` on [Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md).
 {% endtab %}
 
 {% tab title="ID Document" %}

@@ -120,7 +120,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 
 **API?** Same as Linux: `POST /api/liveness` on port **8084**. No Docker on Windows.
 
-**Active liveness?** Not this App. Passive JPEG PAD only.
+**Active liveness?** No. This product is passive JPEG anti-spoofing only.
 
 ### Related documentation
 

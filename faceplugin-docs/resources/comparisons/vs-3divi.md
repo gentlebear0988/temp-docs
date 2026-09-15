@@ -1,7 +1,7 @@
 ---
 description: >-
   Faceplugin vs 3DiVi Face SDK. On-premise face recognition, platforms, liveness, and ID
-  document products. Public 3DiVi docs versus Faceplugin shipping Apps.
+  document products. Public 3DiVi docs versus Faceplugin products in these docs.
 ---
 
 # Faceplugin vs 3DiVi

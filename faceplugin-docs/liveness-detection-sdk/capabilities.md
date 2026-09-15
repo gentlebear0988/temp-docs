@@ -19,33 +19,33 @@ flowchart LR
 
 ## Passive presentation-attack detection (PAD)
 
-The shipping Apps are **iBeta Level 2 class** **passive** PAD: score a camera frame or JPEG **without** a smile / turn-head challenge. Optional active challenge demos on GitHub are **not** this product’s server API.
+The product is **passive** anti-spoofing (presentation-attack detection): it scores a camera frame or JPEG **without** a smile / turn-head challenge. These docs describe performance in iBeta Level 2 terms; contact Faceplugin if you need a specific certification claim. Optional active challenge demos on GitHub are **not** this product’s server API.
 
-Capable of detecting attack classes including:
+Capable of detecting attack types including:
 
 * Printed photos
 * Screen replays
 * 3D models / masks
-* Deepfake-style video (as a PAD attack class — not a separate deepfake SKU)
+* Deepfake-style video (one type of spoof — not a separate deepfake product)
 
-Score **≥ 0.5** → Real / pass (server default operating point in these docs).
+Score **≥ 0.5** → Real / pass (server default threshold in these docs).
 
 ## Mobile vs server
 
 | Surface | Behavior |
 | --- | --- |
-| **Android / iOS** | Live camera + VideoWorker / `faceDetection` for PAD |
+| **Android / iOS** | Live camera + VideoWorker / `faceDetection` for anti-spoofing |
 | **Linux / Windows** | `POST /api/liveness` with one RGB JPEG on port **8084** |
 
-There is **no** public Face Liveness Flutter or React Native App. Use native Liveness, or 2D liveness on Face Recognition Identify.
+There is **no** public Face Liveness Flutter or React Native SDK. Use native Liveness, or 2D liveness on Face Recognition Identify.
 
 ## When to use this vs Identify 2D liveness
 
 | Need | Product |
 | --- | --- |
-| PAD **and** enroll / 1:N match | [Face Recognition](../face-recognition-sdk/capabilities.md) (Identify includes 2D liveness) |
-| PAD **only** (no gallery) | **Face Liveness Detection** (this product) |
-| Recognition + PAD in **one** server process | [Face Recognition + Liveness](../face-recognition-sdk/face-recognition-sdk-linux.md) on **8083** |
+| Anti-spoofing **and** enroll / 1:N match | [Face Recognition](../face-recognition-sdk/capabilities.md) (Identify includes 2D liveness) |
+| Anti-spoofing **only** (no gallery) | **Face Liveness Detection** (this product) |
+| Recognition + anti-spoofing in **one** server process | [Face Recognition + Liveness](../face-recognition-sdk/face-recognition-sdk-linux.md) on **8083** |
 | Document authenticity (ID spoof) | Document Reader authenticity or [ID Document Liveness](../id-document-liveness-sdk/) **8086** |
 
 ## Face Liveness API
@@ -78,7 +78,7 @@ Images: `faceplugin/face-liveness`. See [Linux](liveness-detection-linux-sdk.md)
 
 **Does it need the internet?** No, after license activation.
 
-**Difference from Face Recognition liveness?** Identify embeds 2D liveness in matching; this SDK is PAD-only.
+**Difference from Face Recognition liveness?** Identify embeds 2D liveness in matching; this SDK is anti-spoofing only.
 
 ### Related documentation
 

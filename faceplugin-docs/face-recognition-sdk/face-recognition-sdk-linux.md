@@ -6,11 +6,11 @@ description: >-
 
 # Face Recognition + Liveness Linux SDK
 
-Fully on-premise **Face Recognition + Face Liveness API for Linux / Docker** in **one** App. Image: `faceplugin/face-recognition-liveness-sdk`. Default port **8083**. Gradio **9003**.
+Fully on-premise **Face Recognition + Face Liveness API for Linux / Docker** in **one** container. Image: `faceplugin/face-recognition-liveness-sdk`. Default port **8083**. Gradio **9003**.
 
 One wrapper (`libFaceRecognitionSDK.so`), one license, two model packs (`far.fpk` + `fal.fpk`). Your license can unlock Recognition only, Liveness only, or both.
 
-This is **not** the recognition-only [Face Recognition Linux SDK](face-recognition-linux-sdk.md) (`faceplugin/face-recognition`). It is **not** the PAD-only [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (port **8084**). Do not merge Drive folders into one `lib/cpu/`.
+This is **not** the recognition-only [Face Recognition Linux SDK](face-recognition-linux-sdk.md) (`faceplugin/face-recognition`). It is **not** the anti-spoofing-only [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (port **8084**). Do not copy two products’ Google Drive runtimes into one `lib/cpu/` folder.
 
 All processing stays on your server. **No** biometric data is sent to Faceplugin cloud.
 
@@ -85,7 +85,7 @@ Same recognition routes as [Face Recognition Linux SDK](face-recognition-linux-s
 | `POST /api/feature` | Extract template |
 | `POST /api/match` | Compare two photos |
 | `POST /api/similarity` | Compare two templates |
-| `POST /api/liveness` | Passive face PAD |
+| `POST /api/liveness` | Passive face anti-spoofing |
 
 There is **no** `POST /api/identify` (no server-side 1:N gallery). Store templates in **your** database and call `/api/similarity`.
 
@@ -110,7 +110,7 @@ Local Gradio: `DEMO_PORT=9003 API_BASE=http://127.0.0.1:8083 python3 demo.py` (D
 
 ### FAQ
 
-**Is this one container for recognition and PAD?** Yes. Image `faceplugin/face-recognition-liveness-sdk`, port **8083**, including `POST /api/liveness`.
+**Is this one container for recognition and liveness?** Yes. Image `faceplugin/face-recognition-liveness-sdk`, port **8083**, including `POST /api/liveness`.
 
 **Prefer two separate products?** Use [Face Recognition Linux](face-recognition-linux-sdk.md) on **8083** and [Face Liveness Linux](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on **8084**.
 

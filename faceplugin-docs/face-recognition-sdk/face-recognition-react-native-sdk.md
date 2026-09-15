@@ -257,7 +257,7 @@ Prefer `ingestLiveCameraFrame` so rotation is handled for you.
 
 **Screenshots?** The gallery uses **Android** sample UI. The plugin wraps native Android and iOS engines.
 
-**Liveness Flutter/RN App?** None public. Identify includes 2D liveness.
+**Liveness Flutter/React Native SDK?** None public. Identify includes 2D liveness.
 
 ### Related documentation
 

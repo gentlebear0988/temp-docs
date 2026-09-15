@@ -109,7 +109,7 @@ Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thre
 
 ### FAQ
 
-**Passive or active?** **Passive** PAD on this App.
+**Passive or active?** **Passive** anti-spoofing on this product.
 
 **Screenshots?** Sample demo UI from `faceplugin-assets` (`face-liveness/mobile/`). Not a dedicated iOS photoshoot.
 

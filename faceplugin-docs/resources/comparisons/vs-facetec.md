@@ -25,7 +25,7 @@ Faceplugin ships **2D** on-premise engines: still-image or camera-frame matching
 | Pricing model in public docs | License key / machine code | Monthly 3D liveness usage + minimums (per FaceTec.com) |
 | NIST / iBeta | FRVT evaluated matching; iBeta Level 2 **class** PAD wording | FaceTec publishes PAD certification claims — verify on FaceTec.com |
 
-**Choose Faceplugin** when you want **unlimited on-prem inference after license**, 2D JPEG/`faceDetection` APIs, Docker Hub images, and a **separate** document OCR engine you orchestrate ([eKYC](../choose-a-product.md#combining-products-ekyc)).
+**Choose Faceplugin** when you want **unlimited on-prem inference after license**, 2D JPEG/`faceDetection` APIs, Docker Hub images, and a **separate** document OCR engine you combine yourself ([eKYC](../choose-a-product.md#combining-products-ekyc)).
 
 **Look at FaceTec** when you specifically need **3D FaceMap liveness** and their certified PAD / 3D matching stack.
 
