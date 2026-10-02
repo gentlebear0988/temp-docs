@@ -53,7 +53,7 @@ Typical call order on **Linux / Windows**: `GET /api/machinecode` → `POST /api
 
 ### FAQ
 
-**Can face recognition work completely offline?** Yes. After you activate with an `FP1.…` key, matching does not need the internet. See [Capabilities](capabilities.md).
+**Can face recognition work completely offline?** Yes. After you activate with a license key, matching does not need the internet. See [Capabilities](capabilities.md).
 
 **Does this SDK include liveness?** Mobile Identify includes passive 2D liveness. For standalone face anti-spoofing, use the [Face Liveness Detection SDK](../liveness-detection-sdk/). On the server you can use combined [Recognition + Liveness](face-recognition-sdk-linux.md), which provides both services on port **8083**.
 

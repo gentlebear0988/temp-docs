@@ -39,7 +39,7 @@ run.bat
 curl -s http://127.0.0.1:8084/api/machinecode
 ```
 
-Send `FPMC1.…` to Faceplugin.
+Send machine code to Faceplugin.
 {% endstep %}
 
 {% step %}
@@ -68,7 +68,7 @@ GET /api/machinecode
 
 | **Input**        | None |
 | ---------------- | ---- |
-| **Return value** | Envelope. <code>data.machinecode</code> is <code>FPMC1.…</code> |
+| **Return value** | Envelope. <code>data.machinecode</code> is <code>machine code</code> |
 
 Also: `GET /api/health`, `GET /api/licenseStatus`, `GET /api/backend`.
 
@@ -78,7 +78,7 @@ Also: `GET /api/health`, `GET /api/licenseStatus`, `GET /api/backend`.
 POST /api/activate
 ```
 
-| **Input**        | Plain <code>FP1.…</code>, JSON <code>{"license":"FP1.…"}</code>, or a license file |
+| **Input**        | Plain <code>license key</code>, JSON <code>{"license":"license key"}</code>, or a license file |
 | ---------------- | ------------------------------------------------------------------------------------ |
 | **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
 

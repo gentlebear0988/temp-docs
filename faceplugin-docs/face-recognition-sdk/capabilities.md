@@ -22,7 +22,7 @@ flowchart LR
 
 ## Offline / on-premise face recognition
 
-After you activate with an `FP1.…` key, face detection, template extraction, and matching run **offline** on the device or on **your** Windows/Linux host. Images are not sent to a Faceplugin cloud.
+After you activate with a license key, face detection, template extraction, and matching run **offline** on the device or on **your** Windows/Linux host. Images are not sent to a Faceplugin cloud.
 
 The algorithm is evaluated on **NIST FRVT** (as stated across Faceplugin Face Recognition docs).
 
@@ -51,7 +51,7 @@ Default port **8083**:
 
 | Route                  | Role          |
 | ---------------------- | ------------- |
-| `GET /api/machinecode` | `FPMC1.…`     |
+| `GET /api/machinecode` | machine code     |
 | `POST /api/activate`   | Activate      |
 | `POST /api/detect`     | Detect faces  |
 | `POST /api/quality`    | Quality       |

@@ -14,7 +14,7 @@ Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`.
 | Android demo package name | `com.faceplugin.faceliveness` |
 | SDK class / framework | `FaceLivenessSDK` in `facelivenessdk.framework` |
 
-Keep the iOS demo bundle **`com.faceplugin.faceliveness.app`** so the included license works. Request a new `FP1.…` if you change it.
+Keep the iOS demo bundle **`com.faceplugin.faceliveness.app`** so the included license works. Request a new license key if you change it.
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -36,7 +36,7 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 +(int)setActivation:(NSString*)license;
 ```
 
-| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>FP1.…</code>)</li></ul> |
+| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>license key</code>)</li></ul> |
 | ---------------- | -------------------------------------------------------------------------------------------------- |
 | **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul> |
 

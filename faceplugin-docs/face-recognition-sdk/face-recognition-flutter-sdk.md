@@ -106,7 +106,7 @@ The gallery is **Android** sample UI from `faceplugin-assets`. The Flutter plugi
 
 ### License
 
-Licenses are **offline**. Demo keys live in `example/lib/core/constants/license.dart`. Request a new `FP1.…` for your own app.
+Licenses are **offline**. Demo keys live in `example/lib/core/constants/license.dart`. Request a new license key for your own app.
 
 Default thresholds in the example Settings: identify **0.67**, liveness **0.5**, pose **40°**, eye-close **0.5**. You pass these as Dart parameters — change them for your product.
 
@@ -129,8 +129,8 @@ Then copy runtimes (table above), set your Android package name / iOS bundle ide
 import 'package:face_recognition_sdk/face_recognition_sdk.dart';
 
 Future<void> activate() async {
-  final code = await getMachineCode(); // FPMC1.… — send when requesting a key
-  final act = await setActivation('FP1.…');
+  final code = await getMachineCode(); // machine code — send when requesting a key
+  final act = await setActivation('license key');
   if (act != sdkSuccess) {
     throw StateError(await lastLicenseError());
   }

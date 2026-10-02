@@ -1,7 +1,7 @@
 ---
 description: >-
   Faceplugin SDK glossary. Plain-language definitions for MRZ, OCR, eKYC, 1:1, 1:N,
-  PAD, FRVT, FP1, FPMC1, template, and HTTP ports used in these docs.
+  PAD, FRVT, license key, machine code, template, and HTTP ports used in these docs.
 ---
 
 # Glossary
@@ -45,8 +45,8 @@ Short definitions for terms used across Faceplugin docs. For product choice, see
 
 | Term | Meaning |
 | --- | --- |
-| **`FP1.…`** | License key string for activation (mobile app id / bundle id, or server after you send a machine code). |
-| **`FPMC1.…`** | Server **machine code** from `GET /api/machinecode`. Docker and a native host on the same PC produce **different** codes. |
+| **License key** | The activation string Faceplugin issues for your app id (mobile) or machine code (server). Paste it into `license.txt` or send it to `POST /api/activate`. |
+| **Machine code** | Server fingerprint from `GET /api/machinecode` (or the API log). Send it when you request a server license. Docker and a native host on the same PC produce **different** codes. |
 | **Google Drive runtime** | Large native binaries (AAR, frameworks, `.so` / `.dll`, `.fpk`) linked from each platform page — not stored on GitHub. |
 | **Port 8082** | ID Document Recognition HTTP API |
 | **Port 8083** | Face Recognition HTTP API (combined Recognition + Liveness also uses 8083 and adds `/api/liveness`) |

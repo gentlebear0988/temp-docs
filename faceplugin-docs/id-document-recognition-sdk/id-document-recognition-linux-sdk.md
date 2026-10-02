@@ -58,7 +58,30 @@ curl -s -X POST http://127.0.0.1:8082/api/activate \
 {% endstep %}
 {% endstepper %}
 
-**Native (optional):** put `libDocSDK.so`, `libDocumentEngine.so`, `dcr.fpk` from [Google Drive](https://drive.google.com/drive/folders/16DFGKtyGbyL-0gfVOmNVaQ9vgXCYDr2M) **directly** in `lib/cpu/`, then `./run.sh`.
+### Other ways to run
+
+#### Option B — Docker Compose (local build)
+
+```
+git clone https://github.com/Faceplugin-ltd/ID-Document-Recognition-Docker.git
+cd ID-Document-Recognition-Docker
+```
+
+Put the [Google Drive runtime](https://drive.google.com/drive/folders/16DFGKtyGbyL-0gfVOmNVaQ9vgXCYDr2M) files **directly** in `lib/cpu/`, then:
+
+```
+# macOS/Windows Docker Desktop: remove the /etc/machine-id volume from docker-compose.yml first
+sudo docker compose up --build -d
+sudo docker compose logs -f
+```
+
+#### Option C — Native Linux (no Docker)
+
+Same `lib/cpu/` layout:
+
+```
+./run.sh
+```
 
 **Try online:** [Hugging Face Space](https://huggingface.co/spaces/Faceplugin-Ltd/ID-Document-Recognition-SDK) (Gradio UI → your Linux API).
 
@@ -117,7 +140,7 @@ Also: `GET /api/health`, `GET /api/licenseStatus`, `GET /api/backend`.
 POST /api/activate
 ```
 
-| **Input**        | Plain <code>FP1.…</code>, JSON <code>{"license":"FP1.…"}</code>, or a license file |
+| **Input**        | Plain <code>license key</code>, JSON <code>{"license":"license key"}</code>, or a license file |
 | ---------------- | ------------------------------------------------------------------------------------ |
 | **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
 

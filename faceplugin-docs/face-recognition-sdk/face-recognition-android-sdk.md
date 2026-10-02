@@ -60,7 +60,7 @@ dependencies {
 }
 ```
 
-4. Add camera / gallery permissions in `AndroidManifest.xml`. Call **setActivation → init** on a **background** thread. Keep the demo package name **`com.faceplugin.facerecognitionsdk`**. Request a new `FP1.…` for your own app.
+4. Add camera / gallery permissions in `AndroidManifest.xml`. Call **setActivation → init** on a **background** thread. Keep the demo package name **`com.faceplugin.facerecognitionsdk`**. Request a new license key for your own app.
 
 {% hint style="info" %}
 Serialize native calls on one thread. The engine is not concurrent. First `init` unpacks on-device models (a few seconds).
@@ -76,7 +76,7 @@ Status codes: **0** Success (`SDK_SUCCESS`), **1** Invalid license, **2** Expire
 public static int setActivation(Context context, String license);
 ```
 
-| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>FP1.…</code>)</li></ul> |
+| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>license key</code>)</li></ul> |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul>                                           |
 
@@ -314,7 +314,7 @@ You need `libfacesdk/` (the AAR) and `FaceRecognitionSDK`. You do **not** need t
 1. Copy `libfacesdk` into your project root and put `facerecognitionsdk.aar` inside it.
 2. Wire Gradle as in Setup (`minSdk 24`, `abiFilters`, `useLegacyPackaging`).
 3. Add CAMERA and photo-library permissions.
-4. Request `FP1.…` for your own app.
+4. Request license key for your own app.
 5. Optional: copy `app/.../kit/` (`FaceRecognitionClient`) so you do not rewrite threading, CameraX, or VideoWorker.
 
 Typical call order: `setActivation` → `init` → `faceDetection` → `templateExtraction` → store templates in **your** database → `similarityCalculation` or VideoWorker for live 1:N.
@@ -325,7 +325,7 @@ Typical call order: `setActivation` → `init` → `faceDetection` → `template
 
 **What APIs does this page ship?** Java/Kotlin `FaceRecognitionSDK.setActivation`, `init`, `faceDetection`, `templateExtraction`, `similarityCalculation`, and VideoWorker Identify.
 
-**Offline / on-premise?** Yes, after an `FP1.…` key bound to the demo app id (or your own id).
+**Offline / on-premise?** Yes, after a license key bound to the demo app id (or your own id).
 
 **Identify threshold?** Default **0.67**. Mobile Identify includes **passive 2D liveness**.
 

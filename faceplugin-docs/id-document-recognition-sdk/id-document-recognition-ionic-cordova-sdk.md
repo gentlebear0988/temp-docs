@@ -58,7 +58,7 @@ ionic cordova run android
 
 Drive: [Android](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH) · [iOS](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q).
 
-The Android demo `FP1.…` string in this repo can differ from Capacitor / React Native / Flutter; it is still bound to `com.faceplugin.documentreader`.
+The Android demo license key string in this repo can differ from Capacitor / React Native / Flutter; it is still bound to `com.faceplugin.documentreader`.
 
 ### APIs
 

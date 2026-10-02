@@ -68,8 +68,6 @@
     * [Faceplugin vs 3DiVi](resources/comparisons/vs-3divi.md)
     * [Faceplugin vs FaceTec](resources/comparisons/vs-facetec.md)
     * [Faceplugin vs Luxand](resources/comparisons/vs-luxand.md)
-    * [Faceplugin vs FaceOnLive](resources/comparisons/vs-faceonlive.md)
-    * [Faceplugin vs KBY-AI](resources/comparisons/vs-kby-ai.md)
   * [Changelog](resources/changelog.md)
 * [Request a License & Support](request-a-license-and-support.md)
 * [Contact us](contact-us.md)

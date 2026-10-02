@@ -117,7 +117,7 @@ The gallery is **Android** sample UI from `faceplugin-assets`. The React Native 
 
 ### License
 
-Licenses are **offline**. The sample key is only for the demo app. Request a new `FP1.…` for your own app.
+Licenses are **offline**. The sample key is only for the demo app. Request a new license key for your own app.
 
 Default thresholds in Settings: identify **0.67**, liveness **0.5**, pose **40°**, eye-close **0.5**.
 
@@ -143,7 +143,7 @@ import {
   SDK_SUCCESS,
 } from 'face-recognition-sdk';
 
-const code = await setActivation('FP1.…');
+const code = await setActivation('license key');
 if (code === SDK_SUCCESS) {
   await init();
 }

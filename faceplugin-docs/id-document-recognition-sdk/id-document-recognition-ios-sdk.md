@@ -99,7 +99,7 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 
 ### License
 
-Licenses are **offline**. Request a new `FP1.…` for your own app.
+Licenses are **offline**. Request a new license key for your own app.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
@@ -107,7 +107,7 @@ Licenses are **offline**. Request a new `FP1.…` for your own app.
 
 **Passport OCR on iOS?** Yes. `recognize` returns OCR, MRZ, barcode, and crops.
 
-**Offline?** Yes after `setActivation` / `initSDK` for bundle `com.faceplugin.documentreader.app` (or your own `FP1.…`).
+**Offline?** Yes after `setActivation` / `initSDK` for bundle `com.faceplugin.documentreader.app` (or your own license key).
 
 ### Related documentation
 

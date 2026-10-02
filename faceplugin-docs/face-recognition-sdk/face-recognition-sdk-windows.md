@@ -45,7 +45,7 @@ run.bat
 curl -s http://127.0.0.1:8083/api/machinecode
 ```
 
-Send `FPMC1.…` to Faceplugin. Copy it from the terminal if curl is not available.
+Send machine code to Faceplugin. Copy it from the terminal if curl is not available.
 {% endstep %}
 
 {% step %}
@@ -70,7 +70,7 @@ Same recognition routes as [Face Recognition Windows SDK](face-recognition-windo
 | Endpoint | Purpose |
 | -------- | ------- |
 | `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code `FPMC1.…` |
+| `GET /api/machinecode` | Machine code |
 | `GET /api/licenseStatus` | License capabilities |
 | `GET /api/backend` | `"cpu"` |
 | `POST /api/activate` | Activate and init |

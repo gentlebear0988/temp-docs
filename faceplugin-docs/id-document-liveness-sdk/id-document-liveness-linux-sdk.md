@@ -27,9 +27,34 @@ sudo docker run -d --name faceplugin-document-liveness \
 
 2. Health (no license): `curl -s http://127.0.0.1:8086/api/health`
 3. Get machine code: `GET /api/machinecode`
-4. Contact us for `FP1.…`, then `POST /api/activate`
+4. Contact us for license key, then `POST /api/activate`
 
-Native: put `libDocSDK.so`, `libDocumentEngine.so`, `dcr.fpk` from [Google Drive](https://drive.google.com/drive/folders/1_V05Nvcdc3WfOPuyquFyGIW-4CDj8aAm) **directly** in `lib/cpu/`, then `./run.sh`. On Docker Desktop omit the `/etc/machine-id` volume.
+### Other ways to run
+
+#### Option B — Docker Compose (local build)
+
+```
+git clone https://github.com/Faceplugin-ltd/ID-Document-Liveness-Detection-Docker.git
+cd ID-Document-Liveness-Detection-Docker
+```
+
+Put the [Google Drive runtime](https://drive.google.com/drive/folders/1_V05Nvcdc3WfOPuyquFyGIW-4CDj8aAm) files **directly** in `lib/cpu/`, then:
+
+```
+# macOS/Windows Docker Desktop: remove the /etc/machine-id volume from docker-compose.yml first
+sudo docker compose up --build -d
+sudo docker compose logs -f
+```
+
+#### Option C — Native Linux (no Docker)
+
+Same `lib/cpu/` layout:
+
+```
+./run.sh
+```
+
+On Docker Desktop omit the `/etc/machine-id` volume for Hub and Compose runs.
 
 Default port **8086**. Gradio demo on **9006** (host only).
 
@@ -51,7 +76,7 @@ Also: `GET /api/health`, `GET /api/licenseStatus`, `GET /api/backend`.
 POST /api/activate
 ```
 
-| **Input**        | Plain <code>FP1.…</code>, JSON <code>{"license":"FP1.…"}</code>, or a license file |
+| **Input**        | Plain <code>license key</code>, JSON <code>{"license":"license key"}</code>, or a license file |
 | ---------------- | ------------------------------------------------------------------------------------ |
 | **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
 

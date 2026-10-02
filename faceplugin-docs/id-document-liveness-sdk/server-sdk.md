@@ -8,7 +8,7 @@ description: >-
 
 Document authenticity only (screen replay, print, substitution). Optical character recognition (OCR), MRZ, and barcodes are **off**.
 
-Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/documentLiveness`. Default port **8086**.
+Typical call order: `GET /api/machinecode` → send machine code → `POST /api/activate` → `POST /api/documentLiveness`. Default port **8086**.
 
 For **fields plus authenticity** in one engine, use [ID Document Recognition Server SDK](../id-document-recognition-sdk/server-sdk.md) with a Liveness-capable license.
 

@@ -29,7 +29,7 @@ Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status code
 +(int)setActivation:(NSString*)license;
 ```
 
-| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>FP1.…</code>)</li></ul> |
+| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>license key</code>)</li></ul> |
 | ---------------- | -------------------------------------------------------------------------------------------------- |
 | **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul> |
 
@@ -147,7 +147,7 @@ The gallery is **Android** sample UI from `faceplugin-assets`. iOS demo tiles ma
 
 ### License
 
-Licenses are **offline**. The sample key is only for the demo bundle. Request a new `FP1.…` if you change the demo bundle.
+Licenses are **offline**. The sample key is only for the demo bundle. Request a new license key if you change the demo bundle.
 
 Identify default threshold is **0.67**. Liveness demo default is **0.5**.
 
@@ -167,7 +167,7 @@ Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFea
 
 **Are the screenshots iOS?** No. The gallery uses **Android** sample UI. iOS demo tiles match those screens.
 
-**Offline?** Yes, after `FP1.…` for the demo bundle id (or yours).
+**Offline?** Yes, after license key for the demo bundle id (or yours).
 
 ### Related documentation
 

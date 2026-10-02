@@ -66,7 +66,7 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 public static int setActivation(Context context, String license);
 ```
 
-| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>FP1.…</code>)</li></ul> |
+| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>license key</code>)</li></ul> |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul>       |
 
@@ -165,7 +165,7 @@ public static int deinit();
 
 ### License
 
-Licenses are **offline**. Request a new `FP1.…` for your own app. Use `allowsLiveness()` before Capture.
+Licenses are **offline**. Request a new license key for your own app. Use `allowsLiveness()` before Capture.
 
 {% hint style="warning" %}
 `FaceDetectionParam.check_liveness` defaults to **false**. Set it to **true** or you will not get a liveness score.

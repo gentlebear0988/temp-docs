@@ -157,7 +157,7 @@ public static String deinit();
 
 ### License
 
-Licenses are **offline**. Request a new `FP1.…` for your own app. Parse the JSON with [Document result JSON](document-result-json.md).
+Licenses are **offline**. Request a new license key for your own app. Parse the JSON with [Document result JSON](document-result-json.md).
 
 ### Try it (after the demo compiles)
 
@@ -173,7 +173,7 @@ String json = DocumentReaderSDK.recognize(front, back, "normal");
 
 **Passport OCR on Android?** Yes. `DocumentReaderSDK.recognize` / `documentProcess` return OCR, MRZ, barcode, and crops. See [Document result JSON](document-result-json.md).
 
-**Offline?** Yes after `setActivation` / `init` with an `FP1.…` for the demo app id (or yours).
+**Offline?** Yes after `setActivation` / `init` with a license key for the demo app id (or yours).
 
 ### Related documentation
 

@@ -135,7 +135,7 @@ Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projec
 
 **Legacy plugin?** Yes. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new apps.
 
-**Offline?** Yes after activation with an `FP1.…` bound to the Cordova app id.
+**Offline?** Yes after activation with a license key bound to the Cordova app id.
 
 ### Related documentation
 

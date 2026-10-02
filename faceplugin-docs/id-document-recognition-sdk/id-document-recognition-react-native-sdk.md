@@ -101,7 +101,7 @@ import {
   SDK_SUCCESS,
 } from 'document-reader-sdk';
 
-const act = await setActivation('FP1.…');
+const act = await setActivation('license key');
 if (act === SDK_SUCCESS) await init();
 const locateJson = await locateDocument(imageUri);
 const resultJson = await recognize(frontUri, backUri, 'normal');

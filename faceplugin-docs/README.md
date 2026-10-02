@@ -4,14 +4,8 @@ description: >-
   SDK docs. Offline Android, iOS, Flutter, React Native, Windows, and Linux
   Docker integration guides.
 icon: hand-wave
-cover: .gitbook/assets/Screenshot 2025-11-21 184657.png
-coverY: 0
 layout:
   width: default
-  cover:
-    visible: true
-    size: full
-    mask: none
   title:
     visible: true
   description:
@@ -54,7 +48,7 @@ This documentation is the **integration** layer: clone a public GitHub sample, a
 1. Read **Capabilities** for the product you need (what it can do).
 2. Open **Mobile SDK** or **Server SDK**, then the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
 3. Follow **Setup** / **How to run** to place the Google Drive runtime package and start the **GitHub sample app** for that product.
-4. Copy the **machine code** (`FPMC1.…`) if you run a server SDK, then [request a license](request-a-license-and-support.md).
+4. Copy the **machine code** if you run a server SDK, then [request a license](request-a-license-and-support.md).
 5. Use [Try it](resources/try-it.md) / **APIs** to call the same **SDK APIs** from your app. Store templates and document JSON in **your** database.
 
 Ports: Document **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
@@ -74,7 +68,6 @@ Also: [ID Document Liveness SDK](id-document-liveness-sdk/) (Linux / Docker auth
 ### Try our SDKs
 
 * [GitHub repos](https://github.com/Faceplugin-ltd)
-* [Google Play App](https://play.google.com/store/apps/details?id=ai.faceplugin.recognition)
 * [Playground](https://playground.faceplugin.com/)
 * [Hugging Face Spaces](https://huggingface.co/Faceplugin-Ltd)
 * [Docker Hub](https://hub.docker.com/u/faceplugin)
@@ -82,7 +75,7 @@ Also: [ID Document Liveness SDK](id-document-liveness-sdk/) (Linux / Docker auth
 
 ### Features <a href="#feature" id="feature"></a>
 
-* Offline after `FP1.…` license activation — no Faceplugin cloud inference
+* Offline after license activation — no Faceplugin cloud inference
 * HTTP APIs on ports **8082** (documents), **8083** (face recognition), **8084** (face liveness), **8086** (document liveness)
 * Mobile SDKs for Android, iOS, Flutter, React Native, and Ionic (platform support varies by product)
 

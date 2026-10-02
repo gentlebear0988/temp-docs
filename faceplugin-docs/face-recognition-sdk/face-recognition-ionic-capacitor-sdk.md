@@ -90,7 +90,7 @@ Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
 
 ### License
 
-Licenses are **offline**. The sample key is only for the demo app. Request a new `FP1.…` for your own app. [Request a License & Support](../request-a-license-and-support.md).
+Licenses are **offline**. The sample key is only for the demo app. Request a new license key for your own app. [Request a License & Support](../request-a-license-and-support.md).
 
 Default thresholds in Settings: identify **0.67**, liveness **0.5**, pose **40°**, eye-close **0.5**.
 
@@ -116,8 +116,8 @@ import {
 } from 'face-recognition-capacitor';
 
 async function activate() {
-  const mc = await getMachineCode(); // FPMC1.… — send when requesting a key
-  const act = await setActivation('FP1.…');
+  const mc = await getMachineCode(); // machine code — send when requesting a key
+  const act = await setActivation('license key');
   if (act !== SDK_SUCCESS) throw new Error(await lastLicenseError());
   const initCode = await init();
   if (initCode !== SDK_SUCCESS) throw new Error(`init failed: ${initCode}`);
@@ -196,7 +196,7 @@ Optional session helpers in the example: `IdentifySession`, `CaptureSession`.
 
 **Package?** `face-recognition-capacitor`. Prefer Capacitor over Cordova for new Ionic apps.
 
-**Offline?** Yes after `setActivation` / `init` with an `FP1.…` for your app id.
+**Offline?** Yes after `setActivation` / `init` with a license key for your app id.
 
 ### Related documentation
 

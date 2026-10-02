@@ -36,7 +36,7 @@ Identify on mobile includes **2D liveness** as part of matching. The Face Livene
 
 ## Can face recognition work completely offline?
 
-Yes. After you activate with an `FP1.…` key bound to the app id (mobile) or machine code (server), matching does not need the internet.
+Yes. After you activate with a license key bound to the app id (mobile) or machine code (server), matching does not need the internet.
 
 ## Can Faceplugin run on-premise?
 
@@ -60,9 +60,9 @@ Yes for Face Recognition, Face Liveness, and ID Document Recognition. Physical i
 
 ## Docker vs host machine code
 
-`GET /api/machinecode` returns `FPMC1.…`. Docker and a native host on the same machine produce **different** codes. License the environment you run in production. See [Request a License](../request-a-license-and-support.md).
+`GET /api/machinecode` returns machine code. Docker and a native host on the same machine produce **different** codes. License the environment you run in production. See [Request a License](../request-a-license-and-support.md).
 
-## Demo `FP1.…` and my own app id
+## Demo license key and my own app id
 
 Sample keys are bound to the **demo** application id / bundle id on the platform page. Request a new key for your production id.
 
@@ -80,7 +80,7 @@ Document Reader has public Node / Go / C++ HTTP options. Face server integration
 
 ## Where are acronyms defined?
 
-See the [Glossary](glossary.md) for MRZ, OCR, eKYC, 1:1 / 1:N, PAD, FRVT, `FP1.…`, and `FPMC1.…`.
+See the [Glossary](glossary.md) for MRZ, OCR, eKYC, 1:1 / 1:N, PAD, FRVT, license key, and machine code.
 
 ### Related documentation
 

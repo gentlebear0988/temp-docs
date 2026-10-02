@@ -8,7 +8,7 @@ description: >-
 
 Score **one RGB JPEG** over HTTP. `POST /api/liveness` (alias `/api/check_liveness`). Score **0.5 or higher** → Real / pass.
 
-Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/liveness`. Default port **8084**.
+Typical call order: `GET /api/machinecode` → send machine code → `POST /api/activate` → `POST /api/liveness`. Default port **8084**.
 
 For a live camera on Android or iOS, use [Mobile SDK](mobile-sdk.md).
 

@@ -24,12 +24,12 @@ curl -s http://127.0.0.1:8083/api/machinecode
 
 Change the port: **ID Document Recognition** (Document Reader) **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
 
-`health` works **before** you have a key. Copy the server **machine code** (`FPMC1.…`) from `machinecode` and [request a license](../request-a-license-and-support.md).
+`health` works **before** you have a key. Copy the server **machine code** (machine code) from `machinecode` and [request a license](../request-a-license-and-support.md).
 
 ## 2. Server — activate once
 
 ```bash
-# license.txt contains one line: FP1.…
+# license.txt contains one line: license key
 curl -s -X POST http://127.0.0.1:8083/api/activate \
   -H 'Content-Type: text/plain' \
   --data-binary @license.txt
@@ -96,14 +96,14 @@ print(urllib.request.urlopen(req).read().decode())
 
 ## 4. Mobile — after the demo compiles
 
-Keep the **demo application ID** so the included `FP1.…` license works. Call this on a **background** thread.
+Keep the **demo application ID** so the included license key license works. Call this on a **background** thread.
 
 {% tabs %}
 {% tab title="Android Face Recognition" %}
 ```kotlin
 Thread {
     FaceRecognitionSDK.getMachineCode(context)
-    var code = FaceRecognitionSDK.setActivation(context, "FP1.…") // demo key from the repo
+    var code = FaceRecognitionSDK.setActivation(context, "license key") // demo key from the repo
     if (code == FaceRecognitionSDK.SDK_SUCCESS) {
         code = FaceRecognitionSDK.init(context)
     }
@@ -138,7 +138,7 @@ Install: [Face Recognition Flutter SDK](../face-recognition-sdk/face-recognition
 ```kotlin
 Thread {
     DocumentReaderSDK.getMachineCode(context)
-    var code = DocumentReaderSDK.setActivation(context, "FP1.…")
+    var code = DocumentReaderSDK.setActivation(context, "license key")
     if (code == DocumentReaderSDK.SDK_SUCCESS) {
         code = DocumentReaderSDK.init(context)
     }

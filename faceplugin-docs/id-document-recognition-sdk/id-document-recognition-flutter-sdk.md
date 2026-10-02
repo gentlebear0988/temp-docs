@@ -76,7 +76,7 @@ Physical phone. Keep Android `com.faceplugin.documentreader`, iOS `com.faceplugi
 
 ### License
 
-Licenses are **offline**. Request a new `FP1.…` for your own app.
+Licenses are **offline**. Request a new license key for your own app.
 
 ### Integrate into your own app
 
@@ -93,8 +93,8 @@ Then `flutter pub get`, copy runtimes, `cd ios && pod install`, and **rebuild** 
 import 'package:document_reader_sdk/document_reader_sdk.dart';
 
 Future<void> boot() async {
-  final machine = await getMachineCode(); // FPMC1.…
-  final act = await setActivation('FP1.…');
+  final machine = await getMachineCode(); // machine code
+  final act = await setActivation('license key');
   if (act != sdkSuccess) {
     print(await lastLicenseError());
     return;

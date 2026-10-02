@@ -11,7 +11,7 @@ Start here when a Faceplugin demo never reaches **Ready**, the camera stays blac
 ## Home never shows Ready / tiles stay locked
 
 1. Native runtime missing or nested in a subfolder. Check the exact AAR / framework path in that SDK's platform guide.
-2. Wrong application id — demo `FP1.…` only matches the sample id.
+2. Wrong application id — demo license key only matches the sample id.
 3. `init` returned 1–4. See [Status codes](status-codes.md).
 4. Called activate/init on the UI thread (Android) or before the binary was packaged (hot reload is not enough).
 

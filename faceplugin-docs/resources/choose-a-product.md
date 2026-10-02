@@ -57,7 +57,7 @@ Detect faces, read attributes, extract templates, and match 1:1. Mobile demos al
 | Windows (recognition)                   | [FaceRecognition-Windows](https://github.com/Faceplugin-ltd/FaceRecognition-Windows)                 | `sdk.py` + `app.py`                         | API **8083**, demo **9003**                     |
 | Linux / Docker (recognition)            | [FaceRecognition-Docker](https://github.com/Faceplugin-ltd/FaceRecognition-Docker)                   | `faceplugin/face-recognition`               | API **8083**, demo **9003**                     |
 | Windows (recognition + liveness)        | [FaceRecognitionSDK-Windows](https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Windows)           | `sdk.py` + `app.py`                         | API **8083** (+ `/api/liveness`), demo **9003** |
-| Linux / Docker (recognition + liveness) | [FaceRecognitionSDK-Linux](https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Linux)               | `faceplugin/face-recognition-liveness-sdk`  | API **8083** (+ `/api/liveness`), demo **9003** |
+| Linux / Docker (recognition + liveness) | [FaceRecognition-LivenessDetection-Docker](https://github.com/Faceplugin-ltd/FaceRecognition-LivenessDetection-Docker) | `faceplugin/face-recognition-liveness-sdk`  | API **8083** (+ `/api/liveness`), demo **9003** |
 
 ## Face Liveness
 

@@ -8,7 +8,7 @@ description: >-
 
 [3DiVi Face SDK](https://3divi.ai/products/software/face-sdk) is a C++ face recognition library with wrappers (C#, Java, Python, Swift, Flutter) for Windows, Linux, Android, and iOS. It documents on-prem / on-device / own-cloud deployment and a **2d_liveness** estimator. 3DiVi also sells OMNI Platform (client-server video) and Image API (REST).
 
-Faceplugin is an **on-premise SDK suite**: Face Recognition, standalone Face Liveness (passive anti-spoofing HTTP + mobile), ID Document Recognition (passport OCR / MRZ), and ID Document Liveness. **Server SDKs** are Docker Hub images licensed with a **machine code** (`FPMC1.…`).
+Faceplugin is an **on-premise SDK suite**: Face Recognition, standalone Face Liveness (passive anti-spoofing HTTP + mobile), ID Document Recognition (passport OCR / MRZ), and ID Document Liveness. **Server SDKs** are Docker Hub images licensed with a **machine code** (machine code).
 
 | Criterion | Faceplugin | 3DiVi |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ Faceplugin is an **on-premise SDK suite**: Face Recognition, standalone Face Liv
 | Document liveness | Yes (Linux 8086) | Check vendor |
 | NIST FRVT (as claimed in Faceplugin docs) | Evaluated matching | Check vendor |
 | iBeta / PAD certification | No iBeta certification claimed in these docs — ask Faceplugin | Check vendor |
-| License model | Offline `FP1.…` / `FPMC1.…` | Hardware, app id, USB token, online validation options |
+| License model | Offline license key / machine code | Hardware, app id, USB token, online validation options |
 
 **Choose Faceplugin** when you want a **documented HTTP Docker API** plus **ID OCR and document liveness** in the same vendor docs, with mobile 1:N Identify demos.
 

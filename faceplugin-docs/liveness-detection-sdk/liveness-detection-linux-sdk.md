@@ -51,7 +51,7 @@ curl -s http://127.0.0.1:8084/api/health
 curl -s http://127.0.0.1:8084/api/machinecode
 ```
 
-Send `FPMC1.…` to Faceplugin. Docker and local host codes are **different**.
+Send machine code to Faceplugin. Docker and local host codes are **different**.
 {% endstep %}
 
 {% step %}
@@ -79,9 +79,32 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 {% endstep %}
 {% endstepper %}
 
-**Native (optional):** put `libFaceLivenessSDK.so`, `libfal-eng.so`, `fal.fpk` from [Google Drive](https://drive.google.com/drive/folders/1rFnw7VASLmA4q8NWenQgszFS8njRGEgt) **directly** in `lib/cpu/`, then `./run.sh`.
+### Other ways to run
 
-Default port **8084**. Gradio demo (`demo.py`) on **9004** (host only). The Docker image is API-only.
+#### Option B — Docker Compose (local build)
+
+```
+git clone https://github.com/Faceplugin-ltd/FaceLivenessDetection-Docker.git
+cd FaceLivenessDetection-Docker
+```
+
+Put the [Google Drive runtime](https://drive.google.com/drive/folders/1rFnw7VASLmA4q8NWenQgszFS8njRGEgt) files **directly** in `lib/cpu/`, then:
+
+```
+# macOS/Windows Docker Desktop: remove the /etc/machine-id volume from docker-compose.yml first
+sudo docker compose up --build -d
+sudo docker compose logs -f
+```
+
+#### Option C — Native Linux (no Docker)
+
+Same `lib/cpu/` layout:
+
+```
+./run.sh
+```
+
+Default port **8084**. Gradio demo (`demo.py`) on **9004** (host only). The Docker Hub image is API-only.
 
 `POST /api/check_liveness` is an alias of `/api/liveness`.
 
@@ -103,7 +126,7 @@ GET /api/machinecode
 
 | **Input**        | None                                                               |
 | ---------------- | ------------------------------------------------------------------ |
-| **Return value** | Envelope. <code>data.machinecode</code> is <code>FPMC1.…</code> |
+| **Return value** | Envelope. <code>data.machinecode</code> is <code>machine code</code> |
 
 Also: `GET /api/health` (no license), `GET /api/licenseStatus`, `GET /api/backend` (`"cpu"`).
 
@@ -113,10 +136,10 @@ Also: `GET /api/health` (no license), `GET /api/licenseStatus`, `GET /api/backen
 POST /api/activate
 Content-Type: text/plain
 
-FP1.…
+license key
 ```
 
-JSON `{"license":"FP1.…"}` and a license file body are also accepted.
+JSON `{"license":"license key"}` and a license file body are also accepted.
 
 | **Input**        | License key or file. |
 | ---------------- | -------------------- |
@@ -182,7 +205,7 @@ Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio 
 
 **Face Liveness API?** `POST /api/liveness` on port **8084**. Score **≥ 0.5** → Real.
 
-**Machine code?** `GET /api/machinecode` returns `FPMC1.…`. Docker and host codes differ.
+**Machine code?** `GET /api/machinecode` returns machine code. Docker and host codes differ.
 
 ### Related documentation
 

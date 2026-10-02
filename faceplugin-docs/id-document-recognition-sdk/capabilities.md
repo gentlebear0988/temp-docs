@@ -64,7 +64,7 @@ Linux Docker and Windows expose an HTTP **document verification API** on port **
 
 | Route | Role |
 | --- | --- |
-| `GET /api/machinecode` | Machine code `FPMC1.…` |
+| `GET /api/machinecode` | Machine code |
 | `POST /api/activate` | Activate license |
 | `POST /api/documentRecognition` | OCR / MRZ / barcode |
 | `POST /api/documentLiveness` | Authenticity (when licensed) |

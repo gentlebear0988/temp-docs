@@ -1,14 +1,14 @@
 ---
 description: >-
   Faceplugin Face Recognition Server SDK and Face Recognition API. On-premise HTTP for Windows,
-  Linux Docker, and .NET. detect, match, similarity on port 8083. Offline after FP1 activation.
+  Linux Docker, and .NET. detect, match, similarity on port 8083. Offline after license activation.
 ---
 
 # Faceplugin Face Recognition Server SDK
 
 Face Recognition as an HTTP API (or .NET bindings) on **your** machine. Still-image detect, quality, template extract, 1:1 match, and template similarity. Combined Recognition + Liveness packages also expose `POST /api/liveness` on the same port. There is **no** server-side 1:N gallery (`POST /api/identify` does not exist).
 
-Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/detect` / `match` / `similarity` (and `/liveness` on the combined package). Default port **8083**.
+Typical call order: `GET /api/machinecode` → send machine code → `POST /api/activate` → `POST /api/detect` / `match` / `similarity` (and `/liveness` on the combined package). Default port **8083**.
 
 Open-source Windows/Linux SDKs are free Python samples ([Open-Source-Face-Recognition-SDK](https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK)) with lower accuracy than the commercial API.
 

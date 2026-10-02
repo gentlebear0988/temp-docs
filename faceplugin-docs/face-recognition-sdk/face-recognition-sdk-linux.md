@@ -16,7 +16,7 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 ### Code <a href="#code" id="code"></a>
 
-{% embed url="https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Linux" %}
+{% embed url="https://github.com/Faceplugin-ltd/FaceRecognition-LivenessDetection-Docker" %}
 
 ### Setup <a href="#setup" id="setup"></a>
 
@@ -51,7 +51,7 @@ curl -s http://127.0.0.1:8083/api/health
 curl -s http://127.0.0.1:8083/api/machinecode
 ```
 
-Send `FPMC1.…` to Faceplugin. Docker and host machine codes differ.
+Send machine code to Faceplugin. Docker and host machine codes differ.
 {% endstep %}
 
 {% step %}
@@ -65,6 +65,47 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
 {% endstep %}
 {% endstepper %}
 
+### Other ways to run
+
+Most teams use Docker Hub (above). These options are for teams that need a local image build or a native host process.
+
+#### Option B — Docker Compose (local build)
+
+1. Clone the repo and download the Google Drive runtime into `./lib/cpu/` (files directly in that folder, not a nested zip folder):
+
+```
+git clone https://github.com/Faceplugin-ltd/FaceRecognition-LivenessDetection-Docker.git
+cd FaceRecognition-LivenessDetection-Docker
+```
+
+Drive folder: [FaceRecognition-LivenessDetection-Docker runtime](https://drive.google.com/drive/folders/1Lzz3eb_JMDZ0xyGtnGzxsUmMbgaYzin6). Confirm:
+
+```
+ls lib/cpu/libFaceRecognitionSDK.so lib/cpu/libfar-eng.so lib/cpu/far.fpk lib/cpu/libfal-eng.so lib/cpu/fal.fpk
+```
+
+2. Build and start:
+
+```
+# macOS/Windows Docker Desktop: remove the /etc/machine-id volume from docker-compose.yml first
+sudo docker compose up --build -d
+sudo docker compose logs -f
+```
+
+Detached Compose has no TTY, so activate with `POST /api/activate` after you receive a license key.
+
+#### Option C — Native Linux (no Docker)
+
+Requires the same `./lib/cpu/` layout as Option B. Needs glibc **2.38+** (for example Ubuntu 24.04).
+
+```
+cd FaceRecognition-LivenessDetection-Docker
+pip3 install -r requirements.txt
+./run.sh
+```
+
+Copy the machine code from the terminal, then activate with `POST /api/activate` or paste the license key when the process prompts you.
+
 {% hint style="info" %}
 Control routes (`/api/health`, `/api/machinecode`, `/api/activate`, `/api/licenseStatus`) return a JSON **envelope**. Process POSTs return **engine JSON** as the HTTP body. Native `./run.sh` sets `LD_PRELOAD` for liveness VFS hooks — Docker images already do this.
 {% endhint %}
@@ -76,7 +117,7 @@ Same recognition routes as [Face Recognition Linux SDK](face-recognition-linux-s
 | Endpoint | Purpose |
 | -------- | ------- |
 | `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code `FPMC1.…` |
+| `GET /api/machinecode` | Machine code |
 | `GET /api/licenseStatus` | License capabilities |
 | `GET /api/backend` | `"cpu"` |
 | `POST /api/activate` | Activate and init |

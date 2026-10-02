@@ -1,7 +1,7 @@
 ---
 description: >-
   Faceplugin Face Recognition API for Linux Docker. On-premise detect, match, and similarity
-  on port 8083. Offline after FPMC1 / FP1 activation.
+  on port 8083. Offline after license activation.
 ---
 
 # Face Recognition Linux SDK
@@ -49,7 +49,7 @@ curl -s http://127.0.0.1:8083/api/health
 curl -s http://127.0.0.1:8083/api/machinecode
 ```
 
-Send `FPMC1.…` to Faceplugin. Docker and local host codes are **different**.
+Send machine code to Faceplugin. Docker and local host codes are **different**.
 {% endstep %}
 
 {% step %}
@@ -65,7 +65,31 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
 {% endstep %}
 {% endstepper %}
 
-**Native (optional):** put `libFaceRecognitionSDK.so`, `libfar-eng.so`, `far.fpk` from [Google Drive](https://drive.google.com/drive/folders/1NVq0psW8PLfEX58FWNE-RKFWfCZdOMmz) **directly** in `lib/cpu/`, then `pip3 install -r requirements.txt` and `./run.sh`. Local `./run.sh` wants glibc **2.38+** (e.g. Ubuntu 24.04).
+### Other ways to run
+
+#### Option B — Docker Compose (local build)
+
+```
+git clone https://github.com/Faceplugin-ltd/FaceRecognition-Docker.git
+cd FaceRecognition-Docker
+```
+
+Put the [Google Drive runtime](https://drive.google.com/drive/folders/1NVq0psW8PLfEX58FWNE-RKFWfCZdOMmz) files **directly** in `lib/cpu/`, then:
+
+```
+# macOS/Windows Docker Desktop: remove the /etc/machine-id volume from docker-compose.yml first
+sudo docker compose up --build -d
+sudo docker compose logs -f
+```
+
+#### Option C — Native Linux (no Docker)
+
+Same `lib/cpu/` layout. Needs glibc **2.38+** (for example Ubuntu 24.04).
+
+```
+pip3 install -r requirements.txt
+./run.sh
+```
 
 {% hint style="info" %}
 Control routes (`/api/health`, `/api/machinecode`, `/api/activate`, `/api/licenseStatus`) return a JSON **envelope**. Process POSTs (`/api/detect`, `/api/quality`, …) return **engine JSON** as the HTTP body.
@@ -120,7 +144,7 @@ GET /api/machinecode
 
 | **Input**        | None |
 | ---------------- | ---- |
-| **Return value** | Envelope. <code>data.machinecode</code> is <code>FPMC1.…</code> |
+| **Return value** | Envelope. <code>data.machinecode</code> is <code>machine code</code> |
 
 Also: `GET /api/health` (`data.status` is `"ok"`), `GET /api/licenseStatus`, `GET /api/backend` (`"cpu"`).
 
@@ -130,10 +154,10 @@ Also: `GET /api/health` (`data.status` is `"ok"`), `GET /api/licenseStatus`, `GE
 POST /api/activate
 Content-Type: text/plain
 
-FP1.…
+license key
 ```
 
-JSON `{"license":"FP1.…"}` and a license file body are also accepted. Empty body returns envelope `code: -1`.
+JSON `{"license":"license key"}` and a license file body are also accepted. Empty body returns envelope `code: -1`.
 
 | **Input**        | License key or file |
 | ---------------- | -------------------- |
@@ -226,7 +250,7 @@ Call order: `get_machine_code` → `activate` → `init_sdk` → detect / qualit
 
 **Is this a Face Recognition API?** Yes. Docker image `faceplugin/face-recognition`, port **8083**: `POST /api/detect`, `/api/match`, `/api/similarity`.
 
-**Machine code?** `GET /api/machinecode` returns `FPMC1.…`. Docker and host codes differ.
+**Machine code?** `GET /api/machinecode` returns machine code. Docker and host codes differ.
 
 **Server-side 1:N?** No. There is no `POST /api/identify` gallery.
 

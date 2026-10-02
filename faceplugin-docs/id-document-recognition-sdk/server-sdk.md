@@ -8,7 +8,7 @@ description: >-
 
 ID Document Recognition as an HTTP API on **your** machine. Send page images; receive OCR, MRZ, barcode, image quality, and optional authenticity JSON.
 
-Typical call order: `GET /api/machinecode` → send `FPMC1.…` → `POST /api/activate` → `POST /api/documentRecognition` / `documentLiveness` / `documentProcess`. Default port **8082**.
+Typical call order: `GET /api/machinecode` → send machine code → `POST /api/activate` → `POST /api/documentRecognition` / `documentLiveness` / `documentProcess`. Default port **8082**.
 
 Parse results with [Document result JSON](document-result-json.md). Authenticity field names: [Document security check fields](document-security-check-fields.md).
 
