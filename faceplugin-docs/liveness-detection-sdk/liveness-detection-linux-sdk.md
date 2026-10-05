@@ -79,6 +79,26 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 {% endstep %}
 {% endstepper %}
 
+### Run multiple containers with one license <a href="#run-multiple-containers" id="run-multiple-containers"></a>
+
+You only need this section if you want to run multiple Face Liveness containers on the same Linux host.
+
+On Linux, mount `/etc/machine-id` into each container so they use the same machine code. Each container must have a different container name and host port.
+
+For example:
+
+```bash
+sudo docker run -d --name faceplugin-face-liveness-2 \
+  --shm-size=1gb --privileged \
+  -p 8085:8084 \
+  -v /etc/machine-id:/etc/machine-id:ro \
+  faceplugin/face-liveness:latest
+```
+
+Activate each container with the same license key (`POST /api/activate` on each host port).
+
+On Docker Desktop (macOS/Windows), omit the `/etc/machine-id` volume. Each container may require its own license.
+
 ### Other ways to run
 
 #### Option B — Docker Compose (local build)

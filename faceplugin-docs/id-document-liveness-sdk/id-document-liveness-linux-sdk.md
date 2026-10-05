@@ -29,6 +29,26 @@ sudo docker run -d --name faceplugin-document-liveness \
 3. Get machine code: `GET /api/machinecode`
 4. Contact us for license key, then `POST /api/activate`
 
+### Run multiple containers with one license <a href="#run-multiple-containers" id="run-multiple-containers"></a>
+
+You only need this section if you want to run multiple Document Liveness containers on the same Linux host.
+
+On Linux, mount `/etc/machine-id` into each container so they use the same machine code. Each container must have a different container name and host port.
+
+For example:
+
+```bash
+sudo docker run -d --name faceplugin-document-liveness-2 \
+  --shm-size=2gb --privileged \
+  -p 8087:8086 \
+  -v /etc/machine-id:/etc/machine-id:ro \
+  faceplugin/document-liveness:latest
+```
+
+Activate each container with the same license key (`POST /api/activate` on each host port).
+
+On Docker Desktop (macOS/Windows), omit the `/etc/machine-id` volume. Each container may require its own license.
+
 ### Other ways to run
 
 #### Option B — Docker Compose (local build)

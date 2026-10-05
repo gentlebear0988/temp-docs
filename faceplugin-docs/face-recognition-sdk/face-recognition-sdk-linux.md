@@ -65,6 +65,26 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
 {% endstep %}
 {% endstepper %}
 
+### Run multiple containers with one license <a href="#run-multiple-containers" id="run-multiple-containers"></a>
+
+You only need this section if you want to run multiple Face Recognition + Liveness containers on the same Linux host.
+
+On Linux, mount `/etc/machine-id` into each container so they use the same machine code. Each container must have a different container name and host port.
+
+For example:
+
+```bash
+sudo docker run -d --name faceplugin-face-recognition-liveness-sdk-2 \
+  --shm-size=2gb --privileged \
+  -p 8085:8083 \
+  -v /etc/machine-id:/etc/machine-id:ro \
+  faceplugin/face-recognition-liveness-sdk:latest
+```
+
+Activate each container with the same license key (`POST /api/activate` on each host port).
+
+On Docker Desktop (macOS/Windows), omit the `/etc/machine-id` volume. Each container may require its own license.
+
 ### Other ways to run
 
 Most teams use Docker Hub (above). These options are for teams that need a local image build or a native host process.
