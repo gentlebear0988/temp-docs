@@ -105,7 +105,6 @@ You call each product from **your** app or backend. See [Combining products](../
 | --- | --- |
 | Android, iOS, Flutter, React Native, Ionic | [Mobile SDK](mobile-sdk.md) |
 | Linux Docker, Windows, Node | [Server SDK](server-sdk.md) |
-| Browser demos (HTTP clients) | [Web clients](web-clients.md) |
 
 ## FAQ
 

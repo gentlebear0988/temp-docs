@@ -125,8 +125,6 @@ On mobile, keep each product’s AAR or frameworks separate. Request one license
 
 Face Liveness has no public Flutter or React Native SDK. Use Face Recognition’s 2D liveness on Identify, and/or a native Face Liveness module.
 
-Platform inventory: [Platform matrix](../resources/platform-matrix.md).
-
 ### Related documentation
 
 * [Hosting requirements](hosting-requirements.md) · [Production deployment](production-deployment.md) · [HTTP API](../http-api/) · [Choose a product](../resources/choose-a-product.md)

@@ -11,7 +11,6 @@ Shared reference pages that apply across products. For **what each product can d
 New here? Start with [Choose a product](choose-a-product.md) and [Try it](try-it.md) (also linked from the top of the sidebar).
 
 * [Passport OCR and ID verification](passport-ocr-and-id-verification.md) — short guide into Document capabilities
-* [Platform matrix](platform-matrix.md) — which platforms ship for each product
 * [Glossary](glossary.md) — MRZ, OCR, eKYC, 1:N, PAD, license key, machine code, ports
 * [FAQ](faq.md) — passport OCR, Face Recognition API, liveness, offline, Flutter, Docker vs host machine code, thresholds
 * [Troubleshooting](troubleshooting.md)

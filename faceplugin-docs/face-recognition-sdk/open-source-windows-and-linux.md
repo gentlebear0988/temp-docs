@@ -143,6 +143,5 @@ Compares two face feature embeddings.
 ### Related documentation
 
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Mobile SDK](mobile-sdk.md) · [Glossary](../resources/glossary.md)
-* [Open Source React](open-source-face-recognition-react-sdk.md) · [Open Source Vue](open-source-face-recognition-vue-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

@@ -67,7 +67,7 @@ Recognition-only images: `faceplugin/face-recognition`. Combined Recognition + L
 | ------------------------------------------ | --------------------------------- |
 | Android, iOS, Flutter, React Native, Ionic | [Mobile SDK](mobile-sdk.md)       |
 | Linux, Windows, .NET, open-source Python   | [Server SDK](server-sdk.md)       |
-| Browser open-source samples                | [Open Source Web](web-clients.md) |
+| Open-source Windows & Linux                | [Open Source](open-source-windows-and-linux.md) |
 
 ## Use cases
 

@@ -84,7 +84,7 @@ See the [Glossary](glossary.md) for MRZ, OCR, eKYC, 1:1 / 1:N, PAD, FRVT, licens
 
 ### Related documentation
 
-* [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/) · [Platform matrix](platform-matrix.md)
+* [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/)
 * [Glossary](glossary.md) · [Try it](try-it.md) · [Troubleshooting](troubleshooting.md) · [Status codes](status-codes.md)
 * [Choose a product](choose-a-product.md) · [Passport OCR & ID verification](passport-ocr-and-id-verification.md)
 * [Document capabilities](../id-document-recognition-sdk/capabilities.md) · [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) · [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md)

@@ -5,7 +5,6 @@
 * [Welcome](README.md)
 * [Choose a product](resources/choose-a-product.md)
 * [Try it](resources/try-it.md)
-* [Platform matrix](resources/platform-matrix.md)
 
 ## Products
 
@@ -27,10 +26,6 @@
   * [Open Source](face-recognition-sdk/open-source-windows-and-linux.md)
     * [Linux](face-recognition-sdk/open-source-face-recognition-linux-sdk.md)
     * [Windows](face-recognition-sdk/open-source-face-recognition-windows-sdk.md)
-    * [Web](face-recognition-sdk/web-clients.md)
-      * [JavaScript](face-recognition-sdk/open-source-face-recognition-javascript-sdk.md)
-      * [React](face-recognition-sdk/open-source-face-recognition-react-sdk.md)
-      * [Vue](face-recognition-sdk/open-source-face-recognition-vue-sdk.md)
 * [Face Liveness Detection SDK](liveness-detection-sdk/README.md)
   * [Capabilities](liveness-detection-sdk/capabilities.md)
   * [Mobile SDK](liveness-detection-sdk/mobile-sdk.md)
@@ -52,11 +47,6 @@
     * [Linux](id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
     * [Windows](id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
     * [Node.js](id-document-recognition-sdk/id-document-recognition-node-sdk.md)
-  * [Web clients](id-document-recognition-sdk/web-clients.md)
-    * [JavaScript](id-document-recognition-sdk/id-document-recognition-javascript-sdk.md)
-    * [React](id-document-recognition-sdk/id-document-recognition-react-sdk.md)
-    * [Vue](id-document-recognition-sdk/id-document-recognition-vue-sdk.md)
-    * [Angular](id-document-recognition-sdk/id-document-recognition-angular-sdk.md)
   * [Document result JSON](id-document-recognition-sdk/document-result-json.md)
   * [Document security check fields](id-document-recognition-sdk/document-security-check-fields.md)
 * [ID Document Liveness SDK](id-document-liveness-sdk/README.md)

@@ -12,7 +12,6 @@ Published release notes for Faceplugin SDKs will be listed here.
 
 * **HTTP API hub** — shared and per-product endpoint reference under [HTTP API](../http-api/)
 * **Deploy and host** — [Architecture](../deploy-and-host/architecture.md), [Hosting requirements](../deploy-and-host/hosting-requirements.md), [Production deployment](../deploy-and-host/production-deployment.md)
-* **Platform matrix** — [Platform matrix](platform-matrix.md)
 
 Until dated product release entries appear on this page, use:
 

@@ -95,6 +95,6 @@ Platforms vary by product. **Face Recognition** and **ID Document Recognition** 
 ### Related documentation
 
 * [Choose a product](resources/choose-a-product.md) · [Try it](resources/try-it.md) · [HTTP API](http-api/) · [Deploy and host](deploy-and-host/)
-* [Platform matrix](resources/platform-matrix.md) · [Glossary](resources/glossary.md) · [FAQ](resources/faq.md)
+* [Glossary](resources/glossary.md) · [FAQ](resources/faq.md)
 * [Request a License & Support](request-a-license-and-support.md) · [SDK comparison](resources/comparisons/)
 * [Status codes](resources/status-codes.md) · [Troubleshooting](resources/troubleshooting.md) · [Changelog](resources/changelog.md)

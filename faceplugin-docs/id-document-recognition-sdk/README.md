@@ -61,7 +61,7 @@ Coverage: **16,900** templates across **255** countries and territories — full
 
 Pick **Capabilities** to learn what the product can do, then **Mobile SDK** or **Server SDK** for install.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Passport OCR, MRZ, ID verification, coverage PDF, eKYC.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows, Linux / Docker, and Node HTTP API on port 8082.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr><tr><td></td><td><strong>Web clients</strong></td><td>JavaScript, React, Vue, Angular demos calling the HTTP API.</td><td><a href="web-clients.md">web-clients.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Passport OCR, MRZ, ID verification, coverage PDF, eKYC.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows, Linux / Docker, and Node HTTP API on port 8082.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
 
 ### FAQ
 

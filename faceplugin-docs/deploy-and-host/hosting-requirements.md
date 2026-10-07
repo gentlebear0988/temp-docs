@@ -53,4 +53,4 @@ This page does not invent phone RAM minimums beyond each platform README.
 
 ### Related documentation
 
-* [Architecture](architecture.md) · [Production deployment](production-deployment.md) · [Platform matrix](../resources/platform-matrix.md)
+* [Architecture](architecture.md) · [Production deployment](production-deployment.md)

@@ -22,4 +22,4 @@ Start with a single product platform page for install steps. Then use this secti
 
 ### Related documentation
 
-* [HTTP API](../http-api/) · [Choose a product](../resources/choose-a-product.md) · [Platform matrix](../resources/platform-matrix.md) · [Request a License](../request-a-license-and-support.md)
+* [HTTP API](../http-api/) · [Choose a product](../resources/choose-a-product.md) · [Request a License](../request-a-license-and-support.md)

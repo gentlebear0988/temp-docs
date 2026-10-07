@@ -6,7 +6,7 @@ description: >-
 
 # Faceplugin Face Recognition Mobile SDK
 
-On-device **Face Recognition SDK** for Android, iOS, Flutter, React Native, and Ionic. Enroll people, run live **1:N Identify**, and store templates in **your** database. Processing stays on the phone. This is **not** the HTTP Face Recognition API — that is [Server SDK](server-sdk.md). Browser JavaScript / React / Vue samples are under [Open Source Web](web-clients.md).
+On-device **Face Recognition SDK** for Android, iOS, Flutter, React Native, and Ionic. Enroll people, run live **1:N Identify**, and store templates in **your** database. Processing stays on the phone. This is **not** the HTTP Face Recognition API — that is [Server SDK](server-sdk.md).
 
 Typical call order: `setActivation` → `init` → detect / extract template → `similarity` or VideoWorker (live 1:N). Identify default **0.67**. Mobile Identify includes **passive 2D liveness**.
 
@@ -25,7 +25,7 @@ flowchart LR
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Open Source Web](web-clients.md) · [Face Recognition SDK](README.md) · [Glossary](../resources/glossary.md)
+* [Capabilities](capabilities.md) · [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Face Recognition SDK](README.md) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection Mobile SDK](../liveness-detection-sdk/mobile-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)

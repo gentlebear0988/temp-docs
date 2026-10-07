@@ -96,6 +96,6 @@ Sizing and Docker flags: [Hosting requirements](../deploy-and-host/hosting-requi
 
 ### Related documentation
 
-* [Try it](try-it.md) · [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/) · [Platform matrix](platform-matrix.md)
+* [Try it](try-it.md) · [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/)
 * [FAQ](faq.md) · [Glossary](glossary.md) · [Troubleshooting](troubleshooting.md)
 * [Request a License](../request-a-license-and-support.md)
