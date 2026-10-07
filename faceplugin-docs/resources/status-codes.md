@@ -2,6 +2,7 @@
 description: >-
   Faceplugin SDK status codes for activate and init (0–4), Linux/Windows HTTP envelope codes,
   and document verification / image quality fields. Used across Face Recognition, Liveness, and Document SDKs.
+icon: hashtag
 ---
 
 # Status codes

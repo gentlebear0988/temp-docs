@@ -2,6 +2,7 @@
 description: >-
   Faceplugin SDK glossary. Plain-language definitions for MRZ, OCR, eKYC, 1:1, 1:N,
   PAD, FRVT, license key, machine code, template, and HTTP ports used in these docs.
+icon: book
 ---
 
 # Glossary

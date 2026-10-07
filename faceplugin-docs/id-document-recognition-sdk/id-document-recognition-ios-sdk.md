@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document Recognition iOS SDK. On-premise OCR, MRZ, and authenticity.
   docsdk.framework, setActivation, initSDK, locateDocument, recognize.
+icon: apple
 ---
 
 # ID Document Recognition iOS SDK

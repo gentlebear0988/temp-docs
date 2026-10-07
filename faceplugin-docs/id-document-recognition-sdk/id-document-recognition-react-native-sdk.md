@@ -20,6 +20,7 @@ layout:
     visible: true
   actions:
     visible: true
+icon: react
 ---
 
 # ID Document Recognition React Native SDK

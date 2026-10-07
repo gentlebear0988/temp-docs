@@ -2,6 +2,7 @@
 description: >-
   Release history for Faceplugin Face Recognition, Face Liveness, and ID Document SDKs.
   Check each public GitHub repository and Docker Hub for the latest tags.
+icon: clock-rotate-left
 ---
 
 # Changelog

@@ -2,6 +2,7 @@
 description: >-
   Faceplugin vs Luxand FaceSDK. On-premise face recognition and liveness versus Luxand’s
   FaceSDK library. Document OCR is Faceplugin-only in this table.
+icon: scale-balanced
 ---
 
 # Faceplugin vs Luxand

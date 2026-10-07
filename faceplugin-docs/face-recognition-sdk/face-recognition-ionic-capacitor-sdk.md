@@ -20,6 +20,7 @@ layout:
     visible: true
   actions:
     visible: true
+icon: mobile
 ---
 
 # Face Recognition Ionic Capacitor SDK

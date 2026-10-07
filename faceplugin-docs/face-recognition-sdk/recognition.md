@@ -1,6 +1,7 @@
 ---
 description: >-
   Faceplugin Face SDK — Recognition only. Server Face Recognition API on port 8083 (no /api/liveness).
+icon: fingerprint
 ---
 
 # Face SDK — Recognition

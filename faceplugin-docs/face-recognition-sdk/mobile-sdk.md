@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition Mobile SDK. On-premise 1:1 and 1:N matching for Android, iOS,
   Flutter, React Native, and Ionic. Offline setActivation, init, VideoWorker Identify.
+icon: mobile-screen
 ---
 
 # Faceplugin Face Recognition Mobile SDK

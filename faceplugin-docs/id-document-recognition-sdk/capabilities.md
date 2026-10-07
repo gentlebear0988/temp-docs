@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document SDK capabilities: passport OCR / MRZ, document authenticity
   (Recognition + Liveness license), and authenticity-only Document Liveness on port 8086.
+icon: list-check
 ---
 
 # ID Document SDK capabilities

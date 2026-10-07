@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Liveness API for Windows and Linux Docker. On-premise anti-spoofing HTTP POST
   /api/liveness on port 8084. Score 0.5 or higher is Real.
+icon: server
 ---
 
 # Faceplugin Face Liveness Detection Server SDK

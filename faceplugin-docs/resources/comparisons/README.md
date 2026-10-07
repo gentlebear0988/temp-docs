@@ -3,6 +3,7 @@ description: >-
   On-premise face recognition and liveness SDK comparison. Faceplugin versus
   3DiVi, FaceTec, and Luxand. Criteria from public vendor docs, not guessed
   checkmarks.
+icon: scale-balanced
 ---
 
 # SDK comparison

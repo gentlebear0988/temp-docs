@@ -20,6 +20,7 @@ layout:
     visible: true
   actions:
     visible: true
+icon: react
 ---
 
 # Face Recognition React Native SDK

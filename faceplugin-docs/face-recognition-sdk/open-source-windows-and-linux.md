@@ -2,6 +2,7 @@
 description: >-
   Free on-premise Python Face Recognition sample for Windows and Linux. Detect, embed, and
   compare faces locally. Lower accuracy than Faceplugin’s commercial HTTP API on port 8083.
+icon: code
 ---
 
 # Open Source Windows & Linux

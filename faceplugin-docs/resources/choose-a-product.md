@@ -3,6 +3,7 @@ description: >-
   Choose a Faceplugin product and platform. Public GitHub repos, Docker images,
   ports, and how to combine Face Recognition, Liveness, and ID Document SDKs in
   an eKYC flow.
+icon: compass
 ---
 
 # Choose a product

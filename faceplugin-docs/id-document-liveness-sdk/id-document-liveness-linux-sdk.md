@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document Liveness Linux SDK. On-premise document anti-spoofing HTTP API.
   Docker image faceplugin/document-liveness, POST /api/documentLiveness on port 8086.
+icon: linux
 ---
 
 # ID Document Liveness Linux SDK

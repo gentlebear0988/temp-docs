@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document SDK — Recognition + Liveness. Document Reader with OCR and optional
   document authenticity (same engine / license flags).
+icon: layer-group
 ---
 
 # ID Document SDK — Recognition + Liveness

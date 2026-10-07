@@ -1,6 +1,7 @@
 ---
 description: >-
   Faceplugin open-source Face Recognition Linux SDK. Free on-premise Python sample. Lower accuracy than the commercial Docker Face Recognition API.
+icon: linux
 ---
 
 # Open Source Face Recognition Linux SDK

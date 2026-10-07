@@ -3,6 +3,7 @@ description: >-
   Try Faceplugin SDKs with copy-paste commands. Start with license-free curl
   health and machine-code checks, then activate the SDK and test face detection,
   face matching, liveness, and document OCR.
+icon: flask
 ---
 
 # Try it

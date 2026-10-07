@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document Recognition Windows SDK. Fully on-premise OCR and authenticity
   HTTP API on port 8082. documentRecognition, documentProcess.
+icon: windows
 ---
 
 # ID Document Recognition Windows SDK

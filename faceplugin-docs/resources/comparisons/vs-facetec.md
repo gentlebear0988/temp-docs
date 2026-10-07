@@ -2,6 +2,7 @@
 description: >-
   Faceplugin vs FaceTec. 2D on-premise face/liveness/document SDKs versus FaceTec 3D FaceMap
   liveness, server SDK, and usage-based 3D liveness billing.
+icon: scale-balanced
 ---
 
 # Faceplugin vs FaceTec

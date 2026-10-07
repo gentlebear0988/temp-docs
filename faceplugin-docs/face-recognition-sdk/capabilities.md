@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face SDK capabilities: face recognition (1:1, mobile 1:N Identify),
   standalone face liveness (PAD), and combined Recognition + Liveness on port 8083.
+icon: list-check
 ---
 
 # Face SDK capabilities

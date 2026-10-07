@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition SDK Windows — recognition and face liveness in one process.
   HTTP API on port 8083 including POST /api/liveness. No Docker.
+icon: windows
 ---
 
 # Face Recognition + Liveness Windows SDK

@@ -3,6 +3,7 @@ description: >-
   Request a Faceplugin offline license. Mobile license keys bind to app id.
   Server licenses start from a machine code from GET /api/machinecode. Docker and
   host codes differ. On-premise, no per-call cloud.
+icon: key
 ---
 
 # Request a License & Support

@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document Recognition Mobile SDK. On-premise passport OCR and ID card
   verification for Android, iOS, Flutter, React Native, and Ionic.
+icon: mobile-screen
 ---
 
 # Faceplugin ID Document Recognition Mobile SDK

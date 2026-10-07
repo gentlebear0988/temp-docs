@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document SDK: passport OCR / MRZ, authenticity-only Document Liveness,
   and OCR plus authenticity in one Document Reader engine.
+icon: id-card
 ---
 
 # ID Document SDK

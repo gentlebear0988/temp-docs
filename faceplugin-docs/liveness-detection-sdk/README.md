@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Liveness Detection SDK and anti-spoofing. On-premise passive liveness for
   Android, iOS, Windows, and Linux Docker. POST /api/liveness on port 8084.
+icon: user-shield
 ---
 
 # Face Liveness Detection SDK

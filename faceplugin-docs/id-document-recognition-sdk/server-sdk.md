@@ -2,6 +2,7 @@
 description: >-
   Faceplugin document verification API for Windows and Linux Docker. On-premise passport OCR,
   MRZ, and authenticity HTTP on port 8082. documentRecognition and documentProcess.
+icon: server
 ---
 
 # Faceplugin ID Document Recognition Server SDK

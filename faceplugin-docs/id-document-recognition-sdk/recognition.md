@@ -1,6 +1,7 @@
 ---
 description: >-
   Faceplugin ID Document SDK — Recognition. OCR / MRZ / barcode via the Document Reader product.
+icon: file-lines
 ---
 
 # ID Document SDK — Recognition

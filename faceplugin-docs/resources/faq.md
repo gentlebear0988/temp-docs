@@ -2,6 +2,7 @@
 description: >-
   Faceplugin SDK FAQ. Passport OCR, ID verification, Face Recognition API, passive vs active
   liveness, offline licensing, Flutter, Docker machine codes, and thresholds.
+icon: circle-question
 ---
 
 # FAQ

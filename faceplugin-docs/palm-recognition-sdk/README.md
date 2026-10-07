@@ -2,6 +2,7 @@
 description: >-
   Faceplugin open-source Palm Recognition SDK. On-premise RGB-camera palm matching with Python
   Anaconda. ROI extraction and compare_two_images. Not a Faceplugin commercial face SDK.
+icon: hand
 ---
 
 # Palm Recognition SDK

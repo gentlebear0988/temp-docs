@@ -2,6 +2,7 @@
 description: >-
   Faceplugin docs resources. Glossary, FAQ, troubleshooting, status codes, SDK comparison, and
   changelog for on-premise Face Recognition, Face Liveness, and ID Document SDKs.
+icon: books
 ---
 
 # Resources

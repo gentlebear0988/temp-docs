@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document Recognition Node.js HTTP API. Same documentProcess routes as Python
   on port 8082. Optional native libDocSDK; stub without it.
+icon: node-js
 ---
 
 # ID Document Recognition Node SDK

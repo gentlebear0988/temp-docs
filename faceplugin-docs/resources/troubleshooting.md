@@ -2,6 +2,7 @@
 description: >-
   Troubleshoot Faceplugin SDK demos. Missing AAR or frameworks, wrong app id licenses, Docker
   shm-size, Yarn 3 on React Native, and cameras that stay black on emulators.
+icon: screwdriver-wrench
 ---
 
 # Troubleshooting

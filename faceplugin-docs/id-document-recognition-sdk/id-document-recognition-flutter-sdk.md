@@ -20,6 +20,7 @@ layout:
     visible: true
   actions:
     visible: true
+icon: mobile
 ---
 
 # ID Document Recognition Flutter SDK

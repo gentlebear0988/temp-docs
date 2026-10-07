@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition Windows SDK. Fully on-premise HTTP API on port 8083. detect,
   quality, feature, match, similarity. No Docker.
+icon: windows
 ---
 
 # Face Recognition Windows SDK

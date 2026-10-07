@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition SDK Linux Docker — recognition and face liveness in one container.
   faceplugin/face-recognition-liveness-sdk on port 8083. detect, match, liveness.
+icon: linux
 ---
 
 # Face Recognition + Liveness Linux SDK

@@ -20,6 +20,7 @@ layout:
     visible: true
   actions:
     visible: true
+icon: android
 ---
 
 # ID Document Recognition Android SDK

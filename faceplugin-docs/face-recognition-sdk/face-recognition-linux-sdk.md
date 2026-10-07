@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition API for Linux Docker. On-premise detect, match, and similarity
   on port 8083. Offline after license activation.
+icon: linux
 ---
 
 # Face Recognition Linux SDK

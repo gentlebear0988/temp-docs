@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Liveness Detection Mobile SDK. On-premise anti-spoofing for Android and
   iOS. Passive liveness against photos, screens, 3D masks, and deepfakes.
+icon: mobile-screen
 ---
 
 # Faceplugin Face Liveness Detection Mobile SDK

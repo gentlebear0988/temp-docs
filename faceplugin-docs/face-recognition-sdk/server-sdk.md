@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition Server SDK and Face Recognition API. On-premise HTTP for Windows,
   Linux Docker, and .NET. detect, match, similarity on port 8083. Offline after license activation.
+icon: server
 ---
 
 # Faceplugin Face Recognition Server SDK

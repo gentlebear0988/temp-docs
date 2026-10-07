@@ -2,6 +2,7 @@
 description: >-
   ID Document Recognition result JSON. documentName, OCR, MRZ, barcode, verification, image
   quality, images, and security fields returned by recognize and documentProcess on every platform.
+icon: brackets-curly
 ---
 
 # Document result JSON

@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition iOS SDK. Fully on-premise face matching, 1:N identify, and 2D
   liveness. Xcode frameworks, setActivation, initSDK, detectImage, VideoWorker.
+icon: apple
 ---
 
 # Face Recognition iOS SDK

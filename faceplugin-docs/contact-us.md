@@ -2,6 +2,7 @@
 description: >-
   Contact Faceplugin for licenses and integration support. Email, WhatsApp, and Telegram.
   Request mobile license keys or server machine codes for on-premise SDKs.
+icon: envelope
 ---
 
 # Contact us

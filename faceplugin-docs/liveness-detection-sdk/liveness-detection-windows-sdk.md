@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Liveness Detection Windows SDK. Fully on-premise PAD HTTP API on port 8084.
   POST /api/liveness. No Docker.
+icon: windows
 ---
 
 # Face Liveness Detection Windows SDK

@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Recognition .NET SDK. Fully on-premise face matching and liveness for C#
   and .NET. Activate, Init, DetectFace, Compare.
+icon: code
 ---
 
 # Face Recognition .NET SDK

@@ -1,6 +1,7 @@
 ---
 description: >-
   Faceplugin open-source Face Recognition Windows SDK. Free on-premise Python sample. Lower accuracy than the commercial HTTP API on port 8083.
+icon: windows
 ---
 
 # Open Source Face Recognition Windows SDK

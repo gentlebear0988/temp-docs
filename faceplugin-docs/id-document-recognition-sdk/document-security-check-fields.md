@@ -2,6 +2,7 @@
 description: >-
   Faceplugin document security check fields for RGB captures. JSON keys and titles
   returned in security.pages: photoOriginAnalysis, hologramIntegrity, physicalDocument.
+icon: shield-halved
 ---
 
 # Document security check fields

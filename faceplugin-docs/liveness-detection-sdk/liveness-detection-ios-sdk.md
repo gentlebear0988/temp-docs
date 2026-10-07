@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face Liveness Detection iOS SDK. On-premise PAD against photos, screens, masks, and
   deepfakes. Xcode frameworks, setActivation, initSDK, detectImage.
+icon: apple
 ---
 
 # Face Liveness Detection iOS SDK

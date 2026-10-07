@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face SDK — Recognition + Liveness. Mobile Identify with 2D liveness, and server
   combined API on port 8083 with /api/liveness.
+icon: layer-group
 ---
 
 # Face SDK — Recognition + Liveness
@@ -16,9 +17,7 @@ On-device enroll / **1:N Identify** with **passive 2D liveness** (same native en
 
 One process on port **8083**: recognition routes **plus** `POST /api/liveness`. Image: `faceplugin/face-recognition-liveness-sdk`.
 
-* **Linux / Docker:** [Linux](face-recognition-sdk-linux.md)
-* **Windows:** [Windows](face-recognition-sdk-windows.md)
-* **.NET:** [`.NET`](face-recognition-dot-net-sdk.md)
+See [Server](recognition-and-liveness-server.md) for Linux, Windows, and .NET.
 
 **Capabilities:** [Face SDK capabilities](capabilities.md).
 

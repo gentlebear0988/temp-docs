@@ -2,6 +2,7 @@
 description: >-
   Faceplugin Face SDK: on-premise face recognition, standalone face liveness, and
   combined Recognition + Liveness for mobile and server (ports 8083 / 8084).
+icon: face-viewfinder
 ---
 
 # Face SDK

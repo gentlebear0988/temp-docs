@@ -2,6 +2,7 @@
 description: >-
   On-premise passport OCR SDK and ID card verification API from Faceplugin. Read MRZ
   (machine-readable zone), barcodes, and 16,900 document templates on mobile or port 8082.
+icon: passport
 ---
 
 # Passport OCR and ID card verification
