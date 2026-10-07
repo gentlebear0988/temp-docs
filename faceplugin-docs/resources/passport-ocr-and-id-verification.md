@@ -13,7 +13,7 @@ Looking for an on-premise **passport OCR SDK**, **MRZ reader** (machine-readable
 * **Try HTTP:** [Try it](try-it.md)
 * **Install:** [Mobile](../id-document-recognition-sdk/mobile-sdk.md) · [Server](../id-document-recognition-sdk/server-sdk.md)
 
-For face match after the ID scan, see [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) and [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
+For face match after the ID scan, see [Face SDK capabilities](../face-recognition-sdk/capabilities.md).
 
 ### Related documentation
 

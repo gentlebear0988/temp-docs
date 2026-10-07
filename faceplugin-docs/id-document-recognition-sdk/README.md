@@ -1,18 +1,22 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition SDK. On-premise passport OCR SDK, ID card verification API,
-  MRZ reader, barcode, 16,900 document templates, Android, iOS, Flutter, Windows, Linux Docker.
+  Faceplugin ID Document SDK: passport OCR / MRZ, authenticity-only Document Liveness,
+  and OCR plus authenticity in one Document Reader engine.
 ---
 
-# ID Document Recognition SDK
+# ID Document SDK
 
 ### Overview
 
-**Faceplugin ID Document Recognition SDK** is an on-premise **passport OCR** and **ID card verification** engine. It classifies the document, runs OCR, reads the MRZ, decodes barcodes and QR codes, checks image quality, and crops the portrait and signature.
+**Faceplugin ID Document SDK** covers **document recognition** (OCR / MRZ / barcode), **authenticity-only liveness**, and **recognition + liveness** in one Document Reader engine.
 
 **Coverage:** **16,900** document templates across **255** countries and territories. Full list: [Supported documents PDF](capabilities.md#document-type-classification--worldwide-coverage). What the product can do: [Capabilities](capabilities.md).
 
-This is **not** the authenticity-only [ID Document Liveness SDK](../id-document-liveness-sdk/). With a **Liveness-capable license**, the same document engine can also run **document authenticity** (document liveness). It is **not** a face matching SDK — use [Face Recognition](../face-recognition-sdk/) after you have a selfie.
+* **[Recognition](recognition.md)** — classify, OCR, MRZ, barcode, crops (port **8082** / mobile)
+* **[Liveness](../id-document-liveness-sdk/README.md)** — authenticity only, no OCR (port **8086**)
+* **[Recognition + Liveness](recognition-and-liveness.md)** — OCR plus authenticity with a Liveness-capable license
+
+It is **not** a face matching SDK — use the [Face SDK](../face-recognition-sdk/) after you have a selfie.
 
 ```mermaid
 flowchart LR
@@ -57,11 +61,11 @@ Faceplugin Supported Documents (PDF)
 
 Coverage: **16,900** templates across **255** countries and territories — full list in the PDF. Confirm a specific series with [support](../request-a-license-and-support.md) if needed.
 
-### Platforms
+### Modes
 
-Pick **Capabilities** to learn what the product can do, then **Mobile SDK** or **Server SDK** for install.
+Pick **Capabilities**, then a mode.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Passport OCR, MRZ, ID verification, coverage PDF, eKYC.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android, iOS, Flutter, React Native, and Ionic.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows, Linux / Docker, and Node HTTP API on port 8082.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Recognition, authenticity-only liveness, and OCR + authenticity.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Recognition</strong></td><td>Mobile and server Document Reader on port 8082.</td><td><a href="recognition.md">recognition.md</a></td></tr><tr><td></td><td><strong>Liveness</strong></td><td>Authenticity-only Linux API on port 8086.</td><td><a href="../id-document-liveness-sdk/README.md">../id-document-liveness-sdk/README.md</a></td></tr><tr><td></td><td><strong>Recognition + Liveness</strong></td><td>OCR plus authenticity in one Document Reader engine.</td><td><a href="recognition-and-liveness.md">recognition-and-liveness.md</a></td></tr></tbody></table>
 
 ### FAQ
 
@@ -85,7 +89,7 @@ Pick **Capabilities** to learn what the product can do, then **Mobile SDK** or *
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [ID Document Liveness SDK](../id-document-liveness-sdk/) · [Face Recognition SDK](../face-recognition-sdk/)
+* [Capabilities](capabilities.md) · [Recognition](recognition.md) · [Liveness](../id-document-liveness-sdk/) · [Recognition + Liveness](recognition-and-liveness.md) · [Face SDK](../face-recognition-sdk/)
 * [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md) · [Glossary](../resources/glossary.md)
 * [Passport OCR & ID verification](../resources/passport-ocr-and-id-verification.md) · [Combining products (eKYC)](../resources/choose-a-product.md)
 * [SDK comparison](../resources/comparisons/README.md) · [Status codes](../resources/status-codes.md)

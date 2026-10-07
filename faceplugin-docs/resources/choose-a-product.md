@@ -17,9 +17,9 @@ Need a vendor comparison? See [SDK comparison](comparisons/).
 
 | You need                                      | Use                                                                                                                                                                                                                                                            |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Passport OCR / MRZ / ID card verification     | [Document capabilities](../id-document-recognition-sdk/capabilities.md) → [ID Document Recognition SDK](../id-document-recognition-sdk/)                                                                                                                       |
-| Match faces 1:1 or 1:N / Face Recognition API | [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) → [Face Recognition SDK](../face-recognition-sdk/)                                                                                                                                    |
-| Face anti-spoofing only                       | [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md) → [Face Liveness Detection SDK](../liveness-detection-sdk/)                                                                                                                            |
+| Passport OCR / MRZ / ID card verification     | [ID Document capabilities](../id-document-recognition-sdk/capabilities.md) → [ID Document SDK](../id-document-recognition-sdk/) · [Recognition](../id-document-recognition-sdk/recognition.md) |
+| Match faces 1:1 or 1:N / Face Recognition API | [Face SDK capabilities](../face-recognition-sdk/capabilities.md) → [Face SDK](../face-recognition-sdk/) · [Recognition](../face-recognition-sdk/recognition.md) |
+| Face anti-spoofing only                       | [Face SDK capabilities](../face-recognition-sdk/capabilities.md) → [Liveness](../liveness-detection-sdk/) |
 | Recognition and anti-spoofing together        | For recognition plus liveness on one server, use [Face Recognition + Liveness Linux](../face-recognition-sdk/face-recognition-sdk-linux.md) or [Windows](../face-recognition-sdk/face-recognition-sdk-windows.md) (port **8083**, includes `/api/liveness`). Or run separate services on **8083** and **8084**—never mix their runtime folders. |
 | Document authenticity **without** OCR         | [ID Document Liveness SDK](../id-document-liveness-sdk/)                                                                                                                                                                                                       |
 
@@ -44,7 +44,7 @@ Scan passports, national IDs, and driver licenses on the device or over HTTP (**
 
 ## Face Recognition
 
-Detect faces, read attributes, extract templates, and match 1:1. Mobile demos also support live **1:N Identify** (VideoWorker) and a local person database. Server APIs currently expose still-image detect / quality / feature / match / similarity — not a gallery-based 1:N identification endpoint. Capability overview: [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
+Detect faces, read attributes, extract templates, and match 1:1. Mobile demos also support live **1:N Identify** (VideoWorker) and a local person database. Server APIs currently expose still-image detect / quality / feature / match / similarity — not a gallery-based 1:N identification endpoint. Capability overview: [Face SDK capabilities](../face-recognition-sdk/capabilities.md).
 
 | Platform                                | Clone                                                                                                | Package / image                             | Port                                            |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------- |
@@ -61,7 +61,7 @@ Detect faces, read attributes, extract templates, and match 1:1. Mobile demos al
 
 ## Face Liveness
 
-Standalone presentation-attack detection (anti-spoofing). Mobile uses a live camera plus VideoWorker. The server scores a single RGB JPEG. Capability overview: [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
+Standalone presentation-attack detection (anti-spoofing). Mobile uses a live camera plus VideoWorker. The server scores a single RGB JPEG. Capability overview: [Face SDK capabilities](../face-recognition-sdk/capabilities.md) (Liveness section).
 
 | Platform       | Clone                                                                                            | Package / image                         | Port                        |
 | -------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------- | --------------------------- |

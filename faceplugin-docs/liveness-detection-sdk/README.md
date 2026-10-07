@@ -10,7 +10,7 @@ description: >-
 
 **Faceplugin Face Liveness Detection SDK** is an on-premise **face anti-spoofing** / presentation-attack detection (PAD) engine. It answers: is a **live person** in front of the camera, or a printout, phone screen, 3D mask, or deepfake-style video?
 
-**What it can do:** [Face Liveness Detection capabilities](capabilities.md) — passive anti-spoofing, mobile vs server, and when to use it versus Face Recognition Identify.
+**What it can do:** [Face SDK capabilities](../face-recognition-sdk/capabilities.md) (Liveness section) — passive anti-spoofing, mobile vs server, and when to use it versus Face Recognition Identify.
 
 This product is **passive** anti-spoofing: no smile / turn-head challenge. These docs do **not** claim iBeta certification. Contact Faceplugin if you need a certification statement. Active challenge demos on GitHub are **not** this product. Optional active prompts on some Face Recognition Identify flows also are not this SDK.
 
@@ -34,9 +34,9 @@ Capable of detecting:
 
 ### Platforms
 
-Start with [Capabilities](capabilities.md), then **Mobile SDK** or **Server SDK**.
+Start with [Face SDK capabilities](../face-recognition-sdk/capabilities.md), then **Mobile SDK** or **Server SDK**.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Passive anti-spoofing, API 8084, vs Identify 2D liveness.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android and iOS. Live camera anti-spoofing.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker. JPEG over HTTP on port 8084.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Face SDK capabilities — Recognition, Liveness, Recognition + Liveness.</td><td><a href="../face-recognition-sdk/capabilities.md">../face-recognition-sdk/capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android and iOS. Live camera anti-spoofing.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker. JPEG over HTTP on port 8084.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
 
 ### FAQ
 
@@ -56,7 +56,7 @@ Start with [Capabilities](capabilities.md), then **Mobile SDK** or **Server SDK*
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Face Recognition SDK](../face-recognition-sdk/) · [ID Document Liveness SDK](../id-document-liveness-sdk/)
+* [Face SDK capabilities](../face-recognition-sdk/capabilities.md) · [Face SDK](../face-recognition-sdk/) · [ID Document SDK](../id-document-recognition-sdk/)
 * [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md) · [Glossary](../resources/glossary.md)
 * [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
 * [Status codes](../resources/status-codes.md)

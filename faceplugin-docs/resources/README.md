@@ -18,7 +18,7 @@ New here? Start with [Choose a product](choose-a-product.md) and [Try it](try-it
 * [SDK comparison](comparisons/README.md)
 * [Changelog](changelog.md)
 
-Capability pages: [Document](../id-document-recognition-sdk/capabilities.md) · [Face Recognition](../face-recognition-sdk/capabilities.md) · [Face Liveness](../liveness-detection-sdk/capabilities.md)
+Capability pages: [ID Document SDK](../id-document-recognition-sdk/capabilities.md) · [Face SDK](../face-recognition-sdk/capabilities.md)
 
 ### Related documentation
 

@@ -11,7 +11,7 @@ This section compares **Faceplugin** to vendors people often evaluate for on-pre
 
 Faceplugin facts below match the products in these docs: on-premise/offline after license activation; Android, iOS, Flutter, React Native, Ionic, Windows, and Linux Docker; **passive** face anti-spoofing; passport OCR / ID card APIs (**16,900** templates / **255** countries — [catalog PDF](../../id-document-recognition-sdk/capabilities.md#document-type-classification--worldwide-coverage)); document liveness on Linux; NIST FRVT **evaluated** matching. These docs do **not** claim iBeta certification for Face Liveness. Ask Faceplugin if you need a certification statement.
 
-Capability overviews: [Document](../../id-document-recognition-sdk/capabilities.md) · [Face Recognition](../../face-recognition-sdk/capabilities.md) · [Face Liveness](../../liveness-detection-sdk/capabilities.md).
+Capability overviews: [ID Document SDK](../../id-document-recognition-sdk/capabilities.md) · [Face SDK](../../face-recognition-sdk/capabilities.md).
 
 | Page                                                           | When to read it                                       |
 | -------------------------------------------------------------- | ----------------------------------------------------- |

@@ -16,7 +16,7 @@ Yes. The ID Document Recognition SDK reads passports and MRZ (when the template 
 
 ## What is a face recognition SDK?
 
-A library that detects faces, extracts a template (embedding), and compares templates. Faceplugin’s commercial SDK runs **on-premise**. You store templates in **your** database. See [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
+A library that detects faces, extracts a template (embedding), and compares templates. Faceplugin’s commercial SDK runs **on-premise**. You store templates in **your** database. See [Face SDK capabilities](../face-recognition-sdk/capabilities.md).
 
 ## Is there a Face Recognition API?
 
@@ -24,7 +24,7 @@ Yes. Linux Docker and Windows expose an HTTP API on port **8083** (`/api/detect`
 
 ## What is passive liveness detection?
 
-The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin’s [Face Liveness Detection SDK](../liveness-detection-sdk/capabilities.md) is **passive** anti-spoofing. These docs do **not** claim iBeta certification. Contact Faceplugin if you need a certification statement.
+The engine scores a camera frame or JPEG **without** a smile / turn-head challenge. Faceplugin Face SDK **Liveness** is **passive** anti-spoofing. These docs do **not** claim iBeta certification. Contact Faceplugin if you need a certification statement. See [Face SDK capabilities](../face-recognition-sdk/capabilities.md).
 
 ## What is the difference between active and passive liveness?
 
@@ -32,7 +32,7 @@ The engine scores a camera frame or JPEG **without** a smile / turn-head challen
 
 ## Face Recognition liveness vs Face Liveness SDK?
 
-Identify on mobile includes **2D liveness** as part of matching. The Face Liveness product is **anti-spoofing only** (no enroll / 1:N). See [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md).
+Identify on mobile includes **2D liveness** as part of matching. Standalone Face SDK **Liveness** is **anti-spoofing only** (no enroll / 1:N). See [Face SDK capabilities](../face-recognition-sdk/capabilities.md).
 
 ## Can face recognition work completely offline?
 
@@ -87,5 +87,5 @@ See the [Glossary](glossary.md) for MRZ, OCR, eKYC, 1:1 / 1:N, PAD, FRVT, licens
 * [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/)
 * [Glossary](glossary.md) · [Try it](try-it.md) · [Troubleshooting](troubleshooting.md) · [Status codes](status-codes.md)
 * [Choose a product](choose-a-product.md) · [Passport OCR & ID verification](passport-ocr-and-id-verification.md)
-* [Document capabilities](../id-document-recognition-sdk/capabilities.md) · [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) · [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md)
+* [ID Document capabilities](../id-document-recognition-sdk/capabilities.md) · [Face SDK capabilities](../face-recognition-sdk/capabilities.md)
 * [SDK comparison](comparisons/README.md)
