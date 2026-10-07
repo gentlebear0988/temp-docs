@@ -66,26 +66,23 @@ flowchart TB
 
 Optional authenticity-only Document Liveness (**8086**) or Face Liveness (**8084**) only if you intentionally split services.
 
-Do **not** copy two Google Drive runtimes into one `lib/cpu/` folder.
+## One runtime per server
+
+Each product is its **own** process or container. Each has its own `lib/cpu/` (or Hub image that already includes the runtime).
+
+You do **not** install Document and Face into one App tree. To use both, run **two servers** (for example Document on **8082** and Face Recognition + Liveness on **8083**) and call both from your backend.
 
 ```text
-lib/
-  dcr/cpu/    # Document Reader
-  far/cpu/    # Face Recognition (+ fal.fpk inside combined FaceRecognitionSDK)
+document-reader/          face-recognition-liveness/
+  lib/cpu/   ← Document     lib/cpu/   ← Face only
+  app.py                    app.py
 ```
 
-| Product | Code | Pack example |
-| --- | --- | --- |
-| Face Recognition | `far` | `far.fpk` |
-| Face Liveness | `fal` | `fal.fpk` (also inside combined FaceRecognitionSDK) |
-| Document Reader / Document Liveness | `dcr` | `dcr.fpk` |
-
-Never ship a generic `models.fpk` next to another product.
-
 {% hint style="danger" %}
-OpenCV, OpenSSL, and ONNX builds often differ between products. Shared libraries can overwrite each other. That can crash the process or return wrong scores.
+Do **not** dump a second product’s Google Drive folder into another product’s `lib/cpu/`. OpenCV, OpenSSL, and ONNX builds differ; files overwrite each other and the process can crash or return wrong scores. Keep one Drive runtime per App / container.
 {% endhint %}
 
+The Face **Recognition + Liveness** package is already one product (one Drive / one image) with recognition and face PAD together. That is not the same as merging Document + Face into one folder.
 ## Who owns what
 
 | You own | Faceplugin SDK owns |

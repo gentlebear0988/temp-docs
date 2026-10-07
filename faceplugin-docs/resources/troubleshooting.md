@@ -38,7 +38,7 @@ Use **Yarn 3** as `packageManager`. npm workspaces are not supported at the root
 
 ## Two products in one APK / one `lib/`
 
-Do not copy two products’ Google Drive runtimes into one folder. See [Architecture](../deploy-and-host/architecture.md).
+Do not dump a second product’s Google Drive runtime into another product’s `lib/cpu/`. Run separate servers instead. See [Architecture](../deploy-and-host/architecture.md).
 
 ## Still stuck
 

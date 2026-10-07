@@ -40,7 +40,7 @@ Prefer the **combined** Face and Document images for eKYC so you do not run sepa
 | ID Document Recognition + Liveness | 2 cores | 4 GB | 4 GB | 4 cores / 8 GB RAM / 8 GB disk | Ubuntu 20.04+ x86_64; recommend 22.04 / 24.04. Windows 10/11 x64. CPU only | `--shm-size=2gb` is **required**. `--privileged`. On Linux mount `/etc/machine-id:ro` |
 | ID Document Liveness (only) | 2 cores | 4 GB | 4 GB | 4 cores / 8 GB RAM / 8 GB disk | Align with Document Reader Linux | `--shm-size=2gb` is **required**. `--privileged`. On Linux mount `/etc/machine-id:ro` |
 
-For a typical eKYC box, plan **two** containers: Document Reader (**8082**) + Face Recognition + Liveness (**8083**). Add RAM/CPU for each. Do not merge runtimes into one `lib/cpu/`. See [Architecture](architecture.md).
+For a typical eKYC box, plan **two** containers: Document Reader (**8082**) + Face Recognition + Liveness (**8083**). Add RAM/CPU for each. Each container keeps its own `lib/cpu/` — do not mix product Drive folders. See [Architecture](architecture.md).
 
 ## Docker rules
 

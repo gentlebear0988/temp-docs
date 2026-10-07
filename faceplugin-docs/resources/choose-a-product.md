@@ -89,7 +89,7 @@ Authenticity / anti-spoofing **only** (no OCR, MRZ, or barcode API). For OCR plu
 
 Faceplugin does **not** offer one all-in-one identity-verification app. You combine Document Reader, Face Liveness, and Face Recognition in **your** mobile app or backend.
 
-Run **one process or container per product**. Do not merge two Google Drive runtimes into one `lib/cpu/` folder.
+Run **one process or container per product** (for eKYC: Document on **8082** and Face Recognition + Liveness on **8083**). Do not dump a second product’s Google Drive runtime into another product’s `lib/cpu/` — use two servers instead.
 
 Full topology, responsibility split, and HTTP vs `sdk.py`: [Architecture](../deploy-and-host/architecture.md).
 
