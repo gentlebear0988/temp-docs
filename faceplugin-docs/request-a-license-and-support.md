@@ -37,7 +37,8 @@ Faceplugin provides integration help for licensed SDKs, plus ongoing support aft
 
 ### Related documentation
 
-* [Try it](resources/try-it.md) · [FAQ](resources/faq.md) · [Glossary](resources/glossary.md) · [Troubleshooting](resources/troubleshooting.md)
+* [Try it](resources/try-it.md) · [HTTP API shared endpoints](http-api/shared.md) · [Production deployment](deploy-and-host/production-deployment.md)
+* [FAQ](resources/faq.md) · [Glossary](resources/glossary.md) · [Troubleshooting](resources/troubleshooting.md)
 * [Choose a product](resources/choose-a-product.md) · [Changelog](resources/changelog.md)
 
 {% hint style="info" %}

@@ -84,47 +84,18 @@ Authenticity / anti-spoofing **only** (no OCR, MRZ, or barcode API). For OCR plu
 
 ## Combining products (eKYC) <a href="#combining-products-ekyc" id="combining-products-ekyc"></a>
 
-**eKYC** means electronic know-your-customer / digital identity onboarding. A typical flow is:
-
-```mermaid
-flowchart LR
-  ID --> OCR
-  OCR --> DocLiveness
-  DocLiveness --> Selfie
-  Selfie --> FaceLiveness
-  FaceLiveness --> Match
-```
+**eKYC** means electronic know-your-customer / digital identity onboarding.
 
 Faceplugin does **not** offer one all-in-one identity-verification app. You combine Document Reader, Face Liveness, and Face Recognition in **your** mobile app or backend.
 
-Keep each engine in its **own** process or container so OpenCV, ONNX, and model packs cannot overwrite each other.
+Run **one process or container per product**. Do not merge two Google Drive runtimes into one `lib/cpu/` folder.
 
-Prefer **one process (or container) per product**. Do not dump two Google Drive runtimes into one `lib/cpu/` folder.
+Full topology, responsibility split, and HTTP vs `sdk.py`: [Architecture](../deploy-and-host/architecture.md).
 
-```
-lib/
-  dcr/cpu/    # Document Reader
-  far/cpu/    # Face Recognition
-  fal/cpu/    # Face Liveness
-```
-
-On Linux, run Docker containers on 8082 / 8083 / 8084 (and 8086 if you split document authenticity).
-
-{% hint style="danger" %}
-OpenCV, OpenSSL, and ONNX builds often differ between products. Do not copy two products’ runtime files into the same folder—shared libraries can overwrite each other and cause crashes or wrong scores.
-{% endhint %}
-
-| Product                             | Code  | Pack example |
-| ----------------------------------- | ----- | ------------ |
-| Face Recognition                    | `far` | `far.fpk`    |
-| Face Liveness                       | `fal` | `fal.fpk`    |
-| Document Reader / Document Liveness | `dcr` | `dcr.fpk`    |
-
-Never ship a generic `models.fpk` next to another product.
-
-On mobile: unique AAR / framework names, one license **per** application id **per** product, serialize native calls **per** engine. Face Liveness has no Flutter/React Native SDK—use Face Recognition’s 2D liveness and/or a native Face Liveness module.
+Sizing and Docker flags: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 ### Related documentation
 
-* [Try it](try-it.md) · [FAQ](faq.md) · [Glossary](glossary.md) · [Troubleshooting](troubleshooting.md)
+* [Try it](try-it.md) · [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/) · [Platform matrix](platform-matrix.md)
+* [FAQ](faq.md) · [Glossary](glossary.md) · [Troubleshooting](troubleshooting.md)
 * [Request a License](../request-a-license-and-support.md)

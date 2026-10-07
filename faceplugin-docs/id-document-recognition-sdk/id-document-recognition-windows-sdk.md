@@ -16,6 +16,8 @@ Reads ID cards, passports, and driver licenses. Same routes as [ID Document Reco
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Copy the runtime
@@ -55,16 +57,16 @@ Same as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md
 | `GET /api/health` | Process is listening (no license) |
 | `GET /api/machinecode` | Machine code |
 | `GET /api/licenseStatus` | License status |
+| `GET /api/backend` | `"cpu"` |
 | `POST /api/activate` | Activate and `init_sdk()` |
 | `POST /api/documentRecognition` | OCR / MRZ / barcode / image quality only |
 | `POST /api/documentLiveness` | Authenticity only |
-| `POST /api/documentProcess` | Combined pipeline |
+| `POST /api/documentProcess` | Combined OCR + optional authenticity |
 | `POST /api/generalProcess` | Single-image general process |
 
-Python: `sdk.document_recognition`, `sdk.document_liveness`, `sdk.document_process`, `sdk.general_process`, plus `start_new_session`, `start_new_page`, `unload` (not HTTP routes).
+Full reference: [Document Reader HTTP API](../http-api/document-reader.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
-`documentRecognition` is OCR / MRZ / barcode / image quality only. `documentLiveness` is authenticity only. Combined flags stay on `documentProcess`: `"normal"` or `"strict"` (Windows README); `"none"` turns Liveness off. Image quality is `"none"` | `"normal"` like OCR.
-
+Some routes wrap the result in a small JSON object (an **envelope**). Process POSTs return **engine JSON** as the body.
 ### Try it
 
 ```bash

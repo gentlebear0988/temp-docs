@@ -22,6 +22,8 @@ All processing stays on your machine. **No** biometric data is sent to Faceplugi
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Copy the runtime
@@ -60,7 +62,7 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
 {% endstepper %}
 
 {% hint style="info" %}
-Control routes return a JSON **envelope**. Process POSTs return **engine JSON**. Port **8083** is shared with recognition-only — run **one** Face Recognition HTTP service at a time.
+Some routes wrap the result in a small JSON object (an **envelope**). Process POSTs return **engine JSON** as the body. Port **8083** is shared with recognition-only — run **one** Face Recognition HTTP service at a time.
 {% endhint %}
 
 ### APIs
@@ -80,6 +82,8 @@ Same recognition routes as [Face Recognition Windows SDK](face-recognition-windo
 | `POST /api/match` | Compare two photos |
 | `POST /api/similarity` | Compare two templates |
 | `POST /api/liveness` | Passive face anti-spoofing |
+
+Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Liveness: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
 There is **no** `POST /api/identify` (no server-side 1:N gallery).
 

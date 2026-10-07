@@ -18,6 +18,8 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Copy the runtime
@@ -76,11 +78,9 @@ Same routes as [Face Recognition Linux SDK](face-recognition-linux-sdk.md):
 | `POST /api/match` | Compare two photos |
 | `POST /api/similarity` | Compare two templates |
 
-There is **no** `POST /api/identify` (no server-side 1:N gallery). Store templates in **your** database and call `/api/similarity`.
+Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
-Python: `sdk.detect`, `sdk.quality`, `sdk.feature`, `sdk.match`, `sdk.similarity`.
-
-Call order: `get_machine_code` → `activate` → `init_sdk` → detect / quality / feature / match / similarity.
+Some routes wrap the result in a small JSON object (an **envelope**). Process POSTs return **engine JSON** as the body. There is **no** `POST /api/identify` (no server-side 1:N gallery).
 
 ### Try it
 

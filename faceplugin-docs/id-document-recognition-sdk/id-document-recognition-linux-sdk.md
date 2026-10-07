@@ -22,6 +22,8 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Pull from Docker Hub (no Google Drive download)
@@ -144,94 +146,21 @@ You do **not** need Gradio in production.
 
 ### APIs
 
-Control routes return a JSON **envelope**. Process POSTs return **engine JSON** as the HTTP body.
+| Endpoint | Purpose |
+| -------- | ------- |
+| `GET /api/health` | Process is listening (no license) |
+| `GET /api/machinecode` | Machine code |
+| `GET /api/licenseStatus` | License status |
+| `GET /api/backend` | `"cpu"` |
+| `POST /api/activate` | Activate and `init_sdk()` |
+| `POST /api/documentRecognition` | OCR / MRZ / barcode / image quality only |
+| `POST /api/documentLiveness` | Authenticity only |
+| `POST /api/documentProcess` | Combined OCR + optional authenticity |
+| `POST /api/generalProcess` | Single-image general process |
 
-#### <mark style="color:orange;">get_machine_code:</mark> This API is used to retrieve the code specific to the server
+Full reference: [Document Reader HTTP API](../http-api/document-reader.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
-```http
-GET /api/machinecode
-```
-
-Also: `GET /api/health`, `GET /api/licenseStatus`, `GET /api/backend`.
-
-#### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK
-
-```http
-POST /api/activate
-```
-
-| **Input**        | Plain <code>license key</code>, JSON <code>{"license":"license key"}</code>, or a license file |
-| ---------------- | ------------------------------------------------------------------------------------ |
-| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
-
-#### <mark style="color:orange;">documentRecognition:</mark> This API is used to run OCR / MRZ / barcode / image quality only
-
-```http
-POST /api/documentRecognition
-```
-
-```json
-{
-  "images": [
-    { "image": "<BASE64>", "page_idx": 0 },
-    { "image": "<BASE64>", "page_idx": 1 }
-  ]
-}
-```
-
-| **Input**        | One or more page images (base64). Authenticity is always off. |
-| ---------------- | ------------------------------------------------------------- |
-| **Return value** | Engine JSON (not the envelope).                                 |
-
-#### <mark style="color:orange;">documentLiveness:</mark> This API is used to run authenticity / security only
-
-```http
-POST /api/documentLiveness
-```
-
-| **Input**        | One or more page images (base64). OCR / MRZ / barcode / image quality are always off. |
-| ---------------- | -------------------------------------------------------------------------------------- |
-| **Return value** | Engine JSON with <code>security</code> checks when the license includes Liveness.     |
-
-Need authenticity **without** OCR as a separate product? See [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md).
-
-#### <mark style="color:orange;">documentProcess:</mark> This API is used to run the combined OCR / MRZ / barcode / image quality / authenticity pipeline
-
-```http
-POST /api/documentProcess
-```
-
-```json
-{
-  "images": [
-    { "image": "<BASE64>", "page_idx": 0 }
-  ],
-  "response": {
-    "OCR": "normal",
-    "MRZ": "normal",
-    "Barcode": "normal",
-    "ImageQuality": "normal",
-    "Authenticity": "normal"
-  }
-}
-```
-
-- `"Authenticity": "none"` skips liveness checks. `"normal"` runs them when the license includes Liveness.
-- `"ImageQuality": "none"` skips capture-quality checks.
-
-| **Input**        | One or more page images (base64) and optional <code>response</code> flags. |
-| ---------------- | ----------------------------------------------------------------------------- |
-| **Return value** | Engine JSON (not the envelope).                                                |
-
-#### <mark style="color:orange;">generalProcess:</mark> This API is used for a single-image general process
-
-```http
-POST /api/generalProcess
-```
-
-```json
-{ "image": "<BASE64>", "options": {} }
-```
+Some routes wrap the result in a small JSON object (an **envelope**). Process POSTs return **engine JSON** as the body. Authenticity-only without OCR: [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md).
 
 Python:
 

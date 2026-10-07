@@ -49,9 +49,11 @@ This documentation is the **integration** layer: clone a public GitHub sample, a
 2. Open **Mobile SDK** or **Server SDK**, then the **platform** page (Android, iOS, Flutter, React Native, Linux, Windows, …).
 3. Follow **Setup** / **How to run** to place the Google Drive runtime package and start the **GitHub sample app** for that product.
 4. Copy the **machine code** if you run a server SDK, then [request a license](request-a-license-and-support.md).
-5. Use [Try it](resources/try-it.md) / **APIs** to call the same **SDK APIs** from your app. Store templates and document JSON in **your** database.
+5. Use [Try it](resources/try-it.md) and the [HTTP API](http-api/) to call the same server APIs from your app. Store templates and document JSON in **your** database.
 
 Ports: Document **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
+
+For topology and sizing, see [Deploy and host](deploy-and-host/).
 
 Native binaries are **not** on GitHub (too large). Each platform page links the Google Drive folder and the exact copy path.
 
@@ -85,13 +87,14 @@ Platforms vary by product. **Face Recognition** and **ID Document Recognition** 
 
 ### Use cases <a href="#application" id="application"></a>
 
-* **eKYC / digital onboarding** — ID OCR + optional authenticity + selfie liveness + face match ([combine products](resources/choose-a-product.md#combining-products-ekyc))
+* **eKYC / digital onboarding** — ID OCR + optional authenticity + selfie liveness + face match ([Architecture](deploy-and-host/architecture.md))
 * **Banking and fintech** — passport / ID verification and face anti-spoofing on your infrastructure
 * **Access control and attendance** — mobile 1:N Identify with templates you store
 * **Fraud prevention** — reject presentation attacks and document spoofs before enrollment
 
 ### Related documentation
 
-* [Choose a product](resources/choose-a-product.md) · [Try it](resources/try-it.md) · [Glossary](resources/glossary.md) · [FAQ](resources/faq.md)
+* [Choose a product](resources/choose-a-product.md) · [Try it](resources/try-it.md) · [HTTP API](http-api/) · [Deploy and host](deploy-and-host/)
+* [Platform matrix](resources/platform-matrix.md) · [Glossary](resources/glossary.md) · [FAQ](resources/faq.md)
 * [Request a License & Support](request-a-license-and-support.md) · [SDK comparison](resources/comparisons/)
 * [Status codes](resources/status-codes.md) · [Troubleshooting](resources/troubleshooting.md) · [Changelog](resources/changelog.md)

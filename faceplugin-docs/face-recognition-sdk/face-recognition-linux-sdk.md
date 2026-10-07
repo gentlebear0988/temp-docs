@@ -18,6 +18,8 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Pull from Docker Hub (no Google Drive download)
@@ -156,98 +158,22 @@ You do **not** need Gradio in production.
 
 ### APIs
 
-#### <mark style="color:orange;">get_machine_code:</mark> This API is used to retrieve the code specific to the server
+| Endpoint | Purpose |
+| -------- | ------- |
+| `GET /api/health` | Process is listening (no license) |
+| `GET /api/machinecode` | Machine code |
+| `GET /api/licenseStatus` | License status |
+| `GET /api/backend` | `"cpu"` |
+| `POST /api/activate` | Activate and `init_sdk()` |
+| `POST /api/detect` | Detect faces |
+| `POST /api/quality` | Quality checks |
+| `POST /api/feature` | Extract template |
+| `POST /api/match` | Compare two photos |
+| `POST /api/similarity` | Compare two templates |
 
-```http
-GET /api/machinecode
-```
+Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
-| **Input**        | None |
-| ---------------- | ---- |
-| **Return value** | Envelope. <code>data.machinecode</code> is <code>machine code</code> |
-
-Also: `GET /api/health` (`data.status` is `"ok"`), `GET /api/licenseStatus`, `GET /api/backend` (`"cpu"`).
-
-#### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK
-
-```http
-POST /api/activate
-Content-Type: text/plain
-
-license key
-```
-
-JSON `{"license":"license key"}` and a license file body are also accepted. Empty body returns envelope `code: -1`.
-
-| **Input**        | License key or file |
-| ---------------- | -------------------- |
-| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>. |
-
-#### <mark style="color:orange;">detect:</mark> This API is used to detect faces
-
-{% tabs %}
-{% tab title="JSON" %}
-```http
-POST /api/detect
-Content-Type: application/json
-
-{"image":"<BASE64>","cropImage":false}
-```
-{% endtab %}
-{% tab title="form-data" %}
-File field `image` (alias `file`). Text field `cropImage` (`true` / `false`). Same URL.
-{% endtab %}
-{% endtabs %}
-
-| **Input**        | Base64 image. Optional <code>cropImage</code> (alias <code>crop_image</code>). |
-| ---------------- | ------------------------------------------------------------------------------ |
-| **Return value** | Engine JSON (not the envelope). A gated call without a recognition license returns <code>code</code> 8 with <code>licenseError</code>. |
-
-#### <mark style="color:orange;">quality:</mark> This API is used to run face image quality checks
-
-```http
-POST /api/quality
-```
-
-Same body as detect. ICAO-style checks. Python: `sdk.quality`.
-
-#### <mark style="color:orange;">feature:</mark> This API is used to extract a face template
-
-```http
-POST /api/feature
-```
-
-```json
-{ "image": "<BASE64>" }
-```
-
-Store the template in **your** database. Compare later with `/api/similarity`.
-
-#### <mark style="color:orange;">match:</mark> This API is used to compare two photos (1:1)
-
-```http
-POST /api/match
-```
-
-```json
-{ "image1": "<BASE64>", "image2": "<BASE64>", "cropImage": false }
-```
-
-The server detects and extracts internally.
-
-#### <mark style="color:orange;">similarity:</mark> This API is used to compare two templates
-
-```http
-POST /api/similarity
-```
-
-```json
-{ "feature1": "<BASE64>", "feature2": "<BASE64>" }
-```
-
-Aliases: `template1` / `template2`. Both features must decode to the **same length**. Form-data uses **text** fields (not files).
-
-There is **no** `POST /api/identify` (no server-side 1:N gallery).
+Some routes wrap the result in a small JSON object (an **envelope**). Process POSTs return **engine JSON** as the body. There is **no** `POST /api/identify` (no server-side 1:N gallery).
 
 Python:
 
@@ -276,8 +202,9 @@ Call order: `get_machine_code` → `activate` → `init_sdk` → detect / qualit
 
 ### Related documentation
 
+* [Face Recognition HTTP API](../http-api/face-recognition.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Windows](face-recognition-windows-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Architecture](../deploy-and-host/architecture.md) · [SDK comparison](../resources/comparisons/README.md)

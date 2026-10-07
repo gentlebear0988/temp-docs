@@ -21,7 +21,7 @@ Physical device, `CAMERA` permission / `NSCameraUsageDescription`, arm64. Docume
 
 ## Docker starts then process calls fail
 
-Activate with `POST /api/activate`. Detached Compose does not prompt. `--shm-size` too small for Document Reader (`dcr.fpk`). Privileged + machine-id volume as in the README.
+Activate with `POST /api/activate`. Detached Compose does not prompt. `--shm-size` too small for Document Reader (`dcr.fpk`). Privileged + machine-id volume as in the README. Sizing and Docker flags: [Hosting requirements](../deploy-and-host/hosting-requirements.md). Endpoint contracts: [HTTP API](../http-api/).
 
 ## `lib/cpu` “file not found”
 
@@ -37,7 +37,7 @@ Use **Yarn 3** as `packageManager`. npm workspaces are not supported at the root
 
 ## Two products in one APK / one `lib/`
 
-Do not copy two products’ Google Drive runtimes into one folder. See [Combining products](choose-a-product.md#combining-products-ekyc).
+Do not copy two products’ Google Drive runtimes into one folder. See [Architecture](../deploy-and-host/architecture.md).
 
 ## Still stuck
 
@@ -45,5 +45,6 @@ Email [info@faceplugin.com](mailto:info@faceplugin.com) with: OS, GitHub repo na
 
 ### Related documentation
 
+* [HTTP API](../http-api/) · [Hosting requirements](../deploy-and-host/hosting-requirements.md) · [Architecture](../deploy-and-host/architecture.md)
 * [FAQ](faq.md) · [Glossary](glossary.md) · [Status codes](status-codes.md) · [Try it](try-it.md)
 * [Request a License](../request-a-license-and-support.md)

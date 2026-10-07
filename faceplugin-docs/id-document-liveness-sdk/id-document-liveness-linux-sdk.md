@@ -12,6 +12,8 @@ description: >-
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 1. Pull and run the Docker Hub image:
 
 ```
@@ -82,36 +84,18 @@ Need OCR as well? Use [ID Document Recognition Linux SDK](../id-document-recogni
 
 ### APIs
 
-#### <mark style="color:orange;">get_machine_code:</mark> This API is used to retrieve the code specific to the server
+| Endpoint | Purpose |
+| -------- | ------- |
+| `GET /api/health` | Process is listening (no license) |
+| `GET /api/machinecode` | Machine code |
+| `GET /api/licenseStatus` | License status |
+| `GET /api/backend` | `"cpu"` |
+| `POST /api/activate` | Activate and `init_sdk()` |
+| `POST /api/documentLiveness` | Authenticity / document anti-spoofing |
 
-```http
-GET /api/machinecode
-```
+Full reference: [Document Liveness HTTP API](../http-api/document-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
-Also: `GET /api/health`, `GET /api/licenseStatus`, `GET /api/backend`.
-
-#### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK
-
-```http
-POST /api/activate
-```
-
-| **Input**        | Plain <code>license key</code>, JSON <code>{"license":"license key"}</code>, or a license file |
-| ---------------- | ------------------------------------------------------------------------------------ |
-| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
-
-#### <mark style="color:orange;">documentLiveness:</mark> This API is used to run authenticity / document anti-spoofing
-
-```http
-POST /api/documentLiveness
-Content-Type: application/json
-
-{"images":[{"image":"<BASE64>","page_idx":0},{"image":"<BASE64>","page_idx":1}]}
-```
-
-| **Input**        | One or more page images (base64). OCR / MRZ / barcode / image quality are always off. |
-| ---------------- | -------------------------------------------------------------------------------------- |
-| **Return value** | Engine JSON with <code>security</code> checks. There is no <code>documentRecognition</code> / <code>documentProcess</code> on this product. |
+Some routes wrap the result in a small JSON object (an **envelope**). `POST /api/documentLiveness` returns **engine JSON** as the body. There is no `documentRecognition` / `documentProcess` on this product.
 
 Python:
 

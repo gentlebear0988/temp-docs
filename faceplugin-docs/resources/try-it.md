@@ -7,7 +7,7 @@ description: >-
 
 # Try it
 
-These snippets are meant to be **copied as-is**. You do not write a UI first. Start with `health` and `machinecode` (no license needed), then activate and call one process API.
+These snippets are meant to be **copied as-is**. You do not write a UI first. Start with `health` and `machinecode` (no license needed), then activate and call one process API. Full endpoint contracts: [HTTP API](../http-api/).
 
 {% hint style="info" %}
 **Start with the server if you want the quickest test.** Docker Hub + `curl` lets you test the SDK without Android Studio. Mobile snippets assume you have already run the demo once, with the required AAR/framework files in place and the demo license configured for the demo app ID.
@@ -152,5 +152,6 @@ Thread {
 
 ### Related documentation
 
-* [Choose a product](choose-a-product.md) · [Glossary](glossary.md) · [Status codes](status-codes.md) · [Troubleshooting](troubleshooting.md)
+* [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/) · [Choose a product](choose-a-product.md)
+* [Glossary](glossary.md) · [Status codes](status-codes.md) · [Troubleshooting](troubleshooting.md)
 * [Request a License](../request-a-license-and-support.md)

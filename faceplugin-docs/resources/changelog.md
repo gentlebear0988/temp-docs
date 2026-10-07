@@ -8,11 +8,18 @@ description: >-
 
 Published release notes for Faceplugin SDKs will be listed here.
 
-Until dated entries appear on this page, use:
+## Documentation
+
+* **HTTP API hub** — shared and per-product endpoint reference under [HTTP API](../http-api/)
+* **Deploy and host** — [Architecture](../deploy-and-host/architecture.md), [Hosting requirements](../deploy-and-host/hosting-requirements.md), [Production deployment](../deploy-and-host/production-deployment.md)
+* **Platform matrix** — [Platform matrix](platform-matrix.md)
+
+Until dated product release entries appear on this page, use:
 
 * The **Releases** tab on each [public GitHub repository](https://github.com/Faceplugin-ltd)
 * Docker Hub tags such as `latest` under [hub.docker.com/u/faceplugin](https://hub.docker.com/u/faceplugin)
 
 ### Related documentation
 
-* [Choose a product](choose-a-product.md) · [Request a License](../request-a-license-and-support.md) · [Glossary](glossary.md)
+* [Choose a product](choose-a-product.md) · [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/)
+* [Request a License](../request-a-license-and-support.md) · [Glossary](glossary.md)

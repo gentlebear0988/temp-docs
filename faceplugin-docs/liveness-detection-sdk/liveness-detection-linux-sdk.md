@@ -20,6 +20,8 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Pull from Docker Hub (no Google Drive download)
@@ -138,53 +140,19 @@ Licenses are **offline**. [Request a License & Support](../request-a-license-and
 
 ### APIs
 
-#### <mark style="color:orange;">get_machine_code:</mark> This API is used to retrieve the code specific to the server on which this SDK is running <a href="#setactivation" id="setactivation"></a>
+| Endpoint | Purpose |
+| -------- | ------- |
+| `GET /api/health` | Process is listening (no license) |
+| `GET /api/machinecode` | Machine code |
+| `GET /api/licenseStatus` | License status |
+| `GET /api/backend` | `"cpu"` |
+| `POST /api/activate` | Activate and `init_sdk()` |
+| `POST /api/liveness` | Passive face anti-spoofing |
+| `POST /api/check_liveness` | Alias of `/api/liveness` |
 
-```http
-GET /api/machinecode
-```
+Full reference: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
-| **Input**        | None                                                               |
-| ---------------- | ------------------------------------------------------------------ |
-| **Return value** | Envelope. <code>data.machinecode</code> is <code>machine code</code> |
-
-Also: `GET /api/health` (no license), `GET /api/licenseStatus`, `GET /api/backend` (`"cpu"`).
-
-#### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK <a href="#initsdk" id="initsdk"></a>
-
-```http
-POST /api/activate
-Content-Type: text/plain
-
-license key
-```
-
-JSON `{"license":"license key"}` and a license file body are also accepted.
-
-| **Input**        | License key or file. |
-| ---------------- | -------------------- |
-| **Return value** | Envelope. Success: <code>code</code> 0, <code>"Successfully activated"</code>. On success the HTTP service also calls <code>init_sdk()</code>. |
-
-#### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake <a href="#facedetection" id="facedetection"></a>
-
-```http
-POST /api/liveness
-Content-Type: application/json
-
-{"image":"<BASE64-JPEG>"}
-```
-
-File field `image` (alias `file`) is accepted as `multipart/form-data`. Same URL. Alias: `POST /api/check_liveness`.
-
-| **Input**        | JPEG image (base64 JSON or form-data). A missing <code>image</code> field returns envelope <code>code: -1</code> and <code>"image required"</code>. |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Return value** | Engine JSON. Score **≥ 0.5** → <code>result</code> Real and <code>pass</code> true. Score **&lt; 0.5** → <code>result</code> Spoof and <code>pass</code> false. |
-
-Example:
-
-```json
-{ "score": 0.72, "result": "Real", "pass": true }
-```
+Some routes wrap the result in a small JSON object (an **envelope**). `POST /api/liveness` returns **engine JSON** as the body. Score **≥ 0.5** → Real / `pass` true.
 
 Python:
 

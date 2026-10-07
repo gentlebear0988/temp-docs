@@ -16,6 +16,8 @@ Native `libDocSDK` is optional. Without it the server can run a demo stub (`DOCS
 
 ### Setup
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 ```bash
 npm start
 ```
@@ -23,6 +25,23 @@ npm start
 Web demos (React / Vue / Angular / JavaScript) can point at this process on **8082**.
 
 Also public: [Go](https://github.com/Faceplugin-ltd/ID-Document-Recognition-Go) and [C/C++](https://github.com/Faceplugin-ltd/ID-Document-Recognition-CPP) HTTP APIs with the same route family.
+
+### APIs
+
+| Endpoint | Purpose |
+| -------- | ------- |
+| `GET /api/health` | Process is listening (no license) |
+| `GET /api/machinecode` | Machine code |
+| `GET /api/licenseStatus` | License status |
+| `POST /api/activate` | Activate |
+| `POST /api/documentRecognition` | OCR / MRZ / barcode / image quality only |
+| `POST /api/documentLiveness` | Authenticity only |
+| `POST /api/documentProcess` | Combined OCR + optional authenticity |
+| `POST /api/generalProcess` | Single-image general process |
+
+Full reference: [Document Reader HTTP API](../http-api/document-reader.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
+
+Same route family as the Python Document Reader server. Without native `libDocSDK`, use `DOCSDK_STUB=1` for a demo stub only.
 
 ### Related documentation
 

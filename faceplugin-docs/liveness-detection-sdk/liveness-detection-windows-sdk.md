@@ -16,6 +16,8 @@ Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Same HTTP API 
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Copy the runtime
@@ -60,44 +62,30 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 
 ### APIs
 
-#### <mark style="color:orange;">get_machine_code:</mark> This API is used to retrieve the code specific to the server
+| Endpoint | Purpose |
+| -------- | ------- |
+| `GET /api/health` | Process is listening (no license) |
+| `GET /api/machinecode` | Machine code |
+| `GET /api/licenseStatus` | License status |
+| `GET /api/backend` | `"cpu"` |
+| `POST /api/activate` | Activate and `init_sdk()` |
+| `POST /api/liveness` | Passive face anti-spoofing |
+| `POST /api/check_liveness` | Alias of `/api/liveness` |
 
-```http
-GET /api/machinecode
+Full reference: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
+
+Some routes wrap the result in a small JSON object (an **envelope**). `POST /api/liveness` returns **engine JSON** as the body. Score **≥ 0.5** → Real / `pass` true.
+
+Python:
+
+```python
+import sdk
+
+sdk.get_machine_code()
+sdk.activate("license.txt")
+sdk.init_sdk()
+print(sdk.liveness(base64_jpeg))
 ```
-
-| **Input**        | None |
-| ---------------- | ---- |
-| **Return value** | Envelope. <code>data.machinecode</code> is <code>machine code</code> |
-
-Also: `GET /api/health`, `GET /api/licenseStatus`, `GET /api/backend`.
-
-#### <mark style="color:orange;">activate_machine:</mark> This API is used to activate the SDK
-
-```http
-POST /api/activate
-```
-
-| **Input**        | Plain <code>license key</code>, JSON <code>{"license":"license key"}</code>, or a license file |
-| ---------------- | ------------------------------------------------------------------------------------ |
-| **Return value** | Envelope. On success the HTTP service also calls <code>init_sdk()</code>.                  |
-
-#### <mark style="color:orange;">check_liveness:</mark> This API is used to determine if the faces are real or fake
-
-```http
-POST /api/liveness
-Content-Type: application/json
-
-{"image":"<BASE64-JPEG>"}
-```
-
-File field `image` (alias `file`) is accepted as `multipart/form-data`. Same URL.
-
-| **Input**        | JPEG image (base64 JSON or form-data). |
-| ---------------- | --------------------------------------- |
-| **Return value** | Engine JSON. Score **≥ 0.5** → <code>result</code> Real and <code>pass</code> true. |
-
-Python: `sdk.get_machine_code()`, `sdk.activate`, `sdk.init_sdk()`, `sdk.liveness`.
 
 ### Try it
 

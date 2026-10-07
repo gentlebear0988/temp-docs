@@ -20,6 +20,8 @@ All processing stays on your server. **No** biometric data is sent to Faceplugin
 
 ### Setup <a href="#setup" id="setup"></a>
 
+Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
+
 {% stepper %}
 {% step %}
 ## Pull from Docker Hub (no Google Drive download)
@@ -148,7 +150,9 @@ Same recognition routes as [Face Recognition Linux SDK](face-recognition-linux-s
 | `POST /api/similarity` | Compare two templates |
 | `POST /api/liveness` | Passive face anti-spoofing |
 
-There is **no** `POST /api/identify` (no server-side 1:N gallery). Store templates in **your** database and call `/api/similarity`.
+Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Liveness: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
+
+Some routes wrap the result in a small JSON object (an **envelope**). Process POSTs return **engine JSON** as the body. There is **no** `POST /api/identify` (no server-side 1:N gallery).
 
 ### Try it
 

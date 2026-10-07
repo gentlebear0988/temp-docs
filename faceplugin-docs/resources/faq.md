@@ -20,7 +20,7 @@ A library that detects faces, extracts a template (embedding), and compares temp
 
 ## Is there a Face Recognition API?
 
-Yes — Linux Docker and Windows HTTP on port **8083** (`/api/detect`, `/match`, `/similarity`). The combined Recognition + Liveness packages also expose `/api/liveness` on the same port. Details: [Face Recognition capabilities](../face-recognition-sdk/capabilities.md).
+Yes. Linux Docker and Windows expose an HTTP API on port **8083** (`/api/detect`, `/api/match`, `/api/similarity`). The combined Recognition + Liveness packages also expose `/api/liveness` on the same port. Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Overview: [HTTP API](../http-api/).
 
 ## What is passive liveness detection?
 
@@ -84,6 +84,7 @@ See the [Glossary](glossary.md) for MRZ, OCR, eKYC, 1:1 / 1:N, PAD, FRVT, licens
 
 ### Related documentation
 
+* [HTTP API](../http-api/) · [Deploy and host](../deploy-and-host/) · [Platform matrix](platform-matrix.md)
 * [Glossary](glossary.md) · [Try it](try-it.md) · [Troubleshooting](troubleshooting.md) · [Status codes](status-codes.md)
 * [Choose a product](choose-a-product.md) · [Passport OCR & ID verification](passport-ocr-and-id-verification.md)
 * [Document capabilities](../id-document-recognition-sdk/capabilities.md) · [Face Recognition capabilities](../face-recognition-sdk/capabilities.md) · [Face Liveness capabilities](../liveness-detection-sdk/capabilities.md)
