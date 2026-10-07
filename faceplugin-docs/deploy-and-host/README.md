@@ -18,7 +18,7 @@ Use this section when you put Faceplugin on **your** servers. Faceplugin does no
 | [Hosting requirements](hosting-requirements.md) | Size CPU, RAM, disk, ports, and Docker flags |
 | [Production deployment](production-deployment.md) | Harden a first-run install for production |
 
-Start with a single product platform page for install steps. Then use this section for topology and ops.
+For eKYC servers, prefer [Face Recognition + Liveness](../face-recognition-sdk/recognition-and-liveness.md) and [Document Recognition + Liveness](../id-document-recognition-sdk/recognition-and-liveness.md) instead of separate recognition-only and liveness-only containers. Start with a platform page for install steps, then use this section for topology and ops.
 
 ### Related documentation
 

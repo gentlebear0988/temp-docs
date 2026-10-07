@@ -1,15 +1,16 @@
 ---
 description: >-
-  Faceplugin ID Document SDK — Recognition. Passport OCR, MRZ, barcode, and document classification.
+  Faceplugin ID Document SDK — Recognition. OCR / MRZ / barcode via the Document Reader product.
 ---
 
 # ID Document SDK — Recognition
 
-Document **recognition** (Document Reader): classify, OCR, MRZ, barcode, quality, and crops. Default server port **8082**.
+**OCR / MRZ / barcode / classify / crops** without a dedicated authenticity-only service.
+
+There is no separate “OCR-only” public repository. Document Reader apps expose recognition APIs, and with a Liveness-capable license they also run authenticity — see [Recognition + Liveness](recognition-and-liveness.md) for all Document Reader platforms (mobile, Linux, Windows, Node).
 
 * **Capabilities:** [ID Document SDK capabilities](capabilities.md) (Recognition section)
-* **Mobile:** Android, iOS, Flutter, React Native, Ionic — [Mobile SDK](mobile-sdk.md)
-* **Server:** Linux / Windows / Node — [Server SDK](server-sdk.md)
 * **Result shape:** [Document result JSON](document-result-json.md)
+* **Install platforms:** [Recognition + Liveness](recognition-and-liveness.md)
 
-For authenticity only (no OCR) see [Liveness](../id-document-liveness-sdk/README.md). For OCR plus authenticity in one engine see [Recognition + Liveness](recognition-and-liveness.md).
+For authenticity **without** OCR, use [Liveness](../id-document-liveness-sdk/README.md) on port **8086**.

@@ -1,15 +1,16 @@
 ---
 description: >-
-  Faceplugin Face SDK — Recognition. Mobile Identify and server Face Recognition API on port 8083.
+  Faceplugin Face SDK — Recognition only. Server Face Recognition API on port 8083 (no /api/liveness).
 ---
 
 # Face SDK — Recognition
 
-Face **recognition** only: detect, quality, templates, 1:1 match, and mobile **1:N Identify**.
+**Recognition only** server products: detect, quality, templates, 1:1 match / similarity. Port **8083**. These images do **not** expose `POST /api/liveness`.
 
 * **Capabilities:** [Face SDK capabilities](capabilities.md) (Recognition section)
-* **Mobile:** Android, iOS, Flutter, React Native, Ionic — [Mobile SDK](mobile-sdk.md)
-* **Server:** Linux / Windows / .NET HTTP on port **8083** — [Server SDK](server-sdk.md)
+* **Server:** [Server SDK](server-sdk.md) — [Linux](face-recognition-linux-sdk.md) (`faceplugin/face-recognition`) · [Windows](face-recognition-windows-sdk.md)
 * **Open source:** free Python samples — [Open Source](open-source-windows-and-linux.md)
 
-For standalone anti-spoofing see [Liveness](../liveness-detection-sdk/README.md). For matching and liveness in one server process see [Recognition + Liveness](recognition-and-liveness.md).
+Mobile Face Recognition apps include **2D liveness on Identify** — they live under [Recognition + Liveness](recognition-and-liveness.md), not here.
+
+For standalone anti-spoofing only see [Liveness](../liveness-detection-sdk/README.md). For match + `/api/liveness` in one server process see [Recognition + Liveness](recognition-and-liveness.md).

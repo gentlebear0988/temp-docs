@@ -12,9 +12,9 @@ description: >-
 
 **What it can do:** [Capabilities](capabilities.md). Then pick a mode:
 
-* **[Recognition](recognition.md)** — 1:1 match, mobile 1:N Identify, Face Recognition API on **8083**
-* **[Liveness](../liveness-detection-sdk/README.md)** — passive anti-spoofing only on **8084** / mobile
-* **[Recognition + Liveness](recognition-and-liveness.md)** — match and `POST /api/liveness` in one process on **8083**
+* **[Recognition](recognition.md)** — recognition-only server API on **8083** (`faceplugin/face-recognition`)
+* **[Liveness](../liveness-detection-sdk/README.md)** — standalone face PAD on **8084** / mobile (no matching)
+* **[Recognition + Liveness](recognition-and-liveness.md)** — mobile Identify + 2D liveness, and server match + `/api/liveness` on **8083** (**recommended** for eKYC)
 
 ```mermaid
 flowchart LR
@@ -40,7 +40,7 @@ flowchart LR
 
 Start with [Capabilities](capabilities.md), then open a mode.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Recognition, liveness, and recognition + liveness in one place.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Recognition</strong></td><td>Mobile Identify and server API on port 8083.</td><td><a href="recognition.md">recognition.md</a></td></tr><tr><td></td><td><strong>Liveness</strong></td><td>Standalone face anti-spoofing on mobile and port 8084.</td><td><a href="../liveness-detection-sdk/README.md">../liveness-detection-sdk/README.md</a></td></tr><tr><td></td><td><strong>Recognition + Liveness</strong></td><td>One server process with match and /api/liveness on 8083.</td><td><a href="recognition-and-liveness.md">recognition-and-liveness.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Recognition, liveness, and recognition + liveness in one place.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Recognition</strong></td><td>Recognition-only server (no /api/liveness).</td><td><a href="recognition.md">recognition.md</a></td></tr><tr><td></td><td><strong>Liveness</strong></td><td>Standalone face anti-spoofing on mobile and port 8084.</td><td><a href="../liveness-detection-sdk/README.md">../liveness-detection-sdk/README.md</a></td></tr><tr><td></td><td><strong>Recognition + Liveness</strong></td><td>Mobile + combined server — recommended for eKYC.</td><td><a href="recognition-and-liveness.md">recognition-and-liveness.md</a></td></tr></tbody></table>
 
 Typical call order on **mobile**: `setActivation` → `init` → detect / extract template → store templates in **your** database → `similarity` or VideoWorker (live 1:N). Identify default **0.67**. Liveness default **0.5**.
 

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Faceplugin server architecture. One process per product, eKYC flow, HTTP vs sdk.py, and what
-  you store in your own systems.
+  Faceplugin server architecture. Prefer Recognition + Liveness combined packages for eKYC,
+  HTTP vs sdk.py, and what you store in your own systems.
 icon: sitemap
 layout:
   description:
@@ -10,37 +10,43 @@ layout:
 
 # Architecture
 
-Faceplugin ships **separate** SDKs. You combine them in **your** mobile app or backend.
+Faceplugin ships product SDKs you combine in **your** mobile app or backend.
 
 Faceplugin does **not** ship one all-in-one identity-verification app.
+
+## Recommended: combined Recognition + Liveness
+
+For production eKYC, prefer **combined** packages instead of running recognition and liveness as two separate Face (or Document) services:
+
+| Need | Prefer | Avoid (unless you must split) |
+| --- | --- | --- |
+| Face match + face PAD | [Face Recognition + Liveness](../face-recognition-sdk/recognition-and-liveness.md) on **8083** (`faceplugin/face-recognition-liveness-sdk`) | Face Recognition **8083** + Face Liveness **8084** as two containers |
+| Document OCR + document authenticity | [Document Reader](../id-document-recognition-sdk/recognition-and-liveness.md) on **8082** with a Liveness-capable license | Document Reader **8082** + Document Liveness **8086** when you already need OCR |
+
+Use standalone [Face Liveness](../liveness-detection-sdk/) (**8084**) or [ID Document Liveness](../id-document-liveness-sdk/) (**8086**) only when you want **anti-spoofing without** matching or OCR.
 
 ## Typical eKYC flow
 
 **eKYC** means electronic know-your-customer / digital identity onboarding.
 
-A common flow is:
-
 ```mermaid
 flowchart LR
   ID[ID capture] --> OCR[OCR and MRZ]
-  OCR --> DocLiveness[Document authenticity]
-  DocLiveness --> Selfie[Selfie]
-  Selfie --> FaceLiveness[Face liveness]
-  FaceLiveness --> Match[Face match]
+  OCR --> DocAuth[Document authenticity]
+  DocAuth --> Selfie[Selfie]
+  Selfie --> FaceCombined[Face match + liveness]
 ```
 
-| Step | Product |
+| Step | Recommended product |
 | --- | --- |
-| Read the ID | [ID Document Recognition](../id-document-recognition-sdk/) (port **8082**) |
-| Check the ID is real | Document authenticity on **8082**, or [ID Document Liveness](../id-document-liveness-sdk/) on **8086** |
-| Check the selfie is live | [Face Liveness](../liveness-detection-sdk/) (port **8084**), or `/api/liveness` on Face Recognition + Liveness (**8083**) |
-| Match selfie to ID photo | [Face Recognition](../face-recognition-sdk/) (port **8083**) |
+| Read the ID + check it is real | [ID Document Recognition + Liveness](../id-document-recognition-sdk/recognition-and-liveness.md) (port **8082**) |
+| Check the selfie is live and match to ID photo | [Face Recognition + Liveness](../face-recognition-sdk/recognition-and-liveness.md) (port **8083**) |
 
 You own the final pass / fail decision. The SDKs return scores and fields. They do not decide your business outcome.
 
 ## Recommended topology
 
-Run **one process or container per product**.
+Run **one process or container per product**. For face and documents, that product should usually be the **combined** package.
 
 ```mermaid
 flowchart TB
@@ -50,31 +56,28 @@ flowchart TB
   end
   subgraph faceplugin [Faceplugin on your infra]
     Doc8082[Document Reader :8082]
-    Face8083[Face Recognition :8083]
-    Live8084[Face Liveness :8084]
-    DocLive8086[Document Liveness :8086]
+    Face8083[Face Recognition + Liveness :8083]
   end
   MobileApp --> Doc8082
   MobileApp --> Face8083
   Backend --> Doc8082
   Backend --> Face8083
-  Backend --> Live8084
-  Backend --> DocLive8086
 ```
+
+Optional authenticity-only Document Liveness (**8086**) or Face Liveness (**8084**) only if you intentionally split services.
 
 Do **not** copy two Google Drive runtimes into one `lib/cpu/` folder.
 
 ```text
 lib/
   dcr/cpu/    # Document Reader
-  far/cpu/    # Face Recognition
-  fal/cpu/    # Face Liveness
+  far/cpu/    # Face Recognition (+ fal.fpk inside combined FaceRecognitionSDK)
 ```
 
 | Product | Code | Pack example |
 | --- | --- | --- |
 | Face Recognition | `far` | `far.fpk` |
-| Face Liveness | `fal` | `fal.fpk` |
+| Face Liveness | `fal` | `fal.fpk` (also inside combined FaceRecognitionSDK) |
 | Document Reader / Document Liveness | `dcr` | `dcr.fpk` |
 
 Never ship a generic `models.fpk` next to another product.
@@ -123,7 +126,7 @@ Use this when you want fewer network hops and you already run Python next to the
 
 On mobile, keep each product’s AAR or frameworks separate. Request one license **per** application id **per** product. Call one engine at a time.
 
-Face Liveness has no public Flutter or React Native SDK. Use Face Recognition’s 2D liveness on Identify, and/or a native Face Liveness module.
+Face Liveness has no public Flutter or React Native SDK. Prefer Face Recognition + Liveness mobile apps (Identify includes 2D liveness), and/or a native Face Liveness module when you need PAD without matching.
 
 ### Related documentation
 

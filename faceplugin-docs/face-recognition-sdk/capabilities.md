@@ -101,9 +101,9 @@ See [Linux](face-recognition-sdk-linux.md) · [Windows](face-recognition-sdk-win
 
 | Mode | Surfaces |
 | --- | --- |
-| Recognition | [Mobile](mobile-sdk.md) · [Server](server-sdk.md) · [Open Source](open-source-windows-and-linux.md) |
-| Liveness | [Mobile](../liveness-detection-sdk/mobile-sdk.md) · [Server](../liveness-detection-sdk/server-sdk.md) |
-| Recognition + Liveness | [Linux](face-recognition-sdk-linux.md) · [Windows](face-recognition-sdk-windows.md) |
+| Recognition | [Server](server-sdk.md) (`faceplugin/face-recognition`) · [Open Source](open-source-windows-and-linux.md) |
+| Liveness | [Mobile](../liveness-detection-sdk/mobile-sdk.md) · [Server](../liveness-detection-sdk/server-sdk.md) (**8084**) |
+| Recognition + Liveness | [Mobile](mobile-sdk.md) · [Linux](face-recognition-sdk-linux.md) · [Windows](face-recognition-sdk-windows.md) · [.NET](face-recognition-dot-net-sdk.md) |
 
 ## Use cases
 

@@ -108,9 +108,9 @@ See [Combining products](../resources/choose-a-product.md#combining-products-eky
 
 | Mode | Surfaces |
 | --- | --- |
-| Recognition | [Mobile](mobile-sdk.md) · [Server](server-sdk.md) |
-| Liveness | [Server](../id-document-liveness-sdk/server-sdk.md) (Linux) |
-| Recognition + Liveness | Document Reader with Liveness license — [Linux](id-document-recognition-linux-sdk.md) · [Windows](id-document-recognition-windows-sdk.md) |
+| Recognition | OCR via Document Reader — install under [Recognition + Liveness](recognition-and-liveness.md) |
+| Liveness | [Server](../id-document-liveness-sdk/server-sdk.md) (Linux **8086**, authenticity only) |
+| Recognition + Liveness | [Mobile](mobile-sdk.md) · [Server](server-sdk.md) (Document Reader, port **8082**) |
 
 ## Use cases
 

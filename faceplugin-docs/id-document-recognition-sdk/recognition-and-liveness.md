@@ -1,15 +1,18 @@
 ---
 description: >-
-  Faceplugin ID Document SDK — Recognition + Liveness. OCR and document authenticity in one Document Reader engine.
+  Faceplugin ID Document SDK — Recognition + Liveness. Document Reader with OCR and optional
+  document authenticity (same engine / license flags).
 ---
 
 # ID Document SDK — Recognition + Liveness
 
-**OCR and document authenticity in one Document Reader engine** (Liveness-capable license). Port **8082** on server; same mobile Document Reader APIs when licensed for authenticity.
+**Document Reader** products: passport / ID OCR **and** document authenticity (document liveness) in one engine when the license allows. Port **8082** on server.
 
-* **Capabilities:** [ID Document SDK capabilities](capabilities.md) (Recognition + Liveness section)
+Public READMEs list OCR, MRZ, barcode, quality, crops, and authenticity / security checks. APIs include `recognize` / `documentProcess` and `documentLiveness` (authenticity-only call on the same SDK).
+
+* **Capabilities:** [ID Document SDK capabilities](capabilities.md)
 * **Security fields:** [Document security check fields](document-security-check-fields.md)
-* **Linux / Docker:** [Linux](id-document-recognition-linux-sdk.md) (`faceplugin/document-reader`)
-* **Windows:** [Windows](id-document-recognition-windows-sdk.md)
+* **Mobile:** [Mobile SDK](mobile-sdk.md)
+* **Server:** [Server SDK](server-sdk.md) — Linux `faceplugin/document-reader`, Windows, Node
 
-Prefer authenticity **without** OCR? Use dedicated [Liveness](../id-document-liveness-sdk/README.md) on port **8086**.
+Prefer authenticity **without** OCR? Use dedicated [Liveness](../id-document-liveness-sdk/README.md) on port **8086**. For production eKYC, prefer Document Reader (this mode) over splitting OCR and Document Liveness unless you need an authenticity-only service — see [Deploy and host](../deploy-and-host/architecture.md).

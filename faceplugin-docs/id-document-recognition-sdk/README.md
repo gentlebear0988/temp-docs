@@ -12,9 +12,9 @@ description: >-
 
 **Coverage:** **16,900** document templates across **255** countries and territories. Full list: [Supported documents PDF](capabilities.md#document-type-classification--worldwide-coverage). What the product can do: [Capabilities](capabilities.md).
 
-* **[Recognition](recognition.md)** — classify, OCR, MRZ, barcode, crops (port **8082** / mobile)
+* **[Recognition](recognition.md)** — OCR / MRZ overview (install via Document Reader platforms)
 * **[Liveness](../id-document-liveness-sdk/README.md)** — authenticity only, no OCR (port **8086**)
-* **[Recognition + Liveness](recognition-and-liveness.md)** — OCR plus authenticity with a Liveness-capable license
+* **[Recognition + Liveness](recognition-and-liveness.md)** — Document Reader mobile + server (**recommended** for eKYC)
 
 It is **not** a face matching SDK — use the [Face SDK](../face-recognition-sdk/) after you have a selfie.
 
@@ -65,7 +65,7 @@ Coverage: **16,900** templates across **255** countries and territories — full
 
 Pick **Capabilities**, then a mode.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Recognition, authenticity-only liveness, and OCR + authenticity.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Recognition</strong></td><td>Mobile and server Document Reader on port 8082.</td><td><a href="recognition.md">recognition.md</a></td></tr><tr><td></td><td><strong>Liveness</strong></td><td>Authenticity-only Linux API on port 8086.</td><td><a href="../id-document-liveness-sdk/README.md">../id-document-liveness-sdk/README.md</a></td></tr><tr><td></td><td><strong>Recognition + Liveness</strong></td><td>OCR plus authenticity in one Document Reader engine.</td><td><a href="recognition-and-liveness.md">recognition-and-liveness.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Recognition, authenticity-only liveness, and OCR + authenticity.</td><td><a href="capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Recognition</strong></td><td>OCR / MRZ overview — platforms under Recognition + Liveness.</td><td><a href="recognition.md">recognition.md</a></td></tr><tr><td></td><td><strong>Liveness</strong></td><td>Authenticity-only Linux API on port 8086.</td><td><a href="../id-document-liveness-sdk/README.md">../id-document-liveness-sdk/README.md</a></td></tr><tr><td></td><td><strong>Recognition + Liveness</strong></td><td>Document Reader mobile + server — recommended for eKYC.</td><td><a href="recognition-and-liveness.md">recognition-and-liveness.md</a></td></tr></tbody></table>
 
 ### FAQ
 
