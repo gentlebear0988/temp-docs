@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin Face Liveness Detection Windows SDK. Fully on-premise PAD HTTP API on port 8084.
-  POST /api/liveness. No Docker.
+  Faceplugin Face Liveness Detection Windows SDK. Fully on-premise PAD HTTP API
+  on port 8084. POST /api/liveness.
 icon: windows
 ---
 
-# Face Liveness Detection Windows SDK
+# Windows
 
 Fully on-premise **Face Liveness HTTP API for Windows**. Default port **8084**. Gradio **9004**. No Docker on Windows.
 
@@ -21,13 +21,13 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Copy the runtime
+#### Copy the runtime
 
 Copy the CPU libraries from [Google Drive](https://drive.google.com/drive/folders/11xD987eHT00NUGiJZCNYSvwRadi0Nue5) into `lib\cpu\`.
 {% endstep %}
 
 {% step %}
-## Install and run
+#### Install and run
 
 ```
 pip install -r requirements.txt
@@ -36,7 +36,7 @@ run.bat
 {% endstep %}
 
 {% step %}
-## Copy the machine code
+#### Copy the machine code
 
 ```
 curl -s http://127.0.0.1:8084/api/machinecode
@@ -46,7 +46,7 @@ Send machine code to Faceplugin.
 {% endstep %}
 
 {% step %}
-## Activate, then check liveness
+#### Activate, then check liveness
 
 ```
 curl -s -X POST http://127.0.0.1:8084/api/activate \
@@ -63,15 +63,15 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 
 ### APIs
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License status |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and `init_sdk()` |
-| `POST /api/liveness` | Passive face anti-spoofing |
-| `POST /api/check_liveness` | Alias of `/api/liveness` |
+| Endpoint                   | Purpose                           |
+| -------------------------- | --------------------------------- |
+| `GET /api/health`          | Process is listening (no license) |
+| `GET /api/machinecode`     | Machine code                      |
+| `GET /api/licenseStatus`   | License status                    |
+| `GET /api/backend`         | `"cpu"`                           |
+| `POST /api/activate`       | Activate and `init_sdk()`         |
+| `POST /api/liveness`       | Passive face anti-spoofing        |
+| `POST /api/check_liveness` | Alias of `/api/liveness`          |
 
 Full reference: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
@@ -105,11 +105,27 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**API?** Same as Linux: `POST /api/liveness` on port **8084**. No Docker on Windows.
+**Which liveness API does the Windows SDK use?**
 
-**Active liveness?** No. This product is passive JPEG anti-spoofing only.
+The same as Linux: `POST /api/liveness` on port 8084. Docker is not used on Windows.
+
+**Does it support active liveness detection?**
+
+No. This product does passive anti-spoofing on a single JPEG only, with no challenge for the user.
+
+**What score counts as a real face?**
+
+A liveness score of 0.5 or higher counts as Real (`pass` is `true`).
+
+**Do I need Docker to run liveness detection on Windows?**
+
+No. The Windows SDK runs natively with Python and `run.bat`.
+
+**Can I run face recognition and liveness on the same Windows server?**
+
+Yes. Run the Face Recognition Windows SDK on port 8083 and the Face Liveness Windows SDK on port 8084 as separate processes.
 
 ### Related documentation
 
@@ -117,4 +133,4 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
 * [Face Recognition Windows SDK](../face-recognition-sdk/face-recognition-windows-sdk.md)
 * [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

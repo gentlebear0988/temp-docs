@@ -1,10 +1,11 @@
 ---
 description: >-
-  Faceplugin open-source Face Recognition Linux SDK. Free on-premise Python sample. Lower accuracy than the commercial Docker Face Recognition API.
+  Faceplugin open-source Face Recognition Linux SDK. Free on-premise Python
+  sample. Lower accuracy than the commercial Docker Face Recognition API.
 icon: linux
 ---
 
-# Open Source Face Recognition Linux SDK
+# Linux
 
 ### Code <a href="#code" id="code"></a>
 
@@ -17,6 +18,7 @@ Free open-source Face Recognition Linux SDK
 Free **open-source** Face Recognition sample for Linux (Python). Detect faces, extract embeddings, and compare them **on your machine** — no Faceplugin cloud.
 
 Accuracy is **lower** than the commercial [Face Recognition Linux SDK](face-recognition-linux-sdk.md). Contact Faceplugin if you need the higher-accuracy native engine.
+
 ### Setup <a href="#setup" id="setup"></a>
 
 Please download anaconda on your computer and install it. We used Linux machine without GPU for testing
@@ -47,14 +49,31 @@ Please download anaconda on your computer and install it. We used Linux machine 
 * **get\_similarity(feat1, feat2):** returns similarity between two feature embeddings. 0 to 100
 * **Threshold:** value to determine if two embeddings belong to same person, default = 75
 
+### Frequently Asked Questions
 
-### FAQ
+**Is Faceplugin's open-source face recognition SDK free?**
 
-**Same accuracy as Docker Hub?** No. Use [Face Recognition Linux SDK](face-recognition-linux-sdk.md) (`faceplugin/face-recognition`) for the commercial Face Recognition API.
+Yes. The Linux sample is free and open source on GitHub.
+
+**Does the open-source SDK need a GPU?**
+
+No. It was tested on a Linux machine without a GPU.
+
+**Is it as accurate as the Docker Hub version?**
+
+No. The open-source sample is less accurate. For the commercial face recognition API, use the Face Recognition Linux SDK (`faceplugin/face-recognition`).
+
+**What similarity threshold should I use?**
+
+The default threshold is 75, on a similarity scale of 0 to 100.
+
+**Does it send face data to the cloud?**
+
+No. Detection, embedding extraction and comparison all run locally.
 
 ### Related documentation
 
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Open Source Windows](open-source-face-recognition-windows-sdk.md) · [Glossary](../resources/glossary.md)
 * Lower accuracy than the commercial [Linux HTTP API](face-recognition-linux-sdk.md).
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

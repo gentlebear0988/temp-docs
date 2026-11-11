@@ -1,19 +1,20 @@
 ---
 description: >-
-  Faceplugin Face Liveness Detection iOS SDK. On-premise PAD against photos, screens, masks, and
-  deepfakes. Xcode frameworks, setActivation, initSDK, detectImage.
+  Faceplugin Face Liveness Detection iOS SDK. On-premise PAD against photos,
+  screens, masks, and deepfakes. Xcode frameworks, setActivation, initSDK,
+  detectImage.
 icon: apple
 ---
 
-# Face Liveness Detection iOS SDK
+# iOS
 
 Fully on-premise **Face Liveness SDK for iOS**. Native class: `FaceLivenessSDK`.
 
-| What | Id |
-| ---- | -- |
-| iOS demo app (Xcode `PRODUCT_BUNDLE_IDENTIFIER`) | `com.faceplugin.faceliveness.app` |
-| Android demo package name | `com.faceplugin.faceliveness` |
-| SDK class / framework | `FaceLivenessSDK` in `facelivenessdk.framework` |
+| What                                             | Id                                              |
+| ------------------------------------------------ | ----------------------------------------------- |
+| iOS demo app (Xcode `PRODUCT_BUNDLE_IDENTIFIER`) | `com.faceplugin.faceliveness.app`               |
+| Android demo package name                        | `com.faceplugin.faceliveness`                   |
+| SDK class / framework                            | `FaceLivenessSDK` in `facelivenessdk.framework` |
 
 Keep the iOS demo bundle **`com.faceplugin.faceliveness.app`** so the included license works. Request a new license key if you change it.
 
@@ -37,8 +38,8 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 +(int)setActivation:(NSString*)license;
 ```
 
-| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>license key</code>)</li></ul> |
-| ---------------- | -------------------------------------------------------------------------------------------------- |
+| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>license key</code>)</li></ul>                                                            |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul> |
 
 #### <mark style="color:orange;">initSDK:</mark> This API is used to initialize the SDK <a href="#initsdk" id="initsdk"></a>
@@ -69,7 +70,7 @@ Status codes: **0** Success, **1** Invalid license, **2** Expired, **3** Not act
 
 | **Input**        | <ul><li><strong>image</strong> (UIImage*): The input image</li></ul> |
 | ---------------- | -------------------------------------------------------------------- |
-| **Return value** | JSON string with detected faces and liveness scores.                   |
+| **Return value** | JSON string with detected faces and liveness scores.                 |
 
 The liveness score ranges from 0.0 to 1.0. If it's greater than the threshold, it's real face. Demo default threshold is **0.5**.
 
@@ -100,19 +101,35 @@ The liveness demo does **not** enroll a match database.
 
 Sample demo UI from `faceplugin-assets` (`face-liveness/mobile/`). Not a dedicated iOS photoshoot.
 
-| Home | Liveness | Settings | About |
-| ---- | -------- | -------- | ----- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness sample demo home (mobile UI from faceplugin-assets, not a dedicated iOS photoshoot)" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" width="180"/></p> |
+| Home                                                                                                                                                                                                                                                                  | Liveness                                                                                                                                                                                          | Settings                                                                                                                                                                                       | About                                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness sample demo home (mobile UI from faceplugin-assets, not a dedicated iOS photoshoot)" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" data-size="original"> |
 
 Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thread.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Passive or active?** **Passive** anti-spoofing on this product.
+**Is the iOS SDK passive or active liveness detection?**
 
-**Screenshots?** Sample demo UI from `faceplugin-assets` (`face-liveness/mobile/`). Not a dedicated iOS photoshoot.
+Passive. It scores the face in a camera frame or image, with no challenge for the user.
+
+**What liveness threshold should I use on iOS?**
+
+Treat a score of 0.5 or higher as real. This is the demo default.
+
+**Which frameworks do I need?**
+
+`facelivenessdk.framework`, `FaceLivenessEngine.framework` and `onnxruntime.framework`, all added with Embed & Sign.
+
+**Can I change the demo's bundle ID?**
+
+Keep `com.faceplugin.faceliveness.app` to use the included license. If you change it, request a new license key.
+
+**Does the iOS liveness SDK work offline?**
+
+Yes. Activation and liveness detection run entirely on the iPhone.
 
 ### Related documentation
 
@@ -120,4 +137,4 @@ Score **≥ 0.5** → real. Call `setActivation` → `initSDK` off the main thre
 * [Face Recognition iOS SDK](../face-recognition-sdk/face-recognition-ios-sdk.md)
 * [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

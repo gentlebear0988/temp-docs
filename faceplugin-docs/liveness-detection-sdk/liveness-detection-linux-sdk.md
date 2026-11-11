@@ -1,15 +1,15 @@
 ---
 description: >-
-  Faceplugin Face Liveness API for Linux Docker. On-premise anti-spoofing PAD. POST
-  /api/liveness on port 8084. Score 0.5 or higher is Real.
+  Faceplugin Face Liveness API for Linux Docker. On-premise anti-spoofing PAD.
+  POST /api/liveness on port 8084. Score 0.5 or higher is Real.
 icon: linux
 ---
 
-# Face Liveness Detection Linux SDK
+# Linux
 
 Fully on-premise **Face Liveness HTTP API for Linux / Docker**. Image: `faceplugin/face-liveness`. Default port **8084**.
 
-Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Score **&lt; 0.5** → Spoof / `pass` false.
+Score **one RGB JPEG**. Score **≥ 0.5** → Real / `pass` true. Score **< 0.5** → Spoof / `pass` false.
 
 Need recognition as well? Run [Face Recognition Linux SDK](../face-recognition-sdk/face-recognition-linux-sdk.md) on port **8083** as a **second** container.
 
@@ -25,7 +25,7 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Pull from Docker Hub (no Google Drive download)
+#### Pull and run the Docker image
 
 ```
 sudo docker pull faceplugin/face-liveness:latest
@@ -40,7 +40,7 @@ On Docker Desktop (macOS/Windows) omit the `/etc/machine-id` volume.
 {% endstep %}
 
 {% step %}
-## Confirm health (no license yet)
+#### Check that the API is running
 
 ```
 curl -s http://127.0.0.1:8084/api/health
@@ -48,7 +48,7 @@ curl -s http://127.0.0.1:8084/api/health
 {% endstep %}
 
 {% step %}
-## Copy the machine code
+#### Get your machine code
 
 ```
 curl -s http://127.0.0.1:8084/api/machinecode
@@ -58,7 +58,7 @@ Send machine code to Faceplugin. Docker and local host codes are **different**.
 {% endstep %}
 
 {% step %}
-## Activate
+#### Activate the license
 
 Put your key in `license.txt`, then:
 
@@ -70,7 +70,7 @@ curl -s -X POST http://127.0.0.1:8084/api/activate \
 {% endstep %}
 
 {% step %}
-## Check liveness
+#### Check a face for liveness
 
 ```
 IMG=$(base64 -w0 face.jpg)   # macOS: base64 -i face.jpg
@@ -141,15 +141,15 @@ Licenses are **offline**. [Request a License & Support](../request-a-license-and
 
 ### APIs
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License status |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and `init_sdk()` |
-| `POST /api/liveness` | Passive face anti-spoofing |
-| `POST /api/check_liveness` | Alias of `/api/liveness` |
+| Endpoint                   | Purpose                           |
+| -------------------------- | --------------------------------- |
+| `GET /api/health`          | Process is listening (no license) |
+| `GET /api/machinecode`     | Machine code                      |
+| `GET /api/licenseStatus`   | License status                    |
+| `GET /api/backend`         | `"cpu"`                           |
+| `POST /api/activate`       | Activate and `init_sdk()`         |
+| `POST /api/liveness`       | Passive face anti-spoofing        |
+| `POST /api/check_liveness` | Alias of `/api/liveness`          |
 
 Full reference: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
@@ -190,11 +190,27 @@ Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio 
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Face Liveness API?** `POST /api/liveness` on port **8084**. Score **≥ 0.5** → Real.
+**What is the Faceplugin face liveness API?**
 
-**Machine code?** `GET /api/machinecode` returns machine code. Docker and host codes differ.
+`POST /api/liveness` on port 8084, served by the `faceplugin/face-liveness` Docker image. A score of 0.5 or higher means the face is real.
+
+**How do I get the machine code for my license?**
+
+Call `GET /api/machinecode`. The machine code inside Docker differs from the host's, so request it from the environment you will run.
+
+**Is this active or passive liveness detection?**
+
+Passive. The API scores a single JPEG, with no challenge for the user.
+
+**Can I run face recognition and liveness on the same Linux server?**
+
+Yes. Run Face Recognition on port 8083 and Face Liveness on port 8084 as separate containers.
+
+**Can I run several liveness containers with one license?**
+
+Yes, on the same Linux host. Mount `/etc/machine-id` into each container and give each a unique name and host port (for example 8085).
 
 ### Related documentation
 
@@ -203,4 +219,4 @@ Open [http://127.0.0.1:9004](http://127.0.0.1:9004). You do **not** need Gradio 
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 * [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin Face Recognition Server SDK and Face Recognition API. On-premise HTTP for Windows,
-  Linux Docker, and .NET. detect, match, similarity on port 8083. Offline after license activation.
+  Faceplugin Face Recognition Server SDK and Face Recognition API. On-premise
+  HTTP for Windows, Linux Docker, and .NET. detect, match, similarity on port
+  8083.
 icon: server
 ---
 
-# Faceplugin Face Recognition Server SDK
+# Server
 
 Face **Recognition** as an HTTP API (or .NET bindings) on **your** machine. Still-image detect, quality, template extract, 1:1 match, and template similarity. There is **no** server-side 1:N gallery (`POST /api/identify` does not exist).
 
@@ -23,20 +24,32 @@ flowchart LR
   Match --> Result
 ```
 
-### FAQ
+### Frequently Asked Questions
 
-**Is this a Face Recognition API?** Yes. HTTP on port **8083**: `POST /api/detect`, `/api/match`, `/api/similarity`.
+**Is this a face recognition API?**
 
-**Is there server-side 1:N?** No. There is no `POST /api/identify` gallery. Store templates in **your** database.
+Yes. The server exposes an HTTP face recognition API on port 8083, with detect, match and similarity endpoints.
 
-**Docker vs Windows?** Same routes. Windows has no Docker; Linux uses `faceplugin/face-recognition`.
+**Does the server support 1:N face search?**
 
-**Recognition + liveness in one process?** See [Recognition + Liveness](recognition-and-liveness.md). Or keep Face Liveness on **8084** as a separate product.
+No. There is no `POST /api/identify` endpoint. Store face templates in your own database and compare them with `/api/similarity`.
+
+**What is the difference between the Docker and Windows versions?**
+
+They expose the same API routes. The Linux version runs from the `faceplugin/face-recognition` Docker image; the Windows version runs natively without Docker.
+
+**Does the face recognition server work offline?**
+
+Yes. Once the license is activated, the server needs no internet connection.
+
+**Can I run face recognition and liveness detection in one process?**
+
+Yes. Use the Recognition + Liveness server, or run the Face Liveness server separately on port 8084.
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Face Recognition SDK](README.md) · [Glossary](../resources/glossary.md)
+* [Capabilities](capabilities.md) · [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Face Recognition SDK](./) · [Glossary](../resources/glossary.md)
 * [Face Liveness Detection Server SDK](../liveness-detection-sdk/server-sdk.md)
 * [ID Document Recognition Server SDK](../id-document-recognition-sdk/server-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

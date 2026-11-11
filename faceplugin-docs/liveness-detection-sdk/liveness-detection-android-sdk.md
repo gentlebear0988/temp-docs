@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin Face Liveness Detection Android SDK. On-premise PAD against photos, screens, masks,
-  and deepfakes. AAR, setActivation, init, faceDetection, detect.
+  Faceplugin Face Liveness Detection Android SDK. On-premise PAD against photos,
+  screens, masks, and deepfakes.
+icon: android
 layout:
   width: default
   title:
@@ -20,19 +21,20 @@ layout:
     visible: true
   actions:
     visible: true
-icon: android
+  anchors:
+    visible: true
 ---
 
-# Face Liveness Detection Android SDK
+# Android
 
 Fully on-premise **Face Liveness SDK for Android** (presentation-attack detection). The demo does not enroll people or run 1:N search. It scores whether the face is real.
 
-| What | Id |
-| ---- | -- |
-| Android demo package name | `com.faceplugin.faceliveness` |
-| Public Java class | `com.faceplugin.facelivenesssdk.FaceLivenessSDK` |
+| What                      | Id                                               |
+| ------------------------- | ------------------------------------------------ |
+| Android demo package name | `com.faceplugin.faceliveness`                    |
+| Public Java class         | `com.faceplugin.facelivenesssdk.FaceLivenessSDK` |
 
-Keep the demo package name **`com.faceplugin.faceliveness`** so the sample key works.
+Keep the demo package name **`com.faceplugin.faceliveness`** so the sample license key keep working.
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -68,8 +70,8 @@ public static int setActivation(Context context, String license);
 ```
 
 | **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>license key</code>)</li></ul> |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul>       |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul>            |
 
 #### <mark style="color:orange;">init:</mark> This API is used to initialize the SDK <a href="#init" id="init"></a>
 
@@ -100,8 +102,8 @@ public static List<FaceBox> faceDetection(Bitmap bitmap, FaceDetectionParam para
 ```
 
 | **Input**        | <ul><li><strong>bitmap</strong> (Bitmap): The Bitmap image</li><li><strong>param</strong> (<strong>FaceDetectionParam</strong>): Parameters for face detection</li></ul> |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Return value** | A list of **FaceBox** objects representing the detected faces and their liveness scores.                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Return value** | A list of **FaceBox** objects representing the detected faces and their liveness scores.                                                                                 |
 
 **FaceDetectionParam**
 
@@ -160,9 +162,9 @@ public static int deinit();
 
 ### Screenshots
 
-| Home | Liveness | Settings | About |
-| ---- | -------- | -------- | ----- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness Android home" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" width="180"/></p> |
+| Home                                                                                                                                                                                           | Liveness                                                                                                                                                                                          | Settings                                                                                                                                                                                       | About                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/home.png" alt="Faceplugin Face Liveness Android home" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/liveness.png" alt="Faceplugin Face Liveness live camera" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/settings.png" alt="Faceplugin Face Liveness settings" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-liveness/mobile/about.png" alt="Faceplugin Face Liveness About" data-size="original"> |
 
 ### License
 
@@ -186,11 +188,31 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Passive or active?** **Passive** anti-spoofing. Score the camera frame; no smile / turn-head challenge on this product.
+**Is this passive or active liveness detection?**
 
-**Threshold?** Treat **0.5** or higher as Real / pass unless Faceplugin support gives you a different recommended threshold.
+Passive. The SDK scores a camera frame, with no smile or head-turn challenge.
+
+**What liveness threshold should I use on Android?**
+
+Treat 0.5 or higher as a pass, unless Faceplugin support recommends a different value for your use case.
+
+**Why am I not getting a liveness score?**
+
+`FaceDetectionParam.check_liveness` defaults to `false`. Set it to `true` before calling `faceDetection`.
+
+**What is the minimum Android version?**
+
+The SDK requires minSdk 24.
+
+**Can I change the demo's package name?**
+
+Keep `com.faceplugin.faceliveness` to use the sample license key. For your own package name, request a license.
+
+**Does the Android liveness SDK work offline?**
+
+Yes. Activation and liveness detection run entirely on the device.
 
 ### Related documentation
 
@@ -198,4 +220,4 @@ if (!faces.isEmpty() && faces.get(0).liveness >= 0.5f) {
 * [Face Recognition Android SDK](../face-recognition-sdk/face-recognition-android-sdk.md)
 * [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

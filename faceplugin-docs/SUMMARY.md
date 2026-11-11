@@ -56,8 +56,6 @@
       * [Linux](id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
       * [Windows](id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
       * [Node.js](id-document-recognition-sdk/id-document-recognition-node-sdk.md)
-* [Palm Recognition SDK](palm-recognition-sdk/README.md)
-  * [Open Source](palm-recognition-sdk/open-source-palm-recognition-sdk.md)
 
 ## Integration
 

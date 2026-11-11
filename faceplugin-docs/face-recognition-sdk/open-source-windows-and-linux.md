@@ -1,11 +1,12 @@
 ---
 description: >-
-  Free on-premise Python Face Recognition sample for Windows and Linux. Detect, embed, and
-  compare faces locally. Lower accuracy than Faceplugin’s commercial HTTP API on port 8083.
+  Free on-premise Python Face Recognition sample for Windows and Linux. Detect,
+  embed, and compare faces locally. Lower accuracy than Faceplugin’s commercial
+  HTTP API on port 8083.
 icon: code
 ---
 
-# Open Source Windows & Linux
+# Open Source
 
 ### Code <a href="#code" id="code"></a>
 
@@ -26,8 +27,6 @@ Accuracy is lower than the commercial Face Recognition SDK. Contact Faceplugin i
 * **Windows or Linux** operating system
 
 #### Setup Instructions
-
-
 
 1.  **Install Anaconda** (if not already installed)
 
@@ -114,8 +113,6 @@ Extracts face information from an image.
   * `landmarks`: Facial landmark points
   * `embedding`: Feature embedding vector
 
-
-
 **`get_similarity(feature1, feature2)`**
 
 Compares two face feature embeddings.
@@ -135,11 +132,15 @@ Compares two face feature embeddings.
 * **Supported Formats**: JPG, PNG, BMP, TIFF
 * **Face Detection**: Automatic detection of multiple faces per image<br>
 
-### FAQ
+### Frequently Asked Questions
 
-**Is this the commercial SDK?** No. Contact Faceplugin for the higher-accuracy native engine.
+**Is this the commercial SDK?**&#x20;
 
-**Does it run on-premise?** Yes. Processing stays on the user’s Windows or Linux machine.
+No. Contact Faceplugin for the higher-accuracy native engine.
+
+**Does it run on-premise?**&#x20;
+
+Yes. Processing stays on the user’s Windows or Linux machine.
 
 ### Related documentation
 

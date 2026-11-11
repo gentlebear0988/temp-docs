@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin Face Liveness API for Windows and Linux Docker. On-premise anti-spoofing HTTP POST
-  /api/liveness on port 8084. Score 0.5 or higher is Real.
+  Faceplugin Face Liveness API for Windows and Linux Docker. On-premise
+  anti-spoofing HTTP POST /api/liveness on port 8084. Score 0.5 or higher is
+  Real.
 icon: server
 ---
 
-# Faceplugin Face Liveness Detection Server SDK
+# Server
 
 Score **one RGB JPEG** over HTTP. `POST /api/liveness` (alias `/api/check_liveness`). Score **0.5 or higher** → Real / pass.
 
@@ -24,16 +25,32 @@ flowchart LR
   Score --> RealOrSpoof
 ```
 
-### FAQ
+### Frequently Asked Questions
 
-**What is the Face Liveness API?** `POST /api/liveness` on port **8084**. Score **≥ 0.5** is Real / pass.
+**What is the Faceplugin face liveness API?**
 
-**Is this document anti-spoofing?** No. Use [ID Document Liveness](../id-document-liveness-sdk/).
+An HTTP endpoint, `POST /api/liveness`, on port 8084. A score of 0.5 or higher means the face is real (pass).
+
+**What does the liveness API accept?**
+
+One RGB JPEG per request.
+
+**Can I run face recognition and liveness on the same server?**
+
+Yes. Run Face Recognition on port 8083 and Face Liveness on port 8084 as separate services, without mixing their `lib/cpu` runtimes.
+
+**Does the face liveness API check ID documents?**
+
+No. It checks faces only. For ID document anti-spoofing, see the ID Document Liveness SDK.
+
+**Does the liveness server work offline?**
+
+Yes. After license activation, it runs entirely on your own server.
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [Face Liveness Detection SDK](README.md) · [Glossary](../resources/glossary.md)
+* [Capabilities](capabilities.md) · [Faceplugin Face Liveness Detection Mobile SDK](mobile-sdk.md) · [Face Liveness Detection SDK](./) · [Glossary](../resources/glossary.md)
 * [Face Recognition Server SDK](../face-recognition-sdk/server-sdk.md)
 * [ID Document Liveness Server SDK](../id-document-liveness-sdk/server-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

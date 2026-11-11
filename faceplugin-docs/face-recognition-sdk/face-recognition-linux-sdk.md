@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin Face Recognition API for Linux Docker. On-premise detect, match, and similarity
-  on port 8083. Offline after license activation.
+  Faceplugin Face Recognition API for Linux Docker. On-premise detect, match,
+  and similarity on port 8083. Offline after license activation.
 icon: linux
 ---
 
-# Face Recognition Linux SDK
+# Linux
 
 Fully on-premise **Face Recognition API for Linux / Docker**. Image: `faceplugin/face-recognition`. Default port **8083**.
 
@@ -23,7 +23,7 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Pull from Docker Hub (no Google Drive download)
+#### Pull from Docker Hub (no Google Drive download)
 
 ```
 sudo docker pull faceplugin/face-recognition:latest
@@ -38,7 +38,7 @@ On Docker Desktop (macOS/Windows) omit the `/etc/machine-id` volume.
 {% endstep %}
 
 {% step %}
-## Confirm health (no license yet)
+#### Confirm health (no license yet)
 
 ```
 curl -s http://127.0.0.1:8083/api/health
@@ -46,7 +46,7 @@ curl -s http://127.0.0.1:8083/api/health
 {% endstep %}
 
 {% step %}
-## Copy the machine code
+#### Copy the machine code
 
 ```
 curl -s http://127.0.0.1:8083/api/machinecode
@@ -56,7 +56,7 @@ Send machine code to Faceplugin. Docker and local host codes are **different**.
 {% endstep %}
 
 {% step %}
-## Activate
+#### Activate
 
 Put your key in `license.txt`, then:
 
@@ -150,27 +150,27 @@ Open [http://127.0.0.1:9003](http://127.0.0.1:9003). Tabs: Detect, Quality, Matc
 
 ### Integrate into your own app
 
-| Path | When to use |
-| ---- | ----------- |
-| **HTTP** (`app.py`) | Any language. Keep this API running and `POST` base64 JPEGs. |
-| **`sdk.py`** | Python on the **same** Linux host as `lib/cpu/` (or inside the container). |
+| Path                | When to use                                                                |
+| ------------------- | -------------------------------------------------------------------------- |
+| **HTTP** (`app.py`) | Any language. Keep this API running and `POST` base64 JPEGs.               |
+| **`sdk.py`**        | Python on the **same** Linux host as `lib/cpu/` (or inside the container). |
 
 You do **not** need Gradio in production.
 
 ### APIs
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License status |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and `init_sdk()` |
-| `POST /api/detect` | Detect faces |
-| `POST /api/quality` | Quality checks |
-| `POST /api/feature` | Extract template |
-| `POST /api/match` | Compare two photos |
-| `POST /api/similarity` | Compare two templates |
+| Endpoint                 | Purpose                           |
+| ------------------------ | --------------------------------- |
+| `GET /api/health`        | Process is listening (no license) |
+| `GET /api/machinecode`   | Machine code                      |
+| `GET /api/licenseStatus` | License status                    |
+| `GET /api/backend`       | `"cpu"`                           |
+| `POST /api/activate`     | Activate and `init_sdk()`         |
+| `POST /api/detect`       | Detect faces                      |
+| `POST /api/quality`      | Quality checks                    |
+| `POST /api/feature`      | Extract template                  |
+| `POST /api/match`        | Compare two photos                |
+| `POST /api/similarity`   | Compare two templates             |
 
 Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
@@ -193,13 +193,27 @@ Call order: `get_machine_code` → `activate` → `init_sdk` → detect / qualit
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Is this a Face Recognition API?** Yes. Docker image `faceplugin/face-recognition`, port **8083**: `POST /api/detect`, `/api/match`, `/api/similarity`.
+**Is this a face recognition API?**
 
-**Machine code?** `GET /api/machinecode` returns machine code. Docker and host codes differ.
+Yes. The `faceplugin/face-recognition` Docker image serves a face recognition REST API on port 8083, with detect, match and similarity endpoints.
 
-**Server-side 1:N?** No. There is no `POST /api/identify` gallery.
+**How do I get the machine code for my license?**
+
+Call `GET /api/machinecode`. The machine code inside Docker differs from the host's, so request it from the environment you will run.
+
+**Does the Linux face recognition server support 1:N search?**
+
+No. There is no `POST /api/identify` gallery. Store templates in your own database and compare them with `/api/similarity`.
+
+**Can I run several containers with one license?**
+
+Yes, on the same Linux host. Mount `/etc/machine-id` into each container so they share a machine code, then activate each with the same key.
+
+**What Linux version do I need without Docker?**
+
+Native Linux requires glibc 2.38 or later, for example Ubuntu 24.04.
 
 ### Related documentation
 
@@ -208,4 +222,4 @@ Call order: `get_machine_code` → `activate` → `init_sdk` → detect / qualit
 * [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md)
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Architecture](../deploy-and-host/architecture.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Architecture](../deploy-and-host/architecture.md) · [SDK comparison](../resources/comparisons/)

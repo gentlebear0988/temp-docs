@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin Face Liveness Detection SDK and anti-spoofing. On-premise passive liveness for
-  Android, iOS, Windows, and Linux Docker. POST /api/liveness on port 8084.
+  Faceplugin Face Liveness Detection SDK and anti-spoofing. On-premise passive
+  liveness for Android, iOS, Windows, and Linux Docker. POST /api/liveness on
+  port 8084.
 icon: user-shield
 ---
 
-# Face Liveness Detection SDK
+# Liveness
 
 ### Overview
 
@@ -37,15 +38,7 @@ Capable of detecting:
 
 Start with [Face SDK capabilities](../face-recognition-sdk/capabilities.md), then **Mobile SDK** or **Server SDK**.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Face SDK capabilities — Recognition, Liveness, Recognition + Liveness.</td><td><a href="../face-recognition-sdk/capabilities.md">../face-recognition-sdk/capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android and iOS. Live camera anti-spoofing.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker. JPEG over HTTP on port 8084.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
-
-### FAQ
-
-**What is passive liveness detection?** The engine scores a camera frame or JPEG without a user challenge animation. See [Capabilities](capabilities.md).
-
-**What is the difference between this and Face Recognition liveness?** Face Recognition mobile Identify includes 2D liveness as part of matching. This product is anti-spoofing only.
-
-**Does it require the internet?** No, after license activation.
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Capabilities</strong></td><td>Face SDK capabilities — Recognition, Liveness, Recognition + Liveness.</td><td><a href="../face-recognition-sdk/capabilities.md">capabilities.md</a></td></tr><tr><td></td><td><strong>Mobile SDK</strong></td><td>Android and iOS. Live camera anti-spoofing.</td><td><a href="mobile-sdk.md">mobile-sdk.md</a></td></tr><tr><td></td><td><strong>Server SDK</strong></td><td>Windows and Linux / Docker. JPEG over HTTP on port 8084.</td><td><a href="server-sdk.md">server-sdk.md</a></td></tr></tbody></table>
 
 ### Use cases
 
@@ -55,9 +48,19 @@ Start with [Face SDK capabilities](../face-recognition-sdk/capabilities.md), the
 * **Exam proctoring** — score camera frames for presentation attacks without a challenge animation
 * **Fraud prevention** — JPEG anti-spoofing on your server (port **8084**)
 
+### Frequently Asked Questions
+
+**What is passive liveness detection?**&#x20;
+
+The engine scores a camera frame or JPEG without a user challenge animation. See [Capabilities](capabilities.md).
+
+**What is the difference between this and Face Recognition liveness?**
+
+Face Recognition mobile Identify includes 2D liveness as part of matching. This product is anti-spoofing only.
+
 ### Related documentation
 
 * [Face SDK capabilities](../face-recognition-sdk/capabilities.md) · [Face SDK](../face-recognition-sdk/) · [ID Document SDK](../id-document-recognition-sdk/)
 * [Request a License](../request-a-license-and-support.md) · [Try it](../resources/try-it.md) · [FAQ](../resources/faq.md) · [Glossary](../resources/glossary.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)
 * [Status codes](../resources/status-codes.md)

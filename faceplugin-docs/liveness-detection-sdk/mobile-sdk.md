@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin Face Liveness Detection Mobile SDK. On-premise anti-spoofing for Android and
-  iOS. Passive liveness against photos, screens, 3D masks, and deepfakes.
+  Faceplugin Face Liveness Detection Mobile SDK. On-premise anti-spoofing for
+  Android and iOS. Passive liveness against photos, screens, 3D masks, and
+  deepfakes.
 icon: mobile-screen
 ---
 
-# Faceplugin Face Liveness Detection Mobile SDK
+# Mobile
 
 Standalone presentation-attack detection on Android and iOS. The demo scores whether the face is **real**. It does not enroll people or run 1:N search.
 
@@ -24,15 +25,31 @@ flowchart LR
   Score --> RealOrSpoof
 ```
 
-### FAQ
+### Frequently Asked Questions
 
-**Is this active liveness?** No. This product is **passive** anti-spoofing (no smile / turn-head challenge).
+**Is this active or passive liveness detection?**
 
-**Flutter / React Native?** There is no public Face Liveness Flutter or React Native SDK. Use native Android/iOS, or 2D liveness on Face Recognition Identify.
+Passive. There is no smile, head-turn or other challenge. The SDK scores a camera frame and returns real or spoof.
+
+**What attacks does the mobile liveness SDK detect?**
+
+Printed photos, screen replays, 3D masks and deepfakes.
+
+**What score counts as a real face?**
+
+A liveness score of 0.5 or higher is treated as Real (pass).
+
+**Does the SDK do face recognition too?**
+
+No. It is anti-spoofing only, with no enrollment or 1:N search. For recognition plus liveness, use the Face Recognition Mobile SDK.
+
+**Does it work offline?**
+
+Yes. Liveness detection runs entirely on the device.
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Face Liveness Detection SDK](README.md) · [Glossary](../resources/glossary.md)
+* [Capabilities](capabilities.md) · [Faceplugin Face Liveness Detection Server SDK](server-sdk.md) · [Face Liveness Detection SDK](./) · [Glossary](../resources/glossary.md)
 * [Face Recognition Mobile SDK](../face-recognition-sdk/mobile-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

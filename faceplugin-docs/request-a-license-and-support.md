@@ -1,8 +1,8 @@
 ---
 description: >-
   Request a Faceplugin offline license. Mobile license keys bind to app id.
-  Server licenses start from a machine code from GET /api/machinecode. Docker and
-  host codes differ. On-premise, no per-call cloud.
+  Server licenses start from a machine code from GET /api/machinecode. Docker
+  and host codes differ. On-premise, no per-call clo
 icon: key
 ---
 
@@ -30,6 +30,7 @@ Do not paste demo license keys into your production app.
 ### Need support?
 
 Faceplugin provides integration help for licensed SDKs, plus ongoing support after you go live. Email, WhatsApp, or Telegram with your OS, GitHub repo name, activate/init result codes, and whether you use Docker or a native Google Drive runtime.
+
 ### Contact us
 
 * Email : [info@faceplugin.com](mailto:info@faceplugin.com)

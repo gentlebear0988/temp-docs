@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin Face Recognition Windows SDK. Fully on-premise HTTP API on port 8083. detect,
-  quality, feature, match, similarity. No Docker.
+  Faceplugin Face Recognition Windows SDK. Fully on-premise HTTP API on port
+  8083. detect, quality, feature, match, similarity.
 icon: windows
 ---
 
-# Face Recognition Windows SDK
+# Windows
 
 Fully on-premise **commercial Face Recognition HTTP API for Windows**. Default port **8083**. Gradio **9003**. No Docker on Windows.
 
@@ -23,13 +23,13 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Copy the runtime
+#### Copy the runtime
 
 Copy the CPU libraries from [Google Drive](https://drive.google.com/drive/folders/12i5d2-TahuJumre2EVYqWO8cIi_unTBz) into `lib\cpu\`.
 {% endstep %}
 
 {% step %}
-## Install and run
+#### Install and run
 
 ```
 pip install -r requirements.txt
@@ -38,7 +38,7 @@ run.bat
 {% endstep %}
 
 {% step %}
-## Copy the machine code
+#### Copy the machine code
 
 ```
 curl -s http://127.0.0.1:8083/api/machinecode
@@ -48,7 +48,7 @@ Send machine code to Faceplugin. Copy it from the terminal if curl is not availa
 {% endstep %}
 
 {% step %}
-## Activate
+#### Activate
 
 ```
 curl -s -X POST http://127.0.0.1:8083/api/activate \
@@ -66,18 +66,18 @@ Control routes (`/api/health`, `/api/machinecode`, `/api/activate`, `/api/licens
 
 Same routes as [Face Recognition Linux SDK](face-recognition-linux-sdk.md):
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License status |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and `init_sdk()` |
-| `POST /api/detect` | Detect faces |
-| `POST /api/quality` | Quality checks |
-| `POST /api/feature` | Extract template |
-| `POST /api/match` | Compare two photos |
-| `POST /api/similarity` | Compare two templates |
+| Endpoint                 | Purpose                           |
+| ------------------------ | --------------------------------- |
+| `GET /api/health`        | Process is listening (no license) |
+| `GET /api/machinecode`   | Machine code                      |
+| `GET /api/licenseStatus` | License status                    |
+| `GET /api/backend`       | `"cpu"`                           |
+| `POST /api/activate`     | Activate and `init_sdk()`         |
+| `POST /api/detect`       | Detect faces                      |
+| `POST /api/quality`      | Quality checks                    |
+| `POST /api/feature`      | Extract template                  |
+| `POST /api/match`        | Compare two photos                |
+| `POST /api/similarity`   | Compare two templates             |
 
 Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
@@ -104,11 +104,27 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Face Recognition API on Windows?** Yes. Port **8083**, same routes as Linux. No Docker.
+**Is there a face recognition API for Windows?**
 
-**Offline?** Yes after `POST /api/activate` with a license key bound to this host's machine code.
+Yes. The Face Recognition Windows SDK serves an HTTP API on port 8083 with the same routes as the Linux version, and it doesn't need Docker.
+
+**Does the Windows face recognition SDK work offline?**
+
+Yes. After you call `POST /api/activate` with a license key bound to the host's machine code, it runs with no internet connection.
+
+**Does the Windows face recognition server support 1:N search?**
+
+No. There is no `POST /api/identify` endpoint. Store face templates in your own database and compare them with `/api/similarity`.
+
+**Do I need Docker to run face recognition on Windows?**
+
+No. The Windows SDK runs natively with Python and `run.bat`. Docker is only used for the Linux version.
+
+**Is this the same as the open-source Windows SDK?**
+
+No. This is Faceplugin's commercial Windows SDK. The open-source Face Recognition Windows SDK is a separate product.
 
 ### Related documentation
 
@@ -116,4 +132,4 @@ curl -s -X POST http://127.0.0.1:8083/api/match \
 * [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [ID Document Recognition Windows SDK](../id-document-recognition-sdk/id-document-recognition-windows-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)
