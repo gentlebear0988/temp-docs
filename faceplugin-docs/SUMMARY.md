@@ -2,13 +2,13 @@
 
 ## Getting started
 
-* [Welcome](README.md)
-* [Choose a product](resources/choose-a-product.md)
-* [Try it](resources/try-it.md)
+* [Faceplugin SDK Documentation: On-Premise Face Recognition, Liveness & ID Document SDKs](README.md)
+* [Choose the Right Faceplugin SDK: Face Recognition, Face Liveness and ID Document Recognition](resources/choose-a-product.md)
+* [Try Faceplugin SDKs: Quick Start for Face Recognition, Face Liveness and ID Document APIs](resources/try-it.md)
 
 ## Products
 
-* [Face SDK](face-recognition-sdk/README.md)
+* [Face Recognition SDK: On-Premise Face Recognition and Face Liveness Detection](face-recognition-sdk/README.md)
   * [Capabilities](face-recognition-sdk/capabilities.md)
   * [Recognition](face-recognition-sdk/recognition.md)
     * [Server](face-recognition-sdk/server-sdk.md)

@@ -1,33 +1,41 @@
 ---
 description: >-
-  Try Faceplugin SDKs with copy-paste commands. Start with license-free curl
-  health and machine-code checks, then activate the SDK and test face detection,
-  face matching, liveness, and document OCR.
+  This quick start shows you how to test Faceplugin's face recognition, face
+  liveness detection and ID document recognition SDKs with copy-paste commands.
 icon: flask
 ---
 
-# Try it
+# Try Faceplugin SDKs: Quick Start for Face Recognition, Face Liveness and ID Document APIs
 
-These snippets are meant to be **copied as-is**. You do not write a UI first. Start with `health` and `machinecode` (no license needed), then activate and call one process API. Full endpoint contracts: [HTTP API](../http-api/).
+There is no need to build a UI first: check that the server is running, activate your license once, then call the main API for each product.
 
 {% hint style="info" %}
-**Start with the server if you want the quickest test.** Docker Hub + `curl` lets you test the SDK without Android Studio. Mobile snippets assume you have already run the demo once, with the required AAR/framework files in place and the demo license configured for the demo app ID.
+**Fastest way to test:** use the server SDKs. You only need Docker Hub and `curl`, with no Android Studio required. The mobile snippets in step 4 assume you have already built and run the demo app.
 {% endhint %}
 
-## 1. Server — no license yet
+### Default API Ports
 
-Start any Linux/Windows server product, then:
+| Server SDK              | Default port |
+| ----------------------- | ------------ |
+| ID Document Recognition | 8082         |
+| Face Recognition        | 8083         |
+| Face Liveness           | 8084         |
+| ID Document Liveness    | 8086         |
+
+### 1. Check the Server and Get Your Machine Code (No License Needed)
+
+Before you have a license, you can confirm the server is running and get the **machine code** you need to request a license. Call the `health` and `machinecode` endpoints. The example below uses the Face Recognition server on port 8083; change the port for other products.
 
 ```bash
 curl -s http://127.0.0.1:8083/api/health
 curl -s http://127.0.0.1:8083/api/machinecode
 ```
 
-Change the port: **ID Document Recognition** (Document Reader) **8082**, Face Recognition **8083**, Face Liveness **8084**, Document Liveness **8086**.
+Send the machine code with your [license request](../request-a-license-and-support.md).
 
-`health` works **before** you have a key. Copy the server **machine code** (machine code) from `machinecode` and [request a license](../request-a-license-and-support.md).
+### 2. Activate Your License (One Time)
 
-## 2. Server — activate once
+Save your license key to a file, then POST it to `/api/activate`. A successful call returns **"Successfully activated"** and loads the engine. You only need to do this once per server.
 
 ```bash
 # license.txt contains one line: license key
@@ -36,9 +44,7 @@ curl -s -X POST http://127.0.0.1:8083/api/activate \
   --data-binary @license.txt
 ```
 
-Success looks like `"Successfully activated"`. The service also loads the engine on this call.
-
-## 3. Server — try the main APIs for each product
+### 3. Test the Main Server APIs
 
 {% tabs %}
 {% tab title="Face Recognition" %}
@@ -95,9 +101,12 @@ req = urllib.request.Request(
 print(urllib.request.urlopen(req).read().decode())
 ```
 
-## 4. Mobile — after the demo compiles
+### 4. Test the Mobile SDKs (Android and Flutter)
 
-Keep the **demo application ID** so the included license key license works. Call this on a **background** thread.
+Once the demo app compiles and runs, use these snippets to call the SDK from your own code. Each one gets the machine code, activates the license, initializes the engine and then runs recognition.
+
+* **Run SDK calls on a background thread** (or in an async function in Flutter) so the UI does not freeze.
+* **Keep the demo's application ID** so the included demo license keeps working.
 
 {% tabs %}
 {% tab title="Android Face Recognition" %}
@@ -150,6 +159,28 @@ Thread {
 `locateDocument` is overlay-only (no OCR). Install: [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md).
 {% endtab %}
 {% endtabs %}
+
+### Frequently Asked Questions
+
+**What is the fastest way to test a Faceplugin SDK?**
+
+Use a server SDK. Pull the Docker image, then call the API with `curl`. You don't need Android Studio or a UI.
+
+**How do I get the machine code for a Faceplugin license?**
+
+Call `/api/machinecode` on the running server, then send the result with your license request.
+
+**How do I activate a Faceplugin server license?**
+
+POST your license key to `/api/activate`. The server returns "Successfully activated" and loads the engine. This only needs to be done once.
+
+**What liveness score means a real face?**
+
+On the Face Liveness API, a score of 0.5 or higher means the face is real.
+
+**Which ports do the Faceplugin server APIs use?**
+
+ID Document Recognition uses 8082, Face Recognition 8083, Face Liveness 8084 and ID Document Liveness 8086.
 
 ### Related documentation
 

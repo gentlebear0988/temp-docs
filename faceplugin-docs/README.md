@@ -26,18 +26,27 @@ layout:
     visible: true
 ---
 
-# Welcome
+# Faceplugin SDK Documentation: On-Premise Face Recognition, Liveness & ID Document SDKs
 
 ### Introduction
 
-**Faceplugin** builds **on-premise, offline** biometric SDKs. Processing stays on the phone, your Windows/Linux host, or your Docker host. There is no per-call Faceplugin cloud.
+Faceplugin provides **offline biometric SDKs** for **face recognition**, **face liveness detection (anti-spoofing)** and **ID document recognition**. Every SDK runs entirely on the user's device or on your own **Windows, Linux or Docker** server, so biometric data never leaves your infrastructure and there are no per-call cloud fees.
+
+This documentation shows you how to choose the right SDK, install it on your platform, license it and integrate it into your app through native code or the HTTP API.
+
+### Why Choose an On-Premise Biometric SDK?
+
+* **Privacy by design:** face images, templates and document data stay on your hardware.
+* **No per-transaction cloud costs:** processing runs locally, not on a metered cloud API.
+* **Works offline:** recognition and verification keep running without an internet connection.
+* **Full data ownership:** store face templates and document results in your own database.
 
 ### What you can build
 
 * **Passport OCR & ID verification** — classify and read **16,900** document templates from **255** countries (MRZ — the machine-readable zone on passports — plus barcode and optional authenticity). Start: [ID Document capabilities](id-document-recognition-sdk/capabilities.md) · [Passport OCR guide](resources/passport-ocr-and-id-verification.md)
 * **Face recognition & liveness** — offline 1:1 match, mobile 1:N Identify, standalone face anti-spoofing, or recognition + liveness in one server process. Start: [Face SDK capabilities](face-recognition-sdk/capabilities.md)
 
-Product hubs: [Face SDK](face-recognition-sdk/) · [ID Document SDK](id-document-recognition-sdk/) · [Palm Recognition](palm-recognition-sdk/)
+Product hubs: [Face SDK](face-recognition-sdk/) · [ID Document SDK](id-document-recognition-sdk/)&#x20;
 
 This documentation is the **integration** layer: clone a public GitHub sample, add the Google Drive runtime package or pull Docker Hub, activate a license, then call the APIs that repository actually exposes.
 
@@ -61,7 +70,7 @@ Each GitHub sample app is a complete application for testing. In production, use
 
 ### Our Products
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face SDK</strong></td><td>Recognition, liveness, and recognition + liveness — mobile and server</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>ID Document SDK</strong></td><td>Passport OCR, authenticity-only liveness, and OCR + authenticity — 16,900 templates</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr><tr><td><strong>Palm Recognition SDK</strong></td><td>Open-source RGB-camera palm matching sample</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png</a></td><td></td><td><a href="palm-recognition-sdk/">palm-recognition-sdk</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Face SDK</strong></td><td>Recognition, liveness, and recognition + liveness — mobile and server</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png</a></td><td></td><td><a href="face-recognition-sdk/">face-recognition-sdk</a></td></tr><tr><td><strong>ID Document SDK</strong></td><td>Passport OCR, authenticity-only liveness, and OCR + authenticity — 16,900 templates</td><td><a href="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png">https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png</a></td><td></td><td><a href="id-document-recognition-sdk/">id-document-recognition-sdk</a></td></tr></tbody></table>
 
 ### Try our SDKs
 
@@ -81,12 +90,34 @@ Each GitHub sample app is a complete application for testing. In production, use
 
 Platforms vary by product. **Face Recognition** and **ID Document Recognition** include Android, iOS, Flutter, React Native, Ionic, Windows, and Linux/Docker. **Face Liveness** is Android, iOS, Windows, and Linux/Docker (no public Flutter or React Native SDK).
 
-### Use cases <a href="#application" id="application"></a>
+### Common Use Cases
 
 * **eKYC / digital onboarding** — ID OCR + optional authenticity + selfie liveness + face match ([Architecture](deploy-and-host/architecture.md))
 * **Banking and fintech** — passport / ID verification and face anti-spoofing on your infrastructure
 * **Access control and attendance** — mobile 1:N Identify with templates you store
 * **Fraud prevention** — reject presentation attacks and document spoofs before enrollment
+
+### Frequently Asked Questions
+
+**Does Faceplugin's face recognition SDK work offline?**
+
+Yes. All Faceplugin SDKs run on-device or on your own server. No cloud connection is needed to process faces or documents.
+
+**Which countries does the ID document SDK support?**
+
+The ID Document SDK recognizes 16,900 document templates from 255 countries, including passports and national ID cards, and reads MRZ and barcodes.
+
+**Which platforms are supported?**
+
+Face Recognition and ID Document SDKs support Android, iOS, Flutter, React Native, Ionic, Windows and Linux/Docker. The Face Liveness SDK supports Android, iOS, Windows and Linux/Docker.
+
+**How do I get a license for a server SDK?**
+
+Copy the machine code from your server installation and submit it through Request a License & Support.
+
+**Where do I download the SDK binaries?**
+
+Each platform page links to a Google Drive folder with the native binaries. GitHub hosts sample apps only.
 
 ### Related documentation
 
