@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin Face Recognition Ionic Cordova SDK. On-premise face matching and liveness.
-  Legacy Cordova plugin. Prefer Capacitor for new Ionic apps.
+  Faceplugin Face Recognition Ionic Cordova SDK. On-premise face matching and
+  liveness. Legacy Cordova plugin. Prefer Capacitor for new Ionic apps.
+icon: mobile
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: mobile
+  anchors:
+    visible: true
 ---
 
-# Face Recognition Ionic Cordova SDK
+# Ionic Cordova
 
 Fully on-premise **Face Recognition SDK for Ionic Cordova**. Plugin folder: `Faceplugin/`. Plugin id: `face-recognition-cordova`. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projects.
 
@@ -48,8 +50,8 @@ npm -v
 
 #### 2. Get the runtimes
 
-- Android AAR: [Google Drive](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0) → `Faceplugin/src/android/facerecognitionsdk.aar`
-- iOS frameworks: [Google Drive](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) → `Faceplugin/src/ios/Frameworks/`
+* Android AAR: [Google Drive](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0) → `Faceplugin/src/android/facerecognitionsdk.aar`
+* iOS frameworks: [Google Drive](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) → `Faceplugin/src/ios/Frameworks/`
 
 ***
 
@@ -132,15 +134,31 @@ Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new projec
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Legacy plugin?** Yes. Prefer [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) for new apps.
+**Is the Cordova plugin a legacy plugin?**
 
-**Offline?** Yes after activation with a license key bound to the Cordova app id.
+Yes. It is maintained for existing Cordova apps. Use the Capacitor SDK for new Ionic apps.
+
+**Does the Cordova face recognition plugin work offline?**
+
+Yes. After activation with a license key tied to your Cordova app ID, everything runs on the device.
+
+**What is the Cordova plugin ID?**
+
+`face-recognition-cordova`, added from the local `Faceplugin/` folder.
+
+**Can I test it with `ionic serve` or a simulator?**
+
+No. `ionic serve` cannot load the engine, and iOS needs a physical device. Test on a real phone.
+
+**What do I need to build for iOS?**
+
+macOS, Xcode 15 or later, a physical iPhone and your Apple Team ID in `build.json`.
 
 ### Related documentation
 
 * [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Capacitor](face-recognition-ionic-capacitor-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Ionic Cordova SDK](../id-document-recognition-sdk/id-document-recognition-ionic-cordova-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

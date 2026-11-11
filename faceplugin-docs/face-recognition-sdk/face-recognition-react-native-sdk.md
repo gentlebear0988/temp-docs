@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin Face Recognition React Native SDK. On-premise 1:1 and 1:N matching with 2D
-  liveness. face-recognition-sdk plugin, Yarn 3, not Expo Go.
+  Faceplugin Face Recognition React Native SDK. On-premise 1:1 and 1:N matching
+  with 2D liveness. face-recognition-sdk plugin, Yarn 3, not Expo Go.
+icon: react
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: react
+  anchors:
+    visible: true
 ---
 
-# Face Recognition React Native SDK
+# React Native
 
 Fully on-premise **Face Recognition SDK for React Native** (Android and iOS). Package: `face-recognition-sdk`. It wraps the same native engines as the Android and iOS Face Recognition SDKs.
 
@@ -41,13 +43,13 @@ All processing stays on the device. **No** biometric data is sent to Faceplugin 
 
 {% stepper %}
 {% step %}
-## Install tools
+#### Install tools
 
 Node **18+**, Yarn, and a React Native environment ([setup guide](https://reactnative.dev/docs/environment-setup)). Physical phone recommended (emulator is limited for camera / liveness).
 {% endstep %}
 
 {% step %}
-## Clone and install
+#### Clone and install
 
 ```bash
 git clone https://github.com/Faceplugin-ltd/FaceRecognition-React-Native.git
@@ -58,21 +60,21 @@ cd example && yarn
 {% endstep %}
 
 {% step %}
-## Place native runtimes
+#### Place native runtimes
 
 Native binaries are **not** on GitHub (too large).
 
-| Platform | File | Example app path | Your own app path |
-| -------- | ---- | ---------------- | ----------------- |
-| Android | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | `node_modules/face-recognition-sdk/android/libs/` |
-| iOS | three frameworks | `ios/Frameworks/` | `node_modules/face-recognition-sdk/ios/Frameworks/` |
+| Platform | File                     | Example app path              | Your own app path                                   |
+| -------- | ------------------------ | ----------------------------- | --------------------------------------------------- |
+| Android  | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | `node_modules/face-recognition-sdk/android/libs/`   |
+| iOS      | three frameworks         | `ios/Frameworks/`             | `node_modules/face-recognition-sdk/ios/Frameworks/` |
 
-- Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
-- iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
+* Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
+* iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
 {% endstep %}
 
 {% step %}
-## Run on a phone
+#### Run on a phone
 
 ```bash
 cd example
@@ -93,28 +95,28 @@ Open `example/ios/FaceRecognitionSdkExample.xcworkspace` in Xcode if you prefer.
 
 Keep the demo package name **`com.faceplugin.facerecognitionsdk`** on Android and iOS so the sample key works.
 
-| Requirement | Value |
-| ----------- | ----- |
-| React Native | 0.74.x (example ships 0.74.5) |
-| Android | minSdk 24, physical device recommended |
-| iOS | iOS 13+, A12+ recommended, physical device |
+| Requirement  | Value                                      |
+| ------------ | ------------------------------------------ |
+| React Native | 0.74.x (example ships 0.74.5)              |
+| Android      | minSdk 24, physical device recommended     |
+| iOS          | iOS 13+, A12+ recommended, physical device |
 
-| Demo tile | What it does |
-| --------- | ------------ |
-| **Enroll** | Enroll a person from a gallery photo (exactly one face) into the on-device database |
-| **Identify** | Live 1:N camera match (VideoWorker) with 2D liveness |
-| **Capture** | Oval coach capture → still with attributes → optional enroll |
-| **Attribute** | Gallery analysis: landmarks, liveness, pose, quality, age, gender, emotion |
-| **Settings** | Camera lens, identify / liveness / pose / eye-close thresholds |
-| **About** | SDK name and license label |
+| Demo tile     | What it does                                                                        |
+| ------------- | ----------------------------------------------------------------------------------- |
+| **Enroll**    | Enroll a person from a gallery photo (exactly one face) into the on-device database |
+| **Identify**  | Live 1:N camera match (VideoWorker) with 2D liveness                                |
+| **Capture**   | Oval coach capture → still with attributes → optional enroll                        |
+| **Attribute** | Gallery analysis: landmarks, liveness, pose, quality, age, gender, emotion          |
+| **Settings**  | Camera lens, identify / liveness / pose / eye-close thresholds                      |
+| **About**     | SDK name and license label                                                          |
 
 ### Screenshots
 
 The gallery is **Android** sample UI from `faceplugin-assets`. The React Native plugin wraps the same native engines; there is no separate RN photoshoot in these docs.
 
-| Home | Identify | Capture |
-| ---- | -------- | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the React Native page; no separate RN screenshot yet)" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+| Home                                                                                                                                                                                                                                                                       | Identify                                                                                                                                                                                                   | Capture                                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the React Native page; no separate RN screenshot yet)" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" data-size="original"> |
 
 ### License
 
@@ -220,9 +222,9 @@ faceDetection(image: ImageInput, param?: FaceDetectionParam): Promise<FaceBox[]>
 templateExtraction(image: ImageInput, faceBox: FaceBox): Promise<string>
 ```
 
-| **Input**        | Image URI / path / base64, and a detected <code>FaceBox</code>. |
-| ---------------- | ---------------------------------------------------------------- |
-| **Return value** | Template as base64. Store it in **your** database.                |
+| **Input**        | Image URI / path / base64, and a detected `FaceBox`. |
+| ---------------- | ---------------------------------------------------- |
+| **Return value** | Template as base64. Store it in **your** database.   |
 
 #### <mark style="color:orange;">similarity:</mark> This API is used to calculate similarity between two templates
 
@@ -252,13 +254,31 @@ Prefer `ingestLiveCameraFrame` so rotation is handled for you.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Package?** `face-recognition-sdk`. Yarn 3; not Expo Go.
+**What is the React Native face recognition package name?**
 
-**Screenshots?** The gallery uses **Android** sample UI. The plugin wraps native Android and iOS engines.
+`face-recognition-sdk`, installed with Yarn 3 from the FaceRecognition-React-Native repository.
 
-**Liveness Flutter/React Native SDK?** None public. Identify includes 2D liveness.
+**Does it work with Expo Go?**
+
+No. The package includes native code, so you need a development build: bare React Native or Expo prebuild.
+
+**Does the React Native face recognition SDK work offline?**
+
+Yes. Detection, matching and liveness all run on the device, with no cloud.
+
+**Which React Native version is supported?**
+
+React Native 0.74.x. The example uses 0.74.5.
+
+**Is there a Face Liveness SDK for React Native?**
+
+There is no public standalone one. Identify includes 2D liveness.
+
+**Are the screenshots React Native?**
+
+No. They show the Android sample UI; the package wraps the native engines.
 
 ### Related documentation
 
@@ -266,4 +286,4 @@ Prefer `ingestLiveCameraFrame` so rotation is handled for you.
 * [ID Document Recognition React Native SDK](../id-document-recognition-sdk/id-document-recognition-react-native-sdk.md)
 * There is no public Face Liveness React Native SDK — use Identify 2D liveness or native Android/iOS Liveness.
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

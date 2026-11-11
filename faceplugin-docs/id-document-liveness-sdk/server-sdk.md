@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin ID Document Liveness Server SDK. On-premise document anti-spoofing HTTP API for
-  Linux Docker on port 8086. POST /api/documentLiveness. No OCR.
+  Faceplugin ID Document Liveness Server SDK. On-premise document anti-spoofing
+  HTTP API for Linux Docker on port 8086. POST /api/documentLiveness. No OCR.
 icon: server
 ---
 
-# Faceplugin ID Document Liveness Server SDK
+# Server
 
 Document authenticity only (screen replay, print, substitution). Optical character recognition (OCR), MRZ, and barcodes are **off**.
 
@@ -23,15 +23,31 @@ flowchart LR
   Authenticity --> SecurityJSON
 ```
 
-### FAQ
+### Frequently Asked Questions
 
-**Does this read the MRZ?** No. OCR is off. Use [ID Document Recognition](../id-document-recognition-sdk/).
+**What is the ID document liveness API?**
 
-**API?** `POST /api/documentLiveness` on port **8086** after `POST /api/activate`.
+`POST /api/documentLiveness` on port 8086, called after `POST /api/activate`. It checks whether a document image shows a genuine physical ID.
+
+**Does the document liveness server read the MRZ or do OCR?**
+
+No. OCR, MRZ and barcode reading are off. Use ID Document Recognition to read document fields.
+
+**What attacks does it detect?**
+
+Screen replays, printed copies and substitution.
+
+**Which platforms are supported?**
+
+Linux with Docker, using the `faceplugin/document-liveness` image. There is no public mobile SDK.
+
+**Can I get OCR and authenticity checks from one server?**
+
+Yes. Use the ID Document Recognition Server SDK with a liveness-capable license.
 
 ### Related documentation
 
-* [ID Document Liveness SDK](README.md) · [Linux SDK](id-document-liveness-linux-sdk.md) · [Glossary](../resources/glossary.md)
+* [ID Document Liveness SDK](./) · [Linux SDK](id-document-liveness-linux-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Server SDK](../id-document-recognition-sdk/server-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

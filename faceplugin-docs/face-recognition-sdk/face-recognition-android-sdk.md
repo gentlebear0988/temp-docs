@@ -1,7 +1,9 @@
 ---
 description: >-
-  Faceplugin Face Recognition Android SDK. Fully on-premise face matching, 1:N identify,
-  and 2D liveness. AAR, setActivation, init, faceDetection, VideoWorker.
+  Faceplugin Face Recognition Android SDK. Fully on-premise face matching, 1:N
+  identify, and 2D liveness. AAR, setActivation, init, faceDetection,
+  VideoWorker.
+icon: android
 layout:
   width: default
   title:
@@ -20,10 +22,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: android
+  anchors:
+    visible: true
 ---
 
-# Face Recognition Android SDK
+# Android
 
 Fully on-premise **Face Recognition SDK for Android**. Detect faces, extract templates you store yourself, match 1:1 or live 1:N, and check passive 2D liveness on the device. Images never leave the phone.
 
@@ -78,8 +81,8 @@ public static int setActivation(Context context, String license);
 ```
 
 | **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li><li><strong>license</strong> (String): The license string (<code>license key</code>)</li></ul> |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul>                                           |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul>            |
 
 #### <mark style="color:orange;">init:</mark> This API is used to initialize the SDK <a href="#init" id="init"></a>
 
@@ -87,8 +90,8 @@ public static int setActivation(Context context, String license);
 public static int init(Context context) throws IOException;
 ```
 
-| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li></ul> |
-| ---------------- | ----------------------------------------------------------------------------------- |
+| **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li></ul>                                 |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ |
 | **Return value** | <p>The SDK initialization status code.</p><ul><li>0: Success</li><li>1–4: see <code>setActivation</code></li></ul> |
 
 #### <mark style="color:orange;">getMachineCode:</mark> This API is used to retrieve the machine code <a href="#getmachinecode" id="getmachinecode"></a>
@@ -98,8 +101,8 @@ public static String getMachineCode(Context context);
 ```
 
 | **Input**        | <ul><li><strong>context</strong> (Context): Android <code>Context</code></li></ul> |
-| ---------------- | ----------------------------------------------------------------------------------- |
-| **Return value** | Machine code string (for license requests).                                            |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| **Return value** | Machine code string (for license requests).                                        |
 
 #### <mark style="color:orange;">getLicenseStatus:</mark> This API is used to read license status <a href="#getlicensestatus" id="getlicensestatus"></a>
 
@@ -111,8 +114,8 @@ public static String lastLicenseError();
 public static boolean isActivated();
 ```
 
-| **Input**        | None |
-| ---------------- | ---- |
+| **Input**        | None                |
+| ---------------- | ------------------- |
 | **Return value** | JSON status string. |
 
 #### <mark style="color:orange;">faceDetection:</mark> This API is used to detect faces <a href="#facedetection" id="facedetection"></a>
@@ -122,8 +125,8 @@ public static List<FaceBox> faceDetection(Bitmap bitmap, FaceDetectionParam para
 ```
 
 | **Input**        | <ul><li><strong>bitmap</strong> (Bitmap): The Bitmap image</li><li><strong>param</strong> (<strong>FaceDetectionParam</strong>): Parameters for face detection</li></ul> |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Return value** | A list of **FaceBox** objects representing the detected faces.                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Return value** | A list of **FaceBox** objects representing the detected faces.                                                                                                           |
 
 **FaceDetectionParam**
 
@@ -169,7 +172,7 @@ public static byte[] templateExtraction(Bitmap bitmap, FaceBox faceBox);
 ```
 
 | **Input**        | <ul><li><strong>bitmap</strong> (Bitmap): The Bitmap image</li><li><strong>faceBox</strong> (<strong>FaceBox</strong>): The bounding box of the detected face</li></ul> |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Return value** | A byte array representing the extracted template from the face. Store these in **your** database.                                                                       |
 
 #### <mark style="color:orange;">similarityCalculation:</mark> This API is used to calculate the similarity between two face templates <a href="#similaritycalculation" id="similaritycalculation"></a>
@@ -180,7 +183,7 @@ public static float similarityCalculation(byte[] feature1, byte[] feature2);
 
 | **Input**        | <ul><li><strong>feature1</strong> (byte[]): The first face template</li><li><strong>feature2</strong> (byte[]): The second face template</li></ul> |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Return value** | A float similarity score. Demo Identify default threshold is **0.67**.                                                                               |
+| **Return value** | A float similarity score. Demo Identify default threshold is **0.67**.                                                                             |
 
 `similarity(byte[] feature1, byte[] feature2)` is an alias of `similarityCalculation`.
 
@@ -192,8 +195,8 @@ public static String detect(Bitmap bitmap, boolean crop, int flags);
 ```
 
 | **Input**        | <ul><li><strong>bitmap</strong> (Bitmap): The Bitmap image</li><li><strong>crop</strong> (boolean): Whether to crop faces</li><li><strong>flags</strong> (int): Bit flags (<code>DETECT_ALL</code>, <code>DETECT_LANDMARKS</code>, <code>DETECT_LIVENESS</code>, <code>DETECT_LIVENESS_ACCURATE</code>, …)</li></ul> |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Return value** | JSON string (same idea as HTTP <code>POST /api/detect</code>).                                                                                                                                                                                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Return value** | JSON string (same idea as HTTP `POST /api/detect`).                                                                                                                                                                                                                                                                  |
 
 #### <mark style="color:orange;">quality:</mark> This API is used to run face image quality checks <a href="#quality" id="quality"></a>
 
@@ -236,7 +239,7 @@ FaceRecognitionSDK.stopVideoWorker();
 Also: `startVideoWorker(float matchThreshold)`, `addVideoWorkerFrameRgb`, `addVideoWorkerFrameBgra`, `VideoWorkerConfig` / `ActiveLivenessConfig`.
 
 | **Input**        | Match threshold, enrolled templates, and camera frames. |
-| ---------------- | -------------------------------------------------------- |
+| ---------------- | ------------------------------------------------------- |
 | **Return value** | Match events via the VideoWorker listener (JSON).       |
 
 #### <mark style="color:orange;">deinit:</mark> This API is used to unload the engine <a href="#deinit" id="deinit"></a>
@@ -245,8 +248,8 @@ Also: `startVideoWorker(float matchThreshold)`, `addVideoWorkerFrameRgb`, `addVi
 public static int deinit();
 ```
 
-| **Input**        | None |
-| ---------------- | ---- |
+| **Input**        | None                         |
+| ---------------- | ---------------------------- |
 | **Return value** | Status code. **0**: Success. |
 
 ### Run the demo
@@ -258,30 +261,30 @@ public static int deinit();
 
 Keep the demo package name **`com.faceplugin.facerecognitionsdk`** so the sample key works.
 
-| Demo tile | What it does |
-| --------- | ------------ |
-| **Enroll** | Enroll a person from a gallery photo (exactly one face) into the on-device database |
-| **Identify** | Live 1:N camera match (stop on first hit) with 2D liveness |
-| **Capture** | Oval coach capture → still with attributes → optional enroll |
-| **Attribute** | Gallery analysis: landmarks, liveness, pose, quality, age, gender, emotion |
-| **Settings** | Camera lens, identify / liveness / pose / eye-close thresholds |
-| **About** | SDK name and license label |
+| Demo tile     | What it does                                                                        |
+| ------------- | ----------------------------------------------------------------------------------- |
+| **Enroll**    | Enroll a person from a gallery photo (exactly one face) into the on-device database |
+| **Identify**  | Live 1:N camera match (stop on first hit) with 2D liveness                          |
+| **Capture**   | Oval coach capture → still with attributes → optional enroll                        |
+| **Attribute** | Gallery analysis: landmarks, liveness, pose, quality, age, gender, emotion          |
+| **Settings**  | Camera lens, identify / liveness / pose / eye-close thresholds                      |
+| **About**     | SDK name and license label                                                          |
 
 ### Screenshots
 
-| Home | Identify | Capture |
-| ---- | -------- | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android home" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+| Home                                                                                                                                                                                                  | Identify                                                                                                                                                                                                   | Capture                                                                                                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android home" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" data-size="original"> |
 
 ### System requirements
 
-| Item | Minimum | Recommended |
-| ---- | ------- | ----------- |
-| Android | API 24 (7.0) | API 29 (10) or newer |
-| ABI | `arm64-v8a`, `armeabi-v7a` | `arm64-v8a` |
-| RAM | 4 GB | 6 GB or more |
-| Camera | Front camera | 720p or 1080p |
-| Device | Physical device | Same |
+| Item    | Minimum                    | Recommended          |
+| ------- | -------------------------- | -------------------- |
+| Android | API 24 (7.0)               | API 29 (10) or newer |
+| ABI     | `arm64-v8a`, `armeabi-v7a` | `arm64-v8a`          |
+| RAM     | 4 GB                       | 6 GB or more         |
+| Camera  | Front camera               | 720p or 1080p        |
+| Device  | Physical device            | Same                 |
 
 ### License
 
@@ -322,13 +325,31 @@ Typical call order: `setActivation` → `init` → `faceDetection` → `template
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**What APIs does this page ship?** Java/Kotlin `FaceRecognitionSDK.setActivation`, `init`, `faceDetection`, `templateExtraction`, `similarityCalculation`, and VideoWorker Identify.
+**Which APIs does the Android face recognition SDK provide?**
 
-**Offline / on-premise?** Yes, after a license key bound to the demo app id (or your own id).
+`setActivation`, `init`, `faceDetection`, `templateExtraction`, `similarityCalculation` and VideoWorker for live 1:N Identify, plus helpers for quality, match and attributes.
 
-**Identify threshold?** Default **0.67**. Mobile Identify includes **passive 2D liveness**.
+**Does the Android face recognition SDK work offline?**
+
+Yes. Once activated with a license key bound to the demo app ID or your own, everything runs on the device.
+
+**What is the default face match threshold?**
+
+The demo's Identify threshold is 0.67. Mobile Identify also includes passive 2D liveness, with a default liveness threshold of 0.5.
+
+**What Android version and devices are supported?**
+
+Android API 24 (7.0) or newer on arm64-v8a or armeabi-v7a, with at least 4 GB RAM. API 29+, arm64-v8a and 6 GB are recommended.
+
+**Can I test on an emulator?**
+
+Use a physical phone. Emulators aren't recommended for camera or liveness.
+
+**Does it detect face attributes?**
+
+Yes. `faceDetection` can return age, gender, emotion, mask, glasses, eye closure, occlusion, pose and quality.
 
 ### Related documentation
 
@@ -336,4 +357,4 @@ Typical call order: `setActivation` → `init` → `faceDetection` → `template
 * [Face Liveness Detection Android SDK](../liveness-detection-sdk/liveness-detection-android-sdk.md)
 * [ID Document Recognition Android SDK](../id-document-recognition-sdk/id-document-recognition-android-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin Face Recognition iOS SDK. Fully on-premise face matching, 1:N identify, and 2D
-  liveness. Xcode frameworks, setActivation, initSDK, detectImage, VideoWorker.
+  Faceplugin Face Recognition iOS SDK. Fully on-premise face matching, 1:N
+  identify, and 2D liveness. Xcode frameworks, setActivation, initSDK,
+  detectImage, VideoWorker.
 icon: apple
 ---
 
-# Face Recognition iOS SDK
+# iOS
 
 Fully on-premise **Face Recognition SDK for iOS**. Detect faces, extract templates, match 1:1 or live 1:N, and check passive 2D liveness on the device.
 
@@ -30,8 +31,8 @@ Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status code
 +(int)setActivation:(NSString*)license;
 ```
 
-| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>license key</code>)</li></ul> |
-| ---------------- | -------------------------------------------------------------------------------------------------- |
+| **Input**        | <ul><li><strong>license</strong> (NSString*): The license string (<code>license key</code>)</li></ul>                                                            |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Return value** | <p>The SDK activation status code.</p><ul><li>0: Success</li><li>1: Invalid license</li><li>2: Expired</li><li>3: Not activated</li><li>4: Init failed</li></ul> |
 
 #### <mark style="color:orange;">initSDK:</mark> This API is used to initialize the SDK <a href="#initsdk" id="initsdk"></a>
@@ -40,8 +41,8 @@ Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status code
 +(int)initSDK;
 ```
 
-| **Input**        | None |
-| ---------------- | ---- |
+| **Input**        | None                                                                                                               |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ |
 | **Return value** | <p>The SDK initialization status code.</p><ul><li>0: Success</li><li>1–4: see <code>setActivation</code></li></ul> |
 
 #### <mark style="color:orange;">getMachineCode:</mark> This API is used to retrieve the machine code <a href="#getmachinecode" id="getmachinecode"></a>
@@ -69,7 +70,7 @@ Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status code
 
 | **Input**        | <ul><li><strong>image</strong> (UIImage*): The input image</li><li><strong>flags</strong>: Estimators to run (<code>FaceRecognitionDetectAll</code>, <code>DetectLiveness</code>, …)</li></ul> |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Return value** | JSON string (Linux-compatible, same idea as HTTP <code>POST /api/detect</code>).                                                                                                              |
+| **Return value** | JSON string (Linux-compatible, same idea as HTTP `POST /api/detect`).                                                                                                                          |
 
 #### <mark style="color:orange;">qualityImage:</mark> This API is used to run face image quality checks <a href="#qualityimage" id="qualityimage"></a>
 
@@ -89,8 +90,8 @@ Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status code
 +(NSString*)extractFeatureFromImage:(UIImage*)image;
 ```
 
-| **Input**        | A face image (typically cropped). |
-| ---------------- | ---------------------------------- |
+| **Input**        | A face image (typically cropped).                                     |
+| ---------------- | --------------------------------------------------------------------- |
 | **Return value** | JSON with the template. Store the feature bytes in **your** database. |
 
 #### <mark style="color:orange;">similarityWithFeature1:</mark> This API is used to calculate the similarity between two face templates <a href="#similarity" id="similarity"></a>
@@ -99,8 +100,8 @@ Native class: `FaceRecognitionSDK` (`facerecognitionsdk.framework`). Status code
 +(float)similarityWithFeature1:(NSData*)feature1 feature2:(NSData*)feature2;
 ```
 
-| **Input**        | Two template blobs from <code>extractFeatureFromImage</code>. |
-| ---------------- | --------------------------------------------------------------- |
+| **Input**        | Two template blobs from `extractFeatureFromImage`.                                       |
+| ---------------- | ---------------------------------------------------------------------------------------- |
 | **Return value** | Similarity **0.0–1.0**, or **-1** on error. Demo Identify default threshold is **0.67**. |
 
 #### <mark style="color:orange;">setLandmarkMode:</mark> This API is used to set the landmark model <a href="#setlandmarkmode" id="setlandmarkmode"></a>
@@ -142,9 +143,9 @@ Call **setActivation → initSDK** off the main thread. The engine is **not** co
 
 The gallery is **Android** sample UI from `faceplugin-assets`. iOS demo tiles match these screens; there is no separate iOS photoshoot in these docs.
 
-| Home | Identify | Capture |
-| ---- | -------- | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the iOS page; no separate iOS screenshot yet)" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+| Home                                                                                                                                                                                                                                                               | Identify                                                                                                                                                                                                   | Capture                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the iOS page; no separate iOS screenshot yet)" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" data-size="original"> |
 
 ### License
 
@@ -162,13 +163,31 @@ Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFea
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**What APIs does this page ship?** Swift equivalents of `setActivation`, `init`, face detection, template extract, similarity, and VideoWorker Identify.
+**Which APIs does the iOS face recognition SDK provide?**
 
-**Are the screenshots iOS?** No. The gallery uses **Android** sample UI. iOS demo tiles match those screens.
+Activation, initialization, face detection, quality checks, 1:1 photo match, template extraction, template similarity and VideoWorker for live 1:N Identify. The API is Objective-C and is called from Swift through the bridging header.
 
-**Offline?** Yes, after license key for the demo bundle id (or yours).
+**Does the iOS face recognition SDK work offline?**
+
+Yes. Once activated with a license key for the demo bundle ID or your own, everything runs on the iPhone.
+
+**What is the default face match threshold on iOS?**
+
+The demo's Identify threshold is 0.67, and the liveness default is 0.5.
+
+**Which iOS version is required?**
+
+iOS 13 or later, on a physical iPhone.
+
+**Which frameworks do I need?**
+
+`facerecognitionsdk.framework`, `FaceRecognitionEngine.framework` and `onnxruntime.framework`, all added with Embed & Sign.
+
+**Are the screenshots from iOS?**
+
+No. They show the shared sample UI captured on Android; the iOS demo screens match them.
 
 ### Related documentation
 
@@ -176,4 +195,4 @@ Public header only: `detectImage`, `extractFeatureFromImage`, `similarityWithFea
 * [Face Liveness Detection iOS SDK](../liveness-detection-sdk/liveness-detection-ios-sdk.md)
 * [ID Document Recognition iOS SDK](../id-document-recognition-sdk/id-document-recognition-ios-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

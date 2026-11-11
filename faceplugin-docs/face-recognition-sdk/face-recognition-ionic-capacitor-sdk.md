@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin Face Recognition Ionic Capacitor SDK. On-premise face matching and liveness.
-  face-recognition-capacitor plugin for new Ionic apps.
+  Faceplugin Face Recognition Ionic Capacitor SDK. On-premise face matching and
+  liveness. face-recognition-capacitor plugin for new Ionic apps.
+icon: mobile
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: mobile
+  anchors:
+    visible: true
 ---
 
-# Face Recognition Ionic Capacitor SDK
+# Ionic Capacitor
 
 Fully on-premise **Face Recognition SDK for Ionic Capacitor**. Package: `face-recognition-capacitor`. Use this for **new** Ionic apps. Cordova is a [different repo](face-recognition-ionic-cordova-sdk.md).
 
@@ -37,13 +39,13 @@ Fully on-premise **Face Recognition SDK for Ionic Capacitor**. Package: `face-re
 
 {% stepper %}
 {% step %}
-## Install tools
+#### Install tools
 
 Node **18+**, JDK **17**, Android Studio and/or Xcode 15+. Physical phone with USB debugging.
 {% endstep %}
 
 {% step %}
-## Clone, install, build the plugin
+#### Clone, install, build the plugin
 
 ```bash
 git clone https://github.com/Faceplugin-ltd/FaceRecognition-Ionic-Capacitor.git
@@ -55,19 +57,19 @@ cd example && npm install
 {% endstep %}
 
 {% step %}
-## Place native runtimes
+#### Place native runtimes
 
-| Platform | File | Example app path | Your own app path |
-| -------- | ---- | ---------------- | ----------------- |
-| Android | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | `node_modules/face-recognition-capacitor/android/libs/` |
-| iOS | three frameworks | `ios/Frameworks/` | `node_modules/face-recognition-capacitor/ios/Frameworks/` |
+| Platform | File                     | Example app path              | Your own app path                                         |
+| -------- | ------------------------ | ----------------------------- | --------------------------------------------------------- |
+| Android  | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | `node_modules/face-recognition-capacitor/android/libs/`   |
+| iOS      | three frameworks         | `ios/Frameworks/`             | `node_modules/face-recognition-capacitor/ios/Frameworks/` |
 
-- Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
-- iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
+* Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
+* iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
 {% endstep %}
 
 {% step %}
-## Sync and run
+#### Sync and run
 
 ```bash
 cd example
@@ -82,9 +84,9 @@ Or `npx cap open ios`. Wait for the home status bar → **Ready**.
 
 Keep demo ids so the included license works:
 
-| Platform | Id |
-| -------- | -- |
-| Android package name | `com.faceplugin.facerecognitionsdk` |
+| Platform              | Id                                  |
+| --------------------- | ----------------------------------- |
+| Android package name  | `com.faceplugin.facerecognitionsdk` |
 | iOS bundle identifier | `com.faceplugin.facerecognitionsdk` |
 
 Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
@@ -193,15 +195,31 @@ Optional session helpers in the example: `IdentifySession`, `CaptureSession`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Package?** `face-recognition-capacitor`. Prefer Capacitor over Cordova for new Ionic apps.
+**What is the Ionic Capacitor face recognition package name?**
 
-**Offline?** Yes after `setActivation` / `init` with a license key for your app id.
+`face-recognition-capacitor`. Capacitor is preferred over Cordova for new Ionic apps.
+
+**Does the Ionic face recognition SDK work offline?**
+
+Yes. Once `setActivation` and `init` succeed with a license key for your app ID, everything runs on the device.
+
+**Can I test it with `ionic serve` or in a browser?**
+
+No. The face engine only loads on a real device. Run the app on a physical phone from Android Studio or Xcode.
+
+**Should I use Capacitor or Cordova?**
+
+Use Capacitor for new Ionic apps. The Cordova version is a separate plugin for existing Cordova projects.
+
+**What is the default match threshold?**
+
+0.67 for Identify and 0.5 for liveness.
 
 ### Related documentation
 
 * [Faceplugin Face Recognition Mobile SDK](mobile-sdk.md) · [Ionic Cordova](face-recognition-ionic-cordova-sdk.md) · [Glossary](../resources/glossary.md)
 * [ID Document Recognition Ionic Capacitor SDK](../id-document-recognition-sdk/id-document-recognition-ionic-capacitor-sdk.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

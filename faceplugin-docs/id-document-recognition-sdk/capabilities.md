@@ -1,18 +1,19 @@
 ---
 description: >-
-  Faceplugin ID Document SDK capabilities: passport OCR / MRZ, document authenticity
-  (Recognition + Liveness license), and authenticity-only Document Liveness on port 8086.
+  Faceplugin ID Document SDK capabilities: passport OCR / MRZ, document
+  authenticity (Recognition + Liveness license), and authenticity-only Document
+  Liveness on port 8086.
 icon: list-check
 ---
 
-# ID Document SDK capabilities
+# Capabilities
 
 What the Faceplugin **ID Document SDK** can do — **recognition**, **liveness** (authenticity-only), and **recognition + liveness** — before you pick a platform.
 
-| Mode | What you get | Start install |
-| --- | --- | --- |
-| **Recognition** | OCR, MRZ, barcode, classify, crops (port **8082** / mobile) | [Recognition](recognition.md) |
-| **Liveness** | Authenticity only — no OCR (port **8086**) | [Liveness](../id-document-liveness-sdk/README.md) |
+| Mode                       | What you get                                                 | Start install                                         |
+| -------------------------- | ------------------------------------------------------------ | ----------------------------------------------------- |
+| **Recognition**            | OCR, MRZ, barcode, classify, crops (port **8082** / mobile)  | [Recognition](recognition.md)                         |
+| **Liveness**               | Authenticity only — no OCR (port **8086**)                   | [Liveness](../id-document-liveness-sdk/)              |
 | **Recognition + Liveness** | OCR plus document authenticity in one Document Reader engine | [Recognition + Liveness](recognition-and-liveness.md) |
 
 ```mermaid
@@ -61,12 +62,12 @@ The engine can assess capture quality, locate the document, and return **cropped
 
 ### Recognition API (port 8082)
 
-| Route | Role |
-| --- | --- |
-| `GET /api/machinecode` | Machine code |
-| `POST /api/activate` | Activate license |
+| Route                           | Role                |
+| ------------------------------- | ------------------- |
+| `GET /api/machinecode`          | Machine code        |
+| `POST /api/activate`            | Activate license    |
 | `POST /api/documentRecognition` | OCR / MRZ / barcode |
-| `POST /api/documentProcess` | Combined pipeline |
+| `POST /api/documentProcess`     | Combined pipeline   |
 
 Images: [Linux](id-document-recognition-linux-sdk.md) `faceplugin/document-reader`, [Windows](id-document-recognition-windows-sdk.md).
 
@@ -78,7 +79,7 @@ Dedicated **ID Document Liveness** checks whether the image is a **physical ID**
 * Route: `POST /api/documentLiveness` after `POST /api/activate`
 * Field names: [Document security check fields](document-security-check-fields.md)
 
-See [Liveness](../id-document-liveness-sdk/README.md) · [Linux](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md).
+See [Liveness](../id-document-liveness-sdk/) · [Linux](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md).
 
 This is **not** face anti-spoofing — use the [Face SDK](../face-recognition-sdk/capabilities.md) for selfies.
 
@@ -90,10 +91,10 @@ Prefer authenticity **without** reading fields? Use dedicated Liveness on **8086
 
 ## Which mode to pick
 
-| Need | Mode |
-| --- | --- |
-| Passport OCR / MRZ / barcode | **Recognition** |
-| Authenticity gate without reading PII | **Liveness** (**8086**) |
+| Need                                               | Mode                       |
+| -------------------------------------------------- | -------------------------- |
+| Passport OCR / MRZ / barcode                       | **Recognition**            |
+| Authenticity gate without reading PII              | **Liveness** (**8086**)    |
 | OCR and authenticity in one Document Reader engine | **Recognition + Liveness** |
 
 ## eKYC: document then face
@@ -107,11 +108,11 @@ See [Combining products](../resources/choose-a-product.md#combining-products-eky
 
 ## Platforms
 
-| Mode | Surfaces |
-| --- | --- |
-| Recognition | OCR via Document Reader — install under [Recognition + Liveness](recognition-and-liveness.md) |
-| Liveness | [Server](../id-document-liveness-sdk/server-sdk.md) (Linux **8086**, authenticity only) |
-| Recognition + Liveness | [Mobile](mobile-sdk.md) · [Server](server-sdk.md) (Document Reader, port **8082**) |
+| Mode                   | Surfaces                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------- |
+| Recognition            | OCR via Document Reader — install under [Recognition + Liveness](recognition-and-liveness.md) |
+| Liveness               | [Server](../id-document-liveness-sdk/server-sdk.md) (Linux **8086**, authenticity only)       |
+| Recognition + Liveness | [Mobile](mobile-sdk.md) · [Server](server-sdk.md) (Document Reader, port **8082**)            |
 
 ## Use cases
 
@@ -120,18 +121,26 @@ See [Combining products](../resources/choose-a-product.md#combining-products-eky
 * **Authenticity gate** — reject screen / print attacks before or with OCR
 * **Split architecture** — Document Liveness **8086** + OCR in another service
 
-## FAQ
+### Frequently Asked Questions
 
-**Is this a passport OCR SDK?** Yes — on-premise passport OCR and MRZ, plus ID cards and licenses.
+**Is this a passport OCR SDK?**
 
-**Does Faceplugin read the MRZ?** Yes, when the document template includes an MRZ.
+Yes — on-premise passport OCR and MRZ, plus ID cards and licenses.
 
-**How many document types are supported?** **16,900** templates in **255** countries and territories — see the PDF above.
+**Does Faceplugin read the MRZ?**
 
-**Does Document Liveness read the MRZ?** No. Use Recognition for OCR / MRZ.
+Yes, when the document template includes an MRZ.
+
+**How many document types are supported?**
+
+**16,900** templates in **255** countries and territories — see the PDF above.
+
+**Does Document Liveness read the MRZ?**
+
+No. Use Recognition for OCR / MRZ.
 
 ### Related documentation
 
-* [ID Document SDK](README.md) · [Try it](../resources/try-it.md) · [Glossary](../resources/glossary.md)
+* [ID Document SDK](./) · [Try it](../resources/try-it.md) · [Glossary](../resources/glossary.md)
 * [Document result JSON](document-result-json.md) · [Request a License](../request-a-license-and-support.md)
 * [Face SDK capabilities](../face-recognition-sdk/capabilities.md)

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin Face Recognition Flutter SDK. On-premise 1:1 and 1:N matching with 2D liveness.
-  face_recognition_sdk plugin for Android and iOS.
+  Faceplugin Face Recognition Flutter SDK. On-premise 1:1 and 1:N matching with
+  2D liveness. face_recognition_sdk plugin for Android and iOS.
+icon: mobile
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: mobile
+  anchors:
+    visible: true
 ---
 
-# Face Recognition Flutter SDK
+# Flutter
 
 Fully on-premise **Face Recognition SDK for Flutter**. Package: `face_recognition_sdk`. Same native engines as the Android and iOS Face Recognition SDKs.
 
@@ -37,13 +39,13 @@ All processing stays on the device. **No** biometric data is sent to Faceplugin 
 
 {% stepper %}
 {% step %}
-## Install tools
+#### Install tools
 
 Flutter **3.44+** and Dart **3.3+** (from the package `pubspec.yaml`), JDK **17+** for Android. Run `flutter doctor` and fix reported issues. Accept Android licenses: `flutter doctor --android-licenses`. `JAVA_HOME` must point to the JDK **home** (the folder that contains `bin`), not to `bin` itself.
 {% endstep %}
 
 {% step %}
-## Clone and bootstrap
+#### Clone and bootstrap
 
 ```bash
 git clone https://github.com/Faceplugin-ltd/FaceRecognition-Flutter.git
@@ -53,15 +55,15 @@ dart run tool/bootstrap.dart
 {% endstep %}
 
 {% step %}
-## Place native runtimes
+#### Place native runtimes
 
-| Platform | File | Example app path | Your own app path |
-| -------- | ---- | ---------------- | ----------------- |
-| Android | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | Copy `example/android/libfacesdk/` into **your app** `android/libfacesdk/` and `include(":libfacesdk")` |
-| iOS | three frameworks | `ios/Frameworks/` | Plugin checkout `ios/Frameworks/` |
+| Platform | File                     | Example app path              | Your own app path                                                                                       |
+| -------- | ------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Android  | `facerecognitionsdk.aar` | `example/android/libfacesdk/` | Copy `example/android/libfacesdk/` into **your app** `android/libfacesdk/` and `include(":libfacesdk")` |
+| iOS      | three frameworks         | `ios/Frameworks/`             | Plugin checkout `ios/Frameworks/`                                                                       |
 
-- Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
-- iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
+* Android Google Drive: [facerecognitionsdk.aar](https://drive.google.com/drive/folders/1kpzYVv9Gbm_pEpDe9-x7FGB4NWZzvez0)
+* iOS Google Drive: [frameworks](https://drive.google.com/drive/folders/1PKmV-o7gq7s7dDtiNgXPfCi2ZlWaRy5H) (`facerecognitionsdk`, `FaceRecognitionEngine`, `onnxruntime`)
 
 {% hint style="warning" %}
 Do **not** `implementation(files(…aar))` inside the plugin — AGP will fail `bundleDebugAar`. Copy the `libfacesdk` **module** from the example into your app.
@@ -71,7 +73,7 @@ On a Mac after placing iOS frameworks: `dart run tool/bootstrap.dart` (builds ma
 {% endstep %}
 
 {% step %}
-## Run the example
+#### Run the example
 
 ```bash
 cd example
@@ -84,16 +86,16 @@ Physical phone. Wait for the home status bar → **Ready**.
 
 Keep demo ids so the included license works:
 
-| Platform | Id |
-| -------- | -- |
-| Android package name | `com.faceplugin.facerecognitionsdk` |
+| Platform              | Id                                   |
+| --------------------- | ------------------------------------ |
+| Android package name  | `com.faceplugin.facerecognitionsdk`  |
 | iOS bundle identifier | `com.faceplugin.facerecognition.app` |
 
-| Requirement | Value |
-| ----------- | ----- |
-| Flutter | 3.44+ (see `pubspec.yaml`) |
-| Android | minSdk 24, physical device recommended |
-| iOS | iOS 13+, physical device recommended |
+| Requirement | Value                                  |
+| ----------- | -------------------------------------- |
+| Flutter     | 3.44+ (see `pubspec.yaml`)             |
+| Android     | minSdk 24, physical device recommended |
+| iOS         | iOS 13+, physical device recommended   |
 
 Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
 
@@ -101,9 +103,9 @@ Demo tiles: Enroll, Identify, Capture, Attribute, Settings, About.
 
 The gallery is **Android** sample UI from `faceplugin-assets`. The Flutter plugin wraps the same native engines; there is no separate Flutter photoshoot in these docs.
 
-| Home | Identify | Capture |
-| ---- | -------- | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the Flutter page; no separate Flutter screenshot yet)" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" width="200"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" width="200"/></p> |
+| Home                                                                                                                                                                                                                                                                       | Identify                                                                                                                                                                                                   | Capture                                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/home.png" alt="Faceplugin Face Recognition Android sample UI (shown on the Flutter page; no separate Flutter screenshot yet)" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/identify.png" alt="Faceplugin Face Recognition live identify" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/face-recognition/android/capture.png" alt="Faceplugin Face Recognition oval capture" data-size="original"> |
 
 ### License
 
@@ -220,13 +222,31 @@ Future<void> stopVideoWorker()
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Package?** `face_recognition_sdk`.
+**What is the Flutter face recognition package name?**
 
-**Screenshots?** The gallery uses **Android** sample UI. The plugin wraps native Android and iOS engines.
+`face_recognition_sdk`, added as a git dependency from the FaceRecognition-Flutter repository.
 
-**Face Liveness Flutter SDK?** None public.
+**Does the Flutter face recognition SDK work offline?**
+
+Yes. Detection, matching and liveness all run on the device, with no cloud.
+
+**Which Flutter version do I need?**
+
+Flutter 3.44+ and Dart 3.3+, with JDK 17+ for Android builds.
+
+**Is there a Face Liveness SDK for Flutter?**
+
+There is no public standalone one. Use the 2D liveness built into Identify, or the native Android and iOS Liveness SDKs.
+
+**What is the default match threshold?**
+
+0.67 for Identify and 0.5 for liveness. Both are Dart parameters you can change.
+
+**Are the screenshots Flutter-specific?**
+
+No. They show the Android sample UI; the plugin wraps the native Android and iOS engines.
 
 ### Related documentation
 
@@ -234,4 +254,4 @@ Future<void> stopVideoWorker()
 * [ID Document Recognition Flutter SDK](../id-document-recognition-sdk/id-document-recognition-flutter-sdk.md)
 * There is no public Face Liveness Flutter SDK — use Identify 2D liveness or native Android/iOS Liveness.
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin Face Recognition SDK Linux Docker — recognition and face liveness in one container.
-  faceplugin/face-recognition-liveness-sdk on port 8083. detect, match, liveness.
+  Faceplugin Face Recognition SDK Linux Docker — recognition and face liveness
+  in one container. faceplugin/face-recognition-liveness-sdk on port 8083.
+  detect, match, liveness.
 icon: linux
 ---
 
-# Face Recognition + Liveness Linux SDK
+# Linux
 
 Fully on-premise **Face Recognition + Face Liveness API for Linux / Docker** in **one** container. Image: `faceplugin/face-recognition-liveness-sdk`. Default port **8083**. Gradio **9003**.
 
@@ -25,7 +26,7 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Pull from Docker Hub (no Google Drive download)
+#### Pull and run the Docker image
 
 ```
 sudo docker pull faceplugin/face-recognition-liveness-sdk:latest
@@ -40,7 +41,7 @@ On Docker Desktop (macOS/Windows) omit the `/etc/machine-id` volume. Port **8083
 {% endstep %}
 
 {% step %}
-## Confirm health (no license yet)
+#### Check that the API is running
 
 ```
 curl -s http://127.0.0.1:8083/api/health
@@ -48,7 +49,7 @@ curl -s http://127.0.0.1:8083/api/health
 {% endstep %}
 
 {% step %}
-## Copy the machine code
+#### Get your machine code
 
 ```
 curl -s http://127.0.0.1:8083/api/machinecode
@@ -58,7 +59,7 @@ Send machine code to Faceplugin. Docker and host machine codes differ.
 {% endstep %}
 
 {% step %}
-## Activate
+#### Activate the license
 
 ```
 curl -s -X POST http://127.0.0.1:8083/api/activate \
@@ -137,19 +138,19 @@ Control routes (`/api/health`, `/api/machinecode`, `/api/activate`, `/api/licens
 
 Same recognition routes as [Face Recognition Linux SDK](face-recognition-linux-sdk.md), **plus** liveness:
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License capabilities |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and init |
-| `POST /api/detect` | Detect faces |
-| `POST /api/quality` | Quality checks |
-| `POST /api/feature` | Extract template |
-| `POST /api/match` | Compare two photos |
-| `POST /api/similarity` | Compare two templates |
-| `POST /api/liveness` | Passive face anti-spoofing |
+| Endpoint                 | Purpose                           |
+| ------------------------ | --------------------------------- |
+| `GET /api/health`        | Process is listening (no license) |
+| `GET /api/machinecode`   | Machine code                      |
+| `GET /api/licenseStatus` | License capabilities              |
+| `GET /api/backend`       | `"cpu"`                           |
+| `POST /api/activate`     | Activate and init                 |
+| `POST /api/detect`       | Detect faces                      |
+| `POST /api/quality`      | Quality checks                    |
+| `POST /api/feature`      | Extract template                  |
+| `POST /api/match`        | Compare two photos                |
+| `POST /api/similarity`   | Compare two templates             |
+| `POST /api/liveness`     | Passive face anti-spoofing        |
 
 Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Liveness: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
@@ -174,13 +175,31 @@ Score **≥ 0.5** → Real / pass (same threshold family as Face Liveness on **8
 
 Local Gradio: `DEMO_PORT=9003 API_BASE=http://127.0.0.1:8083 python3 demo.py` (Detect, Quality, Match, **Liveness**).
 
-### FAQ
+### Frequently Asked Questions
 
-**Is this one container for recognition and liveness?** Yes. Image `faceplugin/face-recognition-liveness-sdk`, port **8083**, including `POST /api/liveness`.
+**Is this one container for both face recognition and liveness?**
 
-**Prefer two separate products?** Use [Face Recognition Linux](face-recognition-linux-sdk.md) on **8083** and [Face Liveness Linux](../liveness-detection-sdk/liveness-detection-linux-sdk.md) on **8084**.
+Yes. The `faceplugin/face-recognition-liveness-sdk` image serves both on port 8083, including `POST /api/liveness`.
 
-**Windows combined package?** [Face Recognition + Liveness Windows SDK](face-recognition-sdk-windows.md).
+**Can I run recognition and liveness as separate services instead?**
+
+Yes. Use the Face Recognition Linux SDK on port 8083 and the Face Liveness Linux SDK on port 8084.
+
+**What liveness score counts as a real face?**
+
+A score of 0.5 or higher counts as Real, the same threshold as the standalone Face Liveness product.
+
+**Does one license cover both recognition and liveness?**
+
+The package uses one license, which can enable recognition only, liveness only, or both.
+
+**Does the combined server support 1:N face search?**
+
+No. There is no `POST /api/identify`. Store templates in your own database and compare them with `/api/similarity`.
+
+**Is there a combined package for Windows?**
+
+Yes. See the [Face Recognition + Liveness Windows SDK](face-recognition-sdk-windows.md).
 
 ### Related documentation
 

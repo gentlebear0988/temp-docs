@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin Face Recognition .NET SDK. Fully on-premise face matching and liveness for C#
-  and .NET. Activate, Init, DetectFace, Compare.
+  Faceplugin Face Recognition .NET SDK. Fully on-premise face matching and
+  liveness for C# and .NET. Activate, Init, DetectFace, Compare.
 icon: code
 ---
 
-# Face Recognition .NET SDK
+# .NET
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -56,16 +56,31 @@ This page follows the public [FaceRecognition-.Net](https://github.com/Faceplugi
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
+### Frequently Asked Questions
 
-### FAQ
+**Which APIs does the .NET face recognition SDK provide?**
 
-**What APIs does this page ship?** Public GitHub names: `GetHardwareId`, `Activate`, `Init`, `DetectFace`, `Compare`.
+`GetHardwareId`, `Activate`, `Init`, `DetectFace` and `Compare`, as published in the public GitHub repository.
 
-**Is this the Windows HTTP API?** No. For `POST /api/detect` on port **8083**, use [Face Recognition Windows SDK](face-recognition-windows-sdk.md).
+**Is this the Windows HTTP API?**
+
+No. This is a native library for C#. For the HTTP API (`POST /api/detect` on port 8083), use  [Face Recognition Windows SDK](face-recognition-windows-sdk.md).
+
+**Does the .NET SDK include liveness detection?**
+
+Yes. `DetectFace` returns face liveness along with pose, eye closedness and face occlusion.
+
+**How do I compare two faces in C#?**
+
+Call `Compare` with the RGB data, width, height and stride of both images. The similarity score is written to the `similarity` array.
+
+**Does it send face data to the cloud?**
+
+No. The SDK is fully on-premise: detection and matching run inside your application.
 
 ### Related documentation
 
 * [Faceplugin Face Recognition Server SDK](server-sdk.md) · [Glossary](../resources/glossary.md)
 * [Face Recognition Windows SDK](face-recognition-windows-sdk.md) (HTTP API)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

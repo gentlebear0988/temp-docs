@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin Face Recognition SDK Windows — recognition and face liveness in one process.
-  HTTP API on port 8083 including POST /api/liveness. No Docker.
+  Faceplugin Face Recognition SDK Windows — recognition and face liveness in one
+  process. HTTP API on port 8083 including POST /api/liveness. No Docker.
 icon: windows
 ---
 
-# Face Recognition + Liveness Windows SDK
+# Windows
 
 Fully on-premise **Face Recognition + Face Liveness HTTP API for Windows** in **one** process. Default port **8083**. Gradio **9003**. No Docker on Windows.
 
@@ -27,13 +27,13 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Copy the runtime
+#### Copy the runtime
 
 Copy the CPU libraries from Google Drive into `lib\cpu\` (see the repo README for the current folder link).
 {% endstep %}
 
 {% step %}
-## Install and run
+#### Install and run
 
 ```
 pip install -r requirements.txt
@@ -42,7 +42,7 @@ run.bat
 {% endstep %}
 
 {% step %}
-## Copy the machine code
+#### Get your machine code
 
 ```
 curl -s http://127.0.0.1:8083/api/machinecode
@@ -52,7 +52,7 @@ Send machine code to Faceplugin. Copy it from the terminal if curl is not availa
 {% endstep %}
 
 {% step %}
-## Activate
+#### Activate the license
 
 ```
 curl -s -X POST http://127.0.0.1:8083/api/activate \
@@ -70,19 +70,19 @@ Some routes wrap the result in a small JSON object (an **envelope**). Process PO
 
 Same recognition routes as [Face Recognition Windows SDK](face-recognition-windows-sdk.md), **plus** liveness:
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License capabilities |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and init |
-| `POST /api/detect` | Detect faces |
-| `POST /api/quality` | Quality checks |
-| `POST /api/feature` | Extract template |
-| `POST /api/match` | Compare two photos |
-| `POST /api/similarity` | Compare two templates |
-| `POST /api/liveness` | Passive face anti-spoofing |
+| Endpoint                 | Purpose                           |
+| ------------------------ | --------------------------------- |
+| `GET /api/health`        | Process is listening (no license) |
+| `GET /api/machinecode`   | Machine code                      |
+| `GET /api/licenseStatus` | License capabilities              |
+| `GET /api/backend`       | `"cpu"`                           |
+| `POST /api/activate`     | Activate and init                 |
+| `POST /api/detect`       | Detect faces                      |
+| `POST /api/quality`      | Quality checks                    |
+| `POST /api/feature`      | Extract template                  |
+| `POST /api/match`        | Compare two photos                |
+| `POST /api/similarity`   | Compare two templates             |
+| `POST /api/liveness`     | Passive face anti-spoofing        |
 
 Full reference: [Face Recognition HTTP API](../http-api/face-recognition.md). Liveness: [Face Liveness HTTP API](../http-api/face-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
@@ -105,11 +105,27 @@ curl -s -X POST http://127.0.0.1:8083/api/liveness \
 
 Local Gradio: `run_demo.bat` on **9003** (Detect, Quality, Match, **Liveness**).
 
-### FAQ
+### Frequently Asked Questions
 
-**Is this one Windows process for recognition and liveness?** Yes. Public repo [FaceRecognitionSDK-Windows](https://github.com/Faceplugin-ltd/FaceRecognitionSDK-Windows), including `POST /api/liveness`.
+**Is this one Windows process for both face recognition and liveness?**
 
-**Prefer two separate products?** Use [Face Recognition Windows](face-recognition-windows-sdk.md) on **8083** and [Face Liveness Windows](../liveness-detection-sdk/liveness-detection-windows-sdk.md) on **8084**.
+Yes. A single process on port 8083 serves the recognition routes and `POST /api/liveness`.
+
+**Can I run recognition and liveness as separate products instead?**
+
+Yes. Use the Face Recognition Windows SDK on port 8083 and the Face Liveness Windows SDK on port 8084.
+
+**Do I need Docker on Windows?**
+
+No. The combined SDK runs natively on Windows. For Docker, use the Linux combined SDK.
+
+**Does one license cover both recognition and liveness?**
+
+The package uses one license, which can enable recognition only, liveness only, or both.
+
+**Does the combined server support 1:N face search?**
+
+No. There is no `POST /api/identify`. Store templates in your own database and compare them with `/api/similarity`.
 
 ### Related documentation
 

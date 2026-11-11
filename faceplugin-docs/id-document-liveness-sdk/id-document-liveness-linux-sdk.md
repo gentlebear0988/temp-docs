@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin ID Document Liveness Linux SDK. On-premise document anti-spoofing HTTP API.
-  Docker image faceplugin/document-liveness, POST /api/documentLiveness on port 8086.
+  Faceplugin ID Document Liveness Linux SDK. On-premise document anti-spoofing
+  HTTP API. Docker image faceplugin/document-liveness, POST
+  /api/documentLiveness on port 8086.
 icon: linux
 ---
 
-# ID Document Liveness Linux SDK
+# Linux
 
 ### Code <a href="#setup" id="setup"></a>
 
@@ -85,13 +86,13 @@ Need OCR as well? Use [ID Document Recognition Linux SDK](../id-document-recogni
 
 ### APIs
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License status |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and `init_sdk()` |
+| Endpoint                     | Purpose                               |
+| ---------------------------- | ------------------------------------- |
+| `GET /api/health`            | Process is listening (no license)     |
+| `GET /api/machinecode`       | Machine code                          |
+| `GET /api/licenseStatus`     | License status                        |
+| `GET /api/backend`           | `"cpu"`                               |
+| `POST /api/activate`         | Activate and `init_sdk()`             |
 | `POST /api/documentLiveness` | Authenticity / document anti-spoofing |
 
 Full reference: [Document Liveness HTTP API](../http-api/document-liveness.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
@@ -125,11 +126,27 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Document anti-spoofing API?** `POST /api/documentLiveness` on port **8086**. No OCR.
+**What is the document anti-spoofing API?**
 
-**Need passport OCR too?** Use [ID Document Recognition Linux](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) with a Liveness-capable license, or run both containers and call each API from your backend.
+`POST /api/documentLiveness` on port 8086, served by the `faceplugin/document-liveness` Docker image. It checks authenticity only, with no OCR.
+
+**Can I get passport OCR as well?**
+
+Yes. Use the [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) with a liveness-capable license, or run both containers and call each API from your backend.
+
+**What do I send to the API?**
+
+A JSON body with an `images` array. Each item has a base64 `image` and a `page_idx`, so you can send the front and back of a document.
+
+**Can I run several containers with one license?**
+
+Yes, on the same Linux host. Mount `/etc/machine-id` into each container and give each a unique name and host port, for example 8087.
+
+**Does it send document images to the cloud?**
+
+No. The API runs entirely on your own server.
 
 ### Related documentation
 
@@ -137,4 +154,4 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 * [ID Document Recognition Linux SDK](../id-document-recognition-sdk/id-document-recognition-linux-sdk.md) (OCR + optional authenticity)
 * [Face Liveness Detection Linux SDK](../liveness-detection-sdk/liveness-detection-linux-sdk.md) (face anti-spoofing)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

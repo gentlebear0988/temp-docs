@@ -38,7 +38,7 @@
       * [.NET](face-recognition-sdk/face-recognition-dot-net-sdk.md)
 * [ID Document SDK](id-document-recognition-sdk/README.md)
   * [Capabilities](id-document-recognition-sdk/capabilities.md)
-  * [Document result JSON](id-document-recognition-sdk/document-result-json.md)
+  * [ID Document Recognition JSON Response](id-document-recognition-sdk/document-result-json.md)
   * [Document security check fields](id-document-recognition-sdk/document-security-check-fields.md)
   * [Recognition](id-document-recognition-sdk/recognition.md)
   * [Liveness](id-document-liveness-sdk/README.md)
