@@ -1,43 +1,60 @@
 ---
 description: >-
-  Faceplugin HTTP API for Linux, Docker, and Windows. Ports, response shapes, and links to
-  per-product endpoint pages.
+  Faceplugin HTTP API for Linux, Docker, and Windows. Ports, response shapes,
+  and links to per-product endpoint pages.
 icon: brackets-curly
 layout:
+  width: default
+  title:
+    visible: true
   description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
-# HTTP API overview
+# HTTP API
 
 Use this section when you run Faceplugin on **Linux, Docker, or Windows**. Those apps expose an HTTP API.
 
 Mobile SDKs use the same ideas (activate, process, JSON results). They do **not** use these URLs. Call the native or plugin methods on each mobile platform page instead.
 
-## Base URL
+### Base URL
 
-```text
+```
 http://{host}:{port}
 ```
 
 Paths do **not** include `/v1`.
 
-| Product | Default port | What it does |
-| --- | ---: | --- |
-| ID Document Recognition | 8082 | OCR, MRZ, barcode, optional authenticity |
-| Face Recognition | 8083 | Detect, quality, template, 1:1 match |
-| Face Liveness | 8084 | Score one face image for spoofing |
-| ID Document Liveness | 8086 | Document authenticity only |
+| Product                 | Default port | What it does                             |
+| ----------------------- | -----------: | ---------------------------------------- |
+| ID Document Recognition |         8082 | OCR, MRZ, barcode, optional authenticity |
+| Face Recognition        |         8083 | Detect, quality, template, 1:1 match     |
+| Face Liveness           |         8084 | Score one face image for spoofing        |
+| ID Document Liveness    |         8086 | Document authenticity only               |
 
 **MRZ** means the machine-readable zone on a passport. **OCR** means reading printed text from the image.
 
 These Flask apps allow CORS from any origin (`*`). Do not treat CORS as access control. See [Production deployment](../deploy-and-host/production-deployment.md).
 
-## Two response shapes
+### Two response shapes
 
 This is the most common integration mistake. The apps use **two** shapes.
 
-### Envelope (shared routes)
+#### Envelope (shared routes)
 
 Some routes wrap the result in a small JSON object. We call that an **envelope**.
 
@@ -53,7 +70,7 @@ These routes use an envelope: `GET /api/health`, `/api/machinecode`, `/api/backe
 }
 ```
 
-### Engine JSON (process routes)
+#### Engine JSON (process routes)
 
 Process routes do **not** use an envelope. They return the engine JSON as the HTTP body.
 
@@ -65,7 +82,7 @@ Parse that JSON directly. Do not look for a `success` or `data` wrapper.
 `POST /api/activate` accepts raw `FP1.…` text, JSON `{"license":"FP1.…"}`, or a license file body. An empty body returns envelope `code: -1`.
 {% endhint %}
 
-## Images
+### Images
 
 Send a **base64** image (usually a JPEG) in JSON. Or upload the same field names as **files** with `multipart/form-data`. The path stays the same. The response JSON is the same.
 
@@ -73,21 +90,21 @@ For template compare (`/api/similarity`), send templates as **text** fields (`fe
 
 A **template** is a face feature vector you can store and compare later.
 
-## What is not in these apps
+### What is not in these apps
 
-| Name you might expect | Shipping apps |
-| --- | --- |
-| `POST /api/identify` | **Not** in Face Recognition Linux / Windows |
-| `POST /api/documentDetect` | **Not** in Document Reader Linux / Windows |
-| `POST /api/documentRecognize` | **Not** — use `documentRecognition` or `documentProcess` |
-| `POST /api/verify` / `/api/idv` | **No** all-in-one Face Verification or IDV HTTP app |
-| GPU tags / `lib/gpu/` | **Not** in current Face Recognition or Face Liveness apps |
+| Name you might expect           | Shipping apps                                             |
+| ------------------------------- | --------------------------------------------------------- |
+| `POST /api/identify`            | **Not** in Face Recognition Linux / Windows               |
+| `POST /api/documentDetect`      | **Not** in Document Reader Linux / Windows                |
+| `POST /api/documentRecognize`   | **Not** — use `documentRecognition` or `documentProcess`  |
+| `POST /api/verify` / `/api/idv` | **No** all-in-one Face Verification or IDV HTTP app       |
+| GPU tags / `lib/gpu/`           | **Not** in current Face Recognition or Face Liveness apps |
 
-## Postman
+### Postman
 
 Import `postman/<Product>-API.postman_collection.json` from the repository you cloned.
 
-## Per-product pages
+### Per-product pages
 
 * [Shared endpoints](shared.md) — health, machine code, activate
 * [Face Recognition HTTP API](face-recognition.md)

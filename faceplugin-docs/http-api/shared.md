@@ -1,10 +1,28 @@
 ---
 description: >-
-  Shared Faceplugin HTTP endpoints. GET /api/health, /api/machinecode, /api/backend,
-  /api/licenseStatus, and POST /api/activate. These routes use a JSON envelope.
+  Shared Faceplugin HTTP endpoints. GET /api/health, /api/machinecode,
+  /api/backend, /api/licenseStatus, and POST /api/activate. These routes use a
+  JSON envelope.
 icon: share-nodes
 layout:
+  width: default
+  title:
+    visible: true
   description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
@@ -18,7 +36,7 @@ A **machine code** is a string that identifies the server or container for licen
 
 Process routes (`/api/detect`, `/api/liveness`, `/api/documentProcess`, and so on) are on the product API pages. Those POSTs return **raw engine JSON**. They do not use the envelope below.
 
-## `GET /api/health`
+### `GET /api/health`
 
 Check that the container or `run.bat` process is listening. **No license is required.**
 
@@ -26,31 +44,31 @@ Check that the container or `run.bat` process is listening. **No license is requ
 curl -s http://127.0.0.1:8083/api/health
 ```
 
-| | |
-| --- | --- |
-| **Input** | None |
+|                  |                                    |
+| ---------------- | ---------------------------------- |
+| **Input**        | None                               |
 | **Return value** | Envelope. `data.status` is `"ok"`. |
 
-## `GET /api/machinecode`
+### `GET /api/machinecode`
 
 Get the machine code for a server license. Send the returned `FPMC1.…` string to Faceplugin.
 
-| | |
-| --- | --- |
-| **Input** | None |
+|                  |                                            |
+| ---------------- | ------------------------------------------ |
+| **Input**        | None                                       |
 | **Return value** | Envelope. `data.machinecode` is `FPMC1.…`. |
 
 {% hint style="warning" %}
 A Docker container and the Linux host have **different** machine codes. If you run in Docker, send the code from the **container**.
 {% endhint %}
 
-## `GET /api/backend`
+### `GET /api/backend`
 
 Reports which compute backend the app uses.
 
-| | |
-| --- | --- |
-| **Input** | None |
+|                  |                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Input**        | None                                                                                                                     |
 | **Return value** | Envelope. Face Recognition and Face Liveness return `"backend": "cpu"`. Document products may read `FACEPLUGIN_BACKEND`. |
 
 Example Document Reader `data`:
@@ -63,7 +81,7 @@ Example Document Reader `data`:
 }
 ```
 
-## `POST /api/activate`
+### `POST /api/activate`
 
 Unlocks product endpoints. On success the app also calls `init_sdk()`.
 
@@ -71,23 +89,24 @@ Unlocks product endpoints. On success the app also calls `init_sdk()`.
 {% tab title="JSON / text" %}
 Plain `FP1.…` text, or JSON `{"license":"FP1.…"}`.
 {% endtab %}
+
 {% tab title="form-data" %}
 Field `license` as text, or a license file part named `license`.
 {% endtab %}
 {% endtabs %}
 
-| | |
-| --- | --- |
-| **Input** | License key or file |
+|                  |                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Input**        | License key or file                                                                                                                           |
 | **Return value** | Envelope. Success: `code` 0, `"Successfully activated"`, `data.activated` true. Failure: `code` -1, `"Invalid license"` or `"Empty license"`. |
 
-## `GET /api/licenseStatus`
+### `GET /api/licenseStatus`
 
 Every Face and Document Linux/Windows app implements this route. **No license is required** to call it.
 
-| | |
-| --- | --- |
-| **Input** | None |
+|                  |                                               |
+| ---------------- | --------------------------------------------- |
+| **Input**        | None                                          |
 | **Return value** | Envelope. `data` is the license object below. |
 
 **Face products** (`recognition` / `liveness`):
@@ -120,14 +139,14 @@ Every Face and Document Linux/Windows app implements this route. **No license is
 }
 ```
 
-## `OPTIONS /api/<path>`
+### `OPTIONS /api/<path>`
 
 Returns HTTP 204 for CORS preflight.
 
-## Errors
+### Errors
 
 Unhandled exceptions return envelope `code` **-19** and HTTP 500. Unknown paths return `code` **-10** and HTTP 404. See [Status codes](../resources/status-codes.md).
 
 ### Related documentation
 
-* [HTTP API overview](README.md) · [Request a License](../request-a-license-and-support.md)
+* [HTTP API overview](./) · [Request a License](../request-a-license-and-support.md)

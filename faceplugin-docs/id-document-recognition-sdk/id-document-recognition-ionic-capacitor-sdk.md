@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition Ionic Capacitor SDK. On-premise OCR, MRZ, and
-  authenticity. document-reader-capacitor plugin for new Ionic apps.
+  Faceplugin ID Document Recognition Ionic Capacitor SDK. On-premise OCR, MRZ,
+  and authenticity. document-reader-capacitor plugin for new Ionic apps.
+icon: mobile
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: mobile
+  anchors:
+    visible: true
 ---
 
-# ID Document Recognition Ionic Capacitor SDK
+# Ionic Capacitor
 
 Fully on-premise **ID Document Recognition SDK for Ionic Capacitor**. Package: `document-reader-capacitor`. Prefer this for **new** Ionic apps. Cordova is a [different repo](id-document-recognition-ionic-cordova-sdk.md).
 
@@ -39,7 +41,7 @@ Parse results with [Document result JSON](document-result-json.md).
 
 {% stepper %}
 {% step %}
-## Install and build the plugin
+#### Install and build the plugin
 
 ```bash
 git clone https://github.com/Faceplugin-ltd/ID-Document-Recognition-Ionic-Capacitor.git
@@ -50,19 +52,19 @@ cd example && npm install
 {% endstep %}
 
 {% step %}
-## Place native runtimes
+#### Place native runtimes
 
-| Platform | File | Example / plugin path |
-| -------- | ---- | --------------------- |
-| Android | `documentreadersdk.aar` | `example/android/libdocsdk/` (your app: `node_modules/document-reader-capacitor/android/libs/`) |
-| iOS | `docsdk.framework` | `ios/Frameworks/` |
+| Platform | File                    | Example / plugin path                                                                           |
+| -------- | ----------------------- | ----------------------------------------------------------------------------------------------- |
+| Android  | `documentreadersdk.aar` | `example/android/libdocsdk/` (your app: `node_modules/document-reader-capacitor/android/libs/`) |
+| iOS      | `docsdk.framework`      | `ios/Frameworks/`                                                                               |
 
-- Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
-- iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
+* Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
+* iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
 {% endstep %}
 
 {% step %}
-## Sync and run
+#### Sync and run
 
 ```bash
 cd example
@@ -126,11 +128,27 @@ Also: `getLicenseStatus`, `startNewSession`, `startLivePreview` / `takeLiveSnaps
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Package?** `document-reader-capacitor`. Prefer Capacitor over Cordova.
+**What is the Ionic Capacitor ID document recognition package name?**
 
-**JSON contract?** [Document result JSON](document-result-json.md).
+`document-reader-capacitor`. Capacitor is preferred over Cordova for new Ionic apps.
+
+**Can I test it with `ionic serve` or in a browser?**
+
+No. The engine only runs on a physical device, built through Android Studio or Xcode.
+
+**Where is the result JSON format defined?**
+
+In the [Document result JSON](document-result-json.md) reference.
+
+**What is the difference between recognize, documentRecognition and documentLiveness?**
+
+`recognize` runs the full process. `documentRecognition` reads the document without authenticity checks. `documentLiveness` runs authenticity checks without reading the document.
+
+**Does the Ionic ID document SDK send images to the cloud?**
+
+No. It is an on-premise SDK: documents are read on the device.
 
 ### Related documentation
 
@@ -138,4 +156,4 @@ Also: `getLicenseStatus`, `startNewSession`, `startLivePreview` / `takeLiveSnaps
 * [Face Recognition Ionic Capacitor SDK](../face-recognition-sdk/face-recognition-ionic-capacitor-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

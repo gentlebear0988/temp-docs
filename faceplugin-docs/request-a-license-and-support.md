@@ -21,11 +21,17 @@ Do not paste demo license keys into your production app.
 
 ### FAQ
 
-**Can Faceplugin run completely offline?** Yes, after the key is issued and activated.
+**Can Faceplugin run completely offline?**&#x20;
 
-**Why is my Docker machine code different from the host?** The fingerprint includes Docker. License the environment you ship.
+Yes, after the key is issued and activated.
 
-**Status codes 1–4 on mobile?** See [Status codes](resources/status-codes.md).
+**Why is my Docker machine code different from the host?**
+
+The fingerprint includes Docker. License the environment you ship.
+
+**Status codes 1–4 on mobile?**
+
+See [Status codes](resources/status-codes.md).
 
 ### Need support?
 

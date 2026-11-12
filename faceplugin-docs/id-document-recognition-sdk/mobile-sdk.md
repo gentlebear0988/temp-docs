@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition Mobile SDK. On-premise passport OCR and ID card
-  verification for Android, iOS, Flutter, React Native, and Ionic.
+  Faceplugin ID Document Recognition Mobile SDK. On-premise passport OCR and ID
+  card verification for Android, iOS, Flutter, React Native, and Ionic.
 icon: mobile-screen
 ---
 
-# Faceplugin ID Document Recognition Mobile SDK
+# Mobile
 
 Capture and read identity documents on the device. Camera locate overlay (corners only — no OCR on every frame), then `recognize` / `documentProcess` for OCR, MRZ, barcode, image quality, and optional authenticity.
 
@@ -25,14 +25,18 @@ flowchart LR
 
 ### FAQ
 
-**Does this do passport OCR on the phone?** Yes. `recognize` / `documentProcess` return OCR, MRZ, barcode, and crops. See [Document result JSON](document-result-json.md).
+**Does this do passport OCR on the phone?**
 
-**Is authenticity included?** Only with a Liveness-capable license. Otherwise use [ID Document Liveness](../id-document-liveness-sdk/).
+Yes. `recognize` / `documentProcess` return OCR, MRZ, barcode, and crops. See [Document result JSON](document-result-json.md).
+
+**Is authenticity included?**
+
+Only with a Liveness-capable license. Otherwise use [ID Document Liveness](../id-document-liveness-sdk/).
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Recognition + Liveness](recognition-and-liveness.md) · [Server SDK](server-sdk.md) · [ID Document SDK](README.md) · [Glossary](../resources/glossary.md)
+* [Capabilities](capabilities.md) · [Recognition + Liveness](recognition-and-liveness.md) · [Server SDK](server-sdk.md) · [ID Document SDK](./) · [Glossary](../resources/glossary.md)
 * [Face Recognition Mobile SDK](../face-recognition-sdk/mobile-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

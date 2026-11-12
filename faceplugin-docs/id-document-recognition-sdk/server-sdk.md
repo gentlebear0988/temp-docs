@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin document verification API for Windows and Linux Docker. On-premise passport OCR,
-  MRZ, and authenticity HTTP on port 8082. documentRecognition and documentProcess.
+  Faceplugin document verification API for Windows and Linux Docker. On-premise
+  passport OCR, MRZ, and authenticity HTTP on port 8082. documentRecognition and
+  documentProcess.
 icon: server
 ---
 
-# Faceplugin ID Document Recognition Server SDK
+# Server
 
 ID Document Recognition as an HTTP API on **your** machine. Send page images; receive OCR, MRZ, barcode, image quality, and optional authenticity JSON.
 
@@ -27,16 +28,32 @@ flowchart LR
   Authenticity --> JSON
 ```
 
-### FAQ
+### Frequently Asked Questions
 
-**Is this a document verification API?** Yes. Port **8082**: `POST /api/documentRecognition`, `/api/documentLiveness`, `/api/documentProcess`.
+**Is this a document verification API?**
 
-**Passport OCR without authenticity?** Use `documentRecognition`. Authenticity-only is [ID Document Liveness](../id-document-liveness-sdk/) on port **8086**.
+Yes. On port 8082 it offers `POST /api/documentRecognition`, `/api/documentLiveness` and `/api/documentProcess`.
+
+**Can I get passport OCR without authenticity checks?**
+
+Yes. Use `documentRecognition`. Authenticity-only checks are a separate product, [ID Document Liveness](../id-document-liveness-sdk/) on port **8086**.
+
+**Which platforms does the server SDK support?**
+
+Linux with Docker (`faceplugin/document-reader`), Windows without Docker, and Node.js.
+
+**Does the API send document images to the cloud?**
+
+No. It runs as an HTTP API on your own machine.
+
+**What does the API return?**
+
+JSON with OCR, MRZ, barcode, image quality and optional authenticity results.
 
 ### Related documentation
 
-* [Capabilities](capabilities.md) · [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [ID Document Recognition SDK](README.md) · [Glossary](../resources/glossary.md)
+* [Capabilities](capabilities.md) · [Faceplugin ID Document Recognition Mobile SDK](mobile-sdk.md) · [ID Document Recognition SDK](./) · [Glossary](../resources/glossary.md)
 * [ID Document Liveness Server SDK](../id-document-liveness-sdk/server-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

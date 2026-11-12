@@ -1,14 +1,32 @@
 ---
 description: >-
-  Faceplugin Face Liveness HTTP API. POST /api/liveness (alias /api/check_liveness) with a JPEG
-  on port 8084. Score 0.5 or higher is Real. CPU only.
+  Faceplugin Face Liveness HTTP API. POST /api/liveness (alias
+  /api/check_liveness) with a JPEG on port 8084. Score 0.5 or higher is Real.
+  CPU only.
 icon: user-shield
 layout:
+  width: default
+  title:
+    visible: true
   description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
-# Face Liveness HTTP API
+# Face Liveness
 
 This API scores **one RGB JPEG** for presentation attacks. Examples include a printed photo, a screen replay, a mask, or a deepfake-style spoof.
 
@@ -30,7 +48,7 @@ curl -s -X POST http://127.0.0.1:8084/api/liveness \
   -d "{\"image\":\"$(base64 -w0 face.jpg)\"}"
 ```
 
-## `POST /api/liveness`
+### `POST /api/liveness`
 
 Alias: `POST /api/check_liveness`.
 
@@ -40,15 +58,16 @@ Alias: `POST /api/check_liveness`.
 { "image": "<BASE64-JPEG>", "algorithm": "all" }
 ```
 {% endtab %}
+
 {% tab title="form-data" %}
 File field `image` (alias `file`). Optional text field `algorithm`.
 {% endtab %}
 {% endtabs %}
 
-| | |
-| --- | --- |
-| **Input** | JPEG image. A missing `image` field returns envelope `code: -1` and `"image required"`. |
-| **Return value** | Engine JSON. Score **≥ 0.5** means Real / `pass` true. |
+|                  |                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------- |
+| **Input**        | JPEG image. A missing `image` field returns envelope `code: -1` and `"image required"`. |
+| **Return value** | Engine JSON. Score **≥ 0.5** means Real / `pass` true.                                  |
 
 Example shape:
 
@@ -67,4 +86,4 @@ print(sdk.liveness(base64_jpeg))
 
 ### Related documentation
 
-* [HTTP API overview](README.md) · [Face Recognition HTTP API](face-recognition.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)
+* [HTTP API overview](./) · [Face Recognition HTTP API](face-recognition.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)

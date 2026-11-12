@@ -1,11 +1,12 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition iOS SDK. On-premise OCR, MRZ, and authenticity.
-  docsdk.framework, setActivation, initSDK, locateDocument, recognize.
+  Faceplugin ID Document Recognition iOS SDK. On-premise OCR, MRZ, and
+  authenticity. docsdk.framework, setActivation, initSDK, locateDocument,
+  recognize.
 icon: apple
 ---
 
-# ID Document Recognition iOS SDK
+# iOS
 
 Fully on-premise **ID Document Recognition SDK for iOS**. Native class: `DocSDK`. Demo bundle: **`com.faceplugin.documentreader.app`**.
 
@@ -104,11 +105,27 @@ Licenses are **offline**. Request a new license key for your own app.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Passport OCR on iOS?** Yes. `recognize` returns OCR, MRZ, barcode, and crops.
+**Can I do passport OCR on iOS with this SDK?**
 
-**Offline?** Yes after `setActivation` / `initSDK` for bundle `com.faceplugin.documentreader.app` (or your own license key).
+Yes. `recognize` returns OCR, MRZ, barcode data and cropped images as JSON.
+
+**Does the iOS ID document SDK work offline?**
+
+Yes. After `setActivation` and `initSDK` with a license key for the demo bundle or your own, everything runs on the iPhone.
+
+**What is the difference between recognize, documentRecognition and documentLiveness?**
+
+`recognize` runs everything. `documentRecognition` reads the document without authenticity checks. `documentLiveness` runs authenticity checks without reading the document.
+
+**Which iOS and Xcode versions do I need?**
+
+iOS 13 or later on a physical iPhone, and Xcode 15 or later.
+
+**Which framework do I add to Xcode?**
+
+`docsdk.framework`, added with Embed & Sign. The engine may be nested inside it as `dcrcore.framework`.
 
 ### Related documentation
 
@@ -117,4 +134,4 @@ Licenses are **offline**. Request a new license key for your own app.
 * [Face Liveness Detection iOS SDK](../liveness-detection-sdk/liveness-detection-ios-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

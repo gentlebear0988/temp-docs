@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin document verification API for Linux Docker. On-premise passport OCR, MRZ, and
-  authenticity. POST /api/documentProcess on port 8082.
+  Faceplugin document verification API for Linux Docker. On-premise passport
+  OCR, MRZ, and authenticity. POST /api/documentProcess on port 8082.
 icon: linux
 ---
 
-# ID Document Recognition Linux SDK
+# Linux
 
 Fully on-premise **ID Document Recognition HTTP API for Linux / Docker**. Image: `faceplugin/document-reader`. Default port **8082**. Gradio **9002**.
 
@@ -27,7 +27,9 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Pull from Docker Hub (no Google Drive download)
+#### Pull and run the Docker image
+
+The image comes straight from Docker Hub, so there is nothing to download from Google Drive.
 
 ```
 sudo docker pull faceplugin/document-reader:latest
@@ -38,11 +40,13 @@ sudo docker run -d --name faceplugin-document-reader \
   faceplugin/document-reader:latest
 ```
 
-On Docker Desktop omit the `/etc/machine-id` volume.
+> **`--shm-size=2gb` is required.** A smaller value can crash the engine.
+
+> **Docker Desktop (macOS or Windows):** leave out the `-v /etc/machine-id:/etc/machine-id:ro` line.
 {% endstep %}
 
 {% step %}
-## Confirm health (no license yet)
+**Check that the API is running**
 
 ```
 curl -s http://127.0.0.1:8082/api/health
@@ -50,7 +54,7 @@ curl -s http://127.0.0.1:8082/api/health
 {% endstep %}
 
 {% step %}
-## Activate
+**Get your machine code and activate**
 
 ```
 curl -s http://127.0.0.1:8082/api/machinecode
@@ -138,26 +142,26 @@ Parse the engine JSON with [Document result JSON](document-result-json.md).
 
 ### Integrate into your own app
 
-| Path | When to use |
-| ---- | ----------- |
-| **HTTP** | Any language. Keep this API running and `POST` page images. |
-| **`sdk.py`** | Python on the same Linux host as `lib/cpu/`. |
+| Path         | When to use                                                 |
+| ------------ | ----------------------------------------------------------- |
+| **HTTP**     | Any language. Keep this API running and `POST` page images. |
+| **`sdk.py`** | Python on the same Linux host as `lib/cpu/`.                |
 
 You do **not** need Gradio in production.
 
 ### APIs
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License status |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and `init_sdk()` |
+| Endpoint                        | Purpose                                  |
+| ------------------------------- | ---------------------------------------- |
+| `GET /api/health`               | Process is listening (no license)        |
+| `GET /api/machinecode`          | Machine code                             |
+| `GET /api/licenseStatus`        | License status                           |
+| `GET /api/backend`              | `"cpu"`                                  |
+| `POST /api/activate`            | Activate and `init_sdk()`                |
 | `POST /api/documentRecognition` | OCR / MRZ / barcode / image quality only |
-| `POST /api/documentLiveness` | Authenticity only |
-| `POST /api/documentProcess` | Combined OCR + optional authenticity |
-| `POST /api/generalProcess` | Single-image general process |
+| `POST /api/documentLiveness`    | Authenticity only                        |
+| `POST /api/documentProcess`     | Combined OCR + optional authenticity     |
+| `POST /api/generalProcess`      | Single-image general process             |
 
 Full reference: [Document Reader HTTP API](../http-api/document-reader.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
@@ -176,11 +180,31 @@ print(sdk.document_process(images, options={"response": {"OCR": "normal", "Authe
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Document verification API?** `POST /api/documentRecognition` / `documentProcess` on port **8082**.
+**What is the document verification API?**
 
-**Passport OCR?** Yes — OCR, MRZ, barcode, crops in the same JSON.
+`POST /api/documentRecognition` and `POST /api/documentProcess` on port 8082, served by the `faceplugin/document-reader` Docker image.
+
+**Does it do passport OCR?**
+
+Yes. OCR, MRZ, barcode data and image crops come back in the same JSON response.
+
+**How do I turn on authenticity checks?**
+
+Call `documentProcess` with `"Authenticity": "normal"` in the `response` options, as in the test request above.
+
+**Why does my container crash on start?**
+
+Check that you ran it with `--shm-size=2gb`. A smaller shared-memory size can crash the engine.
+
+**Can I run several containers with one license?**
+
+Yes. Give each container its own name and host port; they can share the same machine ID and license.
+
+**Does the API send document data to the cloud?**
+
+No. It is fully on-premise and runs on your own server.
 
 ### Related documentation
 
@@ -190,4 +214,4 @@ print(sdk.document_process(images, options={"response": {"OCR": "normal", "Authe
 * [ID Document Liveness Linux SDK](../id-document-liveness-sdk/id-document-liveness-linux-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

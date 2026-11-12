@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition Android SDK. On-premise OCR, MRZ, barcode, and
-  authenticity. documentreadersdk.aar in libdocsdk, not libfacesdk.
+  Faceplugin ID Document Recognition Android SDK. On-premise OCR, MRZ, barcode,
+  and authenticity. documentreadersdk.aar in libdocsdk, not libfacesdk.
+icon: android
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: android
+  anchors:
+    visible: true
 ---
 
-# ID Document Recognition Android SDK
+# Android
 
 Fully on-premise **ID Document Recognition SDK for Android**. Reads passports, national IDs, and driver licenses. Place `documentreadersdk.aar` in **`libdocsdk/`**, not `libfacesdk/`.
 
@@ -87,8 +89,8 @@ public static String lastLicenseError();
 public static String locateDocument(Bitmap bitmap);
 ```
 
-| **Input**        | Preview bitmap. |
-| ---------------- | ---------------- |
+| **Input**        | Preview bitmap.                                              |
+| ---------------- | ------------------------------------------------------------ |
 | **Return value** | JSON: corners + score. **No OCR.** Use for the overlay only. |
 
 Also: `locateVideoFrame(byte[] nv21, int width, int height, int rotation)` for camera NV21 frames.
@@ -101,9 +103,9 @@ public static String recognize(Bitmap front, Bitmap back, boolean authenticity);
 public static String recognize(Bitmap front, Bitmap back, String authenticityMode);
 ```
 
-| **Input**        | One image, or front + optional back. Authenticity <code>"normal"</code> / <code>"none"</code> or boolean. |
-| ---------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Return value** | JSON: OCR / MRZ / barcode, verification, image quality, crops, security (if licensed).                   |
+| **Input**        | One image, or front + optional back. Authenticity `"normal"` / `"none"` or boolean.    |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| **Return value** | JSON: OCR / MRZ / barcode, verification, image quality, crops, security (if licensed). |
 
 Verification: **0** Pass, **1** Fail, **2** Not checked.
 
@@ -148,13 +150,13 @@ public static String deinit();
 
 ### Screenshots
 
-| Home | Camera | Gallery |
-| ---- | ------ | ------- |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/home.png" alt="Faceplugin Document Reader Android home" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png" alt="Faceplugin Document Reader camera overlay" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/gallery.png" alt="Faceplugin Document Reader gallery" width="180"/></p> |
+| Home                                                                                                                                                                                               | Camera                                                                                                                                                                                                 | Gallery                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/home.png" alt="Faceplugin Document Reader Android home" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/camera.png" alt="Faceplugin Document Reader camera overlay" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/gallery.png" alt="Faceplugin Document Reader gallery" data-size="original"> |
 
-| Result | Security | Images |
-| ------ | -------- | ------ |
-| <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/result.png" alt="Faceplugin Document Reader result" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/security.png" alt="Faceplugin Document Reader security" width="180"/></p> | <p align="center"><img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/images.png" alt="Faceplugin Document Reader crops" width="180"/></p> |
+| Result                                                                                                                                                                                         | Security                                                                                                                                                                                           | Images                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/result.png" alt="Faceplugin Document Reader result" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/security.png" alt="Faceplugin Document Reader security" data-size="original"> | <img src="https://raw.githubusercontent.com/Faceplugin-ltd/faceplugin-assets/main/screenshots/document-reader/mobile/images.png" alt="Faceplugin Document Reader crops" data-size="original"> |
 
 ### License
 
@@ -170,11 +172,31 @@ String json = DocumentReaderSDK.recognize(front, back, "normal");
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Passport OCR on Android?** Yes. `DocumentReaderSDK.recognize` / `documentProcess` return OCR, MRZ, barcode, and crops. See [Document result JSON](document-result-json.md).
+**Can I do passport OCR on Android with this SDK?**
 
-**Offline?** Yes after `setActivation` / `init` with a license key for the demo app id (or yours).
+Yes. `DocumentReaderSDK.recognize` / `documentProcess` return OCR, MRZ, barcode, and crops. See [Document result JSON](document-result-json.md).
+
+**Does the Android ID document SDK work offline?**
+
+Yes. everything runs on the device.
+
+**What is the difference between recognize, documentRecognition and documentLiveness?**
+
+`recognize` runs everything. `documentRecognition` reads the document without authenticity checks. `documentLiveness` runs authenticity checks without reading the document.
+
+**How do I turn document authenticity checks on?**
+
+Pass `"normal"` (or `true`) as the authenticity argument of `recognize`. Pass `"none"` to skip them. Authenticity also needs a license that includes it.
+
+**What is the minimum Android version?**
+
+minSdk 24, built with JDK 17.
+
+**Where does the AAR file go?**
+
+In `libdocsdk/`, not `libfacesdk/`.
 
 ### Related documentation
 
@@ -183,4 +205,4 @@ String json = DocumentReaderSDK.recognize(front, back, "normal");
 * [Face Liveness Detection Android SDK](../liveness-detection-sdk/liveness-detection-android-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

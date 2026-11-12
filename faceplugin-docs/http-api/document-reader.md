@@ -1,22 +1,40 @@
 ---
 description: >-
   Faceplugin ID Document Recognition HTTP API. POST /api/documentRecognition,
-  /api/documentLiveness, /api/documentProcess, and /api/generalProcess on port 8082.
+  /api/documentLiveness, /api/documentProcess, and /api/generalProcess on port
+  8082.
 icon: file-lines
 layout:
+  width: default
+  title:
+    visible: true
   description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
-# ID Document Recognition HTTP API
+# ID Document Recognition
 
 This is the HTTP API for **ID Document Recognition**. It runs on Linux Docker image `faceplugin/document-reader` and on the Windows app. Default port **8082**.
 
-| Route | Use it for |
-| --- | --- |
-| `documentRecognition` | OCR, MRZ, barcode, image quality only |
-| `documentLiveness` | Authenticity only |
-| `documentProcess` | Combined pipeline (fields plus optional authenticity) |
+| Route                 | Use it for                                            |
+| --------------------- | ----------------------------------------------------- |
+| `documentRecognition` | OCR, MRZ, barcode, image quality only                 |
+| `documentLiveness`    | Authenticity only                                     |
+| `documentProcess`     | Combined pipeline (fields plus optional authenticity) |
 
 **MRZ** is the machine-readable zone on a passport. **OCR** means reading printed text from the image.
 
@@ -34,7 +52,7 @@ curl -s -X POST http://127.0.0.1:8082/api/documentRecognition \
   -d "{\"images\":[{\"image\":\"$(base64 -w0 id.jpg)\"}]}"
 ```
 
-## `POST /api/documentRecognition`
+### `POST /api/documentRecognition`
 
 OCR / MRZ / barcode / image quality only. Authenticity is **always off**. Caller `response` flags are ignored.
 
@@ -49,14 +67,15 @@ OCR / MRZ / barcode / image quality only. Authenticity is **always off**. Caller
 }
 ```
 {% endtab %}
+
 {% tab title="form-data" %}
 Repeated file field `images` (or a single `image` / `file`). Optional file `rfid`. Text `isCropped`.
 {% endtab %}
 {% endtabs %}
 
-| | |
-| --- | --- |
-| **Input** | One or more page images (base64). Same `images` shape as `documentProcess`. |
+|                  |                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------- |
+| **Input**        | One or more page images (base64). Same `images` shape as `documentProcess`.              |
 | **Return value** | Engine JSON with OCR / MRZ / barcode / `imageQuality`. No `security` authenticity block. |
 
 Python:
@@ -70,22 +89,22 @@ result = sdk.document_recognition(
 )
 ```
 
-## `POST /api/documentLiveness`
+### `POST /api/documentLiveness`
 
 Authenticity / security only. OCR / MRZ / barcode / image quality are **always off**. Caller `response` flags are ignored.
 
 Use the same image body as `documentRecognition`. The dedicated Document Liveness product on port **8086** uses this same path. On Document Reader (**8082**) it is authenticity-only against the recognition engine.
 
-| | |
-| --- | --- |
-| **Input** | One or more page images (base64). |
+|                  |                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| **Input**        | One or more page images (base64).                                                         |
 | **Return value** | Engine JSON with `security` checks when the license includes Liveness. No `images` crops. |
 
 Python: `sdk.document_liveness(images)`.
 
 Also see [ID Document Liveness HTTP API](document-liveness.md).
 
-## `POST /api/documentProcess`
+### `POST /api/documentProcess`
 
 Run a full document process (fields plus optional security).
 
@@ -108,6 +127,7 @@ Run a full document process (fields plus optional security).
 }
 ```
 {% endtab %}
+
 {% tab title="form-data" %}
 Repeated file field `images` (or a single `image` / `file`). Optional file `rfid`. Text `options` or `response` as a JSON string. Text `isCropped`.
 {% endtab %}
@@ -119,10 +139,10 @@ Repeated file field `images` (or a single `image` / `file`). Optional file `rfid
 * `"ImageQuality": "none"` skips capture-quality checks and omits `imageQuality` from the result. `"normal"` (default) runs them.
 * Optional `rfid` is a string passed through to the engine. The Gradio demo does not walk through NFC/RFID capture.
 
-| | |
-| --- | --- |
-| **Input** | One or more page images (base64) and response flags. |
-| **Return value** | Engine JSON (not the envelope). |
+|                  |                                                      |
+| ---------------- | ---------------------------------------------------- |
+| **Input**        | One or more page images (base64) and response flags. |
+| **Return value** | Engine JSON (not the envelope).                      |
 
 Python:
 
@@ -139,7 +159,7 @@ result = sdk.document_process(
 
 Session helpers on `sdk.py` (`start_new_session()`, `start_new_page()`, `unload()`, `get_license_status()`) are **not** separate HTTP routes.
 
-## `POST /api/generalProcess`
+### `POST /api/generalProcess`
 
 Single-image general process.
 
@@ -147,11 +167,11 @@ Single-image general process.
 { "image": "<BASE64>", "options": {} }
 ```
 
-| | |
-| --- | --- |
-| **Input** | One base64 image. |
+|                  |                                         |
+| ---------------- | --------------------------------------- |
+| **Input**        | One base64 image.                       |
 | **Return value** | Engine JSON from `sdk.general_process`. |
 
 ### Related documentation
 
-* [HTTP API overview](README.md) · [Document result JSON](../id-document-recognition-sdk/document-result-json.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)
+* [HTTP API overview](./) · [Document result JSON](../id-document-recognition-sdk/document-result-json.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)

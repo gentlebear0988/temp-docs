@@ -1,11 +1,11 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition Windows SDK. Fully on-premise OCR and authenticity
-  HTTP API on port 8082. documentRecognition, documentProcess.
+  Faceplugin ID Document Recognition Windows SDK. Fully on-premise OCR and
+  authenticity HTTP API on port 8082. documentRecognition, documentProcess.
 icon: windows
 ---
 
-# ID Document Recognition Windows SDK
+# Windows
 
 Fully on-premise **ID Document Recognition HTTP API for Windows**. Default port **8082**. Gradio **9002**. No Docker on Windows — use [Linux SDK](id-document-recognition-linux-sdk.md) for Docker.
 
@@ -21,13 +21,13 @@ Sizing: [Hosting requirements](../deploy-and-host/hosting-requirements.md).
 
 {% stepper %}
 {% step %}
-## Copy the runtime
+#### Copy the runtime
 
 Copy the CPU libraries from [Google Drive](https://drive.google.com/drive/folders/1YfHUwnXO0E2NSvS_81nTNO2z3mKVO85g) into `lib\cpu\`.
 {% endstep %}
 
 {% step %}
-## Install and run
+#### Install and run
 
 ```
 pip install -r requirements.txt
@@ -38,7 +38,7 @@ Demo UI: `run_demo.bat` after the API is up.
 {% endstep %}
 
 {% step %}
-## Copy the machine code and activate
+#### Copy the machine code and activate
 
 ```
 curl -s http://127.0.0.1:8082/api/machinecode
@@ -53,21 +53,22 @@ curl -s -X POST http://127.0.0.1:8082/api/activate \
 
 Same as [ID Document Recognition Linux SDK](id-document-recognition-linux-sdk.md):
 
-| Endpoint | Purpose |
-| -------- | ------- |
-| `GET /api/health` | Process is listening (no license) |
-| `GET /api/machinecode` | Machine code |
-| `GET /api/licenseStatus` | License status |
-| `GET /api/backend` | `"cpu"` |
-| `POST /api/activate` | Activate and `init_sdk()` |
+| Endpoint                        | Purpose                                  |
+| ------------------------------- | ---------------------------------------- |
+| `GET /api/health`               | Process is listening (no license)        |
+| `GET /api/machinecode`          | Machine code                             |
+| `GET /api/licenseStatus`        | License status                           |
+| `GET /api/backend`              | `"cpu"`                                  |
+| `POST /api/activate`            | Activate and `init_sdk()`                |
 | `POST /api/documentRecognition` | OCR / MRZ / barcode / image quality only |
-| `POST /api/documentLiveness` | Authenticity only |
-| `POST /api/documentProcess` | Combined OCR + optional authenticity |
-| `POST /api/generalProcess` | Single-image general process |
+| `POST /api/documentLiveness`    | Authenticity only                        |
+| `POST /api/documentProcess`     | Combined OCR + optional authenticity     |
+| `POST /api/generalProcess`      | Single-image general process             |
 
 Full reference: [Document Reader HTTP API](../http-api/document-reader.md). Shared control routes: [Shared endpoints](../http-api/shared.md).
 
 Some routes wrap the result in a small JSON object (an **envelope**). Process POSTs return **engine JSON** as the body.
+
 ### Try it
 
 ```bash
@@ -83,11 +84,27 @@ curl -s -X POST http://127.0.0.1:8082/api/documentProcess \
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**API?** Same routes as Linux on port **8082**. No Docker on Windows.
+**Is there an ID document recognition API for Windows?**
 
-**Authenticity?** `documentLiveness` / `documentProcess` when the license includes it.
+Yes. It uses the same routes as the Linux SDK, on port 8082, and runs without Docker.
+
+**How do I run document authenticity checks on Windows?**
+
+Use `documentLiveness` or `documentProcess`. Both need a license that includes authenticity.
+
+**Do I need Docker to run it on Windows?**
+
+No. The Windows SDK runs natively with `run.bat`. Docker is used only for the Linux SDK.
+
+**Which documents does it read?**
+
+ID cards, passports and driver's licenses.
+
+**Does it send document data to the cloud?**
+
+No. It is fully on-premise and runs on your own Windows machine.
 
 ### Related documentation
 
@@ -96,4 +113,4 @@ curl -s -X POST http://127.0.0.1:8082/api/documentProcess \
 * [Face Liveness Detection Windows SDK](../liveness-detection-sdk/liveness-detection-windows-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

@@ -2,6 +2,7 @@
 description: >-
   Faceplugin ID Document Recognition React Native SDK. On-premise OCR, MRZ, and
   authenticity. document-reader-sdk plugin, not Expo Go.
+icon: react
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: react
+  anchors:
+    visible: true
 ---
 
-# ID Document Recognition React Native SDK
+# React Native
 
 Fully on-premise **ID Document Recognition SDK for React Native**. Package: `document-reader-sdk`. **Not Expo Go.** Physical arm64 device.
 
@@ -37,13 +39,13 @@ Android output is **normalized** to the iOS-shaped JSON. Parse it with [Document
 
 {% stepper %}
 {% step %}
-## Install tools
+#### Install tools
 
 Node **18+**, Yarn, React Native environment. Use Yarn as in the repo. **Not Expo Go.**
 {% endstep %}
 
 {% step %}
-## Clone and install
+#### Clone and install
 
 ```bash
 git clone https://github.com/Faceplugin-ltd/ID-Document-Recognition-React-Native.git
@@ -54,19 +56,19 @@ cd example && yarn
 {% endstep %}
 
 {% step %}
-## Place native runtimes
+#### Place native runtimes
 
-| Platform | File | Example app path | Your own app path |
-| -------- | ---- | ---------------- | ----------------- |
-| Android | `documentreadersdk.aar` | `example/android/libdocsdk/` | `node_modules/document-reader-sdk/android/libs/` |
-| iOS | `docsdk.framework` | `ios/Frameworks/` | `node_modules/document-reader-sdk/ios/Frameworks/` |
+| Platform | File                    | Example app path             | Your own app path                                  |
+| -------- | ----------------------- | ---------------------------- | -------------------------------------------------- |
+| Android  | `documentreadersdk.aar` | `example/android/libdocsdk/` | `node_modules/document-reader-sdk/android/libs/`   |
+| iOS      | `docsdk.framework`      | `ios/Frameworks/`            | `node_modules/document-reader-sdk/ios/Frameworks/` |
 
-- Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
-- iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
+* Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
+* iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
 {% endstep %}
 
 {% step %}
-## Run on a phone
+#### Run on a phone
 
 ```
 yarn
@@ -164,11 +166,33 @@ Also: `getLicenseStatus`, `startNewSession`, `deinit`.
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Package?** `document-reader-sdk`. Yarn 3; not Expo Go.
+**What is the React Native ID document recognition package name?**
 
-**Same JSON as iOS?** Yes — the plugin normalizes Android output. See [Document result JSON](document-result-json.md).
+`document-reader-sdk`. Install it from GitHub with Yarn, not from npm.
+
+**Does it work with Expo Go?**
+
+No. The package contains native code and needs a physical arm64 device.
+
+**Is the JSON result the same on Android and iOS?**
+
+Yes. The plugin normalizes Android output to the iOS shape, so one parser works for both.
+
+See [Document result JSON](document-result-json.md).
+
+**Why don't my changes show up after installing the package?**
+
+You need to rebuild the native app after installing. A JavaScript reload is not enough.
+
+**Which permissions does the SDK need?**
+
+Camera access, plus photo library access if users pick images from the gallery: `CAMERA` and `READ_MEDIA_IMAGES` on Android, and `NSCameraUsageDescription` and `NSPhotoLibraryUsageDescription` on iOS.
+
+Does the React Native ID document SDK work offline?
+
+Yes. It is fully on-premise: documents are read on the device.
 
 ### Related documentation
 
@@ -176,4 +200,4 @@ Also: `getLicenseStatus`, `startNewSession`, `deinit`.
 * [Face Recognition React Native SDK](../face-recognition-sdk/face-recognition-react-native-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

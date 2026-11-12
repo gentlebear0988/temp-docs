@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition Flutter SDK. On-premise OCR, MRZ, and authenticity.
-  document_reader_sdk plugin for Android and iOS.
+  Faceplugin ID Document Recognition Flutter SDK. On-premise OCR, MRZ, and
+  authenticity. document_reader_sdk plugin for Android and iOS.
+icon: mobile
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: mobile
+  anchors:
+    visible: true
 ---
 
-# ID Document Recognition Flutter SDK
+# Flutter
 
 Fully on-premise **ID Document Recognition SDK for Flutter**. Package: `document_reader_sdk`. Android output is **normalized** to the iOS-shaped JSON. Parse it with [Document result JSON](document-result-json.md).
 
@@ -35,13 +37,13 @@ Fully on-premise **ID Document Recognition SDK for Flutter**. Package: `document
 
 {% stepper %}
 {% step %}
-## Install tools
+#### Install tools
 
 Flutter **3.44+** (see the package `pubspec.yaml`). JDK **17**. Run `flutter doctor` and fix reported issues.
 {% endstep %}
 
 {% step %}
-## Clone and bootstrap
+#### Clone and bootstrap
 
 ```
 git clone https://github.com/Faceplugin-ltd/ID-Document-Recognition-Flutter.git
@@ -51,19 +53,19 @@ dart run tool/bootstrap.dart
 {% endstep %}
 
 {% step %}
-## Place native runtimes
+#### Place native runtimes
 
-| Platform | File | Example app path | Your own app path |
-| -------- | ---- | ---------------- | ----------------- |
-| Android | `documentreadersdk.aar` | `example/android/libdocsdk/` | Plugin `android/libs/` |
-| iOS | `docsdk.framework` | `ios/Frameworks/` | Plugin `ios/Frameworks/` |
+| Platform | File                    | Example app path             | Your own app path        |
+| -------- | ----------------------- | ---------------------------- | ------------------------ |
+| Android  | `documentreadersdk.aar` | `example/android/libdocsdk/` | Plugin `android/libs/`   |
+| iOS      | `docsdk.framework`      | `ios/Frameworks/`            | Plugin `ios/Frameworks/` |
 
-- Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
-- iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
+* Android Google Drive: [documentreadersdk.aar](https://drive.google.com/drive/folders/1nDSfvj0WtC1lZgzwFd7471ECVtk-nuYH)
+* iOS Google Drive: [docsdk.framework](https://drive.google.com/drive/folders/1do6Ws_BlXGkR_K9jI_ULd1zHjqLGSP4q)
 {% endstep %}
 
 {% step %}
-## Run the example
+#### Run the example
 
 ```
 cd example
@@ -160,11 +162,27 @@ Also: `getLicenseStatus`, `startNewSession`, `recognizeResult` (typed `DocResult
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Package?** `document_reader_sdk`.
+**What is the Flutter ID document recognition package name?**
 
-**Passport OCR?** Yes. `recognize` / `documentProcess`. Typed helper: `recognizeResult`.
+`document_reader_sdk`, added as a git dependency from the ID-Document-Recognition-Flutter repository.
+
+**Can I do passport OCR in Flutter?**
+
+Yes. `recognize` returns OCR, MRZ and barcode data as JSON, and `recognizeResult` gives you the same result as a typed object.
+
+**Does the Flutter ID document SDK work offline?**
+
+Yes. It is on-premise: document reading runs on the device.
+
+**Is the result the same on Android and iOS?**
+
+Yes. Android output is normalized to the iOS-shaped JSON, so one parser works for both.
+
+**How do I turn authenticity checks on or off?**
+
+Pass `true` or `'normal'` to turn them on, and `false` or `'none'` to turn them off. In `recognize`, authenticity is on by default.
 
 ### Related documentation
 
@@ -172,4 +190,4 @@ Also: `getLicenseStatus`, `startNewSession`, `recognizeResult` (typed `DocResult
 * [Face Recognition Flutter SDK](../face-recognition-sdk/face-recognition-flutter-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

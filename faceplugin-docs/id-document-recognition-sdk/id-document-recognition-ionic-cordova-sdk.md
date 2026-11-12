@@ -1,7 +1,8 @@
 ---
 description: >-
-  Faceplugin ID Document Recognition Ionic Cordova SDK. Legacy DocumentReaderPlugin
-  layout. Prefer Capacitor for new ID scanning apps.
+  Faceplugin ID Document Recognition Ionic Cordova SDK. Legacy
+  DocumentReaderPlugin layout. Prefer Capacitor for new ID scanning apps.
+icon: mobile
 layout:
   width: default
   title:
@@ -20,10 +21,11 @@ layout:
     visible: true
   actions:
     visible: true
-icon: mobile
+  anchors:
+    visible: true
 ---
 
-# ID Document Recognition Ionic Cordova SDK
+# Ionic Cordova
 
 Use this guide only if you already have a **Cordova** Ionic app. The native engine matches Capacitor. New projects should use [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md).
 
@@ -33,7 +35,7 @@ Use this guide only if you already have a **Cordova** Ionic app. The native engi
 
 ### How to run
 
-### ✅ Setup Environment
+#### ✅ Setup Environment
 
 Install Node.js, Ionic CLI, and Cordova. Physical device recommended (`ionic serve` cannot load the engine).
 
@@ -89,9 +91,27 @@ Parse JSON with [Document result JSON](document-result-json.md).
 
 [Request a License & Support](../request-a-license-and-support.md) · [Contact us](../contact-us.md)
 
-### FAQ
+### Frequently Asked Questions
 
-**Legacy plugin?** Yes. Prefer [Ionic Capacitor](id-document-recognition-ionic-capacitor-sdk.md) for new apps.
+**Is the Cordova plugin a legacy plugin?**
+
+Yes. It is for existing Ionic Cordova apps. New apps should use Ionic Capacitor, which runs the same native engine.
+
+**Can I test it with `ionic serve` or a simulator?**
+
+No. `ionic serve` can't load the engine, and iOS needs a physical iPhone because the framework targets device arm64.
+
+**Where do the native runtime files go?**
+
+The Android AAR goes in `DocumentReaderPlugin/src/android/`, and the iOS framework in `DocumentReaderPlugin/src/ios/Frameworks/`.
+
+**What do I need to build for iOS?**
+
+A physical iPhone and your Apple Team ID in the root `build.json`.
+
+**How do I parse the result?**
+
+`recognize` returns JSON. The fields are described in the Document result JSON reference.
 
 ### Related documentation
 
@@ -99,4 +119,4 @@ Parse JSON with [Document result JSON](document-result-json.md).
 * [Face Recognition Ionic Cordova SDK](../face-recognition-sdk/face-recognition-ionic-cordova-sdk.md)
 * [Document result JSON](document-result-json.md)
 * [Request a License](../request-a-license-and-support.md) · [Status codes](../resources/status-codes.md)
-* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/README.md)
+* [Combining products (eKYC)](../resources/choose-a-product.md) · [SDK comparison](../resources/comparisons/)

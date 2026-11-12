@@ -1,14 +1,31 @@
 ---
 description: >-
-  Faceplugin ID Document Liveness HTTP API. POST /api/documentLiveness on port 8086.
-  Authenticity only — OCR, MRZ, and barcode are off.
+  Faceplugin ID Document Liveness HTTP API. POST /api/documentLiveness on port
+  8086. Authenticity only — OCR, MRZ, and barcode are off.
 icon: stamp
 layout:
+  width: default
+  title:
+    visible: true
   description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
-# ID Document Liveness HTTP API
+# ID Document Liveness
 
 This API runs **document authenticity** (anti-spoofing) only. It does not return OCR fields, MRZ lines, or barcodes.
 
@@ -28,7 +45,7 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
   -d "{\"images\":[{\"image\":\"$(base64 -w0 id.jpg)\"}]}"
 ```
 
-## `POST /api/documentLiveness`
+### `POST /api/documentLiveness`
 
 {% tabs %}
 {% tab title="JSON" %}
@@ -41,6 +58,7 @@ curl -s -X POST http://127.0.0.1:8086/api/documentLiveness \
 }
 ```
 {% endtab %}
+
 {% tab title="form-data" %}
 Repeated file field `images` (or a single `image` / `file`). Same URL.
 {% endtab %}
@@ -48,10 +66,10 @@ Repeated file field `images` (or a single `image` / `file`). Same URL.
 
 A lone `"image"` field becomes a one-page list. Optional `options` or top-level `response` are forwarded. The product always requests authenticity. OCR / MRZ / barcode stay off.
 
-| | |
-| --- | --- |
-| **Input** | One or more page images (base64). Front and back are supported. |
-| **Return value** | Engine JSON from `sdk.document_liveness`. |
+|                  |                                                                 |
+| ---------------- | --------------------------------------------------------------- |
+| **Input**        | One or more page images (base64). Front and back are supported. |
+| **Return value** | Engine JSON from `sdk.document_liveness`.                       |
 
 ```python
 import sdk
@@ -64,4 +82,4 @@ Security field names: [Document security check fields](../id-document-recognitio
 
 ### Related documentation
 
-* [HTTP API overview](README.md) · [ID Document Recognition HTTP API](document-reader.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)
+* [HTTP API overview](./) · [ID Document Recognition HTTP API](document-reader.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)

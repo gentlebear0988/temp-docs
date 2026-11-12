@@ -1,10 +1,27 @@
 ---
 description: >-
-  Production checklist for Faceplugin server SDKs. TLS, health checks, activate, no Gradio,
-  networking, scale, and upgrades.
+  Production checklist for Faceplugin server SDKs. TLS, health checks, activate,
+  no Gradio, networking, scale, and upgrades.
 icon: shield-check
 layout:
+  width: default
+  title:
+    visible: true
   description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
@@ -12,7 +29,7 @@ layout:
 
 Use this checklist after a first-run install works. These are **how you run** the product. They are not new product features.
 
-## Before you go live
+### Before you go live
 
 1. Use a Docker Hub image, or a **fixed image tag** you control. Avoid surprise `latest` changes in production if you need a locked build.
 2. Do **not** run Gradio (`demo` / `demo.py`) in production. Gradio is a local test UI only.
@@ -23,7 +40,7 @@ Use this checklist after a first-run install works. These are **how you run** th
 7. Run **one container or process per product**. Prefer **combined** Face Recognition + Liveness (**8083**) and Document Reader with authenticity (**8082**) instead of separate liveness-only services. To scale, add more containers. Follow the license and machine-code rules on each platform page.
 8. Read logs from `docker logs` or process stdout. Faceplugin does not collect cloud telemetry from these apps.
 
-## License and machine code
+### License and machine code
 
 A **machine code** identifies the server or container for licensing.
 
@@ -33,14 +50,14 @@ A Docker container and the Linux host have **different** machine codes. If you r
 
 On Linux, mounting `/etc/machine-id` into each container can let several containers share one machine code. On Docker Desktop, omit that volume. Each container may need its own license. Details: [Request a License & Support](../request-a-license-and-support.md).
 
-## Upgrade path
+### Upgrade path
 
 1. Pull the new image, or replace files in `lib/cpu/`.
 2. Restart the container or process.
 3. Activate again if the machine code changed.
 4. Smoke-test `GET /api/health` and one process endpoint (for example `/api/detect` or `/api/documentRecognition`).
 
-## What production is not
+### What production is not
 
 These surfaces are for evaluation only:
 
@@ -50,15 +67,15 @@ These surfaces are for evaluation only:
 
 Do not point production traffic at them.
 
-## Quick links
+### Quick links
 
-| Topic | Page |
-| --- | --- |
-| Topology and what you own | [Architecture](architecture.md) |
-| CPU, RAM, shm, ports | [Hosting requirements](hosting-requirements.md) |
-| Endpoint contracts | [HTTP API](../http-api/) |
-| First-run curls | [Try it](../resources/try-it.md) |
+| Topic                     | Page                                            |
+| ------------------------- | ----------------------------------------------- |
+| Topology and what you own | [Architecture](architecture.md)                 |
+| CPU, RAM, shm, ports      | [Hosting requirements](hosting-requirements.md) |
+| Endpoint contracts        | [HTTP API](../http-api/)                        |
+| First-run curls           | [Try it](../resources/try-it.md)                |
 
 ### Related documentation
 
-* [Deploy and host](README.md) · [Troubleshooting](../resources/troubleshooting.md) · [Status codes](../resources/status-codes.md)
+* [Deploy and host](./) · [Troubleshooting](../resources/troubleshooting.md) · [Status codes](../resources/status-codes.md)

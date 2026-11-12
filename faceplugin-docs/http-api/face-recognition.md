@@ -1,14 +1,32 @@
 ---
 description: >-
-  Faceplugin Face Recognition HTTP API. POST /api/detect, /api/quality, /api/feature,
-  /api/match, and /api/similarity on port 8083. JSON or form-data. CPU only.
+  Faceplugin Face Recognition HTTP API. POST /api/detect, /api/quality,
+  /api/feature, /api/match, and /api/similarity on port 8083. JSON or form-data.
+  CPU only.
 icon: face-viewfinder
 layout:
+  width: default
+  title:
+    visible: true
   description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
-# Face Recognition HTTP API
+# Face Recognition
 
 This is the **still-image** Face Recognition API. It runs on Linux Docker image `faceplugin/face-recognition` and on the Windows app. Default port **8083**. The engine is **CPU only**.
 
@@ -34,7 +52,7 @@ curl -s -X POST http://127.0.0.1:8083/api/detect \
 
 More one-liners: [Try it](../resources/try-it.md).
 
-## `POST /api/detect`
+### `POST /api/detect`
 
 Detect faces in one image.
 
@@ -46,6 +64,7 @@ Detect faces in one image.
 
 `crop_image` is accepted as an alias.
 {% endtab %}
+
 {% tab title="form-data" %}
 File field `image` (alias `file`). Text field `cropImage` (`true` / `false`). Same URL.
 {% endtab %}
@@ -53,21 +72,21 @@ File field `image` (alias `file`). Text field `cropImage` (`true` / `false`). Sa
 
 Python: `sdk.detect(image, crop_image=False)`.
 
-| | |
-| --- | --- |
-| **Input** | One image. Optional `cropImage`. |
-| **Return value** | Engine JSON (not the envelope). |
+|                  |                                  |
+| ---------------- | -------------------------------- |
+| **Input**        | One image. Optional `cropImage`. |
+| **Return value** | Engine JSON (not the envelope).  |
 
-## `POST /api/quality`
+### `POST /api/quality`
 
 Run ICAO-style quality checks on a face image. Same request body as detect. Python: `sdk.quality`.
 
-| | |
-| --- | --- |
-| **Input** | One image. Optional crop flag. |
-| **Return value** | Engine JSON. |
+|                  |                                |
+| ---------------- | ------------------------------ |
+| **Input**        | One image. Optional crop flag. |
+| **Return value** | Engine JSON.                   |
 
-## `POST /api/feature`
+### `POST /api/feature`
 
 Extract a face **template** (feature vector). Store it. Compare it later with `/api/similarity`.
 
@@ -77,6 +96,7 @@ Extract a face **template** (feature vector). Store it. Compare it later with `/
 { "image": "<BASE64>" }
 ```
 {% endtab %}
+
 {% tab title="form-data" %}
 File field `image` (alias `file`).
 {% endtab %}
@@ -84,12 +104,12 @@ File field `image` (alias `file`).
 
 Python: `sdk.feature`.
 
-| | |
-| --- | --- |
-| **Input** | One image. |
+|                  |                                |
+| ---------------- | ------------------------------ |
+| **Input**        | One image.                     |
 | **Return value** | Engine JSON with the template. |
 
-## `POST /api/match`
+### `POST /api/match`
 
 Compare **two photos** (1:1). The server detects and extracts internally.
 
@@ -99,6 +119,7 @@ Compare **two photos** (1:1). The server detects and extracts internally.
 { "image1": "<BASE64>", "image2": "<BASE64>", "cropImage": false }
 ```
 {% endtab %}
+
 {% tab title="form-data" %}
 File fields `image1` and `image2`. Text field `cropImage`.
 {% endtab %}
@@ -106,12 +127,12 @@ File fields `image1` and `image2`. Text field `cropImage`.
 
 Python: `sdk.match`.
 
-| | |
-| --- | --- |
-| **Input** | Two images. Optional crop flag. |
+|                  |                                      |
+| ---------------- | ------------------------------------ |
+| **Input**        | Two images. Optional crop flag.      |
 | **Return value** | Engine JSON with a similarity score. |
 
-## `POST /api/similarity`
+### `POST /api/similarity`
 
 Compare **two templates** you already extracted.
 
@@ -123,4 +144,4 @@ Aliases: `template1` / `template2`. Missing features return envelope `code: -1`.
 
 ### Related documentation
 
-* [HTTP API overview](README.md) · [Face Liveness HTTP API](face-liveness.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)
+* [HTTP API overview](./) · [Face Liveness HTTP API](face-liveness.md) · [Hosting requirements](../deploy-and-host/hosting-requirements.md)

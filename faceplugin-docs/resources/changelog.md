@@ -1,7 +1,8 @@
 ---
 description: >-
-  Release history for Faceplugin Face Recognition, Face Liveness, and ID Document SDKs.
-  Check each public GitHub repository and Docker Hub for the latest tags.
+  Release history for Faceplugin Face Recognition, Face Liveness, and ID
+  Document SDKs. Check each public GitHub repository and Docker Hub for the
+  latest tags.
 icon: clock-rotate-left
 ---
 
@@ -9,7 +10,7 @@ icon: clock-rotate-left
 
 Published release notes for Faceplugin SDKs will be listed here.
 
-## Documentation
+### Documentation
 
 * **HTTP API hub** — shared and per-product endpoint reference under [HTTP API](../http-api/)
 * **Deploy and host** — [Architecture](../deploy-and-host/architecture.md), [Hosting requirements](../deploy-and-host/hosting-requirements.md), [Production deployment](../deploy-and-host/production-deployment.md)
